@@ -1,14 +1,6 @@
-/*C1*/SET SCHEMA SYSTEM_LOBS
-INSERT INTO BLOCKS VALUES(0,2147483647,0)
-COMMIT
-/*C2*/SET SCHEMA PUBLIC
+/*C5*/SET SCHEMA PUBLIC
 DISCONNECT
-/*C3*/SET SCHEMA PUBLIC
-CREATE SCHEMA EDUCALIFE AUTHORIZATION SA
-create table Educalife.IMAGES (ID varchar(255) not null, GALLERY varchar(255), IMAGE varbinary(16777216), primary key (ID))
-create table Educalife.OXDISCUSSIONCOMMENTS (id varchar(32) not null, comment clob(16777216), discussionId varchar(32), time timestamp, userName varchar(30), primary key (id))
-create table Educalife.YourFirstEntity (id varchar(32) not null, amount numeric(19,2), date date, description varchar(50), primary key (id))
-create index Educalife.IDXbhlx4vunn24ym1tbrlgq8g30m on Educalife.OXDISCUSSIONCOMMENTS (discussionId)
-SET SCHEMA EDUCALIFE
-INSERT INTO YOURFIRSTENTITY VALUES('ff80818173e925290173e9269e260000',100.00,'2020-08-13','Teste')
+/*C6*/SET SCHEMA EDUCALIFE
+DELETE FROM YOURFIRSTENTITY WHERE ID='ff80818173e925290173e9269e260000'
+INSERT INTO YOURFIRSTENTITY VALUES('ff80818173e925290173e9269e260000',150.00,'2020-08-13','Teste')
 COMMIT
