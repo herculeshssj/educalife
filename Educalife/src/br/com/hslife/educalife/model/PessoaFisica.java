@@ -1,5 +1,8 @@
 package br.com.hslife.educalife.model;
 
+import java.time.*;
+import java.util.*;
+
 import javax.persistence.*;
 
 import org.openxava.annotations.*;
@@ -7,8 +10,9 @@ import org.openxava.model.*;
 
 @Entity
 @Table(name="pessoa_fisica")
-@View(members = "geral { nome, cpf} ; "
-				+ "endereco { endereco }"
+@View(members = "geral { nome, cpf, dataNascimento} ; "
+				+ "endereco { endereco } ;"
+				+ "contatos { contatos } "
 )
 public class PessoaFisica extends Identifiable {
 
@@ -16,13 +20,20 @@ public class PessoaFisica extends Identifiable {
 	@Required
 	private String nome;
 	
-	@Column(name = "cpf", nullable = true)
+	@Column(name = "cpf", nullable = false)
 	@Required
 	private String cpf;
+	
+	@Column(name = "data_nascimento", nullable = false)
+	private LocalDate dataNascimento;
 	
 	@Embedded
 	@ReferenceView(value = "endereco")
 	private Endereco endereco;
+	
+	@ElementCollection
+	@ListProperties("tipoContato, descricao, observacao")
+	private Collection<Contato> contatos;
 	
 	/*** Seção de métodos Getters e Setters customizados ***/
 	
@@ -51,9 +62,23 @@ public class PessoaFisica extends Identifiable {
 		this.cpf = cpf;
 	}
 
-	
-
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
+	}
+
+	public Collection<Contato> getContatos() {
+		return contatos;
+	}
+
+	public void setContatos(Collection<Contato> contatos) {
+		this.contatos = contatos;
+	}
+
+	public LocalDate getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(LocalDate dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 }
