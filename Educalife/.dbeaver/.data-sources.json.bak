@@ -20,6 +20,42 @@
 					"postgresql.dd.plain.string": "false",
 					"postgresql.dd.tag.string": "false"
 				},
+				"auth-model": "native"
+			}
+		},
+		"postgres-jdbc-173e931dbd5-1b47482aff3002e6": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "educalife",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "educalife",
+				"url": "jdbc:postgresql://localhost:5432/educalife",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native"
+			}
+		},
+		"hsqldb_embedded-173ecf3c81c-52e2ce97d1d13186": {
+			"provider": "generic",
+			"driver": "hsqldb_embedded",
+			"name": "educalife - teste",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"configuration": {
+				"database": "D:\\Git\\educalife\\Educalife\\data",
+				"url": "jdbc:hsqldb:file:D:\\Git\\educalife\\Educalife\\data",
+				"type": "dev",
 				"auth-model": "native",
 				"handlers": {}
 			}
