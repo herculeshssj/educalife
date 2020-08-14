@@ -1,7 +1,7 @@
 /*C4*/SET SCHEMA PUBLIC
 DISCONNECT
 /*C5*/SET SCHEMA PUBLIC
-alter table Educalife.endereco drop constraint UK_6jo6moinxkfqa5h984spkuedl
-alter table Educalife.endereco add constraint UK_6jo6moinxkfqa5h984spkuedl unique (id_tipo_logradouro)
-alter table Educalife.endereco drop constraint UK_6jo6moinxkfqa5h984spkuedl
-alter table Educalife.endereco add constraint UK_6jo6moinxkfqa5h984spkuedl unique (id_tipo_logradouro)
+alter table Educalife.pessoa_fisica drop constraint UK_6bcxd2j5vmbricys5b0omkrsy
+alter table Educalife.pessoa_fisica add constraint UK_6bcxd2j5vmbricys5b0omkrsy unique (id_tipo_logradouro)
+alter table Educalife.pessoa_fisica drop constraint UK_6bcxd2j5vmbricys5b0omkrsy
+alter table Educalife.pessoa_fisica add constraint UK_6bcxd2j5vmbricys5b0omkrsy unique (id_tipo_logradouro)

@@ -3,13 +3,21 @@ package br.com.hslife.educalife.model;
 import javax.persistence.*;
 
 import org.openxava.annotations.*;
-import org.openxava.model.*;
 
 import br.com.hslife.educalife.enumeration.*;
 
-@Entity
-@Table(name = "endereco")
-public class Endereco extends Identifiable {
+@Embeddable
+@View(name = "endereco",
+members = "tipoLogradouro; "
+		+ "logradouro; "
+		+ "numero; "
+		+ "complemento; "
+		+ "bairro; "
+		+ "cidade;"
+		+ "uf; "
+		+ "cep"
+)
+public class Endereco {
 	
 	@OneToOne(optional = false)
 	@JoinColumn(name = "id_tipo_logradouro", nullable = false)
