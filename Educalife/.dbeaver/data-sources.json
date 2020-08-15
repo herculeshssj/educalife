@@ -15,12 +15,13 @@
 				"url": "jdbc:postgresql://localhost:5432/postgres",
 				"type": "dev",
 				"provider-properties": {
-					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-non-default-db@": "true",
 					"@dbeaver-show-template-db@": "false",
 					"postgresql.dd.plain.string": "false",
 					"postgresql.dd.tag.string": "false"
 				},
-				"auth-model": "native"
+				"auth-model": "native",
+				"handlers": {}
 			}
 		},
 		"postgres-jdbc-173e931dbd5-1b47482aff3002e6": {

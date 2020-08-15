@@ -44,21 +44,6 @@
 				},
 				"auth-model": "native"
 			}
-		},
-		"hsqldb_embedded-173ecf3c81c-52e2ce97d1d13186": {
-			"provider": "generic",
-			"driver": "hsqldb_embedded",
-			"name": "educalife - teste",
-			"save-password": true,
-			"show-system-objects": true,
-			"read-only": false,
-			"configuration": {
-				"database": "D:\\Git\\educalife\\Educalife\\data",
-				"url": "jdbc:hsqldb:file:D:\\Git\\educalife\\Educalife\\data",
-				"type": "dev",
-				"auth-model": "native",
-				"handlers": {}
-			}
 		}
 	},
 	"connection-types": {
