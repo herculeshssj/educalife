@@ -27,14 +27,14 @@ public class Curso extends Identifiable {
 	@Required
 	private int cargaHoraria;
 
-	@Column(name = "descricao_curso")
-	@Required
-	private String descricaoCurso;
-
 	@Enumerated(EnumType.STRING)
 	@Column(name = "status_curso", nullable = false)
 	@Required
 	private StatusCurso statusCurso;
+	
+	@Column(name = "descricao_curso")
+	@Required
+	private String descricaoCurso;
 
 	public String getNomeCurso() {
 		return nomeCurso;
