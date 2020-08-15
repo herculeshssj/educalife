@@ -4,3 +4,4 @@ select * from pessoa_fisica_contatos pfc;
 select * from curso;
 
 drop table curso;
+drop table yourfirstentity ;
