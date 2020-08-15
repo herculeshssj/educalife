@@ -5,3 +5,6 @@ select * from curso;
 
 drop table curso;
 drop table yourfirstentity ;
+
+select * from inscricao_turma ;
+drop table inscricao_turma ;
