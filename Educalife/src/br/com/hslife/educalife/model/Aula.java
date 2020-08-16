@@ -7,7 +7,7 @@ import javax.persistence.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
-@Entity
+//@Entity
 @Table(name="aula")
 public class Aula extends Identifiable{
 	

@@ -10,10 +10,12 @@ import org.openxava.model.*;
 
 @Entity
 @Table(name="pessoa_fisica")
-@View(members = "geral { nome, cpf, dataNascimento} ; "
+@View(members = "geral { nome; cpf; dataNascimento} ; "
 				+ "endereco { endereco } ;"
-				+ "contatos { contatos } "
+				+ "contatos { contatos };"
+				+ "documentos { documentosIdentidade } "
 )
+@Tab(properties = "nome, cpf, dataNascimento")		
 public class PessoaFisica extends Identifiable {
 
 	@Column(name = "nome", nullable = false)
@@ -34,6 +36,10 @@ public class PessoaFisica extends Identifiable {
 	@ElementCollection
 	@ListProperties("tipoContato, descricao, observacao")
 	private Collection<Contato> contatos;
+	
+	@ElementCollection
+	@ListProperties("tipoIdentidade, numero, orgaoExpedidor, dataExpedicao, complemento")
+	private Collection<DocumentoIdentidade> documentosIdentidade;
 	
 	/*** Seção de métodos Getters e Setters customizados ***/
 	
@@ -80,5 +86,13 @@ public class PessoaFisica extends Identifiable {
 
 	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
+	}
+
+	public Collection<DocumentoIdentidade> getDocumentosIdentidade() {
+		return documentosIdentidade;
+	}
+
+	public void setDocumentosIdentidade(Collection<DocumentoIdentidade> documentosIdentidade) {
+		this.documentosIdentidade = documentosIdentidade;
 	}
 }

@@ -8,7 +8,7 @@ import org.openxava.model.*;
 
 import br.com.hslife.educalife.enumeration.*;
 
-@Entity
+//@Entity
 @Table(name="historico_aluno")
 public class HistoricoAluno extends Identifiable {
 

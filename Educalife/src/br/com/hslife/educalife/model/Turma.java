@@ -10,7 +10,7 @@ import org.openxava.model.*;
 
 import br.com.hslife.educalife.enumeration.*;
 
-@Entity
+//@Entity
 @Table(name="turma")
 @View(members = "geral { nomeTurma; "
 		+ "numeroVagasInterno, numeroVagasExterno; "

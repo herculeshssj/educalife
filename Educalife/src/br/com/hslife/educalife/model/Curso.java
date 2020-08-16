@@ -7,7 +7,7 @@ import org.openxava.model.*;
 
 import br.com.hslife.educalife.enumeration.*;
 
-@Entity
+//@Entity
 @Table(name = "curso")
 @View(members = "nomeCurso, descricaoCurso; "
 		+ "cargaHoraria, statusCurso; "

@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 import org.openxava.model.*;
 
-@Entity
+//@Entity
 @Table(name="frequencia")
 public class Frequencia extends Identifiable {
 
