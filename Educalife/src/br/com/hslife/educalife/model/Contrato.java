@@ -11,7 +11,7 @@ import org.openxava.model.*;
 
 import br.com.hslife.educalife.enumeration.*;
 
-@Entity
+//@Entity
 @Table(name="contrato")
 @View(members = "geral { numeroContrato; "
 		+ "situacaoContrato; "

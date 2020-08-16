@@ -21,5 +21,19 @@
     	</action>
 	</controller>    
     -->
+    <controller name="Remarks">
+	    <action name="hideRemarks"
+	        class="br.com.hslife.educalife.action.HideShowPropertyAction">
+	        <set property="property" value="remarks" />
+	        <set property="hide" value="true" />
+	        <use-object name="xava_view"/>  <!-- Not needed since v4m2 -->
+	    </action>
+	    <action name="showRemarks" mode="detail"
+	        class="br.com.hslife.educalife.action.HideShowPropertyAction">
+	        <set property="property" value="remarks" />
+	        <set property="hide" value="false" />
+	        <use-object name="xava_view"/>  <!-- Not needed since v4m2 -->
+	    </action>
+	</controller>
     
 </controllers>
