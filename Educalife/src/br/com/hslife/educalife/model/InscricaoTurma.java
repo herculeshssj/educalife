@@ -1,6 +1,7 @@
 package br.com.hslife.educalife.model;
 
 import java.time.*;
+import java.util.*;
 
 import javax.persistence.*;
 
@@ -11,6 +12,13 @@ import br.com.hslife.educalife.enumeration.*;
 
 @Entity
 @Table(name="inscricao_turma")
+@View(members = "geral { aluno; "
+		+ "turma; "
+		+ "dataInscricao; "
+		+ "motivoInscricao; "
+		+ "statusInscricao }; "
+		+ "frequencia { frequenciaAula } ;"
+)
 public class InscricaoTurma extends Identifiable {
 	
 	@ManyToOne(optional = false)
@@ -27,12 +35,16 @@ public class InscricaoTurma extends Identifiable {
 	
 	@Column(name="motivo_inscricao", nullable = false)
 	@Required
+	@Stereotype("MEMO")
 	private String motivoInscricao;
 	
 	@Enumerated(EnumType.STRING)
 	@Column(name="status_inscricao", nullable = false)
 	@Required
 	private StatusInscricao statusInscricao;
+	
+	@OneToMany(mappedBy = "inscricaoTurma")
+	private Collection<Frequencia> frequenciaAula;
 
 	public PessoaFisica getAluno() {
 		return aluno;
@@ -72,5 +84,13 @@ public class InscricaoTurma extends Identifiable {
 
 	public void setStatusInscricao(StatusInscricao statusInscricao) {
 		this.statusInscricao = statusInscricao;
+	}
+
+	public Collection<Frequencia> getFrequenciaAula() {
+		return frequenciaAula;
+	}
+
+	public void setFrequenciaAula(Collection<Frequencia> frequenciaAula) {
+		this.frequenciaAula = frequenciaAula;
 	}
 }
