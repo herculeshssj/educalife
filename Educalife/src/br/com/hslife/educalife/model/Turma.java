@@ -1,6 +1,7 @@
 package br.com.hslife.educalife.model;
 
 import java.time.*;
+import java.util.*;
 
 import javax.persistence.*;
 
@@ -17,7 +18,8 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "dataInicio, dataFim; "
 		+ "dataInicioInscricao, dataFimInscricao; "
 		+ "statusTurma }; "
-		+ "curso { curso }"
+		+ "curso { curso }; "
+		+ "aulas { aulas }"
 )
 public class Turma extends Identifiable {
 	
@@ -54,6 +56,9 @@ public class Turma extends Identifiable {
 	@Column(name = "status_turma", nullable = false)
 	@Required
 	private StatusTurma statusTurma;
+	
+	@OneToMany(mappedBy = "turma")
+	private Collection<Aula> aulas;
 
 	public StatusTurma getStatusTurma() {
 		return statusTurma;
@@ -133,6 +138,14 @@ public class Turma extends Identifiable {
 
 	public void setDataFimInscricao(LocalDate dataFimInscricao) {
 		this.dataFimInscricao = dataFimInscricao;
+	}
+
+	public Collection<Aula> getAulas() {
+		return aulas;
+	}
+
+	public void setAulas(Collection<Aula> aulas) {
+		this.aulas = aulas;
 	}
 
 }
