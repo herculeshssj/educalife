@@ -10,7 +10,7 @@ import org.openxava.model.*;
 
 @Entity
 @Table(name="pessoa_fisica")
-@View(members = "geral { nome; cpf; dataNascimento} ; "
+@View(members = "geral { nome; cpf; dataNascimento; nomePai; nomeMae} ; "
 				+ "endereco { endereco } ;"
 				+ "contatos { contatos };"
 				+ "documentos { documentosIdentidade } "
@@ -28,6 +28,12 @@ public class PessoaFisica extends Identifiable {
 	
 	@Column(name = "data_nascimento", nullable = false)
 	private LocalDate dataNascimento;
+	
+	@Column(name="nome_pai", nullable = true)
+	private String nomePai;
+	
+	@Column(name="nome_mae", nullable = true)
+	private String nomeMae;
 	
 	@Embedded
 	@ReferenceView(value = "endereco")
@@ -94,5 +100,21 @@ public class PessoaFisica extends Identifiable {
 
 	public void setDocumentosIdentidade(Collection<DocumentoIdentidade> documentosIdentidade) {
 		this.documentosIdentidade = documentosIdentidade;
+	}
+
+	public String getNomePai() {
+		return nomePai;
+	}
+
+	public void setNomePai(String nomePai) {
+		this.nomePai = nomePai;
+	}
+
+	public String getNomeMae() {
+		return nomeMae;
+	}
+
+	public void setNomeMae(String nomeMae) {
+		this.nomeMae = nomeMae;
 	}
 }
