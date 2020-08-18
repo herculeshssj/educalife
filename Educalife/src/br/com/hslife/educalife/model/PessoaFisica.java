@@ -8,16 +8,15 @@ import javax.persistence.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
+import br.com.hslife.educalife.enumeration.*;
+
 @Entity
 @Table(name="pessoa_fisica")
-@View(members = "geral { nome; "
-		+ "cpf; "
-		+ "dataNascimento; "
-		+ "nomePai; "
-		+ "nomeMae; "
-		+ "estadoCivil;"
-		+ "nacionalidade; "
-		+ "naturalidade } ; "
+@View(members = "geral { nome, cpf; "
+		+ "dataNascimento, estadoCivil;"
+		+ "nomePai, nomeMae; "
+		+ "nacionalidade, naturalidade;"
+		+ "tipoSanguineo } ; "
 		+ "endereco { endereco } ;"
 		+ "contatos { contatos };"
 		+ "documentos { documentosIdentidade } "
@@ -54,6 +53,10 @@ public class PessoaFisica extends Identifiable {
 	
 	@Column(nullable = true)
 	private String naturalidade;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name="tipo_sanguineo")
+	private TipoSanguineo tipoSanguineo;
 	
 	@Embedded
 	@ReferenceView(value = "endereco")
@@ -160,5 +163,13 @@ public class PessoaFisica extends Identifiable {
 
 	public void setNacionalidade(Pais nacionalidade) {
 		this.nacionalidade = nacionalidade;
+	}
+
+	public TipoSanguineo getTipoSanguineo() {
+		return tipoSanguineo;
+	}
+
+	public void setTipoSanguineo(TipoSanguineo tipoSanguineo) {
+		this.tipoSanguineo = tipoSanguineo;
 	}
 }
