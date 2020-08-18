@@ -10,10 +10,16 @@ import org.openxava.model.*;
 
 @Entity
 @Table(name="pessoa_fisica")
-@View(members = "geral { nome; cpf; dataNascimento; nomePai; nomeMae; estadoCivil} ; "
-				+ "endereco { endereco } ;"
-				+ "contatos { contatos };"
-				+ "documentos { documentosIdentidade } "
+@View(members = "geral { nome; "
+		+ "cpf; "
+		+ "dataNascimento; "
+		+ "nomePai; "
+		+ "nomeMae; "
+		+ "estadoCivil;"
+		+ "naturalidade } ; "
+		+ "endereco { endereco } ;"
+		+ "contatos { contatos };"
+		+ "documentos { documentosIdentidade } "
 )
 @Tab(properties = "nome, cpf, dataNascimento, estadoCivil.descricao")		
 public class PessoaFisica extends Identifiable {
@@ -39,6 +45,9 @@ public class PessoaFisica extends Identifiable {
 	@JoinColumn(name="id_estado_civil", nullable = true)
 	@DescriptionsList(descriptionProperties = "descricao", order = "${descricao} asc")
 	private EstadoCivil estadoCivil;
+	
+	@Column(nullable = true)
+	private String naturalidade;
 	
 	@Embedded
 	@ReferenceView(value = "endereco")
@@ -129,5 +138,13 @@ public class PessoaFisica extends Identifiable {
 
 	public void setEstadoCivil(EstadoCivil estadoCivil) {
 		this.estadoCivil = estadoCivil;
+	}
+
+	public String getNaturalidade() {
+		return naturalidade;
+	}
+
+	public void setNaturalidade(String naturalidade) {
+		this.naturalidade = naturalidade;
 	}
 }
