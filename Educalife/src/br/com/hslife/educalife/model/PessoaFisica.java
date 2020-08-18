@@ -16,10 +16,8 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "dataNascimento, estadoCivil;"
 		+ "nomePai, nomeMae; "
 		+ "nacionalidade, naturalidade;"
-		+ "tipoSanguineo ; "
-		+ "genero;"
-		+ "escolaridade;"
-		+ "etnia } ;"
+		+ "tipoSanguineo, genero, escolaridade;"
+		+ "etnia, deficiencia } ;"
 		+ "endereco { endereco } ;"
 		+ "contatos { contatos };"
 		+ "documentos { documentosIdentidade } "
@@ -75,6 +73,11 @@ public class PessoaFisica extends Identifiable {
 	@JoinColumn(name="id_etnia", nullable = true)
 	@DescriptionsList(descriptionProperties = "descricao", order = "${descricao} asc")
 	private Etnia etnia;
+	
+	@ManyToOne(optional = true)
+	@JoinColumn(name="id_deficiencia", nullable = true)
+	@DescriptionsList(descriptionProperties = "descricao", order = "${descricao} asc")
+	private Deficiencia deficiencia;
 	
 	@Embedded
 	@ReferenceView(value = "endereco")
@@ -213,5 +216,13 @@ public class PessoaFisica extends Identifiable {
 
 	public void setEtnia(Etnia etnia) {
 		this.etnia = etnia;
+	}
+
+	public Deficiencia getDeficiencia() {
+		return deficiencia;
+	}
+
+	public void setDeficiencia(Deficiencia deficiencia) {
+		this.deficiencia = deficiencia;
 	}
 }
