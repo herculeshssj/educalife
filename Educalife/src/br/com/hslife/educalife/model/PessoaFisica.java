@@ -16,7 +16,8 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "dataNascimento, estadoCivil;"
 		+ "nomePai, nomeMae; "
 		+ "nacionalidade, naturalidade;"
-		+ "tipoSanguineo } ; "
+		+ "tipoSanguineo ; "
+		+ "genero } ;"
 		+ "endereco { endereco } ;"
 		+ "contatos { contatos };"
 		+ "documentos { documentosIdentidade } "
@@ -57,6 +58,11 @@ public class PessoaFisica extends Identifiable {
 	@Enumerated(EnumType.STRING)
 	@Column(name="tipo_sanguineo")
 	private TipoSanguineo tipoSanguineo;
+	
+	@ManyToOne(optional = true)
+	@JoinColumn(name="id_genero", nullable = true)
+	@DescriptionsList(descriptionProperties = "descricao", order = "${descricao} asc")
+	private Genero genero;
 	
 	@Embedded
 	@ReferenceView(value = "endereco")
@@ -171,5 +177,13 @@ public class PessoaFisica extends Identifiable {
 
 	public void setTipoSanguineo(TipoSanguineo tipoSanguineo) {
 		this.tipoSanguineo = tipoSanguineo;
+	}
+
+	public Genero getGenero() {
+		return genero;
+	}
+
+	public void setGenero(Genero genero) {
+		this.genero = genero;
 	}
 }
