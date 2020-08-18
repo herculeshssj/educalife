@@ -17,7 +17,9 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "nomePai, nomeMae; "
 		+ "nacionalidade, naturalidade;"
 		+ "tipoSanguineo ; "
-		+ "genero } ;"
+		+ "genero;"
+		+ "escolaridade;"
+		+ "etnia } ;"
 		+ "endereco { endereco } ;"
 		+ "contatos { contatos };"
 		+ "documentos { documentosIdentidade } "
@@ -63,6 +65,16 @@ public class PessoaFisica extends Identifiable {
 	@JoinColumn(name="id_genero", nullable = true)
 	@DescriptionsList(descriptionProperties = "descricao", order = "${descricao} asc")
 	private Genero genero;
+	
+	@ManyToOne(optional = true)
+	@JoinColumn(name="id_escolaridade", nullable = true)
+	@DescriptionsList(descriptionProperties = "descricao", order = "${descricao} asc")
+	private Escolaridade escolaridade;
+	
+	@ManyToOne(optional = true)
+	@JoinColumn(name="id_etnia", nullable = true)
+	@DescriptionsList(descriptionProperties = "descricao", order = "${descricao} asc")
+	private Etnia etnia;
 	
 	@Embedded
 	@ReferenceView(value = "endereco")
@@ -185,5 +197,21 @@ public class PessoaFisica extends Identifiable {
 
 	public void setGenero(Genero genero) {
 		this.genero = genero;
+	}
+
+	public Escolaridade getEscolaridade() {
+		return escolaridade;
+	}
+
+	public void setEscolaridade(Escolaridade escolaridade) {
+		this.escolaridade = escolaridade;
+	}
+
+	public Etnia getEtnia() {
+		return etnia;
+	}
+
+	public void setEtnia(Etnia etnia) {
+		this.etnia = etnia;
 	}
 }
