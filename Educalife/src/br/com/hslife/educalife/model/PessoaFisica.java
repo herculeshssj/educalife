@@ -16,6 +16,7 @@ import org.openxava.model.*;
 		+ "nomePai; "
 		+ "nomeMae; "
 		+ "estadoCivil;"
+		+ "nacionalidade; "
 		+ "naturalidade } ; "
 		+ "endereco { endereco } ;"
 		+ "contatos { contatos };"
@@ -45,6 +46,11 @@ public class PessoaFisica extends Identifiable {
 	@JoinColumn(name="id_estado_civil", nullable = true)
 	@DescriptionsList(descriptionProperties = "descricao", order = "${descricao} asc")
 	private EstadoCivil estadoCivil;
+	
+	@ManyToOne(optional = true)
+	@JoinColumn(name="id_nacionalidade", nullable = true)
+	@DescriptionsList(descriptionProperties = "denominacao", order = "${denominacao} asc")
+	private Pais nacionalidade;
 	
 	@Column(nullable = true)
 	private String naturalidade;
@@ -146,5 +152,13 @@ public class PessoaFisica extends Identifiable {
 
 	public void setNaturalidade(String naturalidade) {
 		this.naturalidade = naturalidade;
+	}
+
+	public Pais getNacionalidade() {
+		return nacionalidade;
+	}
+
+	public void setNacionalidade(Pais nacionalidade) {
+		this.nacionalidade = nacionalidade;
 	}
 }
