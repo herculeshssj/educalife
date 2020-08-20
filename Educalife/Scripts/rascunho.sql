@@ -8,3 +8,7 @@ drop table yourfirstentity ;
 
 select * from inscricao_turma ;
 drop table inscricao_turma ;
+
+select * from banco where febraban = true;
+truncate banco;
+drop table banco;
