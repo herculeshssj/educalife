@@ -22,6 +22,7 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "contatos { contatos };"
 		+ "documentos { documentosIdentidade }; "
 		+ "dadosBancarios { dadosBancarios } "
+		+ "anotacoes { anotacoes }"
 )
 @Tab(properties = "nome, cpf, dataNascimento, estadoCivil.descricao")		
 public class PessoaFisica extends Identifiable {
@@ -93,7 +94,11 @@ public class PessoaFisica extends Identifiable {
 	private Collection<DocumentoIdentidade> documentosIdentidade;
 	
 	@OneToMany(mappedBy = "pessoaFisica")
+	@ListProperties("banco.codigo, banco.nome, agencia, numeroConta, operacao")
 	private Collection<ContaBanco> dadosBancarios;
+	
+	@ElementCollection
+	private Collection<Anotacao> anotacoes;
 	
 	/*** Seção de métodos Getters e Setters customizados ***/
 	
@@ -236,5 +241,13 @@ public class PessoaFisica extends Identifiable {
 
 	public void setDadosBancarios(Collection<ContaBanco> dadosBancarios) {
 		this.dadosBancarios = dadosBancarios;
+	}
+
+	public Collection<Anotacao> getAnotacoes() {
+		return anotacoes;
+	}
+
+	public void setAnotacoes(Collection<Anotacao> anotacoes) {
+		this.anotacoes = anotacoes;
 	}
 }
