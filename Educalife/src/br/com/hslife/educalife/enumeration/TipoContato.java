@@ -4,7 +4,8 @@ public enum TipoContato {
 	
 	TELEFONE("Telefone"),
 	EMAIL("E-Mail"),
-	SOCIAL("Rede Social");
+	SOCIAL("Rede Social"),
+	SITE("Website");
 	
 	private String descricao;
 	
