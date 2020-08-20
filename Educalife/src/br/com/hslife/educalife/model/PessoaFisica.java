@@ -23,6 +23,7 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "documentos { documentosIdentidade }; "
 		+ "dadosBancarios { dadosBancarios } "
 		+ "anotacoes { anotacoes }"
+		+ "foto { foto }"
 )
 @Tab(properties = "nome, cpf, dataNascimento, estadoCivil.descricao")		
 public class PessoaFisica extends Identifiable {
@@ -99,6 +100,9 @@ public class PessoaFisica extends Identifiable {
 	
 	@ElementCollection
 	private Collection<Anotacao> anotacoes;
+	
+	@Stereotype("PHOTO")
+	private byte[] foto;
 	
 	/*** Seção de métodos Getters e Setters customizados ***/
 	
@@ -249,5 +253,13 @@ public class PessoaFisica extends Identifiable {
 
 	public void setAnotacoes(Collection<Anotacao> anotacoes) {
 		this.anotacoes = anotacoes;
+	}
+
+	public byte[] getFoto() {
+		return foto;
+	}
+
+	public void setFoto(byte[] foto) {
+		this.foto = foto;
 	}
 }
