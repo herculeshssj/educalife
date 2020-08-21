@@ -15,6 +15,8 @@ public class Departamento extends Identifiable {
 	
 	@ManyToOne
 	@JoinColumn(name="id_unidade", nullable = false)
+	@DescriptionsList(descriptionProperties = "nomeUnidade", order = "${nomeUnidade} asc")
+	@NoCreate @NoModify
 	private Unidade unidade;
 
 	public String getNomeDepartamento() {
