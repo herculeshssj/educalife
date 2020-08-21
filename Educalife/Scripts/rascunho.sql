@@ -12,3 +12,6 @@ drop table inscricao_turma ;
 select * from banco where febraban = true;
 truncate banco;
 drop table banco;
+
+select * from cargo;
+truncate cargo;
