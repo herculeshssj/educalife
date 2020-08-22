@@ -9,10 +9,10 @@
 			"show-system-objects": true,
 			"read-only": false,
 			"configuration": {
-				"host": "localhost",
+				"host": "educalife-postgresql",
 				"port": "5432",
 				"database": "postgres",
-				"url": "jdbc:postgresql://localhost:5432/postgres",
+				"url": "jdbc:postgresql://educalife-postgresql:5432/postgres",
 				"type": "dev",
 				"provider-properties": {
 					"@dbeaver-show-non-default-db@": "true",
@@ -22,6 +22,9 @@
 				},
 				"auth-model": "native",
 				"handlers": {}
+			},
+			"custom-properties": {
+				"database.meta.separate.connection": "false"
 			}
 		},
 		"postgres-jdbc-173e931dbd5-1b47482aff3002e6": {
@@ -32,10 +35,10 @@
 			"show-system-objects": true,
 			"read-only": false,
 			"configuration": {
-				"host": "localhost",
+				"host": "educalife-postgresql",
 				"port": "5432",
 				"database": "educalife",
-				"url": "jdbc:postgresql://localhost:5432/educalife",
+				"url": "jdbc:postgresql://educalife-postgresql:5432/educalife",
 				"type": "dev",
 				"provider-properties": {
 					"@dbeaver-show-non-default-db@": "false",
@@ -43,7 +46,11 @@
 					"postgresql.dd.plain.string": "false",
 					"postgresql.dd.tag.string": "false"
 				},
-				"auth-model": "native"
+				"auth-model": "native",
+				"handlers": {}
+			},
+			"custom-properties": {
+				"database.meta.separate.connection": "false"
 			}
 		}
 	},
