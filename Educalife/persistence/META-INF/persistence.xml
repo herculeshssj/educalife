@@ -17,8 +17,6 @@
             <property name="hibernate.default_schema" value="Educalife"/>
             <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>
             <property name="hibernate.show_sql" value="true"/>
-            <property name="org.hibernate.envers.audit_strategy" value="org.hibernate.envers.strategy.ValidityAuditStrategy"/>
-    		<property name="org.hibernate.envers.audit_strategy_validity_store_revend_timestamp" value="true"/>
     		<property name="org.hibernate.envers.default_schema" value="audit"/>
         </properties>
     </persistence-unit>

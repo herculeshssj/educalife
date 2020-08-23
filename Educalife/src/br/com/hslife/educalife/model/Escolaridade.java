@@ -2,11 +2,13 @@ package br.com.hslife.educalife.model;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
 @Entity
 @Table(name="escolaridade")
+@Audited
 public class Escolaridade extends Identifiable {
 
 	@Column

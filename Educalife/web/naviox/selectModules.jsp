@@ -31,6 +31,12 @@ for (Iterator it= modulesList.iterator(); it.hasNext();) {
 	String description = module.getDescription(request.getLocale());
 	String normalizedLabel = Strings.removeAccents(label.toLowerCase()); 
 	String normalizedDescription = Strings.removeAccents(description.toLowerCase());
+	
+	// Remove o AuditoriaEntity do menu
+	if (module.getName().equals("AuditoriaEntity")) {
+		continue;
+	}
+	
 	if (!Is.emptyString(searchWord) && !normalizedLabel.contains(searchWord) && !normalizedDescription.contains(searchWord)) continue;
 	counter++;
 %>
