@@ -4,11 +4,13 @@ import java.util.*;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
 @Entity
 @Table(name="usuario")
+@Audited
 public class Usuario extends Identifiable {
 	
 	@Column(nullable = false)
@@ -25,7 +27,7 @@ public class Usuario extends Identifiable {
 	
 	@ElementCollection
 	@ListProperties("papelUsuario, papelUsuario.nome, papelUsuario.descricao")
-	private Collection<Permissao> permissoes; // permissao
+	private Collection<Permissao> permissao;
 
 	public String getLogin() {
 		return login;
@@ -51,11 +53,11 @@ public class Usuario extends Identifiable {
 		this.ativo = ativo;
 	}
 
-	public Collection<Permissao> getPermissoes() {
-		return permissoes;
+	public Collection<Permissao> getPermissao() {
+		return permissao;
 	}
 
-	public void setPermissoes(Collection<Permissao> permissoes) {
-		this.permissoes = permissoes;
+	public void setPermissao(Collection<Permissao> permissao) {
+		this.permissao = permissao;
 	}
 }
