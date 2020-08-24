@@ -35,6 +35,7 @@ public class Unidade extends Identifiable {
 	@ManyToOne
 	@JoinColumn(name="id_empresa", nullable = false)
 	@DescriptionsList(descriptionProperties = "pessoaJuridica.nomeFantasia")
+	@NoCreate @NoModify
 	private Empresa empresa;
 
 	public String getNomeUnidade() {

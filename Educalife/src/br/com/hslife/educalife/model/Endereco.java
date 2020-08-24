@@ -22,6 +22,7 @@ public class Endereco {
 	@ManyToOne(optional = false)
 	@JoinColumn(name = "id_tipo_logradouro", nullable = false)
 	@Required
+	@NoCreate @NoModify
 	private TipoLogradouro tipoLogradouro;
 	
 	@Required

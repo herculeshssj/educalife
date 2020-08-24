@@ -34,6 +34,4 @@ public class Empresa extends Identifiable {
 	public void setPessoaJuridica(PessoaJuridica pessoaJuridica) {
 		this.pessoaJuridica = pessoaJuridica;
 	}
-	
-	
 }
