@@ -5,7 +5,6 @@ import java.util.*;
 
 import javax.persistence.*;
 
-import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
@@ -15,7 +14,6 @@ import org.openxava.model.*;
 		+ "nomeFantasia; "
 		+ "cnpj; "
 		+ "dataCriacao } "
-		+ "contratoSocial { contratoSocial }"
 		+ "endereco { endereco } ;"
 		+ "contatos { contatos };"
 )
@@ -37,10 +35,6 @@ public class PessoaJuridica extends Identifiable {
 	@Column(name="data_criacao", nullable = false)
 	@Required
 	private LocalDate dataCriacao;
-	
-	@Column(columnDefinition = "text", name="contrato_social", nullable = true)
-	@Stereotype("HTML_TEXT")
-	private String contratoSocial;
 	
 	@Embedded
 	@ReferenceView(value = "endereco")
@@ -80,14 +74,6 @@ public class PessoaJuridica extends Identifiable {
 
 	public void setDataCriacao(LocalDate dataCriacao) {
 		this.dataCriacao = dataCriacao;
-	}
-
-	public String getContratoSocial() {
-		return contratoSocial;
-	}
-
-	public void setContratoSocial(String contratoSocial) {
-		this.contratoSocial = contratoSocial;
 	}
 
 	public Endereco getEndereco() {
