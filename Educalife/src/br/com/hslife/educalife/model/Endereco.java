@@ -19,7 +19,7 @@ members = "tipoLogradouro; "
 )
 public class Endereco {
 	
-	@OneToOne(optional = false)
+	@ManyToOne(optional = false)
 	@JoinColumn(name = "id_tipo_logradouro", nullable = false)
 	@Required
 	private TipoLogradouro tipoLogradouro;

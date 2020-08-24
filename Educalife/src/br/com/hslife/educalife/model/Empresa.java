@@ -8,10 +8,11 @@ import org.openxava.model.*;
 @Entity
 @Table(name="empresa")
 @Tab(properties = "pessoaJuridica.nomeFantasia, pessoaJuridica.cnpj, pessoaJuridica.dataCriacao")
+@View(members = "pessoaJuridica; contratoSocial")
 public class Empresa extends Identifiable {
 
-	@ManyToOne
-	@JoinColumn(name="id_pessoa_juridica")
+	@OneToOne
+	@JoinColumn(name="id_pessoa_juridica", unique = true)
 	private PessoaJuridica pessoaJuridica;
 	
 	@Column(columnDefinition = "text", name="contrato_social", nullable = true)

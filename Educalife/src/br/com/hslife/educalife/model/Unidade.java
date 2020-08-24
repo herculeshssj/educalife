@@ -9,6 +9,11 @@ import org.openxava.model.*;
 
 @Entity
 @Table(name="unidade")
+@View(members = "geral { nomeUnidade;"
+		+ "horarioFuncionamento ;"
+		+ "empresa };"
+		+ "endereco { endereco } ;"
+		+ "contatos { contatos }")
 @Tab(properties = "nomeUnidade, horarioFuncionamento")
 public class Unidade extends Identifiable {
 
@@ -19,12 +24,17 @@ public class Unidade extends Identifiable {
 	@Column(name="horario_funcionamento", nullable = true)
 	private String horarioFuncionamento;
 	
+	@Embedded
+	@ReferenceView(value = "endereco")
+	private Endereco endereco;
+	
 	@ElementCollection
 	@ListProperties("tipoContato, descricao, observacao")
 	private Collection<Contato> contatos;
 	
 	@ManyToOne
 	@JoinColumn(name="id_empresa", nullable = false)
+	@DescriptionsList(descriptionProperties = "pessoaJuridica.nomeFantasia")
 	private Empresa empresa;
 
 	public String getNomeUnidade() {
@@ -57,5 +67,13 @@ public class Unidade extends Identifiable {
 
 	public void setEmpresa(Empresa empresa) {
 		this.empresa = empresa;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 }
