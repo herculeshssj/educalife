@@ -15,3 +15,7 @@ drop table banco;
 
 select * from cargo;
 truncate cargo;
+
+select codigo_cbo ,length(denominacao) from cargo order by 2 desc;
+select * from cargo where codigo_cbo = '811820';
+
