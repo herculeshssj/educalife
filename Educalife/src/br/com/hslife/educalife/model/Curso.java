@@ -7,10 +7,11 @@ import org.openxava.model.*;
 
 import br.com.hslife.educalife.enumeration.*;
 
-//@Entity
+@Entity
 @Table(name = "curso")
-@View(members = "nomeCurso, descricaoCurso; "
+@View(members = "nomeCurso; "
 		+ "cargaHoraria, statusCurso; "
+		+ "descricaoCurso; "
 		+ "coordenador"
 )
 public class Curso extends Identifiable {
@@ -21,7 +22,7 @@ public class Curso extends Identifiable {
 	
 	@ManyToOne(optional = false)
 	@JoinColumn(name="id_coordenador", nullable = false)
-	private PessoaFisica coordenador;
+	private Colaborador coordenador;
 
 	@Column(name = "carga_horaria")
 	@Required
@@ -32,8 +33,9 @@ public class Curso extends Identifiable {
 	@Required
 	private StatusCurso statusCurso;
 	
-	@Column(name = "descricao_curso")
+	@Column(columnDefinition = "text", name = "descricao_curso")
 	@Required
+	@Stereotype("MEMO")
 	private String descricaoCurso;
 
 	public String getNomeCurso() {
@@ -42,14 +44,6 @@ public class Curso extends Identifiable {
 
 	public void setNomeCurso(String nomeCurso) {
 		this.nomeCurso = nomeCurso;
-	}
-
-	public PessoaFisica getCoordenador() {
-		return coordenador;
-	}
-
-	public void setCoordenador(PessoaFisica coordenador) {
-		this.coordenador = coordenador;
 	}
 
 	public int getCargaHoraria() {
@@ -74,5 +68,13 @@ public class Curso extends Identifiable {
 
 	public void setStatusCurso(StatusCurso statusCurso) {
 		this.statusCurso = statusCurso;
+	}
+
+	public Colaborador getCoordenador() {
+		return coordenador;
+	}
+
+	public void setCoordenador(Colaborador coordenador) {
+		this.coordenador = coordenador;
 	}
 }
