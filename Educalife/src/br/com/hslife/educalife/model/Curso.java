@@ -11,9 +11,13 @@ import br.com.hslife.educalife.enumeration.*;
 @Table(name = "curso")
 @View(members = "nomeCurso; "
 		+ "cargaHoraria, statusCurso; "
-		+ "descricaoCurso; "
+		+ "ementaCurso; "
 		+ "coordenador"
 )
+//@Tab(properties = "nomeCurso, nomeCoordenador, cargaHoraria, statusCurso", 
+//	baseCondition = "select e.nomeCurso, p.nome as nomeCoordenador, e.cargaHoraria, e.statusCurso from Curso e, PessoaFisica p "
+//			+ "where e.coordenador.pessoaFisica.id = p.id")
+@Tab(properties = "nomeCurso") 
 public class Curso extends Identifiable {
 
 	@Column(name="nome_curso", nullable = false)
@@ -22,6 +26,8 @@ public class Curso extends Identifiable {
 	
 	@ManyToOne(optional = false)
 	@JoinColumn(name="id_coordenador", nullable = false)
+	//@ReferenceView(value = "simples")
+	//@NoCreate @NoModify
 	private Colaborador coordenador;
 
 	@Column(name = "carga_horaria")
@@ -36,7 +42,7 @@ public class Curso extends Identifiable {
 	@Column(columnDefinition = "text", name = "descricao_curso")
 	@Required
 	@Stereotype("MEMO")
-	private String descricaoCurso;
+	private String ementaCurso;
 
 	public String getNomeCurso() {
 		return nomeCurso;
@@ -54,14 +60,6 @@ public class Curso extends Identifiable {
 		this.cargaHoraria = cargaHoraria;
 	}
 
-	public String getDescricaoCurso() {
-		return descricaoCurso;
-	}
-
-	public void setDescricaoCurso(String descricaoCurso) {
-		this.descricaoCurso = descricaoCurso;
-	}
-
 	public StatusCurso getStatusCurso() {
 		return statusCurso;
 	}
@@ -76,5 +74,13 @@ public class Curso extends Identifiable {
 
 	public void setCoordenador(Colaborador coordenador) {
 		this.coordenador = coordenador;
+	}
+
+	public String getEmentaCurso() {
+		return ementaCurso;
+	}
+
+	public void setEmentaCurso(String ementaCurso) {
+		this.ementaCurso = ementaCurso;
 	}
 }

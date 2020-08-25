@@ -10,6 +10,7 @@ import org.openxava.model.*;
 @Entity
 @Table(name="colaborador")
 @View(members = "matricula; cargo; dataAdmissao, dataDesligamento; equipe; pessoaFisica")
+@View(name = "simples", members = "matricula; cargo; dataAdmissao, dataDesligamento; equipe; pessoaFisica")
 @Tab(properties = "matricula, pessoaFisica.nome, cargo.denominacao, equipe.nomeEquipe, dataAdmissao")
 public class Colaborador extends Identifiable {
 	

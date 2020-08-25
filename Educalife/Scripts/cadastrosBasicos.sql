@@ -256,3 +256,19 @@ INSERT INTO educalife.colaborador
 (id, data_admissao, data_desligamento, matricula, id_cargo, id_equipe, id_pessoa_fisica)
 VALUES('2c9640817425dfa9017425e641ad0009', '2020-01-01', NULL, '34567', '2c9640817425a439017425a681b705f8', '2c9640817425dfa9017425e366d20000', '2c9640817425dfa9017425e604e20005');
 
+/* Cursos */
+INSERT INTO educalife.curso
+(id, carga_horaria, descricao_curso, nome_curso, status_curso, id_coordenador)
+VALUES('ff8081817426ec05017426ed300d0004', 40, 'Conceitos basico da versao mais recente da linguagem Java', 'Java basico', 'ATIVO', '2c9640817425dfa9017425e641ad0007');
+INSERT INTO educalife.curso
+(id, carga_horaria, descricao_curso, nome_curso, status_curso, id_coordenador)
+VALUES('ff8081817426fa81017426fe36a40004', 40, 'Conceitos avancados da versao atual do Java.', 'Java Avancado', 'ATIVO', '2c9640817425dfa9017425e641ad0008');
+INSERT INTO educalife.curso
+(id, carga_horaria, descricao_curso, nome_curso, status_curso, id_coordenador)
+VALUES('ff8081817426ec05017426eca1ab0001', 40, 'Lorem Ipsum', 'Java 5 Basico', 'INATIVO', '2c9640817425dfa9017425e641ad0007');
+INSERT INTO educalife.curso
+(id, carga_horaria, descricao_curso, nome_curso, status_curso, id_coordenador)
+VALUES('ff8081817426fa81017426fdc06a0001', 40, 'Lorem Ipsum', 'Java 5 Avancado', 'INATIVO', '2c9640817425dfa9017425e641ad0008');
+
+
+
