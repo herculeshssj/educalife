@@ -14,10 +14,7 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "ementaCurso; "
 		+ "coordenador"
 )
-//@Tab(properties = "nomeCurso, nomeCoordenador, cargaHoraria, statusCurso", 
-//	baseCondition = "select e.nomeCurso, p.nome as nomeCoordenador, e.cargaHoraria, e.statusCurso from Curso e, PessoaFisica p "
-//			+ "where e.coordenador.pessoaFisica.id = p.id")
-@Tab(properties = "nomeCurso") 
+@Tab(properties = "nomeCurso, coordenador.pessoaFisica.nome, cargaHoraria, statusCurso") 
 public class Curso extends Identifiable {
 
 	@Column(name="nome_curso", nullable = false)
@@ -27,7 +24,7 @@ public class Curso extends Identifiable {
 	@ManyToOne(optional = false)
 	@JoinColumn(name="id_coordenador", nullable = false)
 	//@ReferenceView(value = "simples")
-	//@NoCreate @NoModify
+	@NoCreate @NoModify
 	private Colaborador coordenador;
 
 	@Column(name = "carga_horaria")
