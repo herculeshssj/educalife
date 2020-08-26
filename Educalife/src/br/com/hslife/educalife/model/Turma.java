@@ -1,7 +1,6 @@
 package br.com.hslife.educalife.model;
 
 import java.time.*;
-import java.util.*;
 
 import javax.persistence.*;
 
@@ -10,7 +9,7 @@ import org.openxava.model.*;
 
 import br.com.hslife.educalife.enumeration.*;
 
-//@Entity
+@Entity
 @Table(name="turma")
 @View(members = "geral { nomeTurma; "
 		+ "numeroVagasInterno, numeroVagasExterno; "
@@ -19,8 +18,9 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "dataInicioInscricao, dataFimInscricao; "
 		+ "statusTurma }; "
 		+ "curso { curso }; "
-		+ "aulas { aulas }"
+		//+ "aulas { aulas }"
 )
+@Tab(properties = "nomeTurma, curso.nomeCurso, dataInicio, dataFim, statusTurma")
 public class Turma extends Identifiable {
 	
 	@Column(name="nome_turma", nullable = false)
@@ -29,6 +29,7 @@ public class Turma extends Identifiable {
 	
 	@ManyToOne(optional = false)
 	@JoinColumn(name="id_curso", nullable = false)
+	@NoCreate @NoModify
 	private Curso curso;
 	
 	@Column(name="numero_vagas_interno")
@@ -57,8 +58,8 @@ public class Turma extends Identifiable {
 	@Required
 	private StatusTurma statusTurma;
 	
-	@OneToMany(mappedBy = "turma")
-	private Collection<Aula> aulas;
+	//@OneToMany(mappedBy = "turma")
+	//private Collection<Aula> aulas;
 
 	public StatusTurma getStatusTurma() {
 		return statusTurma;
@@ -139,13 +140,4 @@ public class Turma extends Identifiable {
 	public void setDataFimInscricao(LocalDate dataFimInscricao) {
 		this.dataFimInscricao = dataFimInscricao;
 	}
-
-	public Collection<Aula> getAulas() {
-		return aulas;
-	}
-
-	public void setAulas(Collection<Aula> aulas) {
-		this.aulas = aulas;
-	}
-
 }
