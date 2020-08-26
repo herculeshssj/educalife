@@ -271,4 +271,70 @@ INSERT INTO educalife.curso
 VALUES('ff8081817426fa81017426fdc06a0001', 40, 'Lorem Ipsum', 'Java 5 Avancado', 'INATIVO', '2c9640817425dfa9017425e641ad0008');
 
 
+/* Localidades */
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c15f6920001', true, 'C01', 'Administrativo', '', '2c96408174216d0d0174216eccf50001');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c15f6920002', true, 'C02', 'Ensino', '', '2c96408174216d0d0174216eccf50001');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c15f6920003', true, 'C03', 'Diretoria', '', '2c96408174216d0d0174216eccf50001');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c15f6920004', true, 'C04', 'Recursos Humanos', '', '2c96408174216d0d0174216eccf50001');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c15f6920005', true, 'C05', 'Finanças', '', '2c96408174216d0d0174216eccf50001');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c15f6920006', true, 'C06', 'Sala 01', '', '2c96408174216d0d0174216eccf50001');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c15f6920007', true, 'C07', 'Sala 02', '', '2c96408174216d0d0174216eccf50001');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c15f6920008', true, 'C08', 'Sala 03', '', '2c96408174216d0d0174216eccf50001');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c15f6920009', true, 'C09', 'Auditório', '', '2c96408174216d0d0174216eccf50001');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c15f692000a', true, 'C10', 'Reunião', '', '2c96408174216d0d0174216eccf50001');
+
+
+
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c164cb90004', true, 'B01', 'Administrativo', '', '2c96408174216d0d01742170090b0005');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c164cb90005', true, 'B02', 'Ensino', '', '2c96408174216d0d01742170090b0005');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c164cb90006', true, 'B03', 'Pesquisa e Desenvolvimento', '', '2c96408174216d0d01742170090b0005');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c164cb90007', true, 'B04', 'Sala 01', '', '2c96408174216d0d01742170090b0005');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c164cb90008', true, 'B05', 'Sala 02', '', '2c96408174216d0d01742170090b0005');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c164cb90009', true, 'B06', 'Sala 03', '', '2c96408174216d0d01742170090b0005');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c164cb9000a', true, 'B07', 'Sala 04', '', '2c96408174216d0d01742170090b0005');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c164cb9000b', true, 'B08', 'Sala 05', '', '2c96408174216d0d01742170090b0005');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c164cb9000c', true, 'B09', 'Reunião', '', '2c96408174216d0d01742170090b0005');
+INSERT INTO educalife.localidade
+(id, ativo, codigo, descricao, observacao, id_unidade)
+VALUES('2c9c8081742c131401742c164cb9000d', true, 'B10', 'Auditório', '', '2c96408174216d0d01742170090b0005');
+
+
 
