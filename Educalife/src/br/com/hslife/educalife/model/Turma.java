@@ -11,16 +11,11 @@ import br.com.hslife.educalife.enumeration.*;
 
 @Entity
 @Table(name="turma")
-@View(members = "geral { nomeTurma; "
-		+ "numeroVagasInterno, numeroVagasExterno; "
-		+ "localAula; "
-		+ "dataInicio, dataFim; "
-		+ "dataInicioInscricao, dataFimInscricao; "
-		+ "statusTurma }; "
-		+ "curso { curso }; "
-		//+ "aulas { aulas }"
+@View(members = "geral { nomeTurma; modalidadeTurma; dataInicio; dataFim; dataInicioInscricao; dataFimInscricao; statusTurma } "
+		+ "curso { curso } "
+		+ "local { localAula } "
 )
-@Tab(properties = "nomeTurma, curso.nomeCurso, dataInicio, dataFim, statusTurma")
+@Tab(properties = "nomeTurma, curso.nomeCurso, modalidadeTurma, dataInicio, dataFim, statusTurma")
 public class Turma extends Identifiable {
 	
 	@Column(name="nome_turma", nullable = false)
@@ -32,14 +27,10 @@ public class Turma extends Identifiable {
 	@NoCreate @NoModify
 	private Curso curso;
 	
-	@Column(name="numero_vagas_interno")
-	private int numeroVagasInterno;
-	
-	@Column(name="numero_vagas_externo")
-	private int numeroVagasExterno;
-	
-	@Column(name="local_aula")
-	private String localAula;
+	@Enumerated(EnumType.STRING)
+	@Column(name="modalidade_turma", nullable = false)
+	@Required
+	private ModalidadeTurma modalidadeTurma;
 	
 	@Column(name="data_inicio", nullable = false)
 	private LocalDate dataInicio;
@@ -57,6 +48,11 @@ public class Turma extends Identifiable {
 	@Column(name = "status_turma", nullable = false)
 	@Required
 	private StatusTurma statusTurma;
+	
+	@ManyToOne
+	@JoinColumn(name="id_localidade", nullable = true)
+	@NoCreate @NoModify
+	private Localidade localAula;
 	
 	//@OneToMany(mappedBy = "turma")
 	//private Collection<Aula> aulas;
@@ -83,30 +79,6 @@ public class Turma extends Identifiable {
 
 	public void setCurso(Curso curso) {
 		this.curso = curso;
-	}
-
-	public int getNumeroVagasInterno() {
-		return numeroVagasInterno;
-	}
-
-	public void setNumeroVagasInterno(int numeroVagasInterno) {
-		this.numeroVagasInterno = numeroVagasInterno;
-	}
-
-	public int getNumeroVagasExterno() {
-		return numeroVagasExterno;
-	}
-
-	public void setNumeroVagasExterno(int numeroVagasExterno) {
-		this.numeroVagasExterno = numeroVagasExterno;
-	}
-
-	public String getLocalAula() {
-		return localAula;
-	}
-
-	public void setLocalAula(String localAula) {
-		this.localAula = localAula;
 	}
 
 	public LocalDate getDataInicio() {
@@ -139,5 +111,21 @@ public class Turma extends Identifiable {
 
 	public void setDataFimInscricao(LocalDate dataFimInscricao) {
 		this.dataFimInscricao = dataFimInscricao;
+	}
+
+	public ModalidadeTurma getModalidadeTurma() {
+		return modalidadeTurma;
+	}
+
+	public void setModalidadeTurma(ModalidadeTurma modalidadeTurma) {
+		this.modalidadeTurma = modalidadeTurma;
+	}
+
+	public Localidade getLocalAula() {
+		return localAula;
+	}
+
+	public void setLocalAula(Localidade localAula) {
+		this.localAula = localAula;
 	}
 }
