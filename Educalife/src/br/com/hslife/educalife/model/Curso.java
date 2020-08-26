@@ -11,8 +11,8 @@ import br.com.hslife.educalife.enumeration.*;
 @Table(name = "curso")
 @View(members = "nomeCurso; "
 		+ "cargaHoraria, statusCurso; "
-		+ "ementaCurso; "
-		+ "coordenador"
+		+ "coordenador;"
+		+ "ementaCurso "
 )
 @Tab(properties = "nomeCurso, coordenador.pessoaFisica.nome, cargaHoraria, statusCurso") 
 public class Curso extends Identifiable {
@@ -23,7 +23,7 @@ public class Curso extends Identifiable {
 	
 	@ManyToOne(optional = false)
 	@JoinColumn(name="id_coordenador", nullable = false)
-	//@ReferenceView(value = "simples")
+	@ReferenceView(value = "simples")
 	@NoCreate @NoModify
 	private Colaborador coordenador;
 
