@@ -1,6 +1,7 @@
 package br.com.hslife.educalife.model;
 
 import java.time.*;
+import java.util.*;
 
 import javax.persistence.*;
 
@@ -14,6 +15,7 @@ import br.com.hslife.educalife.enumeration.*;
 @View(members = "geral { nomeTurma; modalidadeTurma; dataInicio; dataFim; dataInicioInscricao; dataFimInscricao; statusTurma } "
 		+ "curso { curso } "
 		+ "local { localAula } "
+		+ "equipe { equipe }"
 )
 @Tab(properties = "nomeTurma, curso.nomeCurso, modalidadeTurma, dataInicio, dataFim, statusTurma")
 public class Turma extends Identifiable {
@@ -55,8 +57,9 @@ public class Turma extends Identifiable {
 	@NoCreate @NoModify
 	private Localidade localAula;
 	
-	//@OneToMany(mappedBy = "turma")
-	//private Collection<Aula> aulas;
+	@ElementCollection
+	@ListProperties("pessoaFisica, funcaoEquipe, ministraAula")
+	private Collection<Equipe> equipe;
 
 	public StatusTurma getStatusTurma() {
 		return statusTurma;
@@ -128,5 +131,13 @@ public class Turma extends Identifiable {
 
 	public void setLocalAula(Localidade localAula) {
 		this.localAula = localAula;
+	}
+
+	public Collection<Equipe> getEquipe() {
+		return equipe;
+	}
+
+	public void setEquipe(Collection<Equipe> equipe) {
+		this.equipe = equipe;
 	}
 }
