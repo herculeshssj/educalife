@@ -24,6 +24,7 @@ public class Turma extends Identifiable {
 	
 	@ManyToOne(optional = false)
 	@JoinColumn(name="id_curso", nullable = false)
+	@ReferenceView(value = "view_in_turma")
 	@NoCreate @NoModify
 	private Curso curso;
 	

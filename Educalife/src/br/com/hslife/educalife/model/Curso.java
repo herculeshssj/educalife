@@ -11,7 +11,13 @@ import br.com.hslife.educalife.enumeration.*;
 @Table(name = "curso")
 @View(members = "nomeCurso; "
 		+ "cargaHoraria, statusCurso; "
+		+ "nomeCoordenador; "
 		+ "coordenador;"
+		+ "ementaCurso "
+)
+@View(name = "view_in_turma", members = "nomeCurso; "
+		+ "nomeCoordenador; "
+		+ "cargaHoraria, statusCurso; "
 		+ "ementaCurso "
 )
 @Tab(properties = "nomeCurso, coordenador.pessoaFisica.nome, cargaHoraria, statusCurso") 
@@ -40,6 +46,16 @@ public class Curso extends Identifiable {
 	@Required
 	@Stereotype("MEMO")
 	private String ementaCurso;
+	
+	@Depends("coordenador")
+	public String getNomeCoordenador() {
+		if (this.coordenador != null) {
+			if (this.coordenador.getPessoaFisica() != null) {
+				return this.coordenador.getPessoaFisica().getNome();
+			}
+		}
+		return "";
+	}
 
 	public String getNomeCurso() {
 		return nomeCurso;
