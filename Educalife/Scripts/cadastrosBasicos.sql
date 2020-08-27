@@ -334,3 +334,66 @@ VALUES('2c9c8081742c131401742c164cb9000d', true, 'B10', 'Auditório', '', '2c964
 
 /* Turmas */
 
+INSERT INTO educalife.turma
+(id, data_fim, data_fim_inscricao, data_inicio, data_inicio_inscricao, modalidade_turma, nome_turma, status_turma, id_curso, id_localidade)
+VALUES('2c9c8081743156470174315d94ae0012', '2020-10-31', '2020-09-25', '2020-10-01', '2020-09-15', 'PRESENCIAL', 'Java Básico - Turma A', 'ATIVO', 'ff8081817426ec05017426ed300d0004', '2c9c8081742c131401742c15f6920006');
+INSERT INTO educalife.turma
+(id, data_fim, data_fim_inscricao, data_inicio, data_inicio_inscricao, modalidade_turma, nome_turma, status_turma, id_curso, id_localidade)
+VALUES('2c9c8081743156470174315f9e1a0017', '2020-10-31', '2020-09-25', '2020-10-01', '2020-09-15', 'PRESENCIAL', 'Java Básico - Turma B', 'ATIVO', 'ff8081817426ec05017426ed300d0004', '2c9c8081742c131401742c15f6920007');
+INSERT INTO educalife.turma
+(id, data_fim, data_fim_inscricao, data_inicio, data_inicio_inscricao, modalidade_turma, nome_turma, status_turma, id_curso, id_localidade)
+VALUES('2c9c808174315647017431618823001d', '2020-10-31', '2020-05-25', '2020-10-01', '2020-09-15', 'PRESENCIAL', 'Java Avançado - Turma A', 'ATIVO', 'ff8081817426fa81017426fe36a40004', '2c9c8081742c131401742c164cb90007');
+INSERT INTO educalife.turma
+(id, data_fim, data_fim_inscricao, data_inicio, data_inicio_inscricao, modalidade_turma, nome_turma, status_turma, id_curso, id_localidade)
+VALUES('2c9c808174315647017431638cc40025', '2020-10-31', '2020-09-25', '2020-10-01', '2020-09-15', 'PRESENCIAL', 'Java Avançado - Turma B', 'ATIVO', 'ff8081817426fa81017426fe36a40004', '2c9c8081742c131401742c164cb90008');
+
+
+INSERT INTO educalife.turma_equipe
+(turma_id, funcao_equipe, ministra_aula, id_pessoa_fisica)
+VALUES('2c9c8081743156470174315d94ae0012', 'COORDENADOR', true, '2c9640817425dfa9017425e604e20003');
+INSERT INTO educalife.turma_equipe
+(turma_id, funcao_equipe, ministra_aula, id_pessoa_fisica)
+VALUES('2c9c8081743156470174315d94ae0012', 'INSTRUTOR', true, '2c9640817425dfa9017425e604e20005');
+INSERT INTO educalife.turma_equipe
+(turma_id, funcao_equipe, ministra_aula, id_pessoa_fisica)
+VALUES('2c9c8081743156470174315f9e1a0017', 'COORDENADOR', true, '2c9640817425dfa9017425e604e20003');
+INSERT INTO educalife.turma_equipe
+(turma_id, funcao_equipe, ministra_aula, id_pessoa_fisica)
+VALUES('2c9c8081743156470174315f9e1a0017', 'INSTRUTOR', true, '2c9640817425dfa9017425e604e20005');
+INSERT INTO educalife.turma_equipe
+(turma_id, funcao_equipe, ministra_aula, id_pessoa_fisica)
+VALUES('2c9c808174315647017431618823001d', 'COORDENADOR', true, '2c9640817425dfa9017425e604e20004');
+INSERT INTO educalife.turma_equipe
+(turma_id, funcao_equipe, ministra_aula, id_pessoa_fisica)
+VALUES('2c9c808174315647017431618823001d', 'TUTOR', false, '2c9640817425dfa9017425e604e20005');
+INSERT INTO educalife.turma_equipe
+(turma_id, funcao_equipe, ministra_aula, id_pessoa_fisica)
+VALUES('2c9c808174315647017431638cc40025', 'COORDENADOR', false, '2c9640817425dfa9017425e604e20004');
+INSERT INTO educalife.turma_equipe
+(turma_id, funcao_equipe, ministra_aula, id_pessoa_fisica)
+VALUES('2c9c808174315647017431638cc40025', 'INSTRUTOR', true, '2c9640817425dfa9017425e604e20005');
+
+
+
+INSERT INTO educalife.turma_ofertavagas
+(turma_id, numero_vaga, publico_alvo)
+VALUES('2c9c8081743156470174315d94ae0012', 40, 'GERAL');
+INSERT INTO educalife.turma_ofertavagas
+(turma_id, numero_vaga, publico_alvo)
+VALUES('2c9c8081743156470174315f9e1a0017', 40, 'GERAL');
+INSERT INTO educalife.turma_ofertavagas
+(turma_id, numero_vaga, publico_alvo)
+VALUES('2c9c808174315647017431618823001d', 10, 'INTERNO');
+INSERT INTO educalife.turma_ofertavagas
+(turma_id, numero_vaga, publico_alvo)
+VALUES('2c9c808174315647017431618823001d', 15, 'EXTERNO');
+INSERT INTO educalife.turma_ofertavagas
+(turma_id, numero_vaga, publico_alvo)
+VALUES('2c9c808174315647017431638cc40025', 5, 'INTERNO');
+INSERT INTO educalife.turma_ofertavagas
+(turma_id, numero_vaga, publico_alvo)
+VALUES('2c9c808174315647017431638cc40025', 10, 'EXTERNO');
+
+
+
+
