@@ -239,22 +239,17 @@ INSERT INTO educalife.departamento
 VALUES('2c964081742176a3017421780934000e', 'Pesquisa e Desenvolvimento', '2c96408174216d0d01742170090b0005');
 
 
-/* Equipe */
-INSERT INTO educalife.equipe
-(id, metas_equipe, ministra_aula, nome_equipe, id_departamento)
-VALUES('2c9640817425dfa9017425e366d20000', 'Lorem Ipsum', true, 'Instrutores - Curso Java', '2c964081742176a3017421774b760002');
-
 
 /* Coordenador de curso */
 INSERT INTO educalife.colaborador
-(id, data_admissao, data_desligamento, matricula, id_cargo, id_equipe, id_pessoa_fisica)
-VALUES('2c9640817425dfa9017425e641ad0007', '2020-01-01', NULL, '12345', '2c9640817425a439017425a681b705f8', '2c9640817425dfa9017425e366d20000', '2c9640817425dfa9017425e604e20003');
+(id, data_admissao, data_desligamento, matricula, id_cargo, id_departamento, id_pessoa_fisica)
+VALUES('2c9640817425dfa9017425e641ad0007', '2020-01-01', NULL, '12345', '2c9640817425a439017425a681b705f8', '2c964081742176a3017421774b760002', '2c9640817425dfa9017425e604e20003');
 INSERT INTO educalife.colaborador
-(id, data_admissao, data_desligamento, matricula, id_cargo, id_equipe, id_pessoa_fisica)
-VALUES('2c9640817425dfa9017425e641ad0008', '2020-01-01', NULL, '23456', '2c9640817425a439017425a681b705f8', '2c9640817425dfa9017425e366d20000', '2c9640817425dfa9017425e604e20004');
+(id, data_admissao, data_desligamento, matricula, id_cargo, id_departamento, id_pessoa_fisica)
+VALUES('2c9640817425dfa9017425e641ad0008', '2020-01-01', NULL, '23456', '2c9640817425a439017425a681b705f8', '2c964081742176a3017421774b760002', '2c9640817425dfa9017425e604e20004');
 INSERT INTO educalife.colaborador
-(id, data_admissao, data_desligamento, matricula, id_cargo, id_equipe, id_pessoa_fisica)
-VALUES('2c9640817425dfa9017425e641ad0009', '2020-01-01', NULL, '34567', '2c9640817425a439017425a681b705f8', '2c9640817425dfa9017425e366d20000', '2c9640817425dfa9017425e604e20005');
+(id, data_admissao, data_desligamento, matricula, id_cargo, id_departamento, id_pessoa_fisica)
+VALUES('2c9640817425dfa9017425e641ad0009', '2020-01-01', NULL, '34567', '2c9640817425a439017425a681b705f8', '2c964081742176a3017421774b760002', '2c9640817425dfa9017425e604e20005');
 
 /* Cursos */
 INSERT INTO educalife.curso
@@ -337,4 +332,5 @@ INSERT INTO educalife.localidade
 VALUES('2c9c8081742c131401742c164cb9000d', true, 'B10', 'Auditório', '', '2c96408174216d0d01742170090b0005');
 
 
+/* Turmas */
 

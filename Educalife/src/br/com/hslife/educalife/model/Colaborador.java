@@ -9,9 +9,9 @@ import org.openxava.model.*;
 
 @Entity
 @Table(name="colaborador")
-@View(members = "matricula; cargo; dataAdmissao, dataDesligamento; equipe; pessoaFisica")
-@View(name = "simples", members = "matricula; cargo; dataAdmissao, dataDesligamento; equipe")
-@Tab(properties = "matricula, pessoaFisica.nome, cargo.denominacao, equipe.nomeEquipe, dataAdmissao")
+@View(members = "matricula; cargo; dataAdmissao, dataDesligamento; departamento; pessoaFisica")
+@View(name = "simples", members = "matricula; cargo; dataAdmissao, dataDesligamento; departamento")
+@Tab(properties = "matricula, pessoaFisica.nome, cargo.denominacao, departamento.nomeDepartamento, departamento.unidade.nomeUnidade, dataAdmissao")
 public class Colaborador extends Identifiable {
 	
 	@Column(nullable = false)
@@ -33,10 +33,10 @@ public class Colaborador extends Identifiable {
 	private LocalDate dataDesligamento;
 	
 	@ManyToOne
-	@JoinColumn(name="id_equipe", nullable = false)
-	@DescriptionsList(descriptionProperties = "nomeEquipe, departamento.nomeDepartamento", order = "${nomeEquipe} asc")
+	@JoinColumn(name="id_departamento", nullable = false)
+	@DescriptionsList(descriptionProperties = "nomeDepartamento, unidade.nomeUnidade", order = "${nomeDepartamento} asc")
 	@NoCreate @NoModify
-	private Equipe equipe;
+	private Departamento departamento;
 
 	@ManyToOne
 	@JoinColumn(name="id_pessoa_fisica", nullable = false)
@@ -82,11 +82,11 @@ public class Colaborador extends Identifiable {
 		this.cargo = cargo;
 	}
 
-	public Equipe getEquipe() {
-		return equipe;
+	public Departamento getDepartamento() {
+		return departamento;
 	}
 
-	public void setEquipe(Equipe equipe) {
-		this.equipe = equipe;
+	public void setDepartamento(Departamento departamento) {
+		this.departamento = departamento;
 	}
 }
