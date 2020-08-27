@@ -16,6 +16,7 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "curso { curso } "
 		+ "local { localAula } "
 		+ "equipe { equipe }"
+		+ "vagas { ofertaVagas } "
 )
 @Tab(properties = "nomeTurma, curso.nomeCurso, modalidadeTurma, dataInicio, dataFim, statusTurma")
 public class Turma extends Identifiable {
@@ -60,6 +61,10 @@ public class Turma extends Identifiable {
 	@ElementCollection
 	@ListProperties("pessoaFisica, funcaoEquipe, ministraAula")
 	private Collection<Equipe> equipe;
+	
+	@ElementCollection
+	@ListProperties("numeroVaga, publicoAlvo")
+	private Collection<OfertaVaga> ofertaVagas;
 
 	public StatusTurma getStatusTurma() {
 		return statusTurma;
@@ -139,5 +144,13 @@ public class Turma extends Identifiable {
 
 	public void setEquipe(Collection<Equipe> equipe) {
 		this.equipe = equipe;
+	}
+
+	public Collection<OfertaVaga> getOfertaVagas() {
+		return ofertaVagas;
+	}
+
+	public void setOfertaVagas(Collection<OfertaVaga> ofertaVagas) {
+		this.ofertaVagas = ofertaVagas;
 	}
 }
