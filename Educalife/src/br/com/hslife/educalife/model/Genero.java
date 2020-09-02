@@ -8,7 +8,7 @@ import org.openxava.model.*;
 
 @Entity
 @Table(name="genero")
-@Audited
+//@Audited
 public class Genero extends Identifiable {
 
 	@Column

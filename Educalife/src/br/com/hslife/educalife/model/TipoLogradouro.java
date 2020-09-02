@@ -8,7 +8,7 @@ import org.openxava.model.*;
 
 @Entity
 @Table(name = "tipo_logradouro")
-@Audited
+//@Audited
 public class TipoLogradouro extends Identifiable {
 	
 	@Required

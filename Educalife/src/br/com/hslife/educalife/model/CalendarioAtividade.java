@@ -10,7 +10,7 @@ import org.openxava.model.*;
 
 @Entity
 @Table(name="calendario_atividade")
-@Audited
+//@Audited
 public class CalendarioAtividade extends Identifiable {
 	
 	@Column(nullable = false)

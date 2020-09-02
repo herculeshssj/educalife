@@ -10,7 +10,7 @@ import org.openxava.model.*;
 
 @Entity
 @Table(name="usuario")
-@Audited
+//@Audited
 public class Usuario extends Identifiable {
 	
 	@Column(nullable = false)
