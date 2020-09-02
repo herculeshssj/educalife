@@ -20,8 +20,7 @@
 					"postgresql.dd.plain.string": "false",
 					"postgresql.dd.tag.string": "false"
 				},
-				"auth-model": "native",
-				"handlers": {}
+				"auth-model": "native"
 			},
 			"custom-properties": {
 				"database.meta.separate.connection": "false"
@@ -46,7 +45,32 @@
 					"postgresql.dd.plain.string": "false",
 					"postgresql.dd.tag.string": "false"
 				},
-				"auth-model": "native",
+				"auth-model": "native"
+			},
+			"custom-properties": {
+				"database.meta.separate.connection": "false"
+			}
+		},
+		"microsoft-174513046eb-68765f3c858991dc": {
+			"provider": "sqlserver",
+			"driver": "microsoft",
+			"name": "Educalife",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"configuration": {
+				"host": "educalife-mssql",
+				"port": "1433",
+				"database": "Educalife",
+				"url": "jdbc:sqlserver://;serverName=educalife-mssql;databaseName=Educalife",
+				"type": "dev",
+				"properties": {
+					"trustServerCertificate": "true"
+				},
+				"provider-properties": {
+					"@dbeaver-authentication@": "SQL_SERVER_PASSWORD",
+					"@dbeaver-show-all-schemas@": "true"
+				},
 				"handlers": {}
 			},
 			"custom-properties": {
