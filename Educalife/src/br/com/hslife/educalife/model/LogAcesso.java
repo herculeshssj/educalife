@@ -7,7 +7,7 @@ import javax.persistence.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
-@Entity
+//@Entity
 @Table(name="log_acesso", schema = "audit")
 @Tab(properties = "dataHora, usuario, ip, acao, entidade, idEntidade")
 public class LogAcesso extends Identifiable {

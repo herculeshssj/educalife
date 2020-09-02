@@ -67,12 +67,14 @@ public class LogAccessTrackerProvider implements IAccessTrackerProvider {
 			f.close();
 
 			// Salvando o log na base
+			/*
 			if (!modelName.equalsIgnoreCase("LogAcesso")) {
 				LogAcesso logAcesso = new LogAcesso(new Timestamp(new Date().getTime()), Users.getCurrent(),
 						Users.getCurrentIP(), action.toString(), modelName, key, changes);
 
 				XPersistence.getManager().persist(logAcesso);
 			}
+			*/
 			
 		} catch (Exception ex) {
 			log.warn(XavaResources.getString("log_tracker_log_failed"), ex);
