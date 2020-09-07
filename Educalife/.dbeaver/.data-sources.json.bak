@@ -54,7 +54,7 @@
 		"microsoft-174513046eb-68765f3c858991dc": {
 			"provider": "sqlserver",
 			"driver": "microsoft",
-			"name": "master",
+			"name": "Educalife",
 			"save-password": true,
 			"show-system-objects": true,
 			"read-only": false,
