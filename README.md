@@ -3,6 +3,10 @@ Educalife
 
 Sistema de Gestão Acadêmica
 
+Desenvolvido com a plataforma RAD OpenXava 6.4.
+
+Compatível com MySQL, MariaDB, PostgreSQL e SQL Server, SQLite, Oracle, Firebird, DB2
+
 ### Criação do container PostgreSQL
 
 ```
