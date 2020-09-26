@@ -1,7 +1,6 @@
 package br.com.hslife.educalife.model;
 
 import java.time.*;
-import java.util.*;
 
 import javax.persistence.*;
 
@@ -10,30 +9,32 @@ import org.openxava.model.*;
 
 import br.com.hslife.educalife.enumeration.*;
 
-//@Entity
+@Entity
 @Table(name="inscricao_turma")
-@View(members = "geral { aluno; "
-		+ "turma; "
-		+ "dataInscricao; "
-		+ "motivoInscricao; "
-		+ "statusInscricao }; "
-		+ "frequencia { frequenciaAula } ;"
+@View(members = "aluno { pessoaFisica; motivoInscricao} "
+		+ "turma { numeroInscricao, dataInscricao, statusInscricao; turma } "
 )
+@Tab(properties = "pessoaFisica.nome, numeroInscricao, turma.nomeTurma, dataInscricao, statusInscricao")
 public class InscricaoTurma extends Identifiable {
 	
 	@ManyToOne(optional = false)
-	@JoinColumn(name="id_aluno", nullable = false)
-	private PessoaFisica aluno;
+	@JoinColumn(name="id_pessoa_fisica", nullable = false)
+	private PessoaFisica pessoaFisica;
 	
 	@ManyToOne(optional = false)
 	@JoinColumn(name="id_turma", nullable = false)
+	@NoCreate @NoModify
 	private Turma turma;
+	
+	@Column(name="numero_inscricao", nullable = false)
+	@Required
+	private long numeroInscricao;
 	
 	@Column(name="data_inscricao", nullable = false)
 	@Required
 	private LocalDate dataInscricao;
 	
-	@Column(name="motivo_inscricao", nullable = false)
+	@Column(columnDefinition = "text", name="motivo_inscricao", nullable = false)
 	@Required
 	@Stereotype("MEMO")
 	private String motivoInscricao;
@@ -43,16 +44,8 @@ public class InscricaoTurma extends Identifiable {
 	@Required
 	private StatusInscricao statusInscricao;
 	
-	@OneToMany(mappedBy = "inscricaoTurma")
-	private Collection<Frequencia> frequenciaAula;
-
-	public PessoaFisica getAluno() {
-		return aluno;
-	}
-
-	public void setAluno(PessoaFisica aluno) {
-		this.aluno = aluno;
-	}
+//	@OneToMany(mappedBy = "inscricaoTurma")
+//	private Collection<Frequencia> frequenciaAula;
 
 	public Turma getTurma() {
 		return turma;
@@ -86,11 +79,29 @@ public class InscricaoTurma extends Identifiable {
 		this.statusInscricao = statusInscricao;
 	}
 
-	public Collection<Frequencia> getFrequenciaAula() {
-		return frequenciaAula;
+	public long getNumeroInscricao() {
+		return numeroInscricao;
 	}
 
-	public void setFrequenciaAula(Collection<Frequencia> frequenciaAula) {
-		this.frequenciaAula = frequenciaAula;
+	public void setNumeroInscricao(long numeroInscricao) {
+		this.numeroInscricao = numeroInscricao;
 	}
+
+	public PessoaFisica getPessoaFisica() {
+		return pessoaFisica;
+	}
+
+	public void setPessoaFisica(PessoaFisica pessoaFisica) {
+		this.pessoaFisica = pessoaFisica;
+	}
+	
+	
+
+//	public Collection<Frequencia> getFrequenciaAula() {
+//		return frequenciaAula;
+//	}
+//
+//	public void setFrequenciaAula(Collection<Frequencia> frequenciaAula) {
+//		this.frequenciaAula = frequenciaAula;
+//	}
 }
