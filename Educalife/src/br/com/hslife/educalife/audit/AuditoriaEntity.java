@@ -7,9 +7,9 @@ import javax.persistence.*;
 
 import org.hibernate.envers.*;
 
-//@Entity
-//@Table(name="auditoria", schema = "audit")
-//@RevisionEntity(AuditoriaListener.class)
+@Entity
+@Table(name="auditoria", schema = "audit")
+@RevisionEntity(AuditoriaListener.class)
 public class AuditoriaEntity implements Serializable {
 
 	/**

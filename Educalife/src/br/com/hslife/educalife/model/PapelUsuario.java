@@ -4,7 +4,6 @@ import java.util.*;
 
 import javax.persistence.*;
 
-import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
