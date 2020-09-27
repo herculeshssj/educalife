@@ -9,7 +9,7 @@ import org.openxava.model.*;
 
 @Entity
 @Table(name="usuario")
-//@Audited
+@Tab(properties = "login, ativo")
 public class Usuario extends Identifiable {
 	
 	@Column(nullable = false)
