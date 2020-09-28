@@ -36,10 +36,21 @@ manager.setModuleName(module); // In order to show the correct description in he
 <!DOCTYPE html>
 
 <head>
+	<!-- Bootstrap -->
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width,initial-scale=1">
+	  <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/naviox/css/bootstrap.css">
+	  <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	  <![endif]-->
+	  <!-- end Bootstrap -->
 	<title><%=title%></title>
 	<link href="<%=request.getContextPath()%>/xava/style/layout.css?ox=<%=oxVersion%>" rel="stylesheet" type="text/css">
     <link href="<%=request.getContextPath()%>/xava/style/<%=Themes.getCSS(request)%>?ox=<%=oxVersion%>" rel="stylesheet" type="text/css"> 
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/xava/style/materialdesignicons.css?ox=<%=oxVersion%>">
+	<link href="<%=request.getContextPath()%>/naviox/style/naviox.css" rel="stylesheet" type="text/css">
 	<script type='text/javascript' src='<%=request.getContextPath()%>/xava/js/dwr-engine.js?ox=<%=oxVersion%>'></script>
 	<script type='text/javascript' src='<%=request.getContextPath()%>/dwr/interface/Modules.js?ox=<%=oxVersion%>'></script>
 	<script type='text/javascript' src='<%=request.getContextPath()%>/dwr/interface/Folders.js?ox=<%=oxVersion%>'></script>
@@ -48,12 +59,11 @@ manager.setModuleName(module); // In order to show the correct description in he
 <body <%=XavaStyle.getBodyClass(request)%>>
 	
 	<div id="main"> 
-				
-		<% if (hasModules) { %>
-			<jsp:include page="leftMenu.jsp"/>
-		<% } %>
 		
 		<div class="module-wrapper">
+			<% if (hasModules) { %>
+				<jsp:include page="mainNavigation.jsp"/>
+			<% } %>
 			<div id="module_header">
 				<%String moduleTitle = hasModules?modules.getCurrentModuleLabel():modules.getCurrentModuleDescription(request);%>
 				<span id="module_title"><%=moduleTitle%></span> 
@@ -110,6 +120,10 @@ manager.setModuleName(module); // In order to show the correct description in he
 		naviox.init();
 	});
 	</script>
+	<!-- Bootstrap -->	
+	<script src="<%=request.getContextPath()%>/naviox/js/jquery.js"></script>
+	<script src="<%=request.getContextPath()%>/naviox/js/bootstrap.js"></script>
+	<!-- End Bootstrap -->
 	
 
 </body>
