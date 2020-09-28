@@ -7,7 +7,7 @@ import javax.persistence.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
-//@Entity
+@Entity
 @Table(name="aula")
 public class Aula extends Identifiable{
 	
@@ -23,7 +23,7 @@ public class Aula extends Identifiable{
 	@Required
 	private String horarioFim;
 	
-	@ManyToOne(optional = false)
+	@ManyToOne
 	@JoinColumn(name="id_turma", nullable = false)
 	private Turma turma;
 

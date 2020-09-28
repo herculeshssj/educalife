@@ -395,6 +395,63 @@ INSERT INTO educalife.turma_ofertavagas
 VALUES('2c9c808174315647017431638cc40025', 10, 'EXTERNO');
 
 
+/* Aulas */
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d50468ab0001', '2020-10-07', '13:00', '09:00', '2c9c8081743156470174315d94ae0012');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d505be630007', '2020-10-14', '13:00', '09:00', '2c9c8081743156470174315d94ae0012');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d505dda0000a', '2020-10-21', '13:00', '09:00', '2c9c8081743156470174315d94ae0012');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d505fb6b000d', '2020-10-28', '13:00', '09:00', '2c9c8081743156470174315d94ae0012');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d50722fc0014', '2020-10-07', '13:00', '09:00', '2c9c8081743156470174315f9e1a0017');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d50749fa0017', '2020-10-14', '13:00', '09:00', '2c9c8081743156470174315f9e1a0017');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d5076528001a', '2020-10-21', '13:00', '09:00', '2c9c8081743156470174315f9e1a0017');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d507804d001d', '2020-10-28', '13:00', '09:00', '2c9c8081743156470174315f9e1a0017');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d507c3880021', '2020-10-01', '17:00', '13:00', '2c9c808174315647017431618823001d');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d507ebd40024', '2020-10-08', '17:00', '13:00', '2c9c808174315647017431618823001d');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d5080c920027', '2020-10-15', '17:00', '13:00', '2c9c808174315647017431618823001d');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d5082fe2002a', '2020-10-22', '17:00', '13:00', '2c9c808174315647017431618823001d');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d5085378002d', '2020-10-31', '17:00', '13:00', '2c9c808174315647017431618823001d');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d5089e020031', '2020-10-07', '17:00', '13:00', '2c9c808174315647017431638cc40025');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d508b9e80034', '2020-10-14', '17:00', '13:00', '2c9c808174315647017431638cc40025');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d508daa10037', '2020-10-21', '17:00', '13:00', '2c9c808174315647017431638cc40025');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d508eeb8003a', '2020-10-28', '17:00', '13:00', '2c9c808174315647017431638cc40025');
+INSERT INTO educalife.aula
+(id, data_aula, horario_fim, horario_inicio, id_turma)
+VALUES('4028b88174d504040174d509054f003d', '2020-10-31', '13:00', '09:00', '2c9c808174315647017431638cc40025');
+
+
 
 
 /*** Alunos ***/

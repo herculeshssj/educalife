@@ -23,18 +23,21 @@ public class LogAccessTrackerProvider implements IAccessTrackerProvider {
 	private static String fileName;
 
 	@SuppressWarnings("rawtypes")
+	@Override
 	public void consulted(String modelName, Map key) {
 		log("CONSULTED: user=" + Users.getCurrent() + ", model=" + modelName + ", key=" + key, LogOperacao.CONSULTA,
 				modelName, key.toString(), null);
 	}
 
 	@SuppressWarnings("rawtypes")
+	@Override
 	public void created(String modelName, Map key) {
 		log("CREATED: user=" + Users.getCurrent() + ", model=" + modelName + ", key=" + key, LogOperacao.CRIACAO,
 				modelName, key.toString(), null);
 	}
 
 	@SuppressWarnings("rawtypes")
+	@Override
 	public void modified(String modelName, Map key, Map<String, Object> oldChangedValues,
 			Map<String, Object> newChangedValues) {
 		StringBuffer changes = new StringBuffer();
@@ -52,6 +55,7 @@ public class LogAccessTrackerProvider implements IAccessTrackerProvider {
 	}
 
 	@SuppressWarnings("rawtypes")
+	@Override
 	public void removed(String modelName, Map key) {
 		log("REMOVED: user=" + Users.getCurrent() + ", model=" + modelName + ", key=" + key, LogOperacao.EXCLUSAO,
 				modelName, key.toString(), null);
