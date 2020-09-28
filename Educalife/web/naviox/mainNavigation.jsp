@@ -1,6 +1,8 @@
 <%@include file="../xava/imports.jsp"%>
 
 <%@page import="java.util.Iterator"%>
+<%@page import="java.util.Map"%>
+<%@page import="java.util.HashMap"%>
 <%@page import="org.openxava.application.meta.MetaModule"%>
 <%@page import="org.openxava.util.Users"%>
 <%@page import="org.openxava.util.Is"%>
@@ -26,67 +28,72 @@
     <div class="collapse navbar-collapse" id="main-navbar-collapse">
  <% 
 if (modules.hasModules(request)) {
-	MetaModule module = null;
-	String description = null;
+	
+	Map<String, MetaModule> menuModulos = new HashMap<>();
 	for (Iterator i = modules.getAll(request).iterator(); i.hasNext(); ) {
 		MetaModule m = (MetaModule)i.next();
-		if (m.getName().equals("Banco")) {
-			module = (MetaModule)m;
-			description = module.getDescription(request.getLocale());
-			break;
-		}
+		menuModulos.put(m.getName(), m);
 	}
-	
 
  %>
       <ul class="nav navbar-nav">
       	<li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          	<xava:message key="cadastrosBasicos"/>
+          <a href="#" class="dropdown-toggle sign-in" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          	<xava:message key="menuCadastros"/>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="<%=modules.getModuleURI(request, module)%>?init=true" title="<%=description%>"><xava:message key="cadastroBanco"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Banco"))%>?init=true"><xava:message key="cadastroBanco"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Cargo"))%>?init=true"><xava:message key="cadastroCargo"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Deficiencia"))%>?init=true"><xava:message key="cadastroDeficiencia"/></a></li>            
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Escolaridade"))%>?init=true"><xava:message key="cadastroEscolaridade"/></a></li>
+			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("EstadoCivil"))%>?init=true"><xava:message key="cadastroEstadoCivil"/></a></li>
+			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("Etnia"))%>?init=true"><xava:message key="cadastroEtnia"/></a></li>
+			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("Genero"))%>?init=true"><xava:message key="cadastroGenero"/></a></li>
+			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("Pais"))%>?init=true"><xava:message key="cadastroPais"/></a></li>
+			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("TipoLogradouro"))%>?init=true"><xava:message key="cadastroTipoLogradouro"/></a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><xava:message key="hhrr"/></a>
+          <a href="#" class="dropdown-toggle sign-in" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          	<xava:message key="menuEnsino"/>
+          </a>
           <ul class="dropdown-menu">
-            <li><a href='#'><xava:message key="offices"/></a></li>
-            <li><a href='#'><xava:message key="employees"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Curso"))%>?init=true"><xava:message key="ensinoCurso"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Turma"))%>?init=true"><xava:message key="ensinoTurma"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("InscricaoTurma"))%>?init=true"><xava:message key="ensinoInscricao"/></a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><xava:message key="products"/></a>
+          <a href="#" class="dropdown-toggle sign-in" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          	<xava:message key="menuAdministracao"/>
+          </a>
           <ul class="dropdown-menu">
-            <li><a href='#'><xava:message key="productlines"/></a></li>
-            <li><a href='#'><xava:message key="products"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Empresa"))%>?init=true"><xava:message key="admEmpresa"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Unidade"))%>?init=true"><xava:message key="admUnidade"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Departamento"))%>?init=true"><xava:message key="admDepartamento"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Localidade"))%>?init=true"><xava:message key="admLocalidade"/></a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><xava:message key="orders"/></a>
+          <a href="#" class="dropdown-toggle sign-in" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          	<xava:message key="menuPessoal"/>
+          </a>
           <ul class="dropdown-menu">
-            <li><a href='#'><xava:message key="customers"/></a></li>
-            <li><a href='#'><xava:message key="orders"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Colaborador"))%>?init=true"><xava:message key="pessoalColaborador"/></a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><xava:message key="payments"/></a>
+          <a href="#" class="dropdown-toggle sign-in" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          	<xava:message key="menuOpcao"/>
+          </a>
           <ul class="dropdown-menu">
-            <li><a href='#'><xava:message key="payments"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Usuario"))%>?init=true"><xava:message key="opcaoUsuario"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("PapelUsuario"))%>?init=true"><xava:message key="opcaoUsuarioPapel"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("LogAcesso"))%>?init=true"><xava:message key="opcaoLogAcesso"/></a></li>
           </ul>
         </li>
       </ul>
-	  <%
-    
-	  if (Is.emptyString(NaviOXPreferences.getInstance().getAutologinUser())) {
-	    String userName = Users.getCurrent();
-	   %>
-      <ul class="nav navbar-nav navbar-right">
- 	    <li><a  href="<%=request.getContextPath()%>/naviox/signOut.jsp" class="sign-in"><xava:message key="signout"/> (<%=userName%>)</a></li>
- 	    </ul>
-	<%
-	  }
-	%> <!-- no modules -->
+	   <!-- no modules -->
 <% } else { 
      if (Is.emptyString(NaviOXPreferences.getInstance().getAutologinUser())) {
 		  %>

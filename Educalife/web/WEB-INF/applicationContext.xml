@@ -22,7 +22,7 @@
  
     <!-- Configure parameters -->
     <task:scheduled-tasks scheduler="myScheduler">
-        <task:scheduled ref="busRoutesPumpService" method="pump" fixed-delay="10000" initial-delay="10000"/>
+        <task:scheduled ref="busRoutesPumpService" method="pump" fixed-delay="100000" initial-delay="100000"/>
     </task:scheduled-tasks>
  
 </beans>
