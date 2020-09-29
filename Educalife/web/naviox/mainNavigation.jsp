@@ -51,6 +51,7 @@ if (modules.hasModules(request)) {
 			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("Genero"))%>?init=true"><xava:message key="cadastroGenero"/></a></li>
 			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("Pais"))%>?init=true"><xava:message key="cadastroPais"/></a></li>
 			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("TipoLogradouro"))%>?init=true"><xava:message key="cadastroTipoLogradouro"/></a></li>
+			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("Order"))%>?init=true"><xava:message key="testOrder"/></a></li>
           </ul>
         </li>
         <li class="dropdown">
