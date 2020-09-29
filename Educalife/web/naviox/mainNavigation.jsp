@@ -62,6 +62,7 @@ if (modules.hasModules(request)) {
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Curso"))%>?init=true"><xava:message key="ensinoCurso"/></a></li>
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Turma"))%>?init=true"><xava:message key="ensinoTurma"/></a></li>
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("InscricaoTurma"))%>?init=true"><xava:message key="ensinoInscricao"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("DiarioClasse"))%>?init=true"><xava:message key="ensinoDiarioClasse"/></a></li>
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("HistoricoAluno"))%>?init=true"><xava:message key="ensinoHistoricoAluno"/></a></li>
           </ul>
         </li>

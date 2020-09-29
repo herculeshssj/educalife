@@ -2,15 +2,8 @@ package br.com.hslife.educalife.model;
 
 import javax.persistence.*;
 
-import org.openxava.model.*;
-
-//@Entity
-@Table(name="frequencia")
-public class Frequencia extends Identifiable {
-
-	@ManyToOne
-	@JoinColumn(name="id_inscricao_turma")
-	private InscricaoTurma inscricaoTurma;
+@Embeddable
+public class Frequencia {
 	
 	@ManyToOne
 	@JoinColumn(name="id_aula")
@@ -18,14 +11,6 @@ public class Frequencia extends Identifiable {
 	
 	@Column
 	private boolean compareceu;
-
-	public InscricaoTurma getInscricaoTurma() {
-		return inscricaoTurma;
-	}
-
-	public void setInscricaoTurma(InscricaoTurma inscricaoTurma) {
-		this.inscricaoTurma = inscricaoTurma;
-	}
 
 	public Aula getAula() {
 		return aula;
