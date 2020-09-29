@@ -6,7 +6,7 @@
 
 	<!-- Diário de Classe -->
 	<controller name="FrequenciaAula">
-		<action name="createInvoice" mode="detail" class="br.com.hslife.educalife.action.TestAction"/>
+		<action name="salvarFrequencia" mode="detail" class="br.com.hslife.educalife.action.SalvarFrequenciaAction"/>
 	</controller>
     
     <!-- Environment variable:
