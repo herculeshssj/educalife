@@ -534,3 +534,42 @@ VALUES('4028b88174cbb2ab0174cbbc354e003b', '2020-10-11', 'Lorem ipsum dolor sit 
 INSERT INTO educalife.inscricao_turma
 (id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
 VALUES('4028b88174cbb2ab0174cbbc8c89003f', '2020-10-12', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 121212, 'PENDENTE', '4028b88174cb9e230174cba1e5e6000e', '2c9c808174315647017431638cc40025');
+
+
+/* Histórico do Aluno */
+INSERT INTO Educalife.Educalife.historico_aluno
+(id, frequencia_aula, nota_final, situacao_final_aluno, id_inscricao_turma)
+VALUES('4028b88174da158f0174da166d500001', 70.00, 7.00, 'APROVADO', '4028b88174cbb2ab0174cbb35e060002');
+INSERT INTO Educalife.Educalife.historico_aluno
+(id, frequencia_aula, nota_final, situacao_final_aluno, id_inscricao_turma)
+VALUES('4028b88174da158f0174da16d4c60007', 60.00, 6.00, 'APROVADO', '4028b88174cbb2ab0174cbb74fcb0007');
+INSERT INTO Educalife.Educalife.historico_aluno
+(id, frequencia_aula, nota_final, situacao_final_aluno, id_inscricao_turma)
+VALUES('4028b88174da17b00174da1832f30002', 50.00, 5.00, 'REPROVADO', '4028b88174cbb2ab0174cbb7b363000b');
+INSERT INTO Educalife.Educalife.historico_aluno
+(id, frequencia_aula, nota_final, situacao_final_aluno, id_inscricao_turma)
+VALUES('4028b88174da193d0174da19cd3c0001', 88.00, 8.00, 'APROVADO', '4028b88174cbb2ab0174cbb801e5000f');
+INSERT INTO Educalife.Educalife.historico_aluno
+(id, frequencia_aula, nota_final, situacao_final_aluno, id_inscricao_turma)
+VALUES('4028b88174da1fdb0174da2058420002', 90.00, 9.00, 'APROVADO', '4028b88174cbb2ab0174cbb876de0013');
+INSERT INTO Educalife.Educalife.historico_aluno
+(id, frequencia_aula, nota_final, situacao_final_aluno, id_inscricao_turma)
+VALUES('4028b88174da21270174da2262a50002', 100.00, 10.00, 'APROVADO', '4028b88174cbb2ab0174cbb8c9180017');
+INSERT INTO Educalife.Educalife.historico_aluno
+(id, frequencia_aula, nota_final, situacao_final_aluno, id_inscricao_turma)
+VALUES('4028b88174da2e100174da2e9a610002', 100.00, 10.00, 'APROVADO', '4028b88174cbb2ab0174cbb91b9a001b');
+INSERT INTO Educalife.Educalife.historico_aluno
+(id, frequencia_aula, nota_final, situacao_final_aluno, id_inscricao_turma)
+VALUES('4028b88174da2e100174da2eba230005', 90.00, 9.00, 'APROVADO', '4028b88174cbb2ab0174cbb96c96001f');
+INSERT INTO Educalife.Educalife.historico_aluno
+(id, frequencia_aula, nota_final, situacao_final_aluno, id_inscricao_turma)
+VALUES('4028b88174da2e100174da2ed9d90008', 80.00, 8.00, 'APROVADO', '4028b88174cbb2ab0174cbb9cb1d0023');
+INSERT INTO Educalife.Educalife.historico_aluno
+(id, frequencia_aula, nota_final, situacao_final_aluno, id_inscricao_turma)
+VALUES('4028b88174da2e100174da2effe6000b', 70.00, 7.00, 'APROVADO', '4028b88174cbb2ab0174cbbbd1c80037');
+INSERT INTO Educalife.Educalife.historico_aluno
+(id, frequencia_aula, nota_final, situacao_final_aluno, id_inscricao_turma)
+VALUES('4028b88174da2e100174da2f2526000e', 60.00, 6.00, 'APROVADO', '4028b88174cbb2ab0174cbbc354e003b');
+INSERT INTO Educalife.Educalife.historico_aluno
+(id, frequencia_aula, nota_final, situacao_final_aluno, id_inscricao_turma)
+VALUES('4028b88174da2e100174da2f4ab30011', 50.00, 5.00, 'REPROVADO', '4028b88174cbb2ab0174cbbc8c89003f');

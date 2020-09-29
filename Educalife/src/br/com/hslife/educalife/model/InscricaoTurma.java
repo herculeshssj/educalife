@@ -14,6 +14,12 @@ import br.com.hslife.educalife.enumeration.*;
 @View(members = "aluno { pessoaFisica; motivoInscricao} "
 		+ "turma { numeroInscricao, dataInscricao, statusInscricao; turma } "
 )
+@View(name = "view_in_historico", members = "numeroInscricao; "
+		+ "nomeAluno; "
+		+ "nomeTurma; "
+		+ "dataInscricao;"
+		+ "statusInscricao"
+)
 @Tab(properties = "pessoaFisica.nome, numeroInscricao, turma.nomeTurma, dataInscricao, statusInscricao")
 public class InscricaoTurma extends Identifiable {
 	
@@ -44,8 +50,21 @@ public class InscricaoTurma extends Identifiable {
 	@Required
 	private StatusInscricao statusInscricao;
 	
-//	@OneToMany(mappedBy = "inscricaoTurma")
-//	private Collection<Frequencia> frequenciaAula;
+	@Depends("pessoaFisica")
+	public String getNomeAluno() {
+		if (this.getPessoaFisica() != null) {
+			return this.getPessoaFisica().getNome();
+		}
+		return "";
+	}
+	
+	@Depends("turma")
+	public String getNomeTurma() {
+		if (this.getTurma() != null) {
+			return this.getTurma().getNomeTurma();
+		}
+		return "";
+	}
 
 	public Turma getTurma() {
 		return turma;
