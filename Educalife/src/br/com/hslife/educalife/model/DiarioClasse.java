@@ -7,7 +7,7 @@ import javax.persistence.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
-@Entity
+//@Entity
 @Table(name="diario_classe")
 @Tab(properties = "inscricaoTurma.numeroInscricao, inscricaoTurma.pessoaFisica.nome, inscricaoTurma.turma.nomeTurma")
 public class DiarioClasse extends Identifiable {
@@ -20,7 +20,7 @@ public class DiarioClasse extends Identifiable {
 	
 	@ElementCollection
 	@ListProperties("aula, aula.dataAula, compareceu")
-	Collection<Frequencia> frequenciaAulas;
+	Collection<Frequencia> frequencia;
 
 	public InscricaoTurma getInscricaoTurma() {
 		return inscricaoTurma;
@@ -30,11 +30,11 @@ public class DiarioClasse extends Identifiable {
 		this.inscricaoTurma = inscricaoTurma;
 	}
 
-	public Collection<Frequencia> getFrequenciaAulas() {
-		return frequenciaAulas;
+	public Collection<Frequencia> getFrequencia() {
+		return frequencia;
 	}
 
-	public void setFrequenciaAulas(Collection<Frequencia> frequenciaAulas) {
-		this.frequenciaAulas = frequenciaAulas;
+	public void setFrequencia(Collection<Frequencia> frequencia) {
+		this.frequencia = frequencia;
 	}
 }

@@ -1,6 +1,7 @@
 package br.com.hslife.educalife.model;
 
 import java.time.*;
+import java.util.*;
 
 import javax.persistence.*;
 
@@ -20,6 +21,13 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "dataInscricao;"
 		+ "statusInscricao"
 )
+@View(name = "view_in_diario", members = "numeroInscricao; "
+		+ "nomeAluno; "
+		+ "nomeTurma; "
+		+ "dataInscricao;"
+		+ "statusInscricao;"
+		+ "frequencia"
+)
 @Tab(properties = "pessoaFisica.nome, numeroInscricao, turma.nomeTurma, dataInscricao, statusInscricao")
 public class InscricaoTurma extends Identifiable {
 	
@@ -34,10 +42,12 @@ public class InscricaoTurma extends Identifiable {
 	
 	@Column(name="numero_inscricao", nullable = false)
 	@Required
+	@ReadOnly(forViews="view_in_diario")
 	private long numeroInscricao;
 	
 	@Column(name="data_inscricao", nullable = false)
 	@Required
+	@ReadOnly(forViews="view_in_diario")
 	private LocalDate dataInscricao;
 	
 	@Column(columnDefinition = "text", name="motivo_inscricao", nullable = false)
@@ -48,7 +58,12 @@ public class InscricaoTurma extends Identifiable {
 	@Enumerated(EnumType.STRING)
 	@Column(name="status_inscricao", nullable = false)
 	@Required
+	@ReadOnly(forViews="view_in_diario")
 	private StatusInscricao statusInscricao;
+	
+	@ElementCollection
+	@ListProperties("aula, aula.dataAula, compareceu, abonado, justificativa")
+	Collection<Frequencia> frequencia;
 	
 	@Depends("pessoaFisica")
 	public String getNomeAluno() {
@@ -113,14 +128,12 @@ public class InscricaoTurma extends Identifiable {
 	public void setPessoaFisica(PessoaFisica pessoaFisica) {
 		this.pessoaFisica = pessoaFisica;
 	}
-	
-	
 
-//	public Collection<Frequencia> getFrequenciaAula() {
-//		return frequenciaAula;
-//	}
-//
-//	public void setFrequenciaAula(Collection<Frequencia> frequenciaAula) {
-//		this.frequenciaAula = frequenciaAula;
-//	}
+	public Collection<Frequencia> getFrequencia() {
+		return frequencia;
+	}
+
+	public void setFrequencia(Collection<Frequencia> frequencia) {
+		this.frequencia = frequencia;
+	}
 }

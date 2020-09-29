@@ -3,6 +3,11 @@
 <!DOCTYPE controllers SYSTEM "dtds/controllers.dtd">
 
 <controllers>
+
+	<!-- Diário de Classe -->
+	<controller name="FrequenciaAula">
+		<action name="createInvoice" mode="detail" class="br.com.hslife.educalife.action.TestAction"/>
+	</controller>
     
     <!-- Environment variable:
     <env-var name="Educalife_DEFAULT_YEAR" value="2015"/> 
@@ -41,6 +46,8 @@
 		<!-- extends controller="Banco"/ -->
 		<action name="createInvoice" mode="ALL" class="br.com.hslife.educalife.action.TestAction"/>
 	</controller>
+	
+	
 	
     
 </controllers>
