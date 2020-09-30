@@ -8,6 +8,11 @@
 	<controller name="FrequenciaAula">
 		<action name="salvarFrequencia" mode="detail" class="br.com.hslife.educalife.action.SalvarFrequenciaAction"/>
 	</controller>
+	
+	<!-- Diário de Notas -->
+	<controller name="AvaliacaoNota">
+		<action name="salvarNotas" mode="detail" class="br.com.hslife.educalife.action.SalvarNotasAction"/>
+	</controller>
     
     <!-- Environment variable:
     <env-var name="Educalife_DEFAULT_YEAR" value="2015"/> 
@@ -25,29 +30,27 @@
         	class="actions.CreateTeacher">
     	</action>
 	</controller>    
-    -->
+    
     <controller name="Remarks">
     	<extends controller="Banco" />
 	    <action name="hideRemarks" mode="detail"
 	        class="br.com.hslife.educalife.action.HideShowPropertyAction">
 	        <set property="property" value="remarks" />
 	        <set property="hide" value="true" />
-	        <use-object name="xava_view"/>  <!-- Not needed since v4m2 -->
+	        <use-object name="xava_view"/>  <!- Not needed since v4m2 ->
 	    </action>
 	    <action name="showRemarks" mode="detail"
 	        class="br.com.hslife.educalife.action.HideShowPropertyAction">
 	        <set property="property" value="remarks" />
 	        <set property="hide" value="false" />
-	        <use-object name="xava_view"/>  <!-- Not needed since v4m2 -->
+	        <use-object name="xava_view"/>  <!- Not needed since v4m2 ->
 	    </action>
 	</controller>
 	
 	<controller name="Order">
-		<!-- extends controller="Banco"/ -->
+		<!- extends controller="Banco"/ ->
 		<action name="createInvoice" mode="ALL" class="br.com.hslife.educalife.action.TestAction"/>
 	</controller>
+	-->
 	
-	
-	
-    
 </controllers>

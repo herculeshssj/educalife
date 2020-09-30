@@ -28,6 +28,13 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "statusInscricao;"
 		+ "frequencia"
 )
+@View(name = "view_in_avaliacao", members = "numeroInscricao; "
+		+ "nomeAluno; "
+		+ "nomeTurma; "
+		+ "dataInscricao;"
+		+ "statusInscricao;"
+		+ "resultadoAvaliacao"
+)
 @Tab(properties = "pessoaFisica.nome, numeroInscricao, turma.nomeTurma, dataInscricao, statusInscricao")
 public class InscricaoTurma extends Identifiable {
 	
@@ -42,12 +49,12 @@ public class InscricaoTurma extends Identifiable {
 	
 	@Column(name="numero_inscricao", nullable = false)
 	@Required
-	@ReadOnly(forViews="view_in_diario")
+	@ReadOnly(forViews="view_in_diario, view_in_avaliacao")
 	private long numeroInscricao;
 	
 	@Column(name="data_inscricao", nullable = false)
 	@Required
-	@ReadOnly(forViews="view_in_diario")
+	@ReadOnly(forViews="view_in_diario, view_in_avaliacao")
 	private LocalDate dataInscricao;
 	
 	@Column(columnDefinition = "text", name="motivo_inscricao", nullable = false)
@@ -58,12 +65,16 @@ public class InscricaoTurma extends Identifiable {
 	@Enumerated(EnumType.STRING)
 	@Column(name="status_inscricao", nullable = false)
 	@Required
-	@ReadOnly(forViews="view_in_diario")
+	@ReadOnly(forViews="view_in_diario, view_in_avaliacao")
 	private StatusInscricao statusInscricao;
 	
 	@ElementCollection
 	@ListProperties("aula, aula.dataAula, compareceu, abonado, justificativa")
 	Collection<Frequencia> frequencia;
+	
+	@ElementCollection
+	@ListProperties("avaliacao, avaliacao.descricao, nota, revisado, notaRevisada, justificativa")
+	Collection<ResultadoAvaliacao> resultadoAvaliacao;
 	
 	@Depends("pessoaFisica")
 	public String getNomeAluno() {
@@ -135,5 +146,13 @@ public class InscricaoTurma extends Identifiable {
 
 	public void setFrequencia(Collection<Frequencia> frequencia) {
 		this.frequencia = frequencia;
+	}
+
+	public Collection<ResultadoAvaliacao> getResultadoAvaliacao() {
+		return resultadoAvaliacao;
+	}
+
+	public void setResultadoAvaliacao(Collection<ResultadoAvaliacao> resultadoAvaliacao) {
+		this.resultadoAvaliacao = resultadoAvaliacao;
 	}
 }

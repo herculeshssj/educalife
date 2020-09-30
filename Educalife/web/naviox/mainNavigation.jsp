@@ -51,7 +51,6 @@ if (modules.hasModules(request)) {
 			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("Genero"))%>?init=true"><xava:message key="cadastroGenero"/></a></li>
 			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("Pais"))%>?init=true"><xava:message key="cadastroPais"/></a></li>
 			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("TipoLogradouro"))%>?init=true"><xava:message key="cadastroTipoLogradouro"/></a></li>
-			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("Order"))%>?init=true"><xava:message key="testOrder"/></a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -64,6 +63,7 @@ if (modules.hasModules(request)) {
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Avaliacao"))%>?init=true"><xava:message key="ensinoAvaliacao"/></a></li>
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("InscricaoTurma"))%>?init=true"><xava:message key="ensinoInscricao"/></a></li>
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("DiarioClasse"))%>?init=true"><xava:message key="ensinoDiarioClasse"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("DiarioNotas"))%>?init=true"><xava:message key="ensinoDiarioNotas"/></a></li>
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("HistoricoAluno"))%>?init=true"><xava:message key="ensinoHistoricoAluno"/></a></li>
           </ul>
         </li>

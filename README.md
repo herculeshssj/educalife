@@ -58,5 +58,5 @@ Os cadastros no Educalife ocorrem na seguinte ordem:
 19. Avaliação;
 20. Inscrição - Turma;
 21. Diário de Classe;
-22. Avaliação - Resultados;
+22. Diário de Notas;
 23. Histórico do Aluno;
