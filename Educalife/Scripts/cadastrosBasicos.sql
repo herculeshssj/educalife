@@ -537,6 +537,171 @@ INSERT INTO educalife.inscricao_turma
 VALUES('4028b88174cbb2ab0174cbbc8c89003f', '2020-10-12', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 121212, 'PENDENTE', '4028b88174cb9e230174cba1e5e6000e', '2c9c808174315647017431638cc40025');
 
 
+/* Frequência */
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb35e060002', false, '4028b88174d504040174d505fb6b000d', false, 'Não justificou');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb74fcb0007', true, '4028b88174d504040174d505fb6b000d', false, 'Problemas de saúde');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb7b363000b', false, '4028b88174d504040174d505fb6b000d', false, 'Não justificou');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb35e060002', false, '4028b88174d504040174d505dda0000a', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb35e060002', false, '4028b88174d504040174d505be630007', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb35e060002', false, '4028b88174d504040174d50468ab0001', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb74fcb0007', false, '4028b88174d504040174d505dda0000a', false, 'Não justificou');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb74fcb0007', false, '4028b88174d504040174d505be630007', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb74fcb0007', false, '4028b88174d504040174d50468ab0001', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb7b363000b', false, '4028b88174d504040174d505dda0000a', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb7b363000b', false, '4028b88174d504040174d505be630007', false, 'Não justificou');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb7b363000b', false, '4028b88174d504040174d50468ab0001', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb801e5000f', false, '4028b88174d504040174d50722fc0014', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb801e5000f', false, '4028b88174d504040174d50749fa0017', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb801e5000f', true, '4028b88174d504040174d5076528001a', false, 'Impossibilitado de chegar no curso');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb801e5000f', false, '4028b88174d504040174d507804d001d', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb876de0013', true, '4028b88174d504040174d50722fc0014', false, 'Obteve bom desempenho na avaliação');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb876de0013', false, '4028b88174d504040174d50749fa0017', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb876de0013', false, '4028b88174d504040174d5076528001a', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb876de0013', false, '4028b88174d504040174d507804d001d', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb8c9180017', false, '4028b88174d504040174d50722fc0014', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb8c9180017', false, '4028b88174d504040174d50749fa0017', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb8c9180017', false, '4028b88174d504040174d5076528001a', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb8c9180017', false, '4028b88174d504040174d507804d001d', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb91b9a001b', false, '4028b88174d504040174d507c3880021', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb91b9a001b', false, '4028b88174d504040174d507ebd40024', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb91b9a001b', false, '4028b88174d504040174d5080c920027', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb91b9a001b', false, '4028b88174d504040174d5082fe2002a', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb91b9a001b', false, '4028b88174d504040174d5085378002d', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb96c96001f', false, '4028b88174d504040174d507c3880021', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb96c96001f', false, '4028b88174d504040174d507ebd40024', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb96c96001f', false, '4028b88174d504040174d5080c920027', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb96c96001f', true, '4028b88174d504040174d5082fe2002a', false, 'Teve bom desempenho na avaliação');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb96c96001f', false, '4028b88174d504040174d5085378002d', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb9cb1d0023', false, '4028b88174d504040174d507c3880021', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb9cb1d0023', false, '4028b88174d504040174d507ebd40024', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb9cb1d0023', false, '4028b88174d504040174d5080c920027', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb9cb1d0023', false, '4028b88174d504040174d5082fe2002a', false, 'Não justificou');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbb9cb1d0023', false, '4028b88174d504040174d5085378002d', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbbbd1c80037', false, '4028b88174d504040174d5089e020031', false, 'Não justificou');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbbbd1c80037', false, '4028b88174d504040174d508b9e80034', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbbbd1c80037', false, '4028b88174d504040174d508daa10037', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbbbd1c80037', false, '4028b88174d504040174d508eeb8003a', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbbbd1c80037', true, '4028b88174d504040174d509054f003d', false, 'Vez prova em outro dia e obteve a média');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbbc354e003b', false, '4028b88174d504040174d5089e020031', false, 'Não justificou');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbbc354e003b', false, '4028b88174d504040174d508b9e80034', false, 'Não justificou');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbbc354e003b', false, '4028b88174d504040174d508daa10037', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbbc354e003b', false, '4028b88174d504040174d508eeb8003a', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbbc354e003b', false, '4028b88174d504040174d509054f003d', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbbc8c89003f', false, '4028b88174d504040174d5089e020031', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbbc8c89003f', false, '4028b88174d504040174d508b9e80034', true, '');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbbc8c89003f', false, '4028b88174d504040174d508daa10037', false, 'Não justificou');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbbc8c89003f', false, '4028b88174d504040174d508eeb8003a', false, 'Não justificou');
+INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
+(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
+VALUES('4028b88174cbb2ab0174cbbc8c89003f', false, '4028b88174d504040174d509054f003d', false, 'Fez prova em outro dia e não obteve média.');
+
+
 /* Histórico do Aluno */
 INSERT INTO Educalife.Educalife.historico_aluno
 (id, frequencia_aula, nota_final, situacao_final_aluno, id_inscricao_turma)

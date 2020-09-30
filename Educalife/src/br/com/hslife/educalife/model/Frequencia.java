@@ -1,5 +1,7 @@
 package br.com.hslife.educalife.model;
 
+import java.util.*;
+
 import javax.persistence.*;
 
 @Embeddable
@@ -17,6 +19,23 @@ public class Frequencia {
 	
 	@Column
 	private String justificativa;
+	
+	@Override
+	public int hashCode() {
+		if (this.aula != null) {
+			return Objects.hash(this.aula.getId());
+		}
+		return super.hashCode();
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this.aula != null & obj != null & ((Frequencia)obj).getAula() != null) {
+			return this.aula.getId().equals(((Frequencia)obj).getAula().getId());
+		}
+
+		return super.equals(obj);
+	}
 
 	public Aula getAula() {
 		return aula;
