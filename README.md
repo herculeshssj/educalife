@@ -5,26 +5,30 @@ Sistema de Gestão Acadêmica
 
 Desenvolvido com a plataforma RAD OpenXava 6.4.
 
-### Criação do container PostgreSQL
+### Criação do container SQL Server 2017/2019
 
 ```
-docker volume create educalife-psql-data
-docker run --restart=unless-stopped --name educalife-postgresql -e POSTGRES_PASSWORD=postgres -p 5432:5432 -v educalife-psql-data:/var/lib/postgresql/data -d postgres:11
+docker volume create educalife_db_data
+docker run --name educalife-db --restart=unless-stopped -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -e 'MSSQL_AGENT_ENABLED=true' -p 1433:1433 -v educalife_db_data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
 ```
+
+Caso queira a versão 2019, substitua a imagem Docker por __mcr.microsoft.com/mssql/server:2019-latest__
 
 No seu arquivo /etc/hosts, inclua uma nova entrada apontando para o IP da sua máquina:
 
 ```
-123.456.789.012 educalife-postgresql
+123.456.789.012 educalife-db
 ```
 
 Localização do arquivo hosts:
 - Windows: C:\Windows\System32\drivers\etc
 - Linux: /etc
 
-Após acessar a base, roda o script SQL **baseInicial.sql** que se encontra na pasta Scripts.
+Após acessar a base como usuário SA, rode o script SQL **baseInicial.sql** que se encontra na pasta Scripts.
 
-Para carregar os dados de exemplos, rode o script SQL *cadastrosBasicos.sql* que se encontra na pasta Scripts.
+Inicie a aplicação para realizar a criação das tabelas.
+
+Para carregar os dados de exemplos, rode o script SQL **cadastrosBasicos.sql** que se encontra na pasta Scripts. Rode o script usando o usuário __educalife__.
 
 
 ### Fluxo de cadastro
@@ -53,4 +57,6 @@ Os cadastros no Educalife ocorrem na seguinte ordem:
 18. Turma;
 19. Inscrição - Turma;
 20. Diário de Classe;
-21. Histórico do Aluno;
+21. Avaliação;
+22. Avaliação - Resultados;
+23. Histórico do Aluno;

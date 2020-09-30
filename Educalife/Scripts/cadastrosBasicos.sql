@@ -1,3 +1,6 @@
+-- Inicia uma transação
+begin transaction;
+
 /* Tipo de logradouro */
 INSERT INTO educalife.tipo_logradouro
 (id, codigo, descricao)
@@ -10,7 +13,7 @@ VALUES('2c9640817425a439017425a955dd1996', 'R', 'Rua');
 /* Cargo */
 INSERT INTO educalife.cargo
 (id, ativo, codigo_cbo, denominacao)
-VALUES('2c9640817425a439017425a681b705f8', true, '234120', 'Professor de computação (no ensino superior)');
+VALUES('2c9640817425a439017425a681b705f8', 1, '234120', 'Professor de computação (no ensino superior)');
 
 
 /* Deficiencia */
@@ -269,67 +272,67 @@ VALUES('ff8081817426fa81017426fdc06a0001', 40, 'Lorem Ipsum', 'Java 5 Avancado',
 /* Localidades */
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c15f6920001', true, 'C01', 'Administrativo', '', '2c96408174216d0d0174216eccf50001');
+VALUES('2c9c8081742c131401742c15f6920001', 1, 'C01', 'Administrativo', '', '2c96408174216d0d0174216eccf50001');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c15f6920002', true, 'C02', 'Ensino', '', '2c96408174216d0d0174216eccf50001');
+VALUES('2c9c8081742c131401742c15f6920002', 1, 'C02', 'Ensino', '', '2c96408174216d0d0174216eccf50001');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c15f6920003', true, 'C03', 'Diretoria', '', '2c96408174216d0d0174216eccf50001');
+VALUES('2c9c8081742c131401742c15f6920003', 1, 'C03', 'Diretoria', '', '2c96408174216d0d0174216eccf50001');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c15f6920004', true, 'C04', 'Recursos Humanos', '', '2c96408174216d0d0174216eccf50001');
+VALUES('2c9c8081742c131401742c15f6920004', 1, 'C04', 'Recursos Humanos', '', '2c96408174216d0d0174216eccf50001');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c15f6920005', true, 'C05', 'Finanças', '', '2c96408174216d0d0174216eccf50001');
+VALUES('2c9c8081742c131401742c15f6920005', 1, 'C05', 'Finanças', '', '2c96408174216d0d0174216eccf50001');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c15f6920006', true, 'C06', 'Sala 01', '', '2c96408174216d0d0174216eccf50001');
+VALUES('2c9c8081742c131401742c15f6920006', 1, 'C06', 'Sala 01', '', '2c96408174216d0d0174216eccf50001');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c15f6920007', true, 'C07', 'Sala 02', '', '2c96408174216d0d0174216eccf50001');
+VALUES('2c9c8081742c131401742c15f6920007', 1, 'C07', 'Sala 02', '', '2c96408174216d0d0174216eccf50001');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c15f6920008', true, 'C08', 'Sala 03', '', '2c96408174216d0d0174216eccf50001');
+VALUES('2c9c8081742c131401742c15f6920008', 1, 'C08', 'Sala 03', '', '2c96408174216d0d0174216eccf50001');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c15f6920009', true, 'C09', 'Auditório', '', '2c96408174216d0d0174216eccf50001');
+VALUES('2c9c8081742c131401742c15f6920009', 1, 'C09', 'Auditório', '', '2c96408174216d0d0174216eccf50001');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c15f692000a', true, 'C10', 'Reunião', '', '2c96408174216d0d0174216eccf50001');
+VALUES('2c9c8081742c131401742c15f692000a', 1, 'C10', 'Reunião', '', '2c96408174216d0d0174216eccf50001');
 
 
 
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c164cb90004', true, 'B01', 'Administrativo', '', '2c96408174216d0d01742170090b0005');
+VALUES('2c9c8081742c131401742c164cb90004', 1, 'B01', 'Administrativo', '', '2c96408174216d0d01742170090b0005');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c164cb90005', true, 'B02', 'Ensino', '', '2c96408174216d0d01742170090b0005');
+VALUES('2c9c8081742c131401742c164cb90005', 1, 'B02', 'Ensino', '', '2c96408174216d0d01742170090b0005');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c164cb90006', true, 'B03', 'Pesquisa e Desenvolvimento', '', '2c96408174216d0d01742170090b0005');
+VALUES('2c9c8081742c131401742c164cb90006', 1, 'B03', 'Pesquisa e Desenvolvimento', '', '2c96408174216d0d01742170090b0005');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c164cb90007', true, 'B04', 'Sala 01', '', '2c96408174216d0d01742170090b0005');
+VALUES('2c9c8081742c131401742c164cb90007', 1, 'B04', 'Sala 01', '', '2c96408174216d0d01742170090b0005');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c164cb90008', true, 'B05', 'Sala 02', '', '2c96408174216d0d01742170090b0005');
+VALUES('2c9c8081742c131401742c164cb90008', 1, 'B05', 'Sala 02', '', '2c96408174216d0d01742170090b0005');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c164cb90009', true, 'B06', 'Sala 03', '', '2c96408174216d0d01742170090b0005');
+VALUES('2c9c8081742c131401742c164cb90009', 1, 'B06', 'Sala 03', '', '2c96408174216d0d01742170090b0005');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c164cb9000a', true, 'B07', 'Sala 04', '', '2c96408174216d0d01742170090b0005');
+VALUES('2c9c8081742c131401742c164cb9000a', 1, 'B07', 'Sala 04', '', '2c96408174216d0d01742170090b0005');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c164cb9000b', true, 'B08', 'Sala 05', '', '2c96408174216d0d01742170090b0005');
+VALUES('2c9c8081742c131401742c164cb9000b', 1, 'B08', 'Sala 05', '', '2c96408174216d0d01742170090b0005');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c164cb9000c', true, 'B09', 'Reunião', '', '2c96408174216d0d01742170090b0005');
+VALUES('2c9c8081742c131401742c164cb9000c', 1, 'B09', 'Reunião', '', '2c96408174216d0d01742170090b0005');
 INSERT INTO educalife.localidade
 (id, ativo, codigo, descricao, observacao, id_unidade)
-VALUES('2c9c8081742c131401742c164cb9000d', true, 'B10', 'Auditório', '', '2c96408174216d0d01742170090b0005');
+VALUES('2c9c8081742c131401742c164cb9000d', 1, 'B10', 'Auditório', '', '2c96408174216d0d01742170090b0005');
 
 
 /* Turmas */
@@ -350,28 +353,28 @@ VALUES('2c9c808174315647017431638cc40025', '2020-10-31', '2020-09-25', '2020-10-
 
 INSERT INTO educalife.turma_equipe
 (turma_id, funcao_equipe, ministra_aula, id_pessoa_fisica)
-VALUES('2c9c8081743156470174315d94ae0012', 'COORDENADOR', true, '2c9640817425dfa9017425e604e20003');
+VALUES('2c9c8081743156470174315d94ae0012', 'COORDENADOR', 1, '2c9640817425dfa9017425e604e20003');
 INSERT INTO educalife.turma_equipe
 (turma_id, funcao_equipe, ministra_aula, id_pessoa_fisica)
-VALUES('2c9c8081743156470174315d94ae0012', 'INSTRUTOR', true, '2c9640817425dfa9017425e604e20005');
+VALUES('2c9c8081743156470174315d94ae0012', 'INSTRUTOR', 1, '2c9640817425dfa9017425e604e20005');
 INSERT INTO educalife.turma_equipe
 (turma_id, funcao_equipe, ministra_aula, id_pessoa_fisica)
-VALUES('2c9c8081743156470174315f9e1a0017', 'COORDENADOR', true, '2c9640817425dfa9017425e604e20003');
+VALUES('2c9c8081743156470174315f9e1a0017', 'COORDENADOR', 1, '2c9640817425dfa9017425e604e20003');
 INSERT INTO educalife.turma_equipe
 (turma_id, funcao_equipe, ministra_aula, id_pessoa_fisica)
-VALUES('2c9c8081743156470174315f9e1a0017', 'INSTRUTOR', true, '2c9640817425dfa9017425e604e20005');
+VALUES('2c9c8081743156470174315f9e1a0017', 'INSTRUTOR', 1, '2c9640817425dfa9017425e604e20005');
 INSERT INTO educalife.turma_equipe
 (turma_id, funcao_equipe, ministra_aula, id_pessoa_fisica)
-VALUES('2c9c808174315647017431618823001d', 'COORDENADOR', true, '2c9640817425dfa9017425e604e20004');
+VALUES('2c9c808174315647017431618823001d', 'COORDENADOR', 1, '2c9640817425dfa9017425e604e20004');
 INSERT INTO educalife.turma_equipe
 (turma_id, funcao_equipe, ministra_aula, id_pessoa_fisica)
-VALUES('2c9c808174315647017431618823001d', 'TUTOR', false, '2c9640817425dfa9017425e604e20005');
+VALUES('2c9c808174315647017431618823001d', 'TUTOR', 0, '2c9640817425dfa9017425e604e20005');
 INSERT INTO educalife.turma_equipe
 (turma_id, funcao_equipe, ministra_aula, id_pessoa_fisica)
-VALUES('2c9c808174315647017431638cc40025', 'COORDENADOR', false, '2c9640817425dfa9017425e604e20004');
+VALUES('2c9c808174315647017431638cc40025', 'COORDENADOR', 0, '2c9640817425dfa9017425e604e20004');
 INSERT INTO educalife.turma_equipe
 (turma_id, funcao_equipe, ministra_aula, id_pessoa_fisica)
-VALUES('2c9c808174315647017431638cc40025', 'INSTRUTOR', true, '2c9640817425dfa9017425e604e20005');
+VALUES('2c9c808174315647017431638cc40025', 'INSTRUTOR', 1, '2c9640817425dfa9017425e604e20005');
 
 
 
@@ -450,7 +453,6 @@ VALUES('4028b88174d504040174d508eeb8003a', '2020-10-28', '17:00', '13:00', '2c9c
 INSERT INTO educalife.aula
 (id, data_aula, horario_fim, horario_inicio, id_turma)
 VALUES('4028b88174d504040174d509054f003d', '2020-10-31', '13:00', '09:00', '2c9c808174315647017431638cc40025');
-
 
 
 
@@ -536,170 +538,170 @@ INSERT INTO educalife.inscricao_turma
 (id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
 VALUES('4028b88174cbb2ab0174cbbc8c89003f', '2020-10-12', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 121212, 'PENDENTE', '4028b88174cb9e230174cba1e5e6000e', '2c9c808174315647017431638cc40025');
 
-
 /* Frequência */
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb35e060002', false, '4028b88174d504040174d505fb6b000d', false, 'Não justificou');
+VALUES('4028b88174cbb2ab0174cbb35e060002', 0, '4028b88174d504040174d505fb6b000d', 0, 'Não justificou');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb74fcb0007', true, '4028b88174d504040174d505fb6b000d', false, 'Problemas de saúde');
+VALUES('4028b88174cbb2ab0174cbb74fcb0007', 1, '4028b88174d504040174d505fb6b000d', 0, 'Problemas de saúde');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb7b363000b', false, '4028b88174d504040174d505fb6b000d', false, 'Não justificou');
+VALUES('4028b88174cbb2ab0174cbb7b363000b', 0, '4028b88174d504040174d505fb6b000d', 0, 'Não justificou');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb35e060002', false, '4028b88174d504040174d505dda0000a', true, '');
+VALUES('4028b88174cbb2ab0174cbb35e060002', 0, '4028b88174d504040174d505dda0000a', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb35e060002', false, '4028b88174d504040174d505be630007', true, '');
+VALUES('4028b88174cbb2ab0174cbb35e060002', 0, '4028b88174d504040174d505be630007', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb35e060002', false, '4028b88174d504040174d50468ab0001', true, '');
+VALUES('4028b88174cbb2ab0174cbb35e060002', 0, '4028b88174d504040174d50468ab0001', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb74fcb0007', false, '4028b88174d504040174d505dda0000a', false, 'Não justificou');
+VALUES('4028b88174cbb2ab0174cbb74fcb0007', 0, '4028b88174d504040174d505dda0000a', 0, 'Não justificou');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb74fcb0007', false, '4028b88174d504040174d505be630007', true, '');
+VALUES('4028b88174cbb2ab0174cbb74fcb0007', 0, '4028b88174d504040174d505be630007', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb74fcb0007', false, '4028b88174d504040174d50468ab0001', true, '');
+VALUES('4028b88174cbb2ab0174cbb74fcb0007', 0, '4028b88174d504040174d50468ab0001', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb7b363000b', false, '4028b88174d504040174d505dda0000a', true, '');
+VALUES('4028b88174cbb2ab0174cbb7b363000b', 0, '4028b88174d504040174d505dda0000a', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb7b363000b', false, '4028b88174d504040174d505be630007', false, 'Não justificou');
+VALUES('4028b88174cbb2ab0174cbb7b363000b', 0, '4028b88174d504040174d505be630007', 0, 'Não justificou');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb7b363000b', false, '4028b88174d504040174d50468ab0001', true, '');
+VALUES('4028b88174cbb2ab0174cbb7b363000b', 0, '4028b88174d504040174d50468ab0001', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb801e5000f', false, '4028b88174d504040174d50722fc0014', true, '');
+VALUES('4028b88174cbb2ab0174cbb801e5000f', 0, '4028b88174d504040174d50722fc0014', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb801e5000f', false, '4028b88174d504040174d50749fa0017', true, '');
+VALUES('4028b88174cbb2ab0174cbb801e5000f', 0, '4028b88174d504040174d50749fa0017', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb801e5000f', true, '4028b88174d504040174d5076528001a', false, 'Impossibilitado de chegar no curso');
+VALUES('4028b88174cbb2ab0174cbb801e5000f', 1, '4028b88174d504040174d5076528001a', 0, 'Impossibilitado de chegar no curso');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb801e5000f', false, '4028b88174d504040174d507804d001d', true, '');
+VALUES('4028b88174cbb2ab0174cbb801e5000f', 0, '4028b88174d504040174d507804d001d', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb876de0013', true, '4028b88174d504040174d50722fc0014', false, 'Obteve bom desempenho na avaliação');
+VALUES('4028b88174cbb2ab0174cbb876de0013', 1, '4028b88174d504040174d50722fc0014', 0, 'Obteve bom desempenho na avaliação');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb876de0013', false, '4028b88174d504040174d50749fa0017', true, '');
+VALUES('4028b88174cbb2ab0174cbb876de0013', 0, '4028b88174d504040174d50749fa0017', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb876de0013', false, '4028b88174d504040174d5076528001a', true, '');
+VALUES('4028b88174cbb2ab0174cbb876de0013', 0, '4028b88174d504040174d5076528001a', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb876de0013', false, '4028b88174d504040174d507804d001d', true, '');
+VALUES('4028b88174cbb2ab0174cbb876de0013', 0, '4028b88174d504040174d507804d001d', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb8c9180017', false, '4028b88174d504040174d50722fc0014', true, '');
+VALUES('4028b88174cbb2ab0174cbb8c9180017', 0, '4028b88174d504040174d50722fc0014', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb8c9180017', false, '4028b88174d504040174d50749fa0017', true, '');
+VALUES('4028b88174cbb2ab0174cbb8c9180017', 0, '4028b88174d504040174d50749fa0017', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb8c9180017', false, '4028b88174d504040174d5076528001a', true, '');
+VALUES('4028b88174cbb2ab0174cbb8c9180017', 0, '4028b88174d504040174d5076528001a', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb8c9180017', false, '4028b88174d504040174d507804d001d', true, '');
+VALUES('4028b88174cbb2ab0174cbb8c9180017', 0, '4028b88174d504040174d507804d001d', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb91b9a001b', false, '4028b88174d504040174d507c3880021', true, '');
+VALUES('4028b88174cbb2ab0174cbb91b9a001b', 0, '4028b88174d504040174d507c3880021', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb91b9a001b', false, '4028b88174d504040174d507ebd40024', true, '');
+VALUES('4028b88174cbb2ab0174cbb91b9a001b', 0, '4028b88174d504040174d507ebd40024', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb91b9a001b', false, '4028b88174d504040174d5080c920027', true, '');
+VALUES('4028b88174cbb2ab0174cbb91b9a001b', 0, '4028b88174d504040174d5080c920027', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb91b9a001b', false, '4028b88174d504040174d5082fe2002a', true, '');
+VALUES('4028b88174cbb2ab0174cbb91b9a001b', 0, '4028b88174d504040174d5082fe2002a', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb91b9a001b', false, '4028b88174d504040174d5085378002d', true, '');
+VALUES('4028b88174cbb2ab0174cbb91b9a001b', 0, '4028b88174d504040174d5085378002d', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb96c96001f', false, '4028b88174d504040174d507c3880021', true, '');
+VALUES('4028b88174cbb2ab0174cbb96c96001f', 0, '4028b88174d504040174d507c3880021', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb96c96001f', false, '4028b88174d504040174d507ebd40024', true, '');
+VALUES('4028b88174cbb2ab0174cbb96c96001f', 0, '4028b88174d504040174d507ebd40024', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb96c96001f', false, '4028b88174d504040174d5080c920027', true, '');
+VALUES('4028b88174cbb2ab0174cbb96c96001f', 0, '4028b88174d504040174d5080c920027', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb96c96001f', true, '4028b88174d504040174d5082fe2002a', false, 'Teve bom desempenho na avaliação');
+VALUES('4028b88174cbb2ab0174cbb96c96001f', 1, '4028b88174d504040174d5082fe2002a', 0, 'Teve bom desempenho na avaliação');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb96c96001f', false, '4028b88174d504040174d5085378002d', true, '');
+VALUES('4028b88174cbb2ab0174cbb96c96001f', 0, '4028b88174d504040174d5085378002d', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb9cb1d0023', false, '4028b88174d504040174d507c3880021', true, '');
+VALUES('4028b88174cbb2ab0174cbb9cb1d0023', 0, '4028b88174d504040174d507c3880021', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb9cb1d0023', false, '4028b88174d504040174d507ebd40024', true, '');
+VALUES('4028b88174cbb2ab0174cbb9cb1d0023', 0, '4028b88174d504040174d507ebd40024', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb9cb1d0023', false, '4028b88174d504040174d5080c920027', true, '');
+VALUES('4028b88174cbb2ab0174cbb9cb1d0023', 0, '4028b88174d504040174d5080c920027', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb9cb1d0023', false, '4028b88174d504040174d5082fe2002a', false, 'Não justificou');
+VALUES('4028b88174cbb2ab0174cbb9cb1d0023', 0, '4028b88174d504040174d5082fe2002a', 0, 'Não justificou');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb9cb1d0023', false, '4028b88174d504040174d5085378002d', true, '');
+VALUES('4028b88174cbb2ab0174cbb9cb1d0023', 0, '4028b88174d504040174d5085378002d', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbbd1c80037', false, '4028b88174d504040174d5089e020031', false, 'Não justificou');
+VALUES('4028b88174cbb2ab0174cbbbd1c80037', 0, '4028b88174d504040174d5089e020031', 0, 'Não justificou');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbbd1c80037', false, '4028b88174d504040174d508b9e80034', true, '');
+VALUES('4028b88174cbb2ab0174cbbbd1c80037', 0, '4028b88174d504040174d508b9e80034', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbbd1c80037', false, '4028b88174d504040174d508daa10037', true, '');
+VALUES('4028b88174cbb2ab0174cbbbd1c80037', 0, '4028b88174d504040174d508daa10037', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbbd1c80037', false, '4028b88174d504040174d508eeb8003a', true, '');
+VALUES('4028b88174cbb2ab0174cbbbd1c80037', 0, '4028b88174d504040174d508eeb8003a', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbbd1c80037', true, '4028b88174d504040174d509054f003d', false, 'Vez prova em outro dia e obteve a média');
+VALUES('4028b88174cbb2ab0174cbbbd1c80037', 1, '4028b88174d504040174d509054f003d', 0, 'Vez prova em outro dia e obteve a média');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc354e003b', false, '4028b88174d504040174d5089e020031', false, 'Não justificou');
+VALUES('4028b88174cbb2ab0174cbbc354e003b', 0, '4028b88174d504040174d5089e020031', 0, 'Não justificou');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc354e003b', false, '4028b88174d504040174d508b9e80034', false, 'Não justificou');
+VALUES('4028b88174cbb2ab0174cbbc354e003b', 0, '4028b88174d504040174d508b9e80034', 0, 'Não justificou');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc354e003b', false, '4028b88174d504040174d508daa10037', true, '');
+VALUES('4028b88174cbb2ab0174cbbc354e003b', 0, '4028b88174d504040174d508daa10037', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc354e003b', false, '4028b88174d504040174d508eeb8003a', true, '');
+VALUES('4028b88174cbb2ab0174cbbc354e003b', 0, '4028b88174d504040174d508eeb8003a', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc354e003b', false, '4028b88174d504040174d509054f003d', true, '');
+VALUES('4028b88174cbb2ab0174cbbc354e003b', 0, '4028b88174d504040174d509054f003d', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc8c89003f', false, '4028b88174d504040174d5089e020031', true, '');
+VALUES('4028b88174cbb2ab0174cbbc8c89003f', 0, '4028b88174d504040174d5089e020031', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc8c89003f', false, '4028b88174d504040174d508b9e80034', true, '');
+VALUES('4028b88174cbb2ab0174cbbc8c89003f', 0, '4028b88174d504040174d508b9e80034', 1, '');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc8c89003f', false, '4028b88174d504040174d508daa10037', false, 'Não justificou');
+VALUES('4028b88174cbb2ab0174cbbc8c89003f', 0, '4028b88174d504040174d508daa10037', 0, 'Não justificou');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc8c89003f', false, '4028b88174d504040174d508eeb8003a', false, 'Não justificou');
+VALUES('4028b88174cbb2ab0174cbbc8c89003f', 0, '4028b88174d504040174d508eeb8003a', 0, 'Não justificou');
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
 (inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc8c89003f', false, '4028b88174d504040174d509054f003d', false, 'Fez prova em outro dia e não obteve média.');
+VALUES('4028b88174cbb2ab0174cbbc8c89003f', 0, '4028b88174d504040174d509054f003d', 0, 'Fez prova em outro dia e não obteve média.');
+
 
 
 /* Histórico do Aluno */
@@ -739,3 +741,6 @@ VALUES('4028b88174da2e100174da2f2526000e', 60.00, 6.00, 'APROVADO', '4028b88174c
 INSERT INTO Educalife.Educalife.historico_aluno
 (id, frequencia_aula, nota_final, situacao_final_aluno, id_inscricao_turma)
 VALUES('4028b88174da2e100174da2f4ab30011', 50.00, 5.00, 'REPROVADO', '4028b88174cbb2ab0174cbbc8c89003f');
+
+-- Commita os dados da transação
+commit;
