@@ -1,68 +1,41 @@
 {
 	"folders": {},
 	"connections": {
-		"postgres-jdbc-173e92d9761-5228af08744d880b": {
-			"provider": "postgresql",
-			"driver": "postgres-jdbc",
-			"name": "postgres",
+		"microsoft-174df1644dc-585c61be5aa5ec7f": {
+			"provider": "sqlserver",
+			"driver": "microsoft",
+			"name": "master",
 			"save-password": true,
 			"show-system-objects": true,
 			"read-only": false,
 			"configuration": {
-				"host": "educalife-postgresql",
-				"port": "5432",
-				"database": "postgres",
-				"url": "jdbc:postgresql://educalife-postgresql:5432/postgres",
+				"host": "educalife-db",
+				"port": "1433",
+				"database": "master",
+				"url": "jdbc:sqlserver://;serverName=educalife-db;databaseName=master",
 				"type": "dev",
-				"provider-properties": {
-					"@dbeaver-show-non-default-db@": "true",
-					"@dbeaver-show-template-db@": "false",
-					"postgresql.dd.plain.string": "false",
-					"postgresql.dd.tag.string": "false"
+				"properties": {
+					"trustServerCertificate": "true"
 				},
-				"auth-model": "native"
-			},
-			"custom-properties": {
-				"database.meta.separate.connection": "false"
+				"provider-properties": {
+					"@dbeaver-authentication@": "SQL_SERVER_PASSWORD",
+					"@dbeaver-show-all-schemas@": "true"
+				},
+				"handlers": {}
 			}
 		},
-		"postgres-jdbc-173e931dbd5-1b47482aff3002e6": {
-			"provider": "postgresql",
-			"driver": "postgres-jdbc",
+		"microsoft-174df1d74d0-549893842bd805da": {
+			"provider": "sqlserver",
+			"driver": "microsoft",
 			"name": "educalife",
 			"save-password": true,
 			"show-system-objects": true,
 			"read-only": false,
 			"configuration": {
-				"host": "educalife-postgresql",
-				"port": "5432",
-				"database": "educalife",
-				"url": "jdbc:postgresql://educalife-postgresql:5432/educalife",
-				"type": "dev",
-				"provider-properties": {
-					"@dbeaver-show-non-default-db@": "false",
-					"@dbeaver-show-template-db@": "false",
-					"postgresql.dd.plain.string": "false",
-					"postgresql.dd.tag.string": "false"
-				},
-				"auth-model": "native"
-			},
-			"custom-properties": {
-				"database.meta.separate.connection": "false"
-			}
-		},
-		"microsoft-174513046eb-68765f3c858991dc": {
-			"provider": "sqlserver",
-			"driver": "microsoft",
-			"name": "Educalife",
-			"save-password": true,
-			"show-system-objects": true,
-			"read-only": false,
-			"configuration": {
-				"host": "educalife-mssql",
+				"host": "educalife-db",
 				"port": "1433",
-				"database": "Educalife",
-				"url": "jdbc:sqlserver://;serverName=educalife-mssql;databaseName=Educalife",
+				"database": "educalife",
+				"url": "jdbc:sqlserver://;serverName=educalife-db;databaseName=educalife",
 				"type": "dev",
 				"properties": {
 					"trustServerCertificate": "true"
@@ -72,9 +45,6 @@
 					"@dbeaver-show-all-schemas@": "false"
 				},
 				"handlers": {}
-			},
-			"custom-properties": {
-				"database.meta.separate.connection": "false"
 			}
 		}
 	},
