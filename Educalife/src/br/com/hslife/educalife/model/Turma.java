@@ -19,6 +19,10 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "vagas { ofertaVagas } "
 		+ "aulas { aulas } "		
 )
+@View(name="view_in_avaliacao", members = "nomeTurma, "
+		+ "modalidadeTurma, "
+		+ "statusTurma"
+)
 @Tab(properties = "nomeTurma, curso.nomeCurso, modalidadeTurma, dataInicio, dataFim, statusTurma")
 public class Turma extends Identifiable {
 	

@@ -55,8 +55,8 @@ Os cadastros no Educalife ocorrem na seguinte ordem:
 16. Colaborador;
 17. Curso;
 18. Turma;
-19. Inscrição - Turma;
-20. Diário de Classe;
-21. Avaliação;
+19. Avaliação;
+20. Inscrição - Turma;
+21. Diário de Classe;
 22. Avaliação - Resultados;
 23. Histórico do Aluno;

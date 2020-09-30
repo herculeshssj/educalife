@@ -455,6 +455,41 @@ INSERT INTO educalife.aula
 VALUES('4028b88174d504040174d509054f003d', '2020-10-31', '13:00', '09:00', '2c9c808174315647017431638cc40025');
 
 
+/* Avaliações */
+INSERT INTO Educalife.Educalife.avaliacao
+(id, data_avaliacao, descricao, nota_avaliacao, topicos_avaliacao, id_turma)
+VALUES('4028b88174df81300174df8303c20002', '2020-10-28', 'Avaliação final', 100.00, '- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- Nullam efficitur orci et varius condimentum.', '2c9c8081743156470174315d94ae0012');
+INSERT INTO Educalife.Educalife.avaliacao
+(id, data_avaliacao, descricao, nota_avaliacao, topicos_avaliacao, id_turma)
+VALUES('4028b88174df81300174df83dfab0007', '2020-10-28', 'Avaliação final', 100.00, '- Praesent et arcu gravida, malesuada tortor maximus, placerat lectus.
+- Sed quis nibh a sem fringilla varius.
+- Praesent pulvinar dui hendrerit metus placerat, eu aliquam lorem tincidunt.', '2c9c8081743156470174315f9e1a0017');
+INSERT INTO Educalife.Educalife.avaliacao
+(id, data_avaliacao, descricao, nota_avaliacao, topicos_avaliacao, id_turma)
+VALUES('4028b88174df81300174df84c55d000b', '2020-10-15', 'Avaliação - principais tópicos', 40.00, '- Duis ultrices felis eu tellus congue, elementum finibus lorem maximus.
+- Sed ullamcorper magna eu semper rutrum.', '2c9c808174315647017431618823001d');
+INSERT INTO Educalife.Educalife.avaliacao
+(id, data_avaliacao, descricao, nota_avaliacao, topicos_avaliacao, id_turma)
+VALUES('4028b88174df81300174df85c2a20010', '2020-10-31', 'Prova final (simulado certificação)', 60.00, '- Curabitur pellentesque tortor ullamcorper eros porta, eget finibus enim dictum.
+- Aenean sagittis libero id pretium lobortis.
+- Sed quis diam ac ante aliquam rhoncus.
+- Sed sit amet elit blandit, consequat dui in, ultrices odio.
+- Integer eu nisl nec nibh eleifend rutrum at vel neque.', '2c9c808174315647017431618823001d');
+INSERT INTO Educalife.Educalife.avaliacao
+(id, data_avaliacao, descricao, nota_avaliacao, topicos_avaliacao, id_turma)
+VALUES('4028b88174df81300174df86a33b0014', '2020-10-21', 'Avaliação - recaptular tópicos vistos', 30.00, '- Suspendisse sit amet dui pharetra massa scelerisque tincidunt.
+- Vestibulum quis ante consequat, sodales orci sed, rutrum odio.
+- Morbi in erat at nulla faucibus congue vel ut erat.
+- Nullam at elit eget augue faucibus auctor.', '2c9c808174315647017431638cc40025');
+INSERT INTO Educalife.Educalife.avaliacao
+(id, data_avaliacao, descricao, nota_avaliacao, topicos_avaliacao, id_turma)
+VALUES('4028b88174df81300174df87125d0017', '2020-10-31', 'Prova final (simulado certificação)', 70.00, '- Pellentesque feugiat purus in molestie auctor.
+- Suspendisse vestibulum risus at semper efficitur.
+- In sed mauris eleifend, sodales lorem vel, auctor ante.
+- Curabitur eget ante mattis, laoreet augue quis, placerat felis.', '2c9c808174315647017431638cc40025');
+
+
 
 
 /*** Alunos ***/
