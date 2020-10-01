@@ -37,6 +37,11 @@ if (modules.hasModules(request)) {
 
  %>
       <ul class="nav navbar-nav">
+      	<li>
+          <a href="<%=request.getContextPath()%>" class="sign-in" role="button" aria-haspopup="true" aria-expanded="false">
+          	<xava:message key="menuInicio"/>
+          </a>
+        </li>
       	<li class="dropdown">
           <a href="#" class="dropdown-toggle sign-in" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
           	<xava:message key="menuCadastros"/>
@@ -76,6 +81,7 @@ if (modules.hasModules(request)) {
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Unidade"))%>?init=true"><xava:message key="admUnidade"/></a></li>
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Departamento"))%>?init=true"><xava:message key="admDepartamento"/></a></li>
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Localidade"))%>?init=true"><xava:message key="admLocalidade"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Contrato"))%>?init=true"><xava:message key="admContrato"/></a></li>
           </ul>
         </li>
         <li class="dropdown">

@@ -2,7 +2,6 @@ package br.com.hslife.educalife.model;
 
 import java.math.*;
 import java.time.*;
-import java.util.*;
 
 import javax.persistence.*;
 
@@ -11,24 +10,25 @@ import org.openxava.model.*;
 
 import br.com.hslife.educalife.enumeration.*;
 
-//@Entity
+@Entity
 @Table(name="contrato")
-@View(members = "geral { numeroContrato; "
+@View(members = "geral { numeroContrato, "
 		+ "situacaoContrato; "
-		+ "dataCadastro; "
-		+ "dataInicioVigencia; "
-		+ "dataFimVigencia; "
+		+ "contratante; "
+		+ "dataInicioVigencia, "
+		+ "dataFimVigencia, "
+		+ "dataRenovacao;"
+		+ "valorContrato, "
+		+ "valorParcela,"
+		+ "quantidadeParcelas, "
 		+ "diaFaturamento; "
-		+ "valorContrato; "
-		+ "quantidadeParcelas; "
-		+ "valorParcela;"
 		+ "observacao } ; "
-		+ "aluno { inscricaoTurma } ;"
-		+ "faturamento { historicoFaturamento } "
+		+ "texto { textoContrato }; "
+		+ "anexos { anexos } "
 )
-@Tab(properties = "numeroContrato, situacaoContrato, dataCadastro, "
+@Tab(properties = "numeroContrato, situacaoContrato, "
 		+ "dataInicioVigencia, dataFimVigencia, diaFaturamento, valorContrato, "
-		+ "quantidadeParcelas, valorParcela, inscricaoTurma.aluno.nome")
+		+ "quantidadeParcelas, valorParcela")
 public class Contrato extends Identifiable {
 
 	@Column(name = "numero_contrato")
@@ -40,14 +40,15 @@ public class Contrato extends Identifiable {
 	@Required
 	private SituacaoContrato situacaoContrato;
 	
-	@Column(name="data_cadastro", nullable = false)
-	private LocalDate dataCadastro;
-	
 	@Column(name="data_inicio_vigencia", nullable = false)
+	@Required
 	private LocalDate dataInicioVigencia;
 	
 	@Column(name="data_fim_vigencia", nullable = false)
 	private LocalDate dataFimVigencia;
+	
+	@Column(name="data_renovacao", nullable = true)
+	private LocalDate dataRenovacao;
 	
 	@Column(name="dia_faturamento")
 	private int diaFaturamento;
@@ -63,17 +64,23 @@ public class Contrato extends Identifiable {
 	@Stereotype("MONEY")
 	private BigDecimal valorParcela;
 	
-	@Column
+	@Column(length = 1000)
 	@Stereotype("MEMO")
 	private String observacao;
 	
-	@OneToOne(optional = false)
-	@JoinColumn(name="id_inscricao_turma", nullable = false)
-	private InscricaoTurma inscricaoTurma;
+	@Column(columnDefinition = "nvarchar(max)", name="texto_contrato", nullable = true)
+	@Stereotype("HTML_TEXT")
+	private String textoContrato;
 	
-	@ElementCollection
-	@ListProperties("dataFatura, valor")
-	private Collection<ContratoHistoricoFaturamento> historicoFaturamento;
+	@Stereotype("FILES")
+	@Column(length=32)
+	private String anexos;
+	
+	@ManyToOne
+	@JoinColumn(name="id_contratante", nullable = true)
+	@ReferenceView(value = "view_in_contrato")
+	@NoCreate @NoModify
+	private PessoaFisica contratante;
 
 	public int getNumeroContrato() {
 		return numeroContrato;
@@ -89,14 +96,6 @@ public class Contrato extends Identifiable {
 
 	public void setSituacaoContrato(SituacaoContrato situacaoContrato) {
 		this.situacaoContrato = situacaoContrato;
-	}
-
-	public LocalDate getDataCadastro() {
-		return dataCadastro;
-	}
-
-	public void setDataCadastro(LocalDate dataCadastro) {
-		this.dataCadastro = dataCadastro;
 	}
 
 	public LocalDate getDataInicioVigencia() {
@@ -155,19 +154,35 @@ public class Contrato extends Identifiable {
 		this.observacao = observacao;
 	}
 
-	public InscricaoTurma getInscricaoTurma() {
-		return inscricaoTurma;
+	public String getTextoContrato() {
+		return textoContrato;
 	}
 
-	public void setInscricaoTurma(InscricaoTurma inscricaoTurma) {
-		this.inscricaoTurma = inscricaoTurma;
+	public void setTextoContrato(String textoContrato) {
+		this.textoContrato = textoContrato;
 	}
 
-	public Collection<ContratoHistoricoFaturamento> getHistoricoFaturamento() {
-		return historicoFaturamento;
+	public String getAnexos() {
+		return anexos;
 	}
 
-	public void setHistoricoFaturamento(Collection<ContratoHistoricoFaturamento> historicoFaturamento) {
-		this.historicoFaturamento = historicoFaturamento;
+	public void setAnexos(String anexos) {
+		this.anexos = anexos;
+	}
+
+	public PessoaFisica getContratante() {
+		return contratante;
+	}
+
+	public void setContratante(PessoaFisica contratante) {
+		this.contratante = contratante;
+	}
+
+	public LocalDate getDataRenovacao() {
+		return dataRenovacao;
+	}
+
+	public void setDataRenovacao(LocalDate dataRenovacao) {
+		this.dataRenovacao = dataRenovacao;
 	}
 }
