@@ -536,6 +536,131 @@ VALUES('4028b88174cb9e230174cba1e5e6000e', '999.999.999-99', '1980-01-01', 'Cent
 /*** Fim do Cadastro ***/
 
 
+/*** Contratos ***/
+insert into Educalife.Educalife.contrato (
+	id,
+	data_fim_vigencia, 
+	data_inicio_vigencia, 
+	dia_faturamento, 
+	numero_contrato, 
+	observacao, 
+	quantidade_parcelas, 
+	situacao_contrato, 
+	texto_contrato, 
+	valor_contrato, 
+	valor_parcela, 
+	anexos, 
+	id_contratante, 
+	data_renovacao
+) select 
+	replace(newid(), '-', ''),
+	'2021-10-31',
+	'2020-10-01',
+	1,
+	ABS(CAST(CAST(NEWID() AS VARBINARY) AS smallint)),
+	'Contrato de prestação de serviços',
+	12,
+	'NOVO',
+	'Lorem Ipsum',
+	1200.00,
+	100.00,
+	null,
+	pf.id,
+	null
+from 
+	Educalife.Educalife.inscricao_turma it 
+inner join
+	Educalife.Educalife.pessoa_fisica pf on pf.id = it.id_pessoa_fisica
+WHERE 
+	pf.id not in (select c.id_pessoa_fisica from Educalife.Educalife.colaborador c);
+	
+
+update Educalife.Educalife.contrato set texto_contrato = '<p><strong>CONTRATO DE PRESTA&Ccedil;&Atilde;O DE SERVI&Ccedil;OS E HONOR&Aacute;RIOS DE PROFISSIONAL AUT&Ocirc;NOMO</strong></p>
+
+<p><strong>Contratante:</strong>&nbsp;(Nome), (nacionalidade), (estado civil), (profiss&atilde;o), portador da c&eacute;dula de identidade R.G. n&ordm; xxxxxx e inscrito no CPF/MF n&ordm; xxxxxxx, residente e domiciliado na (Rua), (n&uacute;mero), (bairro), (CEP), (Cidade), (Estado);</p>
+
+<p><strong>Contratado&nbsp;</strong>: Nome), (nacionalidade), (estado civil), (profiss&atilde;o), portador da c&eacute;dula de identidade R.G. n&ordm; xxxxxx e inscrito no CPF/MF n&ordm; xxxxxxx, residente e domiciliado na (Rua), (n&uacute;mero), (bairro), (CEP), (Cidade), (Estado);</p>
+
+<p>Pelo presente instrumento particular de presta&ccedil;&atilde;o de servi&ccedil;os e honor&aacute;rios de profissional aut&ocirc;nomo de Administra&ccedil;&atilde;o de Empresas, t&ecirc;m entre si justos e acordados quanto segue:</p>
+
+<p><strong>DO OBJETO DO CONTRATO</strong></p>
+
+<p><strong>CL&Aacute;USULA 1&ordf;</strong>: O presente instrumento, tem como objeto, a presta&ccedil;&atilde;o de servi&ccedil;os de administra&ccedil;&atilde;o, sendo que, em sua vig&ecirc;ncia, o contratado deve manter seu registro regularizado no Conselho Regional de Administra&ccedil;&atilde;o, sob pena de ser considerado extinto o presente instrumento.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>CL&Aacute;USULA 2&ordf;:</strong>&nbsp;O contratado executar&aacute; os servi&ccedil;os diretamente a contratante ou aos clientes por este indicados.</p>
+
+<p><strong>DOS SERVI&Ccedil;OS</strong></p>
+
+<p><strong>CL&Aacute;USULA 3&ordf; :</strong>&nbsp;O contratado prestar&aacute; os seguintes servi&ccedil;os (descrever detalhadamente os servi&ccedil;os prestados).</p>
+
+<p><strong>DOS HONOR&Aacute;RIOS</strong></p>
+
+<p><strong>CL&Aacute;USULA 4&ordf;</strong>: O contratado perceber&aacute; o valor integral dos tr&ecirc;s primeiros clientes, a t&iacute;tulo de honor&aacute;rios pelos servi&ccedil;os descritos na cl&aacute;usula anterior, pagos pela Contratante, no m&iacute;nimo o valor de R$ xxxxx (Valor), sendo que a partir do quarto cliente, receber&aacute; 20% do valor liquido estipulado do contrato.</p>
+
+<p><strong>CL&Aacute;USULA 5&ordf;:</strong>&nbsp;Fica estabelecido que s&atilde;o obriga&ccedil;&otilde;es da Contratante:</p>
+
+<p>a) Efetuar o pagamento, de acordo como estabelecido na cl&aacute;usula terceira do presente contrato.</p>
+
+<p>b) Fornecer para o Contratado, c&oacute;pias dos contratos efetivamente realizados.</p>
+
+<p>c) Fornecer ao contratado, materiais e informa&ccedil;&otilde;es, indispens&aacute;veis ao seu servi&ccedil;o, facilitando a prospe&ccedil;&atilde;o dos neg&oacute;cios.</p>
+
+<p>d) Fica vedado ao contratante, negociar abatimentos, descontos ou dila&ccedil;&otilde;es de prazo para o pagamento o execu&ccedil;&atilde;o dos servi&ccedil;os, sem o pr&eacute;vio conhecimento e autoriza&ccedil;&atilde;o do contratado.</p>
+
+<p><strong>CL&Aacute;USULA 6&ordf;:</strong>&nbsp;Fica estabelecido as seguintes obriga&ccedil;&otilde;es do Contratado:</p>
+
+<p>a) Cumprir o estipulado nos termos do presente instrumento contratual.</p>
+
+<p>b) Obedecer as instru&ccedil;&otilde;es da contratante, sobre os termos dos servi&ccedil;os &agrave; serem prestados aos clientes.</p>
+
+<p>c) Prestar informa&ccedil;&otilde;es &agrave; contratante, sempre que esta lhe solicitar, informando sobre a execu&ccedil;&atilde;o de seus servi&ccedil;os e demais detalhes sobre a execu&ccedil;&atilde;o de suas atividades.</p>
+
+<p>d)N&atilde;o revelar detalhes de suas atividades a terceiros, bem como, informa&ccedil;&otilde;es sobre seus clientes.</p>
+
+<p>e) N&atilde;o intermediar abatimentos, descontos, ou dila&ccedil;&atilde;o sem expressa autoriza&ccedil;&atilde;o da contratante.</p>
+
+<p><strong>CL&Aacute;USULA 7&ordf;:</strong>&nbsp;S&atilde;o motivos para que o Contratante rescinda o presente instrumento:</p>
+
+<p>a) Des&iacute;dia do contratado no cumprimento das obriga&ccedil;&otilde;es assumidas para com a contratante e terceiros.</p>
+
+<p>b) Praticar atos, que atinjam a imagem comercia da contratante perante terceiros.</p>
+
+<p>c) Deixar de cumprir o contratado, qualquer das cl&aacute;usulas dispostas no presente instrumento.</p>
+
+<p><strong>CL&Aacute;USULA 8&ordf;:</strong>&nbsp;S&atilde;o motivos para que o Contratado rescinda o presente instrumento:</p>
+
+<p>a) Solicitar a Contratante, atividade que exceda o prestisto neste instrumento de contrato.</p>
+
+<p>b)Deixar a contratante de observar quaiquer obriga&ccedil;&otilde;es que conste no presente contrato.</p>
+
+<p>c) Deixar a Contratante de cumprir com o disposto na cl&aacute;usula terceira deste contrato.</p>
+
+<p>d) Por motivos de for&ccedil;a maior.</p>
+
+<p><strong>CL&Aacute;USULA 9&ordf;:</strong>&nbsp;O presente contrato, ter&aacute; vig&ecirc;ncia por prazo indeterminado, por&eacute;m, havendo interesse em sua rescis&atilde;o, a parte interessada notificar&aacute; a parte contraria, por escrito, com anteced&ecirc;ncia m&iacute;nima de trinta (30) dias.</p>
+
+<p><strong>PAR&Aacute;GRAFO &Uacute;NICO:</strong>&nbsp;A rescis&atilde;o do presente instrumento de contrato, n&atilde;o extingue os direitos e obriga&ccedil;&otilde;es que as partes tenham entre si a para com terceiros.</p>
+
+<p><strong>DO FORO</strong></p>
+
+<p><strong>CL&Aacute;USULA 10&ordf;</strong>: As parte elegem o Foro desta Capital, para dirimir judicialmente as controv&eacute;rsias inerentes do presente contrato.</p>
+
+<p>E, assim por estarem justos e contratados assinam o presente, em 2 (duas) vias de igual forma, teor, na presen&ccedil;a das testemunhas abaixo:</p>
+
+<p>(Local, data, ano)</p>
+
+<p>(Nome e assinatura do Contratante)</p>
+
+<p>(Nome e assinatura do Contratado)</p>
+
+<p>(Nome, RG, Testemunha)</p>
+
+<p>(Nome, RG, Testemunha)</p>
+';
+
+
 /* Inscrições nas turmas */
 INSERT INTO educalife.inscricao_turma
 (id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
