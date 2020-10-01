@@ -61,7 +61,7 @@ public class SalvarFrequenciaAction extends ViewBaseAction {
 			getView().clear();
 			
 		} catch (Exception e) {
-			throw new SystemException("erro_salvar_frequencia", e);
+			throw new SystemException(e.getMessage(), e);
 		}
 		
 	}

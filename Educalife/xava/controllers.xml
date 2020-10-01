@@ -13,6 +13,21 @@
 	<controller name="AvaliacaoNota">
 		<action name="salvarNotas" mode="detail" class="br.com.hslife.educalife.action.SalvarNotasAction"/>
 	</controller>
+	
+	<!-- Contratos -->
+	<controller name="Contrato">
+		<extends controller="Typical" />
+		
+		<action name="vigorarContrato" mode="detail" class="br.com.hslife.educalife.action.GestaoContratoVigorarAction" 
+			available-on-new="false" confirm="true"/>
+		
+		<action name="renegociarContrato" mode="detail" class="br.com.hslife.educalife.action.GestaoContratoRenegociarAction"
+			available-on-new="false" confirm="true"/>
+			
+		<action name="encerrarContrato" mode="detail" class="br.com.hslife.educalife.action.GestaoContratoEncerrarAction"
+			available-on-new="false" confirm="true"/>
+		
+	</controller>
     
     <!-- Environment variable:
     <env-var name="Educalife_DEFAULT_YEAR" value="2015"/> 

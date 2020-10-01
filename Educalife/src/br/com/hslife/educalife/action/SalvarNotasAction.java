@@ -55,7 +55,7 @@ public class SalvarNotasAction extends ViewBaseAction {
 			getView().clear();
 			
 		} catch (Exception e) {
-			throw new SystemException("erro_salvar_notas", e);
+			throw new SystemException(e.getMessage(), e);
 		}
 		
 	}

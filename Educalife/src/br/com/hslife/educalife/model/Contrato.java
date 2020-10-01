@@ -37,7 +37,7 @@ public class Contrato extends Identifiable {
 	
 	@Enumerated(EnumType.STRING)
 	@Column(name="situacao_contrato", nullable = false)
-	@Required
+	@ReadOnly
 	private SituacaoContrato situacaoContrato;
 	
 	@Column(name="data_inicio_vigencia", nullable = false)
@@ -48,6 +48,7 @@ public class Contrato extends Identifiable {
 	private LocalDate dataFimVigencia;
 	
 	@Column(name="data_renovacao", nullable = true)
+	@ReadOnly
 	private LocalDate dataRenovacao;
 	
 	@Column(name="dia_faturamento")
