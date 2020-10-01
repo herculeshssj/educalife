@@ -44,7 +44,7 @@ public class GestaoContratoRenegociarAction extends ViewBaseAction {
 				XPersistence.getManager().merge(contrato);
 				XPersistence.getManager().persist(novoContrato);
 				
-				addMessage("contrato_renegociar_contrato_sucesso", contrato.getNumeroContrato());
+				addMessage("contrato_renegociar_contrato_sucesso", contrato.getNumeroContrato(), novoContrato.getNumeroContrato());
 				
 			} else {
 				addError("contrato_renegociar_contrato_error", contrato.getNumeroContrato());
