@@ -38,7 +38,7 @@ if (modules.hasModules(request)) {
  %>
       <ul class="nav navbar-nav">
       	<li>
-          <a href="<%=request.getContextPath()%>" class="sign-in" role="button" aria-haspopup="true" aria-expanded="false">
+          <a href="<%=request.getContextPath()%>/m/FirstSteps" class="sign-in" role="button" aria-haspopup="true" aria-expanded="false">
           	<xava:message key="menuInicio"/>
           </a>
         </li>
