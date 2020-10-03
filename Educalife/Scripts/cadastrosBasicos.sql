@@ -1,6 +1,3 @@
--- Inicia uma transação
-begin transaction;
-
 /* Tipo de logradouro */
 INSERT INTO educalife.tipo_logradouro
 (id, codigo, descricao)
@@ -535,13 +532,47 @@ VALUES('4028b88174cb9e230174cba1e5e6000e', '999.999.999-99', '1980-01-01', 'Cent
 
 /*** Fim do Cadastro ***/
 
-commit;
+
+/* Inscrições nas turmas */
+INSERT INTO educalife.inscricao_turma
+(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
+VALUES('4028b88174cbb2ab0174cbb876de0013', '2020-10-05', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 555555, 'PENDENTE', '4028b88174cb9e230174cba1e5e60007', '2c9c8081743156470174315f9e1a0017');
+INSERT INTO educalife.inscricao_turma
+(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
+VALUES('4028b88174cbb2ab0174cbb8c9180017', '2020-10-06', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 666666, 'PENDENTE', '4028b88174cb9e230174cba1e5e60008', '2c9c8081743156470174315f9e1a0017');
+INSERT INTO educalife.inscricao_turma
+(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
+VALUES('4028b88174cbb2ab0174cbb35e060002', '2020-10-02', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 111111, 'PENDENTE', '4028b88174cb9e230174cba1e5e60003', '2c9c8081743156470174315d94ae0012');
+INSERT INTO educalife.inscricao_turma
+(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
+VALUES('4028b88174cbb2ab0174cbb74fcb0007', '2020-10-02', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 222222, 'PENDENTE', '4028b88174cb9e230174cba1e5e60004', '2c9c8081743156470174315d94ae0012');
+INSERT INTO educalife.inscricao_turma
+(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
+VALUES('4028b88174cbb2ab0174cbb7b363000b', '2020-10-03', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 333333, 'PENDENTE', '4028b88174cb9e230174cba1e5e60005', '2c9c8081743156470174315d94ae0012');
+INSERT INTO educalife.inscricao_turma
+(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
+VALUES('4028b88174cbb2ab0174cbb801e5000f', '2020-10-04', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 444444, 'PENDENTE', '4028b88174cb9e230174cba1e5e60006', '2c9c8081743156470174315f9e1a0017');
+INSERT INTO educalife.inscricao_turma
+(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
+VALUES('4028b88174cbb2ab0174cbb91b9a001b', '2020-10-07', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 777777, 'PENDENTE', '4028b88174cb9e230174cba1e5e60009', '2c9c808174315647017431618823001d');
+INSERT INTO educalife.inscricao_turma
+(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
+VALUES('4028b88174cbb2ab0174cbb96c96001f', '2020-10-08', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 888888, 'PENDENTE', '4028b88174cb9e230174cba1e5e6000a', '2c9c808174315647017431618823001d');
+INSERT INTO educalife.inscricao_turma
+(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
+VALUES('4028b88174cbb2ab0174cbb9cb1d0023', '2020-10-09', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 999999, 'PENDENTE', '4028b88174cb9e230174cba1e5e6000b', '2c9c808174315647017431618823001d');
+INSERT INTO educalife.inscricao_turma
+(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
+VALUES('4028b88174cbb2ab0174cbbbd1c80037', '2020-10-10', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 101010, 'PENDENTE', '4028b88174cb9e230174cba1e5e6000c', '2c9c808174315647017431638cc40025');
+INSERT INTO educalife.inscricao_turma
+(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
+VALUES('4028b88174cbb2ab0174cbbc354e003b', '2020-10-11', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 111110, 'PENDENTE', '4028b88174cb9e230174cba1e5e6000d', '2c9c808174315647017431638cc40025');
+INSERT INTO educalife.inscricao_turma
+(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
+VALUES('4028b88174cbb2ab0174cbbc8c89003f', '2020-10-12', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 121212, 'PENDENTE', '4028b88174cb9e230174cba1e5e6000e', '2c9c808174315647017431638cc40025');
 
 
 /*** Contratos ***/
-
--- Inicia uma nova transação para conseguir cadastrar os contratos
-begin transaction;
 
 insert into Educalife.Educalife.contrato (
 	id,
@@ -666,44 +697,6 @@ update Educalife.Educalife.contrato set texto_contrato = '<p><strong>CONTRATO DE
 <p>(Nome, RG, Testemunha)</p>
 ';
 
-
-/* Inscrições nas turmas */
-INSERT INTO educalife.inscricao_turma
-(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
-VALUES('4028b88174cbb2ab0174cbb876de0013', '2020-10-05', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 555555, 'PENDENTE', '4028b88174cb9e230174cba1e5e60007', '2c9c8081743156470174315f9e1a0017');
-INSERT INTO educalife.inscricao_turma
-(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
-VALUES('4028b88174cbb2ab0174cbb8c9180017', '2020-10-06', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 666666, 'PENDENTE', '4028b88174cb9e230174cba1e5e60008', '2c9c8081743156470174315f9e1a0017');
-INSERT INTO educalife.inscricao_turma
-(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
-VALUES('4028b88174cbb2ab0174cbb35e060002', '2020-10-02', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 111111, 'PENDENTE', '4028b88174cb9e230174cba1e5e60003', '2c9c8081743156470174315d94ae0012');
-INSERT INTO educalife.inscricao_turma
-(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
-VALUES('4028b88174cbb2ab0174cbb74fcb0007', '2020-10-02', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 222222, 'PENDENTE', '4028b88174cb9e230174cba1e5e60004', '2c9c8081743156470174315d94ae0012');
-INSERT INTO educalife.inscricao_turma
-(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
-VALUES('4028b88174cbb2ab0174cbb7b363000b', '2020-10-03', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 333333, 'PENDENTE', '4028b88174cb9e230174cba1e5e60005', '2c9c8081743156470174315d94ae0012');
-INSERT INTO educalife.inscricao_turma
-(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
-VALUES('4028b88174cbb2ab0174cbb801e5000f', '2020-10-04', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 444444, 'PENDENTE', '4028b88174cb9e230174cba1e5e60006', '2c9c8081743156470174315f9e1a0017');
-INSERT INTO educalife.inscricao_turma
-(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
-VALUES('4028b88174cbb2ab0174cbb91b9a001b', '2020-10-07', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 777777, 'PENDENTE', '4028b88174cb9e230174cba1e5e60009', '2c9c808174315647017431618823001d');
-INSERT INTO educalife.inscricao_turma
-(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
-VALUES('4028b88174cbb2ab0174cbb96c96001f', '2020-10-08', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 888888, 'PENDENTE', '4028b88174cb9e230174cba1e5e6000a', '2c9c808174315647017431618823001d');
-INSERT INTO educalife.inscricao_turma
-(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
-VALUES('4028b88174cbb2ab0174cbb9cb1d0023', '2020-10-09', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 999999, 'PENDENTE', '4028b88174cb9e230174cba1e5e6000b', '2c9c808174315647017431618823001d');
-INSERT INTO educalife.inscricao_turma
-(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
-VALUES('4028b88174cbb2ab0174cbbbd1c80037', '2020-10-10', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 101010, 'PENDENTE', '4028b88174cb9e230174cba1e5e6000c', '2c9c808174315647017431638cc40025');
-INSERT INTO educalife.inscricao_turma
-(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
-VALUES('4028b88174cbb2ab0174cbbc354e003b', '2020-10-11', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 111110, 'PENDENTE', '4028b88174cb9e230174cba1e5e6000d', '2c9c808174315647017431638cc40025');
-INSERT INTO educalife.inscricao_turma
-(id, data_inscricao, motivo_inscricao, numero_inscricao, status_inscricao, id_pessoa_fisica, id_turma)
-VALUES('4028b88174cbb2ab0174cbbc8c89003f', '2020-10-12', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus ut velit efficitur sagittis. Proin venenatis sem fringilla magna euismod, condimentum tristique purus sagittis. Suspendisse potenti. Proin posuere sapien at pharetra interdum. Praesent blandit, dui sed accumsan lacinia, magna erat fringilla sem, vel pellentesque orci dui quis purus. Curabitur rutrum.', 121212, 'PENDENTE', '4028b88174cb9e230174cba1e5e6000e', '2c9c808174315647017431638cc40025');
 
 /* Frequência */
 INSERT INTO Educalife.Educalife.inscricao_turma_frequencia
@@ -965,7 +958,3 @@ VALUES('4028b88174da2e100174da2f2526000e', 60.00, 5.00, 'REPROVADO', '4028b88174
 INSERT INTO Educalife.Educalife.historico_aluno
 (id, frequencia_aula, nota_final, situacao_final_aluno, id_inscricao_turma)
 VALUES('4028b88174da2e100174da2f4ab30011', 50.00, 7.00, 'REPROVADO', '4028b88174cbb2ab0174cbbc8c89003f');
-
-
--- Commita os dados da transação
-commit;

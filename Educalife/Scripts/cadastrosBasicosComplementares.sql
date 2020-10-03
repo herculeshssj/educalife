@@ -1,6 +1,3 @@
--- Inicia a transação
-begin transaction;
-
 INSERT INTO Educalife.Educalife.banco (id,codigo,febraban,nome,website) VALUES 
 ('ff80818174ee5a920174ee68b9e30003','',0,'Administradora de Consórcios Sicredi LTDA','www.sicredi.com.br')
 ,('ff80818174ee5a920174ee68b9fd0005','',0,'Agoracred S/A Sociedade de Crédito, Financiamento e Investimento',NULL)
@@ -3950,6 +3947,3 @@ INSERT INTO Educalife.Educalife.tipo_logradouro (id,codigo,descricao) VALUES
 ,('ff80818174ee5a920174ee70402319a7','VRT','Variante')
 ,('ff80818174ee5a920174ee70402619a9','ZIG','Zigue-Zague')
 ;
-
--- Commita todas as alterações
-commit;
