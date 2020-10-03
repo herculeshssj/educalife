@@ -29,6 +29,7 @@ Após acessar a base como usuário SA, rode o script SQL **baseInicial.sql** que
 Inicie a aplicação para realizar a criação das tabelas.
 
 Para carregar os dados de exemplos, rode o script SQL **cadastrosBasicos.sql** que se encontra na pasta Scripts. Rode o script usando o usuário __educalife__.
+Logo após, rode o script SQL **cadastrosBasicosComplementares.sql** para carregar os dados de exemplos das tabelas do menu __Cadastro__.
 
 
 ### Fluxo de cadastro
