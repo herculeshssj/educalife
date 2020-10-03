@@ -535,8 +535,14 @@ VALUES('4028b88174cb9e230174cba1e5e6000e', '999.999.999-99', '1980-01-01', 'Cent
 
 /*** Fim do Cadastro ***/
 
+commit;
+
 
 /*** Contratos ***/
+
+-- Inicia uma nova transação para conseguir cadastrar os contratos
+begin transaction;
+
 insert into Educalife.Educalife.contrato (
 	id,
 	data_fim_vigencia, 

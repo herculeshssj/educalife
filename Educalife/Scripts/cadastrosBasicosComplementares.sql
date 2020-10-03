@@ -253,8 +253,7 @@ INSERT INTO Educalife.Educalife.banco (id,codigo,febraban,nome,website) VALUES
 ;
 
 INSERT INTO Educalife.Educalife.cargo (id,ativo,codigo_cbo,denominacao) VALUES 
-('2c9640817425a439017425a681b705f8',1,'234120','Professor de computação (no ensino superior)')
-,('ff80818174ee5a920174ee6c2aa601a3',1,'10105','Oficial general da aeronáutica')
+('ff80818174ee5a920174ee6c2aa601a3',1,'10105','Oficial general da aeronáutica')
 ,('ff80818174ee5a920174ee6c2aac01a5',1,'10110','Oficial general do exército')
 ,('ff80818174ee5a920174ee6c2aaf01a7',1,'10115','Oficial general da marinha')
 ,('ff80818174ee5a920174ee6c2ab301a9',1,'10205','Oficial da aeronáutica')
@@ -3432,8 +3431,7 @@ INSERT INTO Educalife.Educalife.cargo (id,ativo,codigo_cbo,denominacao) VALUES
 
 
 INSERT INTO Educalife.Educalife.pais (id,codigo,denominacao) VALUES 
-('2c9640817425a439017425a8aee71718','24','BRASIL')
-,('ff80818174ee5a920174ee6edd18164f','21','BIRMANIA                                ')
+('ff80818174ee5a920174ee6edd18164f','21','BIRMANIA                                ')
 ,('ff80818174ee5a920174ee6edd1c1651','70','GUINE                                   ')
 ,('ff80818174ee5a920174ee6edd1d1653','78','IEMEM DO SUL                            ')
 ,('ff80818174ee5a920174ee6edd1f1655','85','IRLANDIA                                ')
@@ -3739,9 +3737,7 @@ INSERT INTO Educalife.Educalife.pais (id,codigo,denominacao) VALUES
 
 
 INSERT INTO Educalife.Educalife.tipo_logradouro (id,codigo,descricao) VALUES 
-('2c9640817418b7f6017418b8a4ee001e','AV','Avenida')
-,('2c9640817425a439017425a955dd1996','R','Rua')
-,('ff80818174ee5a920174ee703ec81847','A','Área')
+('ff80818174ee5a920174ee703ec81847','A','Área')
 ,('ff80818174ee5a920174ee703ecc1849','AC','Acesso')
 ,('ff80818174ee5a920174ee703ece184b','ACA','Acampamento')
 ,('ff80818174ee5a920174ee703ed0184d','ACL','Acesso Local')
