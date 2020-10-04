@@ -9,6 +9,7 @@ import org.openxava.model.*;
 @Table(name="empresa")
 @Tab(properties = "pessoaJuridica.nomeFantasia, pessoaJuridica.cnpj, pessoaJuridica.dataCriacao")
 @View(members = "pessoaJuridica; contratoSocial")
+@View(name="view_in_conta", members = "nomeEmpresa, cnpjEmpresa")
 public class Empresa extends Identifiable {
 
 	@OneToOne
@@ -18,6 +19,20 @@ public class Empresa extends Identifiable {
 	@Column(columnDefinition = "text", name="contrato_social", nullable = true)
 	@Stereotype("HTML_TEXT")
 	private String contratoSocial;
+	
+	public String getNomeEmpresa() {
+		if (this.getPessoaJuridica() != null) {
+			return this.getPessoaJuridica().getNomeFantasia();
+		}
+		return "";
+	}
+	
+	public String getCnpjEmpresa() {
+		if (this.getPessoaJuridica() != null) {
+			return this.getPessoaJuridica().getCnpj();
+		}
+		return "";
+	}
 
 	public String getContratoSocial() {
 		return contratoSocial;

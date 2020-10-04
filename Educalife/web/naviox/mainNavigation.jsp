@@ -86,6 +86,14 @@ if (modules.hasModules(request)) {
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle sign-in" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          	<xava:message key="menuFinanceiro"/>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Conta"))%>?init=true"><xava:message key="finConta"/></a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle sign-in" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
           	<xava:message key="menuPessoal"/>
           </a>
           <ul class="dropdown-menu">

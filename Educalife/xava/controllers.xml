@@ -17,7 +17,7 @@
 	<!-- Contratos -->
 	<controller name="Contrato">
 		<extends controller="Typical" />
-		
+		<!--
 		<action name="vigorarContrato" mode="detail" class="br.com.hslife.educalife.action.GestaoContratoVigorarAction" 
 			available-on-new="false" confirm="true"/>
 		
@@ -26,7 +26,7 @@
 			
 		<action name="encerrarContrato" mode="detail" class="br.com.hslife.educalife.action.GestaoContratoEncerrarAction"
 			available-on-new="false" confirm="true"/>
-		
+		-->
 	</controller>
     
     <!-- Environment variable:

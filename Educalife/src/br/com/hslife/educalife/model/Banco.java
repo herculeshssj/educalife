@@ -7,7 +7,7 @@ import org.openxava.model.*;
 
 @Entity
 @Table(name="banco")
-//@Audited
+@View(name = "view_in_conta", members = "codigo, nome")
 public class Banco extends Identifiable {
 	
 	@Column(nullable = true)

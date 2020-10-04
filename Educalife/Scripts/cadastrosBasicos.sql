@@ -189,7 +189,113 @@ VALUES('2c9640817421617901742162f7240001', 'https://educalife.com.br', 'Site', '
 /* Empresa */
 INSERT INTO educalife.empresa
 (id, contrato_social, id_pessoa_juridica)
-VALUES('2c964081742167b80174216845730001', '<p>Lorem Ipsum</p>
+VALUES('2c964081742167b80174216845730001', '<p><strong>CONTRATO SOCIAL DA ..............................</strong>&nbsp;</p>
+
+<p>(nome) ............., (nacionalidade) .........., (profiss&atilde;o) .........., (estado civil e regime de casamento) .........., portador do RG n&ordm; ................, inscrito no CPF sob o n&ordm; .......................,&nbsp;&nbsp;residente e domiciliado &agrave; Rua .................................., n&ordm; ....., Bairro ..............., Estado de .........., e (nome) ............., (nacionalidade) .........., (profiss&atilde;o) .........., (estado civil estado civil e regime de casamento) .........., portador do RG n&ordm; ................, inscrito no CPF sob o n&ordm; ......................., residente e domiciliado &agrave; Rua .................................., n&ordm; ....., Bairro ..............., Estado de .........., pelo presente instrumento, constituem entre si uma sociedade simples, mediante as cl&aacute;usulas e condi&ccedil;&otilde;es seguintes:&nbsp;</p>
+
+<p>Cl&aacute;usula 1. A sociedade adotar&aacute; a denomina&ccedil;&atilde;o de ..........................., tendo sede na cidade de ............/(UF), Rua ......................, n&ordm; ......., Bairro ........, e ter&aacute; dura&ccedil;&atilde;o por prazo indeterminado, iniciando suas atividades em ...... de......... de........ (dia/m&ecirc;s/ano).&nbsp;</p>
+
+<p>Cl&aacute;usula 2. Por delibera&ccedil;&atilde;o dos s&oacute;cios, a sociedade poder&aacute; abrir, manter, transferir e extinguir filiais, em qualquer ponto do territ&oacute;rio nacional, observadas as prescri&ccedil;&otilde;es legais vigentes.&nbsp;</p>
+
+<p>Cl&aacute;usula 3. A sociedade tem por objeto ..................(presta&ccedil;&atilde;o de servi&ccedil;os na &aacute;rea m&eacute;dica, consultoria, etc.)&nbsp;</p>
+
+<p>Cl&aacute;usula 4. O capital social &eacute; de R$ ............. (.......................), representado por ...... (..................) quotas no valor de R$ .......... (....................) cada uma, inteiramente integralizado, neste ato, em moeda corrente nacional, e assim distribu&iacute;das:</p>
+
+<p>&nbsp;</p>
+
+<p>S&oacute;cio (nome) .......................&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;..... quotas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R$.......................</p>
+
+<p>S&oacute;cio (nome) .......................&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;..... quotas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R$.......................</p>
+
+<p>TOTAL ............................................ ..... quotas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R$.......................</p>
+
+<p>&nbsp;Par&aacute;grafo &uacute;nico. Os s&oacute;cios n&atilde;o respondem subsidiariamente, pelas obriga&ccedil;&otilde;es sociais.&nbsp;</p>
+
+<p>Cl&aacute;usula 5. A administra&ccedil;&atilde;o da sociedade ser&aacute; exercida pelo (s) s&oacute;cio (s) ....... (nome ou nomes), sendo-lhe (s) vedado delegar seu (s) poder (es) de administra&ccedil;&atilde;o e ger&ecirc;ncia a pessoas estranhas aos quadros sociais.&nbsp;</p>
+
+<p>Par&aacute;grafo 1. A sociedade ser&aacute; representada ativa e passivamente, judicial e extra-judicialmente, isoladamente por quaisquer um dos administradores, sendo-lhe vedado o uso da denomina&ccedil;&atilde;o social em avais, abonos, fian&ccedil;as e outras obriga&ccedil;&otilde;es de mero favor, estranhos aos interesses sociais. Nesta veda&ccedil;&atilde;o n&atilde;o se inclui a presta&ccedil;&atilde;o de garantias e obriga&ccedil;&otilde;es a empresas da qual a sociedade participe, direta ou indiretamente, podendo, ainda, alienar, caucionar ou onerar bens sociais, emitir t&iacute;tulos de cr&eacute;ditos, transigir, assinar cheques e renunciar a direitos quando do interesse da sociedade, contrair empr&eacute;stimos e financiamentos, avalizar, endossar, bem como assinar todo e qualquer documento, contrato ou papel que implique em responsabilidade da sociedade, seja p&uacute;blico ou particular.&nbsp;</p>
+
+<p>Par&aacute;grafo 2. &Eacute; l&iacute;cito aos administradores constituir procuradores, em nome da sociedade, especificando nos instrumentos os atos e opera&ccedil;&otilde;es que poder&atilde;o praticar e a dura&ccedil;&atilde;o do mandato, exceto mandato judicial que poder&aacute; ser por prazo indeterminado.&nbsp;</p>
+
+<p>Par&aacute;grafo 3. Os administradores,receber&atilde;o, mensalmente, pr&oacute;-labore a ser a partir do m&ecirc;s em que as atividades operacionais da sociedade comportarem a referida retirada, mediante aprova&ccedil;&atilde;o pela maioria das quotas representativas do capital social.&nbsp;</p>
+
+<p>Par&aacute;grafo 4. A nomea&ccedil;&atilde;o ou destitui&ccedil;&atilde;o de novos administradores, bem como a fixa&ccedil;&atilde;o da remunera&ccedil;&atilde;o correspondente, ser&aacute;&nbsp;decidida em assembleia de s&oacute;cios, mediante aprova&ccedil;&atilde;o pela maioria das quotas representativas do capital social.&nbsp;</p>
+
+<p>Par&aacute;grafo 5. Os administradores ora nomeados declaram, sob as penas da lei, e para atendimento do par&aacute;grafo 1<sup>o</sup>do artigo 1.011 da Lei 10.406/2002, que n&atilde;o est&atilde;o condenados por nenhum crime cuja pena vede a administra&ccedil;&atilde;o de sociedades.&nbsp;</p>
+
+<p>Cl&aacute;usula 6. Todos os documentos, atos e contratos que envolvam responsabilidade para a sociedade, inclusive movimenta&ccedil;&atilde;o de fundos, emiss&atilde;o de cheques, aceite e avais em t&iacute;tulos cambi&aacute;rios, outorga de procura&ccedil;&otilde;es em nome de sociedade, ser&atilde;o assinados ....... (<em>isoladamente ou conjuntamente),</em>&nbsp;pelos administradores, e as delibera&ccedil;&otilde;es ser&atilde;o de comum acordo.&nbsp;</p>
+
+<p>Cl&aacute;usula 7. O exerc&iacute;cio social ser&aacute; encerrado em 31 de dezembro de cada ano, mediante levantamento de balan&ccedil;o patrimonial, e os lucros apurados ou preju&iacute;zos eventualmente havidos, ser&atilde;o distribu&iacute;dos ou suportados pelos s&oacute;cios na propor&ccedil;&atilde;o de suas quotas de capital.&nbsp;</p>
+
+<p>Par&aacute;grafo 1. Poder&atilde;o ser retidos parte ou todo o lucro, para manuten&ccedil;&atilde;o e refor&ccedil;o do capital de giro e de investimento, conforme delibera&ccedil;&atilde;o da maioria representativa do capital social.&nbsp;</p>
+
+<p>Par&aacute;grafo 2. Os lucros apurados em balancetes intermedi&aacute;rios poder&atilde;o ser distribu&iacute;dos aos s&oacute;cios, sendo compensados com que houver sido apurado por ocasi&atilde;o do encerramento do exerc&iacute;cio.&nbsp;</p>
+
+<p>Cl&aacute;usula 8. Os s&oacute;cios n&atilde;o poder&atilde;o alienar ou ceder parte ou a totalidade de suas quotas de capital a pessoas estranhas, sem antes oferec&ecirc;-las aos outros s&oacute;cios, que em igualdade de condi&ccedil;&otilde;es, ter&atilde;o o direito de prefer&ecirc;ncia na aquisi&ccedil;&atilde;o das mesmas, na propor&ccedil;&atilde;o resultante de sua participa&ccedil;&atilde;o no capital social.&nbsp;</p>
+
+<p>Cl&aacute;usula 9. O s&oacute;cio que desejar retirar-se da sociedade dever&aacute; comunicar sua inten&ccedil;&atilde;o ao outro s&oacute;cio, por escrito, com anteced&ecirc;ncia m&iacute;nima de 60 (sessenta) dias. Nesse caso, os seus haveres ser&atilde;o apurados, em um balan&ccedil;o levantado na ocasi&atilde;o, e pagos em 12 (doze) parcelas mensais, iguais e sucessivas, vencendo a primeira 30 (trinta) dias ap&oacute;s o seu afastamento.&nbsp;</p>
+
+<p>Cl&aacute;usula 10. O falecimento de qualquer dos s&oacute;cios n&atilde;o acarretar&aacute; a extin&ccedil;&atilde;o da sociedade. Nesta hip&oacute;tese, o (s) s&oacute;cio (s) remanescente (s) pagar&aacute; (&atilde;o) aos herdeiros do falecido a sua quota de capital e a parte dos lucros que dever&atilde;o ser apurados em balan&ccedil;o especial, na data do evento, nas mesmas condi&ccedil;&otilde;es da cl&aacute;usula anterior.&nbsp;</p>
+
+<p>Cl&aacute;usula 11.&nbsp;As altera&ccedil;&otilde;es do presente contrato social, bem como as decis&otilde;es sociais, dependem da aprova&ccedil;&atilde;o da maioria do capital social, salvo aquelas que impliquem mudan&ccedil;a no contrato social, cujas decis&otilde;es dever&atilde;o ser do consentimento de todos os s&oacute;cios.&nbsp;</p>
+
+<p>Par&aacute;grafo primeiro. As decis&otilde;es de s&oacute;cios ser&atilde;o tomadas em reuni&otilde;es e especificadas em termo pr&oacute;prio, assinado pelos presentes.&nbsp;</p>
+
+<p>Par&aacute;grafo segundo. As reuni&otilde;es ser&atilde;o realizadas todo ..... (primeiro, segundo...) dia &uacute;til do m&ecirc;s, &aacute;s ...... (horas), na sede social, independentemente de convoca&ccedil;&atilde;o pr&eacute;via ou demais formalidades.&nbsp;</p>
+
+<p>Par&aacute;grafo terceiro. Reuni&otilde;es extraordin&aacute;rias poder&atilde;o ser convocadas por qualquer dos administradores ou titulares de mais de 1/5 (um quinto) do capital social integralizado, mediante fundamento e comunica&ccedil;&atilde;o escrita, com prova de seu recebimento.&nbsp;</p>
+
+<p>Par&aacute;grafo quarto. Dispensam-se as formalidades de convoca&ccedil;&atilde;o quando todos os s&oacute;cios comparecerem ou se declararem, por escrito, cientes do local, data, hora e ordem do dia.</p>
+
+<p>Par&aacute;grafo quinto. A reuni&atilde;o ou a assembleia tornam-se dispens&aacute;veis quando todos os s&oacute;cios decidirem, por escrito, sobre a mat&eacute;ria que seria objeto delas.&nbsp;</p>
+
+<p>Par&aacute;grafo sexto. As delibera&ccedil;&otilde;es tomadas de conformidade com a lei e o contrato vinculam todos os s&oacute;cios, ainda que ausentes ou dissidentes.&nbsp;</p>
+
+<p>Cl&aacute;usula 12. &Eacute; admiss&iacute;vel a exclus&atilde;o de s&oacute;cio, desde que por justa causa, considerando-se como tal uma ou mais entre as seguintes hip&oacute;teses: falta grave no cumprimento de suas obriga&ccedil;&otilde;es, incapacidade superveniente, declara&ccedil;&atilde;o de fal&ecirc;ncia do s&oacute;cio ou que tenha tido suas quotas liquidadas por credor em processo de execu&ccedil;&atilde;o.&nbsp;</p>
+
+<p>Par&aacute;grafo &uacute;nico. Aplicam-se &aacute; exclus&atilde;o o pagamento de haveres na forma e prazos estipulados na cl&aacute;usula 9.&nbsp;</p>
+
+<p>Cl&aacute;usula 13. Em caso de dissolu&ccedil;&atilde;o da sociedade, ser&aacute; procedida a devida liquida&ccedil;&atilde;o e o patrim&ocirc;nio ser&aacute; dividido entre os mesmos, proporcionalmente &agrave;s cotas de capital.&nbsp;</p>
+
+<p>Cl&aacute;usula 14. Os casos omissos neste contrato ser&atilde;o regidos pela Lei 6404/76 (Lei das S/A) com as altera&ccedil;&otilde;es posteriores, e demais disposi&ccedil;&otilde;es legais aplic&aacute;veis.&nbsp;</p>
+
+<p>Cl&aacute;usula 15. Os s&oacute;cios declaram que n&atilde;o est&atilde;o enquadrados em qualquer penalidade ou veda&ccedil;&atilde;o legal que os impe&ccedil;am de exercer a atividade mercantil.&nbsp;</p>
+
+<p>Cl&aacute;usula 16.&nbsp;&nbsp;Os s&oacute;cios elegem o foro e comarca de ..............., estado ......., para dirimir quaisquer quest&otilde;es oriundas do presente contrato.&nbsp;</p>
+
+<p>E assim, por estarem justos e contratados, assinam o presente contrato social em ..... (............) vias de igual teor, na presen&ccedil;a das testemunhas abaixo assinadas.&nbsp;</p>
+
+<p>Local e data: _____________________________&nbsp;</p>
+
+<p style="margin-left:70.8pt">&nbsp;</p>
+
+<p style="margin-left:70.8pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_____________________________</p>
+
+<p style="margin-left:70.8pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assinaturas dos s&oacute;cios</p>
+
+<p style="margin-left:70.9pt">&nbsp;</p>
+
+<p>Testemunhas:</p>
+
+<p>&nbsp;</p>
+
+<p>1&ordf;) Ass. _________________________</p>
+
+<p>Nome:</p>
+
+<p>RG:</p>
+
+<p>&nbsp;</p>
+
+<p>2&ordf;) Ass. _________________________</p>
+
+<p>Nome:</p>
+
+<p>RG:</p>
+
+<p>&nbsp;</p>
+
+<p>Advogado: _______________________</p>
 ', '2c9640817421617901742162f7240001');
 
 
