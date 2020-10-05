@@ -12,6 +12,13 @@ import br.com.hslife.educalife.enumeration.*;
 
 @Entity
 @Table(name = "lancamento")
+@View(members = "conta;"
+		+ "historico, numero;"
+		+ "data, valor, statusLancamento;"
+		+ "acao;"
+		+ "observacao;"
+		+ "anexo")
+@Tab(properties = "conta.descricao, data, historico, valor, statusLancamento")
 public class Lancamento extends Identifiable {
 
 	@Column(nullable = false)
@@ -21,6 +28,7 @@ public class Lancamento extends Identifiable {
 	private String historico;
 	
 	@Column(nullable = true)
+	@Stereotype("MEMO")
 	private String observacao;
 	
 	@Column(nullable = true)
@@ -32,10 +40,13 @@ public class Lancamento extends Identifiable {
 	
 	@Column(name="status_lancamento", length=15)
 	@Enumerated(EnumType.STRING)
+	@Required
 	private StatusLancamento statusLancamento;
 	
 	@ManyToOne
 	@JoinColumn(name="id_conta", nullable = false)
+	@DescriptionsList(descriptionProperties = "descricao")
+	@NoCreate @NoModify
 	private Conta conta;
 	
 	@Stereotype("FILE")

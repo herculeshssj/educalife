@@ -84,7 +84,7 @@ public class Conta extends Identifiable {
 		
 		if (this.getId() != null) {
 			valorLancamentos = XPersistence.getManager()
-					.createQuery("SELECT l.valor FROM Lancamento l WHERE l.conta.id = :idConta ORDER BY l.data ASC")
+					.createQuery("SELECT l.valor FROM Lancamento l WHERE l.conta.id = :idConta and l.statusLancamento <> 'AGENDADO' ORDER BY l.data ASC")
 					.setParameter("idConta", this.getId())
 					.getResultList();
 			
