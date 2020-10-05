@@ -90,6 +90,7 @@ if (modules.hasModules(request)) {
           </a>
           <ul class="dropdown-menu">
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Conta"))%>?init=true"><xava:message key="finConta"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Lancamento"))%>?init=true"><xava:message key="finLancamento"/></a></li>
           </ul>
         </li>
         <li class="dropdown">

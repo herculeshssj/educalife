@@ -2,10 +2,12 @@ package br.com.hslife.educalife.model;
 
 import java.math.*;
 import java.time.*;
+import java.util.*;
 
 import javax.persistence.*;
 
 import org.openxava.annotations.*;
+import org.openxava.jpa.*;
 import org.openxava.model.*;
 
 import br.com.hslife.educalife.enumeration.*;
@@ -39,11 +41,13 @@ public class Conta extends Identifiable {
 	private boolean ativo;
 	
 	@Column(name="saldo_inicial")
+	@Stereotype("MONEY")
 	@Required
-	private double saldoInicial;
+	private BigDecimal saldoInicial;
 	
 	@Column(name="saldo_final")
-	private double saldoFinal;
+	@Stereotype("MONEY")
+	private BigDecimal saldoFinal;
 	
 	@Column(name="data_abertura")
 	@Required
@@ -71,9 +75,25 @@ public class Conta extends Identifiable {
 	@NoCreate @NoModify
 	private Empresa empresa;
 	
+	@SuppressWarnings("unchecked")
+	@Stereotype("MONEY")
 	public BigDecimal getSaldoAtual() {
 		// Calcular o saldo atual da conta
-		return new BigDecimal(999.00);
+		List<BigDecimal> valorLancamentos = new LinkedList<>();
+		BigDecimal saldo = this.getSaldoInicial();
+		
+		if (this.getId() != null) {
+			valorLancamentos = XPersistence.getManager()
+					.createQuery("SELECT l.valor FROM Lancamento l WHERE l.conta.id = :idConta ORDER BY l.data ASC")
+					.setParameter("idConta", this.getId())
+					.getResultList();
+			
+			for (BigDecimal v : valorLancamentos) {
+				saldo = saldo.add(v);
+			}
+		}
+		
+		return saldo;
 	}
 
 	public String getDescricao() {
@@ -108,19 +128,19 @@ public class Conta extends Identifiable {
 		this.ativo = ativo;
 	}
 
-	public double getSaldoInicial() {
+	public BigDecimal getSaldoInicial() {
 		return saldoInicial;
 	}
 
-	public void setSaldoInicial(double saldoInicial) {
+	public void setSaldoInicial(BigDecimal saldoInicial) {
 		this.saldoInicial = saldoInicial;
 	}
 
-	public double getSaldoFinal() {
+	public BigDecimal getSaldoFinal() {
 		return saldoFinal;
 	}
 
-	public void setSaldoFinal(double saldoFinal) {
+	public void setSaldoFinal(BigDecimal saldoFinal) {
 		this.saldoFinal = saldoFinal;
 	}
 

@@ -1,3 +1,9 @@
+use master;
+
+-- Exclui a base
+-- alter database Educalife set single_user with rollback immediate;
+-- drop database Educalife;
+
 -- Cria a base
 CREATE database Educalife;
 
