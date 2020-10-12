@@ -61,3 +61,6 @@ Os cadastros no Educalife ocorrem na seguinte ordem:
 21. Diário de Classe;
 22. Diário de Notas;
 23. Histórico do Aluno;
+
+
+https://idodevjobs.wordpress.com/2014/07/12/spring-data-rest-xml-configuration-example/

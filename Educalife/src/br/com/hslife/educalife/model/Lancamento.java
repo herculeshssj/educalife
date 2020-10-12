@@ -15,7 +15,7 @@ import br.com.hslife.educalife.enumeration.*;
 @View(members = "conta;"
 		+ "historico, numero;"
 		+ "data, valor, statusLancamento;"
-		+ "acao;"
+		+ "formaPagamento;"
 		+ "observacao;"
 		+ "anexo")
 @Tab(properties = "conta.descricao, data, historico, valor, statusLancamento")
@@ -53,9 +53,11 @@ public class Lancamento extends Identifiable {
 	@Column(length=32)
 	private String anexo;
 	
-	@Column(name="acao_lancamento", length=25)
-	@Enumerated(EnumType.STRING)
-	private AcaoLancamento acao;
+	@ManyToOne
+	@JoinColumn(name="id_forma_pagamento", nullable = true)
+	@DescriptionsList(descriptionProperties = "descricao")
+	@NoCreate @NoModify
+	private FormaPagamento formaPagamento;
 
 	public LocalDate getData() {
 		return data;
@@ -113,19 +115,19 @@ public class Lancamento extends Identifiable {
 		this.conta = conta;
 	}
 
-	public AcaoLancamento getAcao() {
-		return acao;
-	}
-
-	public void setAcao(AcaoLancamento acao) {
-		this.acao = acao;
-	}
-
 	public String getAnexo() {
 		return anexo;
 	}
 
 	public void setAnexo(String anexo) {
 		this.anexo = anexo;
+	}
+
+	public FormaPagamento getFormaPagamento() {
+		return formaPagamento;
+	}
+
+	public void setFormaPagamento(FormaPagamento formaPagamento) {
+		this.formaPagamento = formaPagamento;
 	}
 }

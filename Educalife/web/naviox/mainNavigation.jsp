@@ -53,6 +53,7 @@ if (modules.hasModules(request)) {
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Escolaridade"))%>?init=true"><xava:message key="cadastroEscolaridade"/></a></li>
 			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("EstadoCivil"))%>?init=true"><xava:message key="cadastroEstadoCivil"/></a></li>
 			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("Etnia"))%>?init=true"><xava:message key="cadastroEtnia"/></a></li>
+			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("FormaPagamento"))%>?init=true"><xava:message key="cadastroFormaPagamento"/></a></li>
 			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("Genero"))%>?init=true"><xava:message key="cadastroGenero"/></a></li>
 			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("Pais"))%>?init=true"><xava:message key="cadastroPais"/></a></li>
 			<li><a href="<%=modules.getModuleURI(request, menuModulos.get("TipoLogradouro"))%>?init=true"><xava:message key="cadastroTipoLogradouro"/></a></li>

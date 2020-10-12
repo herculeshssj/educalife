@@ -31,3 +31,6 @@ INSERT INTO Educalife.Educalife.lancamento
 VALUES(replace(newid(), '-', ''), 'PAGAMENTO', 'F83B5B55C0A8380100000000CA11D8A8', '2020-10-06', 'Lançamento 0,99', '', '', 'CONFIRMADO', 0.99, '4028b88174f824ba0174f82612de0002');
 
 
+select * from Educalife.lancamento where id_forma_pagamento is not null;
+update Educalife.lancamento set id_forma_pagamento = '4028b881751ad46a01751ad78e950019' where id_forma_pagamento is null;
+

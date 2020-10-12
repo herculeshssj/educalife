@@ -3947,3 +3947,52 @@ INSERT INTO Educalife.Educalife.tipo_logradouro (id,codigo,descricao) VALUES
 ,('ff80818174ee5a920174ee70402319a7','VRT','Variante')
 ,('ff80818174ee5a920174ee70402619a9','ZIG','Zigue-Zague')
 ;
+
+INSERT INTO Educalife.Educalife.forma_pagamento
+(id, ativo, descricao)
+VALUES('4028b881751ad46a01751ad5cbb50001', 1, 'Balcão');
+INSERT INTO Educalife.Educalife.forma_pagamento
+(id, ativo, descricao)
+VALUES('4028b881751ad46a01751ad5e11c0003', 1, 'Cheque');
+INSERT INTO Educalife.Educalife.forma_pagamento
+(id, ativo, descricao)
+VALUES('4028b881751ad46a01751ad60faa0005', 1, 'Débito em conta');
+INSERT INTO Educalife.Educalife.forma_pagamento
+(id, ativo, descricao)
+VALUES('4028b881751ad46a01751ad624d10007', 1, 'Crédito em conta');
+INSERT INTO Educalife.Educalife.forma_pagamento
+(id, ativo, descricao)
+VALUES('4028b881751ad46a01751ad685be0009', 1, 'Depósito');
+INSERT INTO Educalife.Educalife.forma_pagamento
+(id, ativo, descricao)
+VALUES('4028b881751ad46a01751ad69842000b', 1, 'Retirada');
+INSERT INTO Educalife.Educalife.forma_pagamento
+(id, ativo, descricao)
+VALUES('4028b881751ad46a01751ad6b48a000d', 1, 'Depósito ATM');
+INSERT INTO Educalife.Educalife.forma_pagamento
+(id, ativo, descricao)
+VALUES('4028b881751ad46a01751ad6c953000f', 1, 'Retirada ATM');
+INSERT INTO Educalife.Educalife.forma_pagamento
+(id, ativo, descricao)
+VALUES('4028b881751ad46a01751ad6e6770011', 1, 'On-line');
+INSERT INTO Educalife.Educalife.forma_pagamento
+(id, ativo, descricao)
+VALUES('4028b881751ad46a01751ad7052b0013', 1, 'Ponto de venda');
+INSERT INTO Educalife.Educalife.forma_pagamento
+(id, ativo, descricao)
+VALUES('4028b881751ad46a01751ad71b990015', 1, 'Saque');
+INSERT INTO Educalife.Educalife.forma_pagamento
+(id, ativo, descricao)
+VALUES('4028b881751ad46a01751ad741a20017', 1, 'Transferência');
+INSERT INTO Educalife.Educalife.forma_pagamento
+(id, ativo, descricao)
+VALUES('4028b881751ad46a01751ad78e950019', 1, 'Pagamento');
+INSERT INTO Educalife.Educalife.forma_pagamento
+(id, ativo, descricao)
+VALUES('4028b881751ad46a01751ad878f0001b', 1, 'Telefone/Fax');
+INSERT INTO Educalife.Educalife.forma_pagamento
+(id, ativo, descricao)
+VALUES('4028b881751ad46a01751ad90ee9001d', 1, 'Cobrança');
+INSERT INTO Educalife.Educalife.forma_pagamento
+(id, ativo, descricao)
+VALUES('4028b881751ad46a01751ad92a63001f', 1, 'Dívida Ativa');
