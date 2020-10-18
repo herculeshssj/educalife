@@ -1,6 +1,7 @@
 package br.com.hslife.educalife.model;
 
 import java.time.*;
+import java.util.*;
 
 import javax.persistence.*;
 
@@ -47,6 +48,10 @@ public class ContaReceber extends Identifiable {
 	@Stereotype("FILE")
 	@Column(length=32)
 	private String anexo;
+	
+	@ElementCollection
+	@JoinTable(name = "detalhe_conta_receber")
+	private Collection<DetalheContaReceber> detalheContaReceber;
 
 	public String getNumeroCobranca() {
 		return numeroCobranca;
@@ -118,5 +123,13 @@ public class ContaReceber extends Identifiable {
 
 	public void setAnexo(String anexo) {
 		this.anexo = anexo;
+	}
+
+	public Collection<DetalheContaReceber> getDetalheContaReceber() {
+		return detalheContaReceber;
+	}
+
+	public void setDetalheContaReceber(Collection<DetalheContaReceber> detalheContaReceber) {
+		this.detalheContaReceber = detalheContaReceber;
 	}
 }
