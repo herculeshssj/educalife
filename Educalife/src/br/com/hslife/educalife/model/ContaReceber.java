@@ -1,5 +1,6 @@
 package br.com.hslife.educalife.model;
 
+import java.math.*;
 import java.time.*;
 import java.util.*;
 
@@ -10,7 +11,19 @@ import org.openxava.model.*;
 
 @Entity
 @Table(name="conta_receber")
-@Tab(properties = "numeroCobranca, cliente.nome, dataAbertura, dataEnvio, dataVencimento, contaRecebimento.descricao, ativo, pago")
+@View(members = "numeroCobranca;"
+		+ "dataAbertura;"
+		+ "dataEnvio;"
+		+ "dataVencimento;"
+		+ "contaRecebimento;"
+		+ "formaPagamento;"
+		+ "ativo;"
+		+ "pago;"
+		+ "anexo;"
+		+ "observacao;"
+		+ "cliente;"
+		+ "detalheContaReceber")
+@Tab(properties = "numeroCobranca, cliente.nome, dataAbertura, dataEnvio, dataVencimento, contaRecebimento.descricao, valor, valorFaturado, ativo, pago")
 public class ContaReceber extends Identifiable {
 	
 	@Column(name="numero_cobranca", nullable = false)
@@ -60,7 +73,40 @@ public class ContaReceber extends Identifiable {
 	
 	@ElementCollection
 	@JoinTable(name = "detalhe_conta_receber")
+	@ListProperties("faturado, data, descricao, quantidade, precoUnitario, precoTotal")
 	private Collection<DetalheContaReceber> detalheContaReceber;
+	
+	@Stereotype("MONEY")
+	public BigDecimal getValor() {
+		if (getDetalheContaReceber() == null)
+			return BigDecimal.ZERO;
+		
+		BigDecimal total = BigDecimal.ZERO;
+		
+		for (DetalheContaReceber detalhe : getDetalheContaReceber()) {
+			
+			total = total.add(detalhe.getQuantidade().multiply(detalhe.getPrecoUnitario()));
+			
+		}
+		
+		return total;
+	}
+	
+	@Stereotype("MONEY")
+	public BigDecimal getValorFaturado() {
+		if (getDetalheContaReceber() == null)
+			return BigDecimal.ZERO;
+		
+		BigDecimal total = BigDecimal.ZERO;
+		
+		for (DetalheContaReceber detalhe : getDetalheContaReceber()) {
+			if (detalhe.isFaturado())
+				total = total.add(detalhe.getQuantidade().multiply(detalhe.getPrecoUnitario()));
+			
+		}
+		
+		return total;
+	}
 
 	public String getNumeroCobranca() {
 		return numeroCobranca;

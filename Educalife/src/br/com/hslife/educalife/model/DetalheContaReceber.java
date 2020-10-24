@@ -51,6 +51,15 @@ public class DetalheContaReceber {
 	@DescriptionsList(descriptionProperties = "descricao")
 	@NoCreate @NoModify
 	private TabelaImposto tabelaImposto;
+	
+	@Stereotype("MONEY")
+	@Depends("quantidade, precoUnitario")
+	public BigDecimal getPrecoTotal() {
+		if (getQuantidade() == null || getPrecoUnitario() == null)
+			return BigDecimal.ZERO;
+		
+		return getQuantidade().multiply(getPrecoUnitario());
+	}
 
 	public LocalDate getData() {
 		return data;
