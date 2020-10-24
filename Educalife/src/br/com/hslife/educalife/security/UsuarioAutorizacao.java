@@ -41,7 +41,7 @@ public class UsuarioAutorizacao {
 							}
 						}
 						
-						/* TODO refatorar
+						/* SEE refatorar
 						if (usuario.getPermissao().contains(papel)) {
 							liberado = true;
 						}

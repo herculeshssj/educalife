@@ -16,6 +16,8 @@ public class Empresa extends Identifiable {
 	@JoinColumn(name="id_pessoa_juridica", unique = true)
 	private PessoaJuridica pessoaJuridica;
 	
+	//FIXME incluir dataCriacao
+	
 	@Column(columnDefinition = "text", name="contrato_social", nullable = true)
 	@Stereotype("HTML_TEXT")
 	private String contratoSocial;

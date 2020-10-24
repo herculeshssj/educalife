@@ -10,6 +10,7 @@ import org.openxava.model.*;
 
 @Entity
 @Table(name="conta_pagar")
+@Tab(properties = "numeroCobranca, fornecedor.razaoSocial, dataAbertura, dataEnvio, dataVencimento, contaPagamento.descricao, ativo, pago")
 public class ContaPagar extends Identifiable {
 
 	@Column(name="numero_cobranca", nullable = false)
@@ -23,6 +24,9 @@ public class ContaPagar extends Identifiable {
 	@Column(name="data_envio")
 	private LocalDate dataEnvio;
 	
+	@Column(name="data_vencimento")
+	private LocalDate dataVencimento;
+	
 	@ManyToOne
 	@JoinColumn(name="id_conta_pagamento", nullable = false)
 	@Required
@@ -30,24 +34,29 @@ public class ContaPagar extends Identifiable {
 	@NoCreate @NoModify
 	private Conta contaPagamento;
 	
+	@ManyToOne
+	@JoinColumn(name="id_forma_pagamento")
+	@DescriptionsList(descriptionProperties = "descricao")
+	@NoCreate @NoModify
+	private FormaPagamento formaPagamento;
+	
 	@Column
 	private boolean ativo;
 	
-	@ManyToOne
-	@JoinColumn(name="id_fornecedor", nullable = false)
-	private PessoaJuridica fornecedor;
+	@Column
+	private boolean pago;
 	
-	@ManyToOne
-	@JoinColumn(name="id_forma_pagamento")
-	private FormaPagamento formaPagamento;
+	@Stereotype("FILE")
+	@Column(length=32)
+	private String anexo;
 	
 	@Column(nullable = true)
 	@Stereotype("MEMO")
 	private String observacao;
 	
-	@Stereotype("FILE")
-	@Column(length=32)
-	private String anexo;
+	@ManyToOne
+	@JoinColumn(name="id_fornecedor", nullable = false)
+	private PessoaJuridica fornecedor;
 	
 	@ElementCollection
 	@JoinTable(name = "detalhe_conta_pagar")
@@ -131,5 +140,21 @@ public class ContaPagar extends Identifiable {
 
 	public void setDetalheContaPagar(Collection<DetalheContaPagar> detalheContaPagar) {
 		this.detalheContaPagar = detalheContaPagar;
-	}	
+	}
+
+	public LocalDate getDataVencimento() {
+		return dataVencimento;
+	}
+
+	public void setDataVencimento(LocalDate dataVencimento) {
+		this.dataVencimento = dataVencimento;
+	}
+
+	public boolean isPago() {
+		return pago;
+	}
+
+	public void setPago(boolean pago) {
+		this.pago = pago;
+	}
 }

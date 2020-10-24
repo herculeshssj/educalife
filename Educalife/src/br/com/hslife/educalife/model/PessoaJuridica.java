@@ -32,6 +32,7 @@ public class PessoaJuridica extends Identifiable {
 	@Required
 	private String cnpj;
 	
+	//TODO mover dataCriacao para a entidade Empresa
 	@Column(name="data_criacao", nullable = false)
 	@Required
 	private LocalDate dataCriacao;

@@ -34,3 +34,9 @@ VALUES(replace(newid(), '-', ''), 'PAGAMENTO', 'F83B5B55C0A8380100000000CA11D8A8
 select * from Educalife.lancamento where id_forma_pagamento is not null;
 update Educalife.lancamento set id_forma_pagamento = '4028b881751ad46a01751ad78e950019' where id_forma_pagamento is null;
 
+
+select * from Educalife.Educalife.conta_pagar cp ;
+update Educalife.Educalife.conta_pagar set pago = 0;
+
+select * from Educalife.Educalife.conta_receber cr ;
+update Educalife.Educalife.conta_receber set pago = 0;
