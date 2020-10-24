@@ -23,28 +23,42 @@ public class DetalheContaPagar {
 	@JoinColumn(name="id_conta_despesa")
 	@DescriptionsList(descriptionProperties = "descricao")
 	@NoCreate @NoModify
-	private Conta contaDespesa;
+	private Conta contaDespesa; // SEE remover se não for utilizar
 	
 	@Column
 	private BigDecimal quantidade;
 	
 	@Column(name="preco_unitario")
+	@Stereotype("MONEY")
 	private BigDecimal precoUnitario;
 	
 	@Column
+	// SEE remover se não for utilizar
 	private boolean tributavel; // incide impostos ou não
 	
 	@Column(name="impostos_inclusos")
+	// SEE remover se não for utilizar
 	private boolean impostosInclusos; // impostos estão inclusos ou não
 	
 	@ManyToOne
 	@JoinColumn(name="id_tabela_imposto")
 	@DescriptionsList(descriptionProperties = "descricao")
 	@NoCreate @NoModify
+	// SEE remover se não for utilizar
 	private TabelaImposto tabelaImposto;
 	
 	@Column
+	// SEE remover se não for utilizar
 	private boolean cobravel; // pode ser cobrado ou não
+	
+	@Stereotype("MONEY")
+	@Depends("quantidade, precoUnitario")
+	public BigDecimal getPrecoTotal() {
+		if (getQuantidade() == null || getPrecoUnitario() == null)
+			return BigDecimal.ZERO;
+		
+		return getQuantidade().multiply(getPrecoUnitario());
+	}
 
 	public LocalDate getData() {
 		return data;
