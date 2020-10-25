@@ -5,10 +5,9 @@ import java.math.*;
 import javax.persistence.*;
 
 import org.openxava.annotations.*;
-import org.openxava.model.*;
 
 @Embeddable
-public class DetalheFolhaPagamento extends Identifiable {
+public class DetalheFolhaPagamento {
 
 	@ManyToOne
 	@JoinColumn(name="id_rubrica", nullable = false)

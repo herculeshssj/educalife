@@ -8,8 +8,10 @@ import javax.persistence.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
-//@Entity
+@Entity
 @Table(name="folha_pagamento")
+@View(members = "mes, ano; colaborador; detalheFolhaPagamento; remuneracao; desconto; liquido")
+@Tab(properties = "mes, ano, colaborador.matricula, remuneracao, desconto, liquido")
 public class FolhaPagamento extends Identifiable {
 
 	@Column(nullable = false)
@@ -32,14 +34,17 @@ public class FolhaPagamento extends Identifiable {
 	@ListProperties("rubrica.codigo, rubrica.descricao, valor, observacao")
 	private Collection<DetalheFolhaPagamento> detalheFolhaPagamento;
 	
+	@Stereotype("MONEY")
 	public BigDecimal getRemuneracao() {
 		return BigDecimal.ZERO;
 	}
 	
+	@Stereotype("MONEY")
 	public BigDecimal getDesconto() {
 		return BigDecimal.ZERO;
 	}
 	
+	@Stereotype("MONEY")
 	public BigDecimal getLiquido() {
 		return BigDecimal.ZERO;
 	}

@@ -8,6 +8,7 @@ import org.openxava.model.*;
 @Entity
 @Table(name="rubrica")
 @View(members = "codigo; descricao; incide { fgts, inss, irrf }; discriminacao")
+@Tab(properties = "codigo, descricao, fgts, inss, irrf")
 public class Rubrica extends Identifiable {
 	
 	@Column(nullable = false)
