@@ -90,6 +90,7 @@ if (modules.hasModules(request)) {
           	<xava:message key="menuFinanceiro"/>
           </a>
           <ul class="dropdown-menu">
+          	<li><a href="<%=modules.getModuleURI(request, menuModulos.get("CodigoContabil"))%>?init=true"><xava:message key="finCodigoContabil"/></a></li>
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Conta"))%>?init=true"><xava:message key="finConta"/></a></li>
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Lancamento"))%>?init=true"><xava:message key="finLancamento"/></a></li>
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("ContaPagar"))%>?init=true"><xava:message key="finContaPagar"/></a></li>
