@@ -112,6 +112,7 @@ if (modules.hasModules(request)) {
           	<xava:message key="menuOpcao"/>
           </a>
           <ul class="dropdown-menu">
+          	<li><a href="<%=modules.getModuleURI(request, menuModulos.get("ParametroSistema"))%>?init=true"><xava:message key="opcaoParametro"/></a></li>
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Usuario"))%>?init=true"><xava:message key="opcaoUsuario"/></a></li>
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("PapelUsuario"))%>?init=true"><xava:message key="opcaoUsuarioPapel"/></a></li>
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("LogAcesso"))%>?init=true"><xava:message key="opcaoLogAcesso"/></a></li>

@@ -40,3 +40,6 @@ update Educalife.Educalife.conta_pagar set pago = 0;
 
 select * from Educalife.Educalife.conta_receber cr ;
 update Educalife.Educalife.conta_receber set pago = 0;
+
+select * from Educalife.Educalife.rubrica r ;
+update Educalife.Educalife.rubrica set ativo = 1;
