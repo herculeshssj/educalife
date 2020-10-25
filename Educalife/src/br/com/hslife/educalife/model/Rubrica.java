@@ -2,11 +2,13 @@ package br.com.hslife.educalife.model;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
 @Entity
 @Table(name="rubrica")
+@Audited
 @View(members = "codigo; descricao; incide { fgts, inss, irrf }; discriminacao")
 @Tab(properties = "codigo, descricao, fgts, inss, irrf")
 public class Rubrica extends Identifiable {
@@ -19,7 +21,7 @@ public class Rubrica extends Identifiable {
 	@Required
 	private String descricao;
 	
-	@Column(nullable = true, length = 500)
+	@Column(nullable = true, length = 1000)
 	@Stereotype("MEMO")
 	private String discriminacao;
 	
