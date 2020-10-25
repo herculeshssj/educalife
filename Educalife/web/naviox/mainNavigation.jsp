@@ -103,6 +103,7 @@ if (modules.hasModules(request)) {
           </a>
           <ul class="dropdown-menu">
             <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Colaborador"))%>?init=true"><xava:message key="pessoalColaborador"/></a></li>
+            <li><a href="<%=modules.getModuleURI(request, menuModulos.get("Rubrica"))%>?init=true"><xava:message key="pessoalRubrica"/></a></li>
           </ul>
         </li>
         <li class="dropdown">

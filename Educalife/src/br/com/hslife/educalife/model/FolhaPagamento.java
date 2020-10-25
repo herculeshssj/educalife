@@ -29,7 +29,7 @@ public class FolhaPagamento extends Identifiable {
 	
 	@ElementCollection
 	@JoinTable(name="detalhe_folha_pagamento")
-	@ListProperties("codigoContabil.codigo, codigoContabil.descricao, codigoContabil.tipoCodigoContabil, valor, observacao")
+	@ListProperties("rubrica.codigo, rubrica.descricao, valor, observacao")
 	private Collection<DetalheFolhaPagamento> detalheFolhaPagamento;
 	
 	public BigDecimal getRemuneracao() {

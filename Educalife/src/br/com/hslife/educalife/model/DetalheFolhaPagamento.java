@@ -11,9 +11,9 @@ import org.openxava.model.*;
 public class DetalheFolhaPagamento extends Identifiable {
 
 	@ManyToOne
-	@JoinColumn(name="id_codigo_contabil", nullable = false)
+	@JoinColumn(name="id_rubrica", nullable = false)
 	@Required
-	private CodigoContabil codigoContabil;
+	private Rubrica rubrica;
 	
 	@Stereotype("MONEY")
 	@Required
@@ -21,14 +21,6 @@ public class DetalheFolhaPagamento extends Identifiable {
 	
 	@Column(nullable = true)
 	private String observacao;
-
-	public CodigoContabil getCodigoContabil() {
-		return codigoContabil;
-	}
-
-	public void setCodigoContabil(CodigoContabil codigoContabil) {
-		this.codigoContabil = codigoContabil;
-	}
 
 	public BigDecimal getValor() {
 		return valor;
@@ -44,5 +36,13 @@ public class DetalheFolhaPagamento extends Identifiable {
 
 	public void setObservacao(String observacao) {
 		this.observacao = observacao;
+	}
+
+	public Rubrica getRubrica() {
+		return rubrica;
+	}
+
+	public void setRubrica(Rubrica rubrica) {
+		this.rubrica = rubrica;
 	}
 }
