@@ -2,11 +2,13 @@ package br.com.hslife.educalife.model;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
 @Entity
 @Table(name="banco")
+@Audited
 @View(name = "view_in_conta", members = "codigo, nome")
 public class Banco extends Identifiable {
 	

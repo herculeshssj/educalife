@@ -2,12 +2,13 @@ package br.com.hslife.educalife.model;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
 @Entity
 @Table(name="estado_civil")
-//@Audited
+@Audited
 public class EstadoCivil extends Identifiable {
 
 	@Column

@@ -4,12 +4,13 @@ import java.util.*;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
 @Entity
 @Table(name="papel_usuario")
-//@Audited
+@Audited
 public class PapelUsuario extends Identifiable {
 	
 	@Column(nullable = false)

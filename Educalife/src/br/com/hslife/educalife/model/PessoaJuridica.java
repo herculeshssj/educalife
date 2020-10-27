@@ -1,23 +1,23 @@
 package br.com.hslife.educalife.model;
 
-import java.time.*;
 import java.util.*;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
 @Entity
 @Table(name="pessoa_juridica")
+@Audited
 @View(members = "geral { razaoSocial; "
 		+ "nomeFantasia; "
-		+ "cnpj; "
-		+ "dataCriacao } "
+		+ "cnpj; } "
 		+ "endereco { endereco } ;"
 		+ "contatos { contatos };"
 )
-@Tab(properties = "nomeFantasia, cnpj, dataCriacao")
+@Tab(properties = "nomeFantasia, cnpj")
 public class PessoaJuridica extends Identifiable {
 	
 	@Column(name="razao_social", nullable = false)
@@ -31,11 +31,6 @@ public class PessoaJuridica extends Identifiable {
 	@Column(name="cnpj", nullable = false)
 	@Required
 	private String cnpj;
-	
-	//TODO mover dataCriacao para a entidade Empresa
-	@Column(name="data_criacao", nullable = false)
-	@Required
-	private LocalDate dataCriacao;
 	
 	@Embedded
 	@ReferenceView(value = "endereco")
@@ -67,14 +62,6 @@ public class PessoaJuridica extends Identifiable {
 
 	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
-	}
-
-	public LocalDate getDataCriacao() {
-		return dataCriacao;
-	}
-
-	public void setDataCriacao(LocalDate dataCriacao) {
-		this.dataCriacao = dataCriacao;
 	}
 
 	public Endereco getEndereco() {

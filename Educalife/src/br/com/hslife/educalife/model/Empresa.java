@@ -1,14 +1,18 @@
 package br.com.hslife.educalife.model;
 
+import java.time.*;
+
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
 @Entity
 @Table(name="empresa")
-@Tab(properties = "pessoaJuridica.nomeFantasia, pessoaJuridica.cnpj, pessoaJuridica.dataCriacao")
-@View(members = "pessoaJuridica; contratoSocial")
+@Audited
+@Tab(properties = "pessoaJuridica.nomeFantasia, pessoaJuridica.cnpj, dataCriacao")
+@View(members = "pessoaJuridica; dataCriacao; contratoSocial")
 @View(name="view_in_conta", members = "nomeEmpresa, cnpjEmpresa")
 public class Empresa extends Identifiable {
 
@@ -16,7 +20,8 @@ public class Empresa extends Identifiable {
 	@JoinColumn(name="id_pessoa_juridica", unique = true)
 	private PessoaJuridica pessoaJuridica;
 	
-	//FIXME incluir dataCriacao
+	@Column(name="data_criacao", nullable = false)
+	private LocalDate dataCriacao;
 	
 	@Column(columnDefinition = "text", name="contrato_social", nullable = true)
 	@Stereotype("HTML_TEXT")
@@ -50,5 +55,13 @@ public class Empresa extends Identifiable {
 
 	public void setPessoaJuridica(PessoaJuridica pessoaJuridica) {
 		this.pessoaJuridica = pessoaJuridica;
+	}
+
+	public LocalDate getDataCriacao() {
+		return dataCriacao;
+	}
+
+	public void setDataCriacao(LocalDate dataCriacao) {
+		this.dataCriacao = dataCriacao;
 	}
 }

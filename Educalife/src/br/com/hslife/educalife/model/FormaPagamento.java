@@ -2,11 +2,13 @@ package br.com.hslife.educalife.model;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
 @Entity
 @Table(name="forma_pagamento")
+@Audited
 public class FormaPagamento extends Identifiable {
 
 	@Column(nullable = false)

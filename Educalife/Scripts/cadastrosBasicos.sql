@@ -175,8 +175,8 @@ VALUES('2c9640817425dfa9017425e604e20005', '333.333.333-33', '1980-01-01', 'Cent
 
 /* Pessoa jurídica */
 INSERT INTO dbo.pessoa_juridica
-(id, cnpj, data_criacao, bairro, cep, cidade, complemento, logradouro, numero, uf, nome_fantasia, razao_social, id_tipo_logradouro)
-VALUES('2c9640817421617901742162f7240001', '55.723.390/0001-10', '2011-08-11', 'Centro', '26000-000', 'Rio de Janeiro', '8º Andar Sala 815', 'Rio Branco', '185', 'RJ', 'Educalife', 'Educalife Serviços Educacionais Ltda.', '2c9640817418b7f6017418b8a4ee001e');
+(id, cnpj, bairro, cep, cidade, complemento, logradouro, numero, uf, nome_fantasia, razao_social, id_tipo_logradouro)
+VALUES('2c9640817421617901742162f7240001', '55.723.390/0001-10', 'Centro', '26000-000', 'Rio de Janeiro', '8º Andar Sala 815', 'Rio Branco', '185', 'RJ', 'Educalife', 'Educalife Serviços Educacionais Ltda.', '2c9640817418b7f6017418b8a4ee001e');
 
 INSERT INTO dbo.pessoa_juridica_contatos
 (pessoa_juridica_id, descricao, observacao, tipo_contato)
@@ -188,8 +188,8 @@ VALUES('2c9640817421617901742162f7240001', 'https://dbo.com.br', 'Site', 'SITE')
 
 /* Empresa */
 INSERT INTO dbo.empresa
-(id, contrato_social, id_pessoa_juridica)
-VALUES('2c964081742167b80174216845730001', '<p><strong>CONTRATO SOCIAL DA ..............................</strong>&nbsp;</p>
+(id, data_criacao, contrato_social, id_pessoa_juridica)
+VALUES('2c964081742167b80174216845730001', '2011-08-11', '<p><strong>CONTRATO SOCIAL DA ..............................</strong>&nbsp;</p>
 
 <p>(nome) ............., (nacionalidade) .........., (profiss&atilde;o) .........., (estado civil e regime de casamento) .........., portador do RG n&ordm; ................, inscrito no CPF sob o n&ordm; .......................,&nbsp;&nbsp;residente e domiciliado &agrave; Rua .................................., n&ordm; ....., Bairro ..............., Estado de .........., e (nome) ............., (nacionalidade) .........., (profiss&atilde;o) .........., (estado civil estado civil e regime de casamento) .........., portador do RG n&ordm; ................, inscrito no CPF sob o n&ordm; ......................., residente e domiciliado &agrave; Rua .................................., n&ordm; ....., Bairro ..............., Estado de .........., pelo presente instrumento, constituem entre si uma sociedade simples, mediante as cl&aacute;usulas e condi&ccedil;&otilde;es seguintes:&nbsp;</p>
 
