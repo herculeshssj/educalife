@@ -43,3 +43,12 @@ update Educalife.Educalife.conta_receber set pago = 0;
 
 select * from Educalife.Educalife.rubrica r ;
 update Educalife.Educalife.rubrica set ativo = 1;
+
+
+select * from Educalife.Educalife.pais p ;
+
+update Educalife.Educalife.pais set denominacao = rtrim(ltrim(denominacao));
+
+
+
+

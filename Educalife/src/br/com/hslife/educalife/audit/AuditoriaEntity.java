@@ -18,7 +18,7 @@ public class AuditoriaEntity implements Serializable {
 	private static final long serialVersionUID = 5352142560533992437L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "auditoria_generator")
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "auditoria_generator")
 	@SequenceGenerator(name="auditoria_generator", initialValue = 1, allocationSize = 1, schema = "audit", sequenceName = "auditoria_sequence")
 	@RevisionNumber
 	private long id;
