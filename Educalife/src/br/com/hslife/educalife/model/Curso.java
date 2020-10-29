@@ -2,6 +2,7 @@ package br.com.hslife.educalife.model;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
@@ -9,6 +10,7 @@ import br.com.hslife.educalife.enumeration.*;
 
 @Entity
 @Table(name = "curso")
+@Audited
 @View(members = "nomeCurso; "
 		+ "cargaHoraria, statusCurso; "
 		+ "nomeCoordenador; "

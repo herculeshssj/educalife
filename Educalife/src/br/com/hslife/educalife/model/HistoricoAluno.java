@@ -4,6 +4,7 @@ import java.math.*;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
@@ -11,6 +12,7 @@ import br.com.hslife.educalife.enumeration.*;
 
 @Entity
 @Table(name="historico_aluno")
+@Audited
 @View(members = "notaFinal, frequenciaAula, situacaoFinalAluno; inscricaoTurma"
 )
 @Tab(properties = "inscricaoTurma.numeroInscricao, inscricaoTurma.pessoaFisica.nome, inscricaoTurma.turma.nomeTurma, notaFinal, frequenciaAula, situacaoFinalAluno")

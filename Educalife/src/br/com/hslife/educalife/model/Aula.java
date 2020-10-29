@@ -4,11 +4,13 @@ import java.time.*;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
 @Entity
 @Table(name="aula")
+@Audited
 public class Aula extends Identifiable{
 	
 	@Column(name="data_aula", nullable = false)

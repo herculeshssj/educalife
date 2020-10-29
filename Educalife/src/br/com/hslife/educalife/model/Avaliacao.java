@@ -5,11 +5,13 @@ import java.time.*;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
 @Entity
 @Table(name="avaliacao")
+@Audited
 @View(members = "turma; "
 		+ "descricao, dataAvaliacao, notaAvaliacao; "
 		+ "topicosAvaliacao")

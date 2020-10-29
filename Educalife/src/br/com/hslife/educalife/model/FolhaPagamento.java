@@ -5,11 +5,13 @@ import java.util.*;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
 @Entity
 @Table(name="folha_pagamento")
+@Audited
 @View(members = "mes, ano; colaborador; detalheFolhaPagamento; remuneracao; desconto; liquido")
 @Tab(properties = "mes, ano, colaborador.matricula, remuneracao, desconto, liquido")
 public class FolhaPagamento extends Identifiable {

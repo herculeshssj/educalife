@@ -6,11 +6,13 @@ import java.util.*;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
 @Entity
 @Table(name="conta_pagar")
+@Audited
 @View(members = "numeroCobranca;"
 		+ "dataAbertura;"
 		+ "dataEnvio;"

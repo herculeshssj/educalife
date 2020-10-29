@@ -5,6 +5,7 @@ import java.time.*;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
@@ -12,6 +13,7 @@ import br.com.hslife.educalife.enumeration.*;
 
 @Entity
 @Table(name="contrato")
+@Audited
 @View(members = "geral { numeroContrato, "
 		+ "situacaoContrato; "
 		+ "contratante; "

@@ -5,6 +5,7 @@ import java.time.*;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
@@ -12,6 +13,7 @@ import br.com.hslife.educalife.enumeration.*;
 
 @Entity
 @Table(name = "lancamento")
+@Audited
 @View(members = "conta;"
 		+ "historico, numero;"
 		+ "data, valor, statusLancamento;"

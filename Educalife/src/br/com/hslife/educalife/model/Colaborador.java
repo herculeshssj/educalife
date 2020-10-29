@@ -4,11 +4,13 @@ import java.time.*;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
 @Entity
 @Table(name="colaborador")
+@Audited
 @View(members = "matricula; cargo; dataAdmissao, dataDesligamento; departamento; pessoaFisica")
 @View(name = "simples", members = "matricula; cargo; dataAdmissao, dataDesligamento; departamento")
 @Tab(properties = "matricula, pessoaFisica.nome, cargo.denominacao, departamento.nomeDepartamento, departamento.unidade.nomeUnidade, dataAdmissao")
