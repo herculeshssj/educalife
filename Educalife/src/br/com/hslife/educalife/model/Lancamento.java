@@ -51,7 +51,7 @@ public class Lancamento extends Identifiable {
 	
 	@Stereotype("FILE")
 	@Column(length=32)
-	private String anexo;
+	private String anexo; // TODO mover para outro filegroup: https://www.mssqltips.com/sqlservertip/5832/move-sql-server-tables-to-different-filegroups/
 	
 	@ManyToOne
 	@JoinColumn(name="id_forma_pagamento", nullable = true)

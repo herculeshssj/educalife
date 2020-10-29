@@ -6,6 +6,7 @@ import java.util.*;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.jpa.*;
 import org.openxava.model.*;
@@ -14,6 +15,7 @@ import br.com.hslife.educalife.enumeration.*;
 
 @Entity
 @Table(name="conta")
+@Audited
 @View(members = "banco; "
 		+ "descricao, tipoConta; "
 		+ "agencia, numeroConta; "

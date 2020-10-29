@@ -61,7 +61,7 @@ public class ContaPagar extends Identifiable {
 	
 	@Stereotype("FILE")
 	@Column(length=32)
-	private String anexo;
+	private String anexo; // TODO Mover para outro filegroup: https://www.sqlmatters.com/Articles/Moving%20a%20Table%20to%20a%20Different%20Filegroup.aspx
 	
 	@Column(nullable = true)
 	@Stereotype("MEMO")
