@@ -1,6 +1,7 @@
 package br.com.hslife.educalife.model;
 
 import java.time.*;
+import java.util.*;
 
 import javax.persistence.*;
 
@@ -11,7 +12,13 @@ import org.openxava.model.*;
 @Entity
 @Table(name="colaborador")
 @Audited
-@View(members = "matricula; cargo; dataAdmissao, dataDesligamento; departamento; pessoaFisica")
+@View(members = "geral { matricula; "
+		+ "cargo; "
+		+ "dataAdmissao, dataDesligamento; "
+		+ "departamento; "
+		+ "pessoaFisica }; "
+		+ "contracheque {"
+		+ "folhaPagamentos }")
 @View(name = "simples", members = "matricula; cargo; dataAdmissao, dataDesligamento; departamento")
 @Tab(properties = "matricula, pessoaFisica.nome, cargo.denominacao, departamento.nomeDepartamento, departamento.unidade.nomeUnidade, dataAdmissao")
 public class Colaborador extends Identifiable {
@@ -43,6 +50,11 @@ public class Colaborador extends Identifiable {
 	@ManyToOne
 	@JoinColumn(name="id_pessoa_fisica", nullable = false)
 	private PessoaFisica pessoaFisica;
+	
+	@OneToMany(mappedBy = "colaborador")
+	@ReadOnly
+	@ListProperties("mes, ano, rubrica.tipoRubrica, rubrica.codigo, rubrica.descricao, valor, observacao")
+	private Collection<FolhaPagamento> folhaPagamentos;
 
 	public PessoaFisica getPessoaFisica() {
 		return pessoaFisica;
@@ -90,5 +102,13 @@ public class Colaborador extends Identifiable {
 
 	public void setDepartamento(Departamento departamento) {
 		this.departamento = departamento;
+	}
+
+	public Collection<FolhaPagamento> getFolhaPagamentos() {
+		return folhaPagamentos;
+	}
+
+	public void setFolhaPagamentos(Collection<FolhaPagamento> folhaPagamentos) {
+		this.folhaPagamentos = folhaPagamentos;
 	}
 }
