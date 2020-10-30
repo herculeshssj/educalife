@@ -11,6 +11,7 @@
     	<non-jta-data-source>java://comp/env/jdbc/EducalifeDS</non-jta-data-source>
     	<class>org.openxava.session.GalleryImage</class>
     	<class>org.openxava.web.editors.DiscussionComment</class>
+    	<class>org.openxava.web.editors.AttachedFile</class>
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="update"/>
             <property name="javax.persistence.create-database-schemas" value="true"/> 
