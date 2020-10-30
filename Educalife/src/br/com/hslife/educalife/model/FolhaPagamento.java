@@ -1,7 +1,6 @@
 package br.com.hslife.educalife.model;
 
 import java.math.*;
-import java.util.*;
 
 import javax.persistence.*;
 
@@ -12,8 +11,8 @@ import org.openxava.model.*;
 @Entity
 @Table(name="folha_pagamento")
 @Audited
-@View(members = "mes, ano; colaborador; detalheFolhaPagamento; remuneracao; desconto; liquido")
-@Tab(properties = "mes, ano, colaborador.matricula, remuneracao, desconto, liquido")
+@View(members = "mes, ano; valor; observacao; rubrica; colaborador")
+@Tab(properties = "mes, ano, colaborador.matricula, rubrica.codigo, valor")
 public class FolhaPagamento extends Identifiable {
 
 	@Column(nullable = false)
@@ -31,25 +30,19 @@ public class FolhaPagamento extends Identifiable {
 	@NoCreate @NoModify
 	private Colaborador colaborador;
 	
-	@ElementCollection
-	@JoinTable(name="detalhe_folha_pagamento")
-	@ListProperties("rubrica.id, rubrica.codigo, rubrica.descricao, valor, observacao")
-	private Collection<DetalheFolhaPagamento> detalheFolhaPagamento;
+	@ManyToOne
+	@JoinColumn(name="id_rubrica", nullable = false)
+	@Required
+	@ReferenceView(value="simples")
+	@NoCreate @NoModify
+	private Rubrica rubrica;
 	
 	@Stereotype("MONEY")
-	public BigDecimal getRemuneracao() {
-		return BigDecimal.ZERO;
-	}
+	@Required
+	private BigDecimal valor;
 	
-	@Stereotype("MONEY")
-	public BigDecimal getDesconto() {
-		return BigDecimal.ZERO;
-	}
-	
-	@Stereotype("MONEY")
-	public BigDecimal getLiquido() {
-		return BigDecimal.ZERO;
-	}
+	@Column(nullable = true)
+	private String observacao;
 
 	public int getMes() {
 		return mes;
@@ -75,11 +68,27 @@ public class FolhaPagamento extends Identifiable {
 		this.colaborador = colaborador;
 	}
 
-	public Collection<DetalheFolhaPagamento> getDetalheFolhaPagamento() {
-		return detalheFolhaPagamento;
+	public Rubrica getRubrica() {
+		return rubrica;
 	}
 
-	public void setDetalheFolhaPagamento(Collection<DetalheFolhaPagamento> detalheFolhaPagamento) {
-		this.detalheFolhaPagamento = detalheFolhaPagamento;
+	public void setRubrica(Rubrica rubrica) {
+		this.rubrica = rubrica;
+	}
+
+	public BigDecimal getValor() {
+		return valor;
+	}
+
+	public void setValor(BigDecimal valor) {
+		this.valor = valor;
+	}
+
+	public String getObservacao() {
+		return observacao;
+	}
+
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
 	}
 }

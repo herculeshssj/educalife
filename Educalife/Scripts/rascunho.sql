@@ -49,6 +49,8 @@ select * from Educalife.Educalife.pais p ;
 
 update Educalife.Educalife.pais set denominacao = rtrim(ltrim(denominacao));
 
+select * from rubrica r ;
+update rubrica set tipo_rubrica = 'RENDIMENTO' where tipo_rubrica is null;
 
 
 

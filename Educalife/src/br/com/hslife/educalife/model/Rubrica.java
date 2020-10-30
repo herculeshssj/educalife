@@ -6,11 +6,14 @@ import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
+import br.com.hslife.educalife.enumeration.*;
+
 @Entity
 @Table(name="rubrica")
 @Audited
-@View(members = "codigo; descricao; ativo; incide { fgts, inss, irrf }; discriminacao")
-@Tab(properties = "codigo, descricao, fgts, inss, irrf, ativo")
+@View(members = "codigo; descricao; tipoRubrica; ativo; incide { fgts, inss, irrf }; discriminacao")
+@View(name = "simples", members = "codigo, descricao, tipoRubrica, ativo")
+@Tab(properties = "codigo, tipoRubrica, descricao, fgts, inss, irrf, ativo")
 public class Rubrica extends Identifiable {
 	
 	@Column(nullable = false)
@@ -20,6 +23,10 @@ public class Rubrica extends Identifiable {
 	@Column(nullable = false, length = 100)
 	@Required
 	private String descricao;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name="tipo_rubrica", nullable = false)
+	private TipoRubrica tipoRubrica;
 	
 	@Column(nullable = true, length = 1000)
 	@Stereotype("MEMO")
@@ -95,5 +102,13 @@ public class Rubrica extends Identifiable {
 
 	public void setAtivo(boolean ativo) {
 		this.ativo = ativo;
+	}
+
+	public TipoRubrica getTipoRubrica() {
+		return tipoRubrica;
+	}
+
+	public void setTipoRubrica(TipoRubrica tipoRubrica) {
+		this.tipoRubrica = tipoRubrica;
 	}
 }
