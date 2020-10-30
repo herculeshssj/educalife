@@ -12,6 +12,13 @@ import org.openxava.view.*;
 
 import com.openxava.naviox.*;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+
+
 /**
  * 
  * @author Javier Paniza
@@ -40,6 +47,7 @@ public class SignInHelper {
 	
 	public static boolean isAuthorized(ServletRequest request, String user, String password) {
 		String storedPassword = getUsers().getProperty(user, null);
+		System.out.println("Passei pelo SignInHelper! :D");
 		return password.equals(storedPassword);
 	}	
 	
@@ -67,4 +75,22 @@ public class SignInHelper {
 		return users;		
 	}
 
+	/*
+	 * Retorna o texto criptografado em SHA-256
+	 */
+	private String SHA256(String texto) {
+        String sen = "";
+        MessageDigest md = null;
+        try {
+            md = MessageDigest.getInstance("SHA-256");
+            BigInteger hash = new BigInteger(1, md.digest(texto.getBytes()));
+            sen = hash.toString(16);
+        } catch (NullPointerException e) {
+        	e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        
+        return sen;
+    }
 }
