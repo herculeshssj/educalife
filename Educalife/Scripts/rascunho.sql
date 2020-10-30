@@ -53,4 +53,6 @@ select * from rubrica r ;
 update rubrica set tipo_rubrica = 'RENDIMENTO' where tipo_rubrica is null;
 
 
-
+alter table pessoa_fisica alter column foto varbinary(max);
+alter table audit.pessoa_fisica_AUD alter column foto varbinary(max);
+alter table OXFILES alter column [data] varbinary(max);

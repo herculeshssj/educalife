@@ -61,7 +61,7 @@ public class ContaReceber extends Identifiable {
 	
 	@Stereotype("FILE")
 	@Column(length=32)
-	private String anexo; // TODO mover para outro filegroup: https://dba.stackexchange.com/questions/167982/how-to-move-a-table-to-secondary-filegroup-without-losing-data
+	private String anexo;
 	
 	@Column(nullable = true)
 	@Stereotype("MEMO")

@@ -105,6 +105,7 @@ public class PessoaFisica extends Identifiable {
 	private Collection<Anotacao> anotacoes;
 	
 	@Stereotype("PHOTO")
+	@Column(columnDefinition = "varbinary(max)")
 	private byte[] foto;
 	
 	/*** Seção de métodos Getters e Setters customizados ***/
