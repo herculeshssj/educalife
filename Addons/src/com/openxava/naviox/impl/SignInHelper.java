@@ -7,6 +7,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 
 import org.apache.commons.logging.*;
+import org.openxava.jpa.*;
 import org.openxava.util.*;
 import org.openxava.view.*;
 
@@ -17,7 +18,8 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-
+import org.openxava.jpa.*;
+import javax.persistence.*;
 
 /**
  * 
@@ -46,8 +48,21 @@ public class SignInHelper {
 	}
 	
 	public static boolean isAuthorized(ServletRequest request, String user, String password) {
-		String storedPassword = getUsers().getProperty(user, null);
-		System.out.println("Passei pelo SignInHelper! :D");
+		//String storedPassword = getUsers().getProperty(user, null);
+		String storedPassword = null;
+		
+		try {
+			
+			storedPassword = (String)XPersistence.getManager()
+					.createQuery("SELECT u.senha FROM Usuario u WHERE u.login = :login and u.ativo = true")
+					.setParameter("login", user)
+					.getSingleResult();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		
 		return password.equals(storedPassword);
 	}	
 	

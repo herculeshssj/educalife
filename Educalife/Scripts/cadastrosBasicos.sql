@@ -1,3 +1,20 @@
+/* Papel do Usuário */
+INSERT INTO Educalife.dbo.papel_usuario
+(id, descricao, nome)
+VALUES('4028b8817567abae017567ac1bb50000', 'Administrador do sistema. Concede acesso a todas as funcionalidades do sistema.', 'ADMIN');
+
+/* Usuário */
+INSERT INTO dbo.usuario
+(id, ativo, login, senha)
+VALUES('4028b881757e7d9101757e7e3d990001', 1, 'admin', 'admin');
+
+
+/* Permissão do Usuário */
+INSERT INTO Educalife.dbo.usuario_permissao
+(usuario_id, id_papel_usuario)
+VALUES('4028b881757e7d9101757e7e3d990001', '4028b8817567abae017567ac1bb50000');
+
+
 /* Tipo de logradouro */
 INSERT INTO dbo.tipo_logradouro
 (id, codigo, descricao)
