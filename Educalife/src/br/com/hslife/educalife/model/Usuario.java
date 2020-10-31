@@ -26,9 +26,10 @@ public class Usuario extends Identifiable {
 	@Column(nullable = false)
 	private boolean ativo;
 	
+	@OneToMany(mappedBy = "usuario")
 	@ElementCollection
-	@ListProperties("papelUsuario, papelUsuario.nome, papelUsuario.descricao")
-	private Collection<Permissao> permissao;
+	@ListProperties("papelUsuario.nome, papelUsuario.descricao")
+	private Collection<PermissaoUsuario> permissao;
 
 	public String getLogin() {
 		return login;
@@ -54,11 +55,11 @@ public class Usuario extends Identifiable {
 		this.ativo = ativo;
 	}
 
-	public Collection<Permissao> getPermissao() {
+	public Collection<PermissaoUsuario> getPermissao() {
 		return permissao;
 	}
 
-	public void setPermissao(Collection<Permissao> permissao) {
+	public void setPermissao(Collection<PermissaoUsuario> permissao) {
 		this.permissao = permissao;
 	}
 }

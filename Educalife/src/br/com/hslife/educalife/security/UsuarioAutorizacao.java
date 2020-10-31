@@ -34,7 +34,7 @@ public class UsuarioAutorizacao {
 								.setParameter("login", nomeUsuario)
 								.getSingleResult();
 						
-						for (Permissao permissao : usuario.getPermissao()) {
+						for (PermissaoUsuario permissao : usuario.getPermissao()) {
 							if (permissao.getPapelUsuario().equals(papel)) {
 								liberado = true;
 								break;
