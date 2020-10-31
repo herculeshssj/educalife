@@ -17,7 +17,7 @@ public class PapelUsuario extends Identifiable {
 	@Required
 	private String nome;
 	
-	@Column(nullable = false)
+	@Column(nullable = false, length = 100)
 	@Required
 	private String descricao;
 	

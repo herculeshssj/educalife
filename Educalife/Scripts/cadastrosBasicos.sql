@@ -2,6 +2,23 @@
 INSERT INTO Educalife.dbo.papel_usuario
 (id, descricao, nome)
 VALUES('4028b8817567abae017567ac1bb50000', 'Administrador do sistema. Concede acesso a todas as funcionalidades do sistema.', 'ADMIN');
+INSERT INTO Educalife.dbo.papel_usuario
+(id, descricao, nome)
+VALUES('4028b8817567abae017567ac1bf90004', 'Permite ao coordenador acessar os dados referentes os cursos e turmas que gerencia.', 'COORDENADOR_CURSO');
+INSERT INTO Educalife.dbo.papel_usuario
+(id, descricao, nome)
+VALUES('4028b8817567abae017567ac1bfd0006', 'Acesso às tarefas pertinentes a secretaria para gestão dos alunos na instituição, como matrícula, trancamento, pagamentos, etc.', 'SECRETARIA');
+INSERT INTO Educalife.dbo.papel_usuario
+(id, descricao, nome)
+VALUES('4028b881757e9ad501757ed939280014', 'Permite gerenciar detalhes gerais da estrutura da organização.', 'ADMINISTRACAO');
+INSERT INTO Educalife.dbo.papel_usuario
+(id, descricao, nome)
+VALUES('4028b881757e9ad501757ed976670016', 'Gestão da área financeira (contabilidade, tesouraria) da empresa.', 'FINANCEIRO');
+INSERT INTO Educalife.dbo.papel_usuario
+(id, descricao, nome)
+VALUES('4028b881757e9ad501757ed9cd4e0018', 'Acesso a gestão de pessoal da empresa e finanças relacionadas a pessoal.', 'PESSOAL');
+
+
 
 /* Usuário */
 INSERT INTO dbo.usuario
