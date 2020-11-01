@@ -24,7 +24,7 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "ativo;"
 		+ "empresa"
 )
-@Tab(properties = "descricao, tipoConta, agencia, numeroConta, saldoAtual")
+@Tab(properties = "descricao, tipoConta, agencia, numeroConta, ativo, saldoAtual")
 public class Conta extends Identifiable {
 	
 	@Column(nullable=false)
@@ -80,7 +80,7 @@ public class Conta extends Identifiable {
 	@SuppressWarnings("unchecked")
 	@Stereotype("MONEY")
 	public BigDecimal getSaldoAtual() {
-		// Calcular o saldo atual da conta
+		// Calcula o saldo atual da conta
 		List<BigDecimal> valorLancamentos = new LinkedList<>();
 		BigDecimal saldo = this.getSaldoInicial();
 		

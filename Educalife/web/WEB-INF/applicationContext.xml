@@ -18,11 +18,11 @@
     <context:component-scan base-package="br.com.hslife.educalife.schedule" />
  
     <!-- Configure the scheduler -->
-    <task:scheduler id="myScheduler"/>
+    <task:scheduler id="educalifeScheduler"/>
  
     <!-- Configure parameters -->
-    <task:scheduled-tasks scheduler="myScheduler">
-        <task:scheduled ref="busRoutesPumpService" method="pump" fixed-delay="1000000" initial-delay="1000000"/>
+    <task:scheduled-tasks scheduler="educalifeScheduler">
+        <task:scheduled ref="populaBaseService" method="populaBase" fixed-delay="1000000" initial-delay="1000000"/>
     </task:scheduled-tasks>
  
 </beans>

@@ -11,9 +11,9 @@ import org.openxava.model.*;
 @Entity
 @Table(name="empresa")
 @Audited
-@Tab(properties = "pessoaJuridica.nomeFantasia, pessoaJuridica.cnpj, dataCriacao")
 @View(members = "pessoaJuridica; dataCriacao; contratoSocial")
 @View(name="view_in_conta", members = "nomeEmpresa, cnpjEmpresa")
+@Tab(properties = "pessoaJuridica.nomeFantasia, pessoaJuridica.cnpj, dataCriacao")
 public class Empresa extends Identifiable {
 
 	@OneToOne
