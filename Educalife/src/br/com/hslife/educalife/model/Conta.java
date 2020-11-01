@@ -40,6 +40,7 @@ public class Conta extends Identifiable {
 	private String numeroConta;
 	
 	@Column
+	@ReadOnly
 	private boolean ativo;
 	
 	@Column(name="saldo_inicial")
@@ -98,6 +99,12 @@ public class Conta extends Identifiable {
 		return saldo;
 	}
 
+	@PreCreate
+	public void ativarConta() {
+		if (!isAtivo())
+			this.setAtivo(true);
+	}
+	
 	public String getDescricao() {
 		return descricao;
 	}

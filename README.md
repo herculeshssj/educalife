@@ -41,11 +41,11 @@ Os cadastros no Educalife ocorrem na seguinte ordem:
 3. Administração -> Departamento;
 4. Administração -> Localidade;
 5. Financeiro -> Conta;
-6. Pessoal -> Colaborador;
 
 
 
 
+16. Colaborador;
 17. Curso;
 18. Turma;
 19. Avaliação;

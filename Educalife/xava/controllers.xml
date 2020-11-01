@@ -14,6 +14,16 @@
 		<action name="salvarNotas" mode="detail" class="br.com.hslife.educalife.action.SalvarNotasAction"/>
 	</controller>
 	
+	<!-- Contas 
+	<controller name="Conta">
+		<extends controller="Typical" />
+		<action name="habilitarDesabilitarCampos" mode="all" class="br.com.hslife.educalife.action.HabilitarDesabilitarCamposAction"
+			available-on-new="false" on-each-request="true" hidden="true"/>
+		<action name="init" class="br.com.hslife.educalife.action.StartUpAction" mode="detail" on-init="true" hidden="true" available-on-new="false"/>
+	</controller>
+	
+	-->
+	
 	<!-- Contratos -->
 	<controller name="Contrato">
 		<extends controller="Typical" />
