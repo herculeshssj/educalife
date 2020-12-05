@@ -7,7 +7,7 @@ INSERT INTO Educalife.dbo.papel_usuario
 VALUES('4028b8817567abae017567ac1bf90004', 'Permite ao coordenador acessar os dados referentes os cursos e turmas que gerencia.', 'COORDENADOR_CURSO');
 INSERT INTO Educalife.dbo.papel_usuario
 (id, descricao, nome)
-VALUES('4028b8817567abae017567ac1bfd0006', 'Acesso às tarefas pertinentes a secretaria para gestão dos alunos na instituição, como matrícula, trancamento, pagamentos, etc.', 'SECRETARIA');
+VALUES('4028b8817567abae017567ac1bfd0006', 'Acesso às tarefas pertinentes a secretaria para gestão dos alunos na instituição.', 'SECRETARIA');
 INSERT INTO Educalife.dbo.papel_usuario
 (id, descricao, nome)
 VALUES('4028b881757e9ad501757ed939280014', 'Permite gerenciar detalhes gerais da estrutura da organização.', 'ADMINISTRACAO');
@@ -27,9 +27,9 @@ VALUES('4028b881757e7d9101757e7e3d990001', 1, 'admin', 'admin');
 
 
 /* Permissão do Usuário */
-INSERT INTO Educalife.dbo.usuario_permissao
-(usuario_id, id_papel_usuario)
-VALUES('4028b881757e7d9101757e7e3d990001', '4028b8817567abae017567ac1bb50000');
+INSERT INTO Educalife.dbo.permissao_usuario
+(id, id_papel_usuario, id_usuario)
+VALUES('2c9e808176352eea01763531bb390006', '4028b8817567abae017567ac1bb50000', '4028b881757e7d9101757e7e3d990001');
 
 
 /* Tipo de logradouro */
