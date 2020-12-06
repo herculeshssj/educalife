@@ -67,3 +67,7 @@ Os cadastros no Educalife ocorrem na seguinte ordem:
 29. Ensino -> Diário de Classe;
 30. Ensino -> Diário de Notas;
 31. Ensino -> Histórico do Aluno.
+
+### Problema com anexos
+
+Caso tenha problema em anexos arquivos, execute o script __correcaoAnexos__. O problema se deve ao tamanho do campo que guarda os dados binários os anexos.
