@@ -47,6 +47,7 @@ public class Contrato extends Identifiable {
 	private LocalDate dataInicioVigencia;
 	
 	@Column(name="data_fim_vigencia", nullable = false)
+	@Required
 	private LocalDate dataFimVigencia;
 	
 	@Column(name="data_renovacao", nullable = true)
