@@ -19,5 +19,6 @@
 	<classpathentry exported="true" kind="lib" path="web/WEB-INF/lib/spring-core-5.2.9.RELEASE.jar"/>
 	<classpathentry exported="true" kind="lib" path="web/WEB-INF/lib/spring-expression-5.2.9.RELEASE.jar"/>
 	<classpathentry exported="true" kind="lib" path="web/WEB-INF/lib/spring-web-5.2.9.RELEASE.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="web/WEB-INF/classes"/>
 </classpath>
