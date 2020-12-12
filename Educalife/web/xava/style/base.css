@@ -646,7 +646,7 @@ input[type="text"]:disabled, input[type="password"]:disabled, input[type="file"]
 	margin-top: 5px;
 }
 
-.ox-date-calendar input {
+.ox-date-calendar input, .ox-web-url input {  
 	padding-right: 25px;
 }
 
@@ -1963,10 +1963,6 @@ i.ox-sort-indicator2 {
 	color: var(--descriptions-list-handle-hover-color);
 }
 
-.ox-web-url { 
-	margin-right: -20px;
-}
-
 .ox-element-collection .ox-descriptions-list i {
 	top: -3px; 
 }
@@ -2349,12 +2345,12 @@ div[id$="_Index__view"] .ox-list-title {
 	margin-right: 5px;
 }
 
-.ox-image-link:hover .mdi-magnify {
+.ox-image-link:hover i.mdi-magnify { 
 	background: var(--reference-search-icon-hover-background);
 	color: var(--reference-search-icon-hover-color);
 }
 
-.ox-required-editor input, .ox-required-editor select {
+.ox-required-editor input, .ox-required-editor select, .ox-required-editor textarea {
 	border-color: var(--required-editor-border); 
 }
 
@@ -2447,3 +2443,19 @@ div[id$="_Index__view"] .ox-list-title {
 	max-height: 30px;
 }
 
+.ox-read-only-html-text {
+    white-space: break-spaces;
+}
+
+
+.ox-read-only-html-text p {
+	margin-top: -15px;
+}
+
+.ie .ox-read-only-html-text {
+    white-space: pre-wrap;
+}
+
+.ie .ox-read-only-html-text p {
+	margin-top: -5px;
+}

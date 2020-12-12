@@ -96,4 +96,18 @@ git checkout -- Addons/src/com/openxava/naviox/impl/SignInHelper.java
 ```
 
 9. Após isso, realize o commit das alterações;
-10. 
+10. Agora abra o OpenXava Studio, remova os projetos OpenXava e Addons do Package Explorer sem excluir as pastas, e importe os projetos OpenXava, Educalife e Addons que estão no repositório Git local;
+11. Vá no arquivo build.xml do projeto OpenXava, Run As -> Ant Build...;
+12. Na janela de Run As, deixe selecionado somente os alvos Ant "buildOpenXava" e "buildAddons";
+13. Logo em seguida, vá no arquivo build.xml do projeto Educalife, Run As -> Ant Build...;
+14. Na janela de Run As, deixe selecionado somenteo o alvo Ant "updateOX";
+15. Após o build, volte no terminal, e desfaça as alterações nos seguintes arquivos e diretórios:
+
+```
+git checkout -- Educalife/web/naviox/index.jsp 
+git checkout -- Educalife/web/naviox/mainNavigation.jsp
+git checkout -- Educalife/web/WEB-INF/web.xml
+```
+
+16. Após isso, realize o commit das alterações;
+17. 

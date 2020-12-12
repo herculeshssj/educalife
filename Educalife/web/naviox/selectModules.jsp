@@ -3,9 +3,8 @@
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.Collection"%>
 <%@page import="org.openxava.util.Is"%>
-<%@page import="org.openxava.util.Strings"%>
+<%@page import="org.openxava.util.Strings"%> 
 <%@page import="org.openxava.application.meta.MetaModule"%>
-<%@page import="br.com.hslife.educalife.security.UsuarioAutorizacao"%>
 
 <jsp:useBean id="modules" class="com.openxava.naviox.Modules" scope="session"/>
 
@@ -32,12 +31,6 @@ for (Iterator it= modulesList.iterator(); it.hasNext();) {
 	String description = module.getDescription(request.getLocale());
 	String normalizedLabel = Strings.removeAccents(label.toLowerCase()); 
 	String normalizedDescription = Strings.removeAccents(description.toLowerCase());
-		
-	/* Gestão de permissão de acesso ao sistema */
-	if (!UsuarioAutorizacao.isAutorizado(module.getName())) {
-		continue;
-	}
-	
 	if (!Is.emptyString(searchWord) && !normalizedLabel.contains(searchWord) && !normalizedDescription.contains(searchWord)) continue;
 	counter++;
 %>
