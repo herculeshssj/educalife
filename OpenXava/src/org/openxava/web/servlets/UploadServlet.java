@@ -10,8 +10,10 @@ import org.apache.commons.logging.*;
 import org.openxava.controller.*;
 import org.openxava.model.meta.*;
 import org.openxava.util.*;
+import org.openxava.validators.*;
 import org.openxava.view.*;
 import org.openxava.web.*;
+import org.openxava.web.dwr.Module;
 import org.openxava.web.meta.*;
 
 
@@ -43,7 +45,7 @@ public class UploadServlet extends HttpServlet {
 	}	
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		executeAction(request, response, "load", true); 
+		executeAction(request, response, "load", true);
 	}
 
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -67,6 +69,10 @@ public class UploadServlet extends HttpServlet {
 			String propertyValues = "property=" + property; 
 			if (fileId != null) propertyValues = propertyValues + ",fileId=" + fileId; 
 			manager.executeAction(action, errors, messages, propertyValues, request);
+			if (errors.contains()) {
+				Module.memorizeLastMessages(request, request.getParameter("application"), request.getParameter("module"));
+				response.sendError(406);
+			}
 		}
 		catch (Exception ex) { 
 			log.error(XavaResources.getString("no_execute_action", action, ex.getMessage()), ex); 
@@ -86,7 +92,7 @@ public class UploadServlet extends HttpServlet {
 		ModuleContext context = (ModuleContext) request.getSession().getAttribute("context");
 		return (ModuleManager) context.get(request, "manager");
 	}
-
+	
 	private String getEditorProperty(HttpServletRequest request, String property, String editorProperty) {
 		View view = getCurrentView(request);
 		MetaProperty metaProperty = view.getMetaProperty(property);

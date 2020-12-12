@@ -140,8 +140,11 @@ public class Module extends DWRBase {
 		if (firstRequest) return null; 
 		Stack previousViews = (Stack) getContext(request).get(application, module, "xava_previousViews"); // The previousStack to work for both showDialog() and showNewView()
 		if (!previousViews.isEmpty()) return ""; 
-		Map key = getView().getKeyValuesWithValue();
-		if (key.size() == 1) {
+		View view = getView();
+		Map key = view.getKeyValuesWithValue();
+		MetaModel moduleMetaModel = MetaModel.get(manager.getModelName()); 
+		boolean modelFromModule = moduleMetaModel.getPOJOClass().isAssignableFrom(view.getMetaModel().getPOJOClass());
+		if (modelFromModule && key.size() == 1 && !moduleMetaModel.getMetaComponent().isTransient()) {
 			String id = key.values().iterator().next().toString();
 			return "detail=" + id; 				
 		}
@@ -609,13 +612,13 @@ public class Module extends DWRBase {
 			String row = key[1];
 			String column = key[2];
 			String name = qualifiedName.substring(qualifiedName.lastIndexOf('.') + 1);
-			View containerView = (View) en.getValue();			
+			View containerView = (View) en.getValue();
 			put(result, "collection_total_" + row + "_" + column + "_" + qualifiedName + ".", 
 				"editors/collectionTotal.jsp?collectionName=" + name + 
 				"&viewObject=" + containerView.getViewObject() +
 				"&row=" + row +
 				"&column=" + column +
-				"&propertyPrefix=" + containerView.getPropertyPrefix());  									
+				"&propertyPrefix=" + containerView.getPropertyPrefix());			
 		}
 	}
 	
@@ -651,6 +654,11 @@ public class Module extends DWRBase {
 
 	
 	private void memorizeLastMessages(String module) {  
+		memorizeLastMessages(request, application, module); 
+	}
+	
+	/** @since 6.4.2 */
+	public static void memorizeLastMessages(HttpServletRequest request, String application, String module) {
 		ModuleContext context = getContext(request);		
 		Object messages = request.getAttribute("messages");
 		if (messages != null) { 
@@ -661,7 +669,6 @@ public class Module extends DWRBase {
 			context.put(application, module, ERRORS_LAST_REQUEST, errors);
 		}			
 	}
-	
 
 	public static void restoreLastMessages(HttpServletRequest request, String application, String module) {  
 		ModuleContext context = getContext(request);		

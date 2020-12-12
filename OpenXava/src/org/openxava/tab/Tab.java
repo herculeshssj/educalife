@@ -1646,6 +1646,12 @@ public class Tab implements java.io.Serializable, Cloneable {
 		return metaPropertiesBeforeGrouping == null?getMetaProperties():metaPropertiesBeforeGrouping;
 	}
 	
+	public Collection<MetaProperty> getMetaPropertiesGroupBy() { 
+		return getMetaPropertiesBeforeGrouping().stream()
+			.filter(p -> !p.isCalculated())
+			.collect(Collectors.toList());
+	}
+	
 	public void orderBy(String property) {
 		setConditionParameters(); 
 		if (Is.equal(property, orderBy)) {
@@ -2303,7 +2309,7 @@ public class Tab implements java.io.Serializable, Cloneable {
 			persistentRowsHidden = preferences.getBoolean(ROWS_HIDDEN, rowsHidden);
 			rowsHidden = persistentRowsHidden; 
 			filterVisible = preferences.getBoolean(FILTER_VISIBLE, filterVisible); 
-			pageRowCount = Math.min(preferences.getInt(PAGE_ROW_COUNT, pageRowCount), 50); 
+			pageRowCount = Math.min(preferences.getInt(PAGE_ROW_COUNT, pageRowCount), 50);
 			columnWidths = loadMapFromPreferences(preferences, columnWidths, COLUMN_WIDTH, true);
 			labels = loadMapFromPreferences(preferences, labels, COLUMN_LABEL, false);
 			defaultCondition = getCondition();
@@ -2315,16 +2321,17 @@ public class Tab implements java.io.Serializable, Cloneable {
 			log.warn(XavaResources.getString("warning_load_preferences_tab"),ex);
 		}
 	}
-	
-	private Map loadMapFromPreferences(Preferences preferences, Map map, String prefix, boolean toInt) { 
+		
+	private Map loadMapFromPreferences(Preferences preferences, Map map, String prefix, boolean toInt) throws Exception { 
 		if (map!= null) map.clear();
-		for (MetaProperty property: getMetaProperties()) {
-			String value = preferences.get(prefix + property.getQualifiedName(), null);
+		for (String key: preferences.keys()) {
+			if (!key.startsWith(prefix)) continue;
+			String value = preferences.get(key, null);
 			if (value != null) {
 				if (map == null) map = new HashMap();
-				map.put(property.getQualifiedName(), toInt?Integer.parseInt(value):value);
+				map.put(key.substring(prefix.length()), toInt?Integer.parseInt(value):value);
 			}
-		}		
+		}
 		return map;
 	}
 

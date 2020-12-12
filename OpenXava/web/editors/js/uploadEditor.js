@@ -11,6 +11,12 @@ openxava.addEditorInitFunction(function() {
 	    	if (typeof pond === 'undefined') return;
 	    	if (input.dataset.mutiple === "true") pond.allowMultiple = true;
 	    	if (input.dataset.preview === "false") pond.allowImagePreview = false; 
+	    	if (input.dataset.application == null) {
+	    		var id = input.id.split("_", 4);	    		
+	    		input.dataset.application = id[1];
+	    		input.dataset.module = id[2];
+	    		input.dataset.empty = true;
+	    	}
 	    	const fileURL = uploadEditor.getFileURL(input);
 	    	pond.onactivatefile = function(file) {
 	    		if (openxava.browser.edge || openxava.browser.ie) window.open(fileURL + uploadEditor.getFileIdParam(file)); 
@@ -28,8 +34,7 @@ openxava.addEditorInitFunction(function() {
 	    			link.dispatchEvent(new MouseEvent('click'));
 	    		}
 	    	}	    	
-	    	if (input.dataset.empty !== "true") {
-	    		
+	    	if (input.dataset.empty !== "true") {	
 	    		var count = 0; 
 	    		if (typeof input.dataset.files !== 'undefined') {
 		    		const filesIds = input.dataset.files.split(",");
@@ -56,25 +61,33 @@ openxava.addEditorInitFunction(function() {
 	    		uploadEditor.enableUpload(pond, input);
 	    	}
 	    	pond.onremovefile = function(error, file) { 
-	    		$.ajax({
-	    			url: uploadEditor.getUploadURL(input) + uploadEditor.getFileIdParam(file), 
-	    			method: "DELETE"
-    			})
+    			uploadEditor.removeFile(input, file); 
     		}
 	    	if (input.dataset.editable === "true") {
-	    		pond.disabled = true; 
+		    	pond.allowDrop = false;
+		    	pond.allowBrowse = false;
+		    	pond.allowPaste = false;
 	    	}
 	    	if (input.dataset.throwsChanged === "true") {
 		    	pond.onprocessfile = function(error, file) {
 		    		openxava.throwPropertyChanged(input.dataset.application, input.dataset.module, input.id);
 		    	}	    	
 		    	pond.onremovefile = function(error, file) {
+		    		uploadEditor.removeFile(input, file);
 		    		openxava.throwPropertyChanged(input.dataset.application, input.dataset.module, input.id);
 		    	}	    		    	
 	    	}
 	    	pond.allowRevert = false;
-    	}
-    	
+		    pond.onerror = function(error) {
+	    	if (error && error.code == 406) {
+					openxava.ajaxRequest(input.dataset.application, input.dataset.module, false, false);
+			    }
+		    }
+		    
+		    pond.onaddfilestart = function() {
+		    	openxava.hideErrors(input.dataset.application, input.dataset.module);
+		    }		    
+    	}    	
     });
 	
 });
@@ -98,4 +111,11 @@ uploadEditor.getFileURL = function(input) {
 uploadEditor.getFileIdParam = function(file) {
 	const fileId = file.getMetadata("fileId");
 	return typeof fileId === 'undefined'?"":"&fileId=" + fileId; 
+}
+
+uploadEditor.removeFile = function(input, file) {
+	$.ajax({
+		url: uploadEditor.getUploadURL(input) + uploadEditor.getFileIdParam(file), 
+		method: "DELETE"
+	})
 }

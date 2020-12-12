@@ -1,6 +1,71 @@
 Change Log for OpenXava project
 ===============================
 
+OpenXava 6.4.2 (2020-11-9)
+--------------------------
+- Lessons 7 and 8 of course upgraded to latest OpenXava features.
+- New applicationPort property in xava.properties to indicate the port used by the application launcher.
+- New method getPopupContentAsStream() in ModuleTestBase to get the content of new web window.
+- Fix: "Controller YourController not found" error accessing the application when Tomcat is starting.
+- Fix: Label and column width changed by user not persisted if the column isn't in the original @Tab.
+- Fix: @NoFrame references are not well aligned with flowLayout=true.
+- Fix: Two groups in a row (separated by comma) are placed one below other with flowLayout=true.
+- Fix: WEBURL button renders incorrectly when flowLayout=true.
+- Fix: Property ICON in list without label is aligned to top when there are too many columns.
+- Fix: JasperReportBaseAction actions fail with databases with no READ_UNCOMMITTED support like Oracle.
+- Fix: Extra second added in java.sql.Time properties with some databases, such as PostgreSQL.
+- Fix: Required style not applied to text area editors.
+- Fix: JavaScript error with @Calculation properties: "Cannot read property 'toFixed' of undefined".
+- Fix: BigDecimals not recognized as numeric values by Excel because of thousands separators with CSVs. 
+- Fix: When the load action of an upload editor adds errors the messages are not shown to the user.
+- Fix: After adding two rows in an @ElementCollection with PHOTO the new blank row has an error.
+- Fix: Validation errors in controllers.xml/controladores.xml files in just created projects.
+- Fix: Clicking on menu of a module with IChangeModuleAction does not return to root module.
+- Fix: Duplicate load of totals via AJAX when refreshing an element collection.
+- Fix: View.setValue() for an element collection does not work.
+- Fix: View.setValue() for a reference sending the value as a map works but displays an error.
+- Fix: Application launcher (the _Run_YourApplication) fails if port 8080 is used by another process.
+- Fix: getView().setModel(anEntity) with an entity in a transient module put the permalink parameter.
+- Fix: Assign a model to the view of different type of the module and then reload the browser page fails. 
+- Fix: Group by month or year of a DATETIME property implemented with a java.util.Date fails.
+- Fix: Import data from Excel turn big numbers into 2147483647.
+- Fix: Real excel generation (included in TypicalRealExcel) exports BigDecimal as String.
+- Fix: Assigning an Integer to a BigDecimal property with MapFacade fails instead of doing a conversion. 
+- Fix: Concurrent exception accessing labels from time to time under high load with many concurrent users.
+- Fix: View.setValue() to set null to a reference throws an exception.
+- Fix: Exception on save leaving first fields in blank when they are not required and with null values.
+
+OpenXava 6.4.1 (2020-9-22)
+--------------------------
+- Support for JAX-RS 2.1 (JSR 370) for calling RESTful web services.
+- Documentation to install the latest OpenXava version on a 32-bit computer.
+- Composite key explanation included in JPA documentation.
+- Lesson 6 of course upgraded to latest OpenXava features and includes an example of calling REST services.
+- Lesson 2 of course simplified removing some error prone parts.
+- Fix: Reference search icon bad displayed on hover inside element collections.
+- Fix: On removing rows from an element collection calculated properties dependent on totals not updated.
+- Fix: Property dependent on a total property of an element collection not recalculated when total changed.
+- Fix: Calculated properties are not refreshed on adding to collection.
+- Fix: Calculated properties available for "group by" in list, when they cannot be used for grouping.
+- Fix: Read only HTML_TEXT in a section put all content in a row overflowing the screen.
+- Fix: Generate PDF with an IIconEnum property in the list produces an error.
+- Fix: Date, LocalDate and DATETIME do not work with Croatian language.
+- Fix: When running from application launcher the default i18n does not work
+- Fix: The updateOX Ant target fails after a clean of OpenXava project.
+- Fix: Not applicable warnings on updateOX and deployWar Ant targets.
+- Fix: Error message of javax.validation.ValidationException from setter not shown on adding to a collection.
+- Fix: @EntityValidator does not work when entity is modified on adding to a collection.
+- Fix: On adding elements to a collection it closes the dialog even if no elements has been added.
+- Fix: Reference not injected in @EntityValidator on modify if it is not on the user interface.
+- Fix: Required validation on modifying does not work for IMAGES_GALLERY and FILES.
+- Fix: Removing a file from an upload editor does not work if it has an @OnChange action associated. 
+- Fix: Upload editor (PHOTO, IMAGES_GALLERY and FILES) doesn't allow to download file when read only.
+- Fix: Links of menu in JPA docs in Spanish broken. 
+- Fix: Assigning initial value to a reference used as mappedBy of an @OrderColumn list breaks the list.
+- Fix: Saving an entity with a reference with empty value used by a mappedBy of an @OrderColumn fails.
+- Fix: Creating a new element in an @OneToMany shows "You will lose all changes" message leaving record.
+- Fix: From time to time changing the theme by a user changes the login page theme for all users.
+
 OpenXava 6.4 (2020-7-28)
 ------------------------
 - OpenXava Studio, a specific OpenXava IDE, included in the distribution.
@@ -31,6 +96,7 @@ OpenXava 6.4 (2020-7-28)
 - Fix: @DefaultValueCalculator does not work for total properties of a collection if @View is specified.
 - Fix: assertTotalInCollection() in tests does not work for MONEY properties.
 - Fix: Horizontal scrollbar in list mode with large list configuration descriptions.
+- Fix: OpenXava.jar and openxava.jar files duplicated in Linux/Mac.
 
 OpenXava 6.3.2 (2020-5-12)
 --------------------------

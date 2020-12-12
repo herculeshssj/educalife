@@ -612,8 +612,13 @@ public class View implements java.io.Serializable {
 			}
 		}											
 	}
-	
+
 	public void setValues(Map values) throws XavaException {
+		setValuesChangingModel(values);
+		getRoot().dataChanged = !isFirstLevel(); 
+	}
+	
+	public void setValuesChangingModel(Map values) throws XavaException {
 		boolean modelChanged = false;
 		if (values != null) {
 			String modelName = (String) values.get(MapFacade.MODEL_NAME);
@@ -626,7 +631,6 @@ public class View implements java.io.Serializable {
 			}
 		}	
 		setValues(values, !isRepresentsCollection()); 
-		getRoot().dataChanged = !isFirstLevel(); 
 		if (modelChanged) refresh();
 	}
 	
@@ -646,8 +650,7 @@ public class View implements java.io.Serializable {
 	}
 	
 	private void setValues(Map map, boolean closeCollections) throws XavaException { 
-		if (values == null) values = new HashMap();
-		else values.clear();
+		clearValues(); 
 		if (closeCollections) resetCollections(true);
 		resetCollectionTotals();
 		addValues(map, true);
@@ -776,8 +779,23 @@ public class View implements java.io.Serializable {
 			Iterator itSubviews = getSubviews().values().iterator();
 			while (itSubviews.hasNext()) {
 				View subview = (View) itSubviews.next();
+				if (!subview.isRepresentsCollection() || isRepresentsElementCollection()) { 
+					subview.clearValues();
+				}
+			}
+		}
+		if (hasGroups()) {
+			Iterator itSubviews = getGroupsViews().values().iterator();
+			while (itSubviews.hasNext()) {
+				View subview = (View) itSubviews.next();
 				subview.clearValues();
 			}
+		}						
+		if (hasSections()) {
+			int count = getSections().size();
+			for (int i = 0; i < count; i++) {
+				getSectionView(i).clearValues();
+			}	
 		}
 	}
 	
@@ -1292,9 +1310,16 @@ public class View implements java.io.Serializable {
 			String viewName = getViewName() == null?"":"'" + getViewName() + "'";
 			throw new XavaException("member_not_found_in_view", "'" + name + "'", viewName, "'" + getModelName() + "'");
 		}
-		if (!getMetaProperty(name).isTransient()) {
-			getRoot().dataChanged = true;
+		try { 
+			MetaMember member = getMetaModel().getMetaMember(name);
+			if (!isMetaProperty(member) || !((MetaProperty)member).isTransient()) {
+				getRoot().dataChanged = true;
+			}
 		}
+		catch (ElementNotFoundException ex) {
+			// It could be a view property of a XML component
+		}
+		// tmp fin
 		moveViewValuesToCollectionValues();
 	}	
 	
@@ -1328,11 +1353,12 @@ public class View implements java.io.Serializable {
 			if (hasSubview(name)) {	
 				View subview = getSubview(name);
 				if (!subview.isRepresentsCollection()) {
-					if (setValuesForSubviews) subview.setValues((Map)value);
+					if (setValuesForSubviews) subview.setValuesChangingModel((Map)value); 
 					else subview.addValues((Map)value);
 				}
 				else {
-					subview.collectionValues = (List) value; 
+					subview.collectionValues = (List) value;
+					subview.refreshCollection(); 
 				}		
 			}
 			else { 					
@@ -2907,7 +2933,7 @@ public class View implements java.io.Serializable {
 	}
 		
 	private void assignValuesToWebView(String qualifier, boolean firstLevel) {
-		try {		
+		try {
 			this.firstLevel = firstLevel; 
 			formattedProperties = null; 
 			focusForward = "true".equalsIgnoreCase(getRequest().getParameter("xava_focus_forward"));
@@ -2930,6 +2956,7 @@ public class View implements java.io.Serializable {
 			refreshDescriptionsLists = false;
 			oldNotEditableMembersNames = notEditableMembersNames==null?null:new HashSet(notEditableMembersNames);
 			
+			throwElementCollectionTotalsChanged(); 
 						
 			if (hasSections()) { 								
 				View section = getSectionView(getActiveSection());
@@ -2956,6 +2983,26 @@ public class View implements java.io.Serializable {
 	}
 	
 	
+	private void throwElementCollectionTotalsChanged() { 
+		for (View subview: getSubviews().values()) {				
+			if (subview.isRepresentsElementCollection()) {
+				if (subview.collectionSize < 0 && !subview.getTotalProperties().isEmpty()) {
+					for (Collection<String> totalProperties: subview.getTotalProperties().values()) {
+						for (String totalProperty: totalProperties) {
+							String property = subview.removeTotalPropertyPrefix(totalProperty);
+							propertyChanged(property);
+						}
+					}
+				}
+			}						
+		}			
+			
+		for (Iterator it = getGroupsViews().values().iterator(); it.hasNext();) {				
+			View subview = (View) it.next();
+			subview.throwElementCollectionTotalsChanged(); 
+		}
+	}
+
 	private void assignValuesToMembers(String qualifier, Collection members) {
 		for (Object m: members) { 		
 			if (isMetaProperty(m)) {
@@ -3099,6 +3146,7 @@ public class View implements java.io.Serializable {
 		setCollectionEditionRowFromChangedProperty();
 		oldCollectionTotals = collectionTotals; 
 		moveCollectionValuesToViewValues();
+		collectionSize = collectionValues.size(); 
 		if (collectionValues.size() != oldCount) {
 			collectionTotals = null;
 			collectionSize = -1; 
@@ -3324,7 +3372,7 @@ public class View implements java.io.Serializable {
 	
 
 	private void propertyChanged(String propertyId) {
-		try {							
+		try {		
 			String name = Ids.undecorate(propertyId);
 			if (isRepresentsElementCollection()) {
 				if (StringUtils.isNumeric(Strings.firstToken(name, "."))) {
@@ -3366,6 +3414,16 @@ public class View implements java.io.Serializable {
 					getParent().propertyChanged(changedProperty, qualifiedName); 
 				}
 			}
+
+			if (isRepresentsElementCollection()) {
+				Collection<String> totalProperties = getTotalProperties().get(name);
+				if (totalProperties != null) {
+					for (String totalProperty: totalProperties) {
+						String property = Strings.noFirstTokenWithoutFirstDelim(totalProperty, ".");
+						getParent().propertyChanged(property);
+					}
+				}
+			}
 		}
 		catch (ElementNotFoundException ex) {
 			// So that sections that do not have all the properties do not throw exceptions
@@ -3373,7 +3431,7 @@ public class View implements java.io.Serializable {
 		catch (Exception ex) {
 			log.warn(XavaResources.getString("property_changed_warning", propertyId),ex);
 			getErrors().add("change_property_error");
-		}				 		 		
+		}			
 	}
 	
 	private void propertyChanged(MetaProperty changedProperty, String changedPropertyQualifiedName) { 
@@ -3614,7 +3672,7 @@ public class View implements java.io.Serializable {
 	}
 	
 	private void calculateValue(MetaProperty metaProperty, MetaCalculator metaCalculator, ICalculator calculator, Messages errors, Messages messages) {		
-		try {					
+		try {	
 			PropertiesManager mp = new PropertiesManager(calculator);
 			Iterator it = metaCalculator.getMetaSets().iterator();			
 			while (it.hasNext()) {
@@ -3647,7 +3705,7 @@ public class View implements java.io.Serializable {
 					return;
 				}
 			}
-			Object old = getValue(metaProperty.getName());
+			Object old = getValue(metaProperty.getName()); 
 			if (!setValueNotifyingInTotals(metaProperty.getName(), newValue, old)) {
 				if (!Is.equal(old, newValue)) {				
 					setValueNotifying(metaProperty.getName(), newValue);
@@ -3823,7 +3881,7 @@ public class View implements java.io.Serializable {
 		try {			
 			// In this view								
 			for (Iterator it = getMetaPropertiesQualified().iterator(); it.hasNext();) {
-				Object element = (Object) it.next();				
+				Object element = it.next();				
 				if (isMetaProperty(element)) {
 					MetaProperty pro = (MetaProperty) element;					
 					if (WebEditors.depends(pro, p, getViewName())) {
@@ -5978,7 +6036,9 @@ public class View implements java.io.Serializable {
 			Iterator itSubviews = getSubviews().values().iterator();
 			while (itSubviews.hasNext()) {
 				View subview = (View) itSubviews.next();
-				if (subview.isRepresentsElementCollection() || (subview.isRepresentsCollection() && subview.isCollectionFromModel())) { 
+				if ((subview.isRepresentsElementCollection() && !subview.mustRefreshCollection) || 
+					(subview.isRepresentsCollection() && subview.isCollectionFromModel() && !subview.isRepresentsElementCollection())) 
+				{
 					int rowCount = subview.getCollectionTotalsCount();
 					int columnCount = subview.getMetaPropertiesList().size();					
 					for (int row=0; row<rowCount; row++) {

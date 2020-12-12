@@ -458,18 +458,17 @@ public class Dates {
 	}	
 
 	
-	public static String dateFormatForJSCalendar(Locale locale) {		
+	public static String dateFormatForJSCalendar(Locale locale) {
 		DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT, locale);
-		String date = df.format(create(1, 2, 1971)); // d, m, y
+		String date = "hr".equals(locale.getLanguage())?"01.02.1971":df.format(create(1, 2, 1971)); // d, m, y 
 		boolean always4InYear= "es".equals(locale.getLanguage()) || "pl".equals(locale.getLanguage());
-		String result = date.
+		return date.
 			replaceAll("01", "%d").
 			replaceAll("02", "%m").
 			replaceAll("1971", "%Y").
 			replaceAll("71", always4InYear?"%Y":"%y"). 			
 			replaceAll("1", "%d").
 			replaceAll("2", "%m");
-		return result;
 	}	
 	
 	public static String dateTimeFormatForJSCalendar(Locale locale) {		

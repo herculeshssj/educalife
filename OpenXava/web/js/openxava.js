@@ -329,6 +329,10 @@ openxava.showMessages = function(result) {
 	if (!errorsIsEmpty) openxava.effectShow(result.application, result.module, "errors");
 }
 
+openxava.hideErrors = function(application, module) {  
+	$("#"+openxava.decorateId(application, module, "errors")).fadeOut();
+}
+
 openxava.initSelectedRows = function() { 
 	$("._XAVA_SELECTED_ROW_").addClass(openxava.selectedRowClass);
 }
@@ -846,6 +850,7 @@ openxava.throwPropertyChanged = function(application, module, property) {
 
 openxava.calculate = function(application, module, propertyId, scale) {
 	var calculation = $('#' + propertyId + "_CALCULATION_").val();
+	if (calculation == null) return;
 	var value = eval(calculation).toFixed(scale).replace(".", openxava.decimalSeparator);
 	$('#' + propertyId).val(value);
 	$('#' + propertyId).change(); 

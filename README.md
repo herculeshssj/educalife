@@ -71,3 +71,20 @@ Os cadastros no Educalife ocorrem na seguinte ordem:
 ### Problema com anexos
 
 Caso tenha problema em anexos arquivos, execute o script __correcaoAnexos__. O problema se deve ao tamanho do campo que guarda os dados binários os anexos.
+
+
+### Processo de atualização
+
+Para atualizar os arquivos do projeto para a última versão do OpenXava, siga os passos a seguir:
+
+1. Baixe a nova versão do OpenXava no Sourceforge: https://sourceforge.net/projects/openxava/files/;
+2. Após extrair os arquivos, vá no diretório workspace, copie a pasta OpenXava e substitua a pasta que está no repositório Git local;
+3. Entre no repositório Git local pelo terminal, e visualize as alterações usando __git status__;
+4. Desfaça as mudanças nos seguintes arquivos:
+
+```
+git checkout -- OpenXava/src/org/openxava/util/AppServer.java
+```
+
+5. Após isso, realize o commit das alterações;
+6. 

@@ -659,26 +659,21 @@
 		<antcall target="filter"/>
 		<antcall target="createEditorsJS"/>
 		<antcall target="createDefaultI18nFiles"/>
-		<jar jarfile="../${project}/web/WEB-INF/lib/openxava.jar" basedir="${openxava.base.dir}/OpenXava/bin"/>
 	</target>
 	
 	<target name="createDefaultI18nFiles">
-		<copy file="${openxava.base.dir}/OpenXava/bin/Messages_${default.language}.properties" 
-			tofile="${openxava.base.dir}/OpenXava/bin/Messages.properties"/>
-		<copy file="${openxava.base.dir}/OpenXava/bin/Labels_${default.language}.properties" 
-			tofile="${openxava.base.dir}/OpenXava/bin/Labels.properties"/>
 		<copy file="../${project}/${classes.dir}/${project}-messages_${default.language}.properties" 
 			tofile="../${project}/${classes.dir}/${project}-messages.properties"
-			failonerror="false"/>
+			failonerror="false" quiet="true"/> 
 		<copy file="../${project}/${classes.dir}/${project}-labels_${default.language}.properties" 
 			tofile="../${project}/${classes.dir}/${project}-labels.properties"
-			failonerror="false"/>
+			failonerror="false" quiet="true"/> 
 		<copy file="../${project}/${classes.dir}/Mensajes${project}_${default.language}.properties" 
 			tofile="../${project}/${classes.dir}/Mensajes${project}.properties"
-			failonerror="false"/>
+			failonerror="false" quiet="true"/> 
 		<copy file="../${project}/${classes.dir}/Etiquetas${project}_${default.language}.properties" 
 			tofile="../${project}/${classes.dir}/Etiquetas${project}.properties"
-			failonerror="false"/>		
+			failonerror="false" quiet="true"/> 		
 	</target>
 
 	<target name="createWar" depends="prepareWar">
@@ -929,6 +924,7 @@
 		<delete file="../${project}/web/WEB-INF/lib/commons-jexl.jar"/>
 		<delete file="../${project}/web/WEB-INF/lib/hibernate-entitymanager.jar"/>
 		<delete file="../${project}/web/WEB-INF/lib/jboss-logging-annotations.jar"/>
+		<delete file="../${project}/web/WEB-INF/lib/addons-pro.jar"/>
 		
 		<!-- Delete unused CSS -->
 		<delete file="../${project}/web/xava/style/openxava.css"/>
@@ -984,22 +980,25 @@
 			<fileset dir="${openxava.base.dir}/OpenXava/properties"/>
 			<fileset dir="${openxava.base.dir}/OpenXava/i18n"/>
 		</copy>
+		<copy file="${openxava.base.dir}/OpenXava/bin/Messages_${default.language}.properties" 
+			tofile="${openxava.base.dir}/OpenXava/bin/Messages.properties"/>
+		<copy file="${openxava.base.dir}/OpenXava/bin/Labels_${default.language}.properties" 
+			tofile="${openxava.base.dir}/OpenXava/bin/Labels.properties"/>
 		<jar jarfile="${openxava.base.dir}/OpenXava/web/WEB-INF/lib/openxava.jar" basedir="${openxava.base.dir}/OpenXava/bin"/>
 	</target>
 	
 	<target name="buildAddons">
-		<delete includeemptydirs="true">
-		  <fileset dir="${openxava.base.dir}/Addons/bin" includes="**/*"/>
-		</delete>
 		<antcall target="javac">
 			<param name="compile.project" value="Addons"/>
 		</antcall>
 		<copy todir="${openxava.base.dir}/Addons/bin">
 			<fileset dir="${openxava.base.dir}/Addons/xava"/>
 		</copy>
+		<jar jarfile="../Addons/web/WEB-INF/lib/addons.jar" basedir="${openxava.base.dir}/Addons/bin"/>
 	</target>
 	
 	<target name="javac">
+		<mkdir dir="${openxava.base.dir}/${compile.project}/bin"/>
 		<delete includeemptydirs="true">
 		  <fileset dir="${openxava.base.dir}/${compile.project}/bin" includes="**/*"/>
 		</delete>
@@ -1074,11 +1073,9 @@
 				<present present="srconly" targetdir="../${project}/properties" />
 			</fileset>
 		</copy>
-		<copy todir="../${project}/src" overwrite="true" failonerror="false">
+		<copy todir="../${project}/src" overwrite="true" failonerror="false" quiet="true"> 
 			<fileset dir="${openxava.base.dir}/Addons/src-to-copy"/>
 		</copy>		
-		<delete file="../${project}/web/WEB-INF/lib/addons.jar" failonerror="false"/>
-		<jar jarfile="../${project}/web/WEB-INF/lib/addons.jar" basedir="${openxava.base.dir}/Addons/bin"/>		
 	</target>
 	
 	<target name="defineSchemaToolPath">
