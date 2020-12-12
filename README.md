@@ -87,4 +87,13 @@ git checkout -- OpenXava/src/org/openxava/util/AppServer.java
 ```
 
 5. Após isso, realize o commit das alterações;
-6. 
+6. Volte no diretório workspace, copie a pasta Addons e substitua a pasta que está no repositório Git local;
+7. Entre no repositório Git local pelo terminal, e visualize as alterações usando __git status__;
+8. Desfaça as mudanças nos seguintes arquivos:
+
+```
+git checkout -- Addons/src/com/openxava/naviox/impl/SignInHelper.java
+```
+
+9. Após isso, realize o commit das alterações;
+10. 
