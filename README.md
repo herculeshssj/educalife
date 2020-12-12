@@ -110,4 +110,4 @@ git checkout -- Educalife/web/WEB-INF/web.xml
 ```
 
 16. Após isso, realize o commit das alterações;
-17. 
+17. Inicie o projeto e confira se está tudo Ok.
