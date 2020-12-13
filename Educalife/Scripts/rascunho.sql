@@ -4,29 +4,30 @@ select * from pessoa_fisica_contatos pfc;
 select * from curso;
 
 drop table curso;
-drop table yourfirstentity ;
+--drop table yourfirstentity ;
 
 select * from inscricao_turma ;
 drop table inscricao_turma ;
 
-select * from banco where febraban = true;
-truncate banco;
+--select * from banco where febraban = true;
+--truncate banco;
 drop table banco;
 
 select * from cargo;
-truncate cargo;
+--truncate cargo;
 
-select codigo_cbo ,length(denominacao) from cargo order by 2 desc;
+--select codigo_cbo ,length(denominacao) from cargo order by 2 desc;
 select * from cargo where codigo_cbo = '811820';
 select * from cargo where codigo_cbo = '953115';
 
 
 
-select curso0_.id as col_0_0_, curso0_.nome_curso as col_1_0_, pessoafisi1_.nome as col_2_0_, curso0_.carga_horaria as col_3_0_, curso0_.status_curso as col_4_0_ from Educalife.curso curso0_ cross join Educalife.pessoa_fisica pessoafisi1_ cross join Educalife.colaborador colaborado2_ where curso0_.id_coordenador=colaborado2_.id and colaborado2_.id_pessoa_fisica=pessoafisi1_.id limit 10;
+--select curso0_.id as col_0_0_, curso0_.nome_curso as col_1_0_, pessoafisi1_.nome as col_2_0_, curso0_.carga_horaria as col_3_0_, curso0_.status_curso as col_4_0_ from Educalife.curso curso0_ cross join Educalife.pessoa_fisica pessoafisi1_ cross join Educalife.colaborador colaborado2_ where curso0_.id_coordenador=colaborado2_.id and colaborado2_.id_pessoa_fisica=pessoafisi1_.id limit 10;
 
 
 -- Lançamento em massa
-INSERT INTO Educalife.Educalife.lancamento
+/*
+INSERT INTO lancamento
 (id, acao_lancamento, anexo, [data], historico, numero, observacao, status_lancamento, valor, id_conta)
 VALUES(replace(newid(), '-', ''), 'PAGAMENTO', 'F83B5B55C0A8380100000000CA11D8A8', '2020-10-06', 'Lançamento 0,99', '', '', 'CONFIRMADO', 0.99, '4028b88174f824ba0174f82612de0002');
 
@@ -51,8 +52,11 @@ update Educalife.Educalife.pais set denominacao = rtrim(ltrim(denominacao));
 
 select * from rubrica r ;
 update rubrica set tipo_rubrica = 'RENDIMENTO' where tipo_rubrica is null;
-
+*/
 
 alter table pessoa_fisica alter column foto varbinary(max);
 alter table audit.pessoa_fisica_AUD alter column foto varbinary(max);
 alter table OXFILES alter column [data] varbinary(max);
+
+select * from OXFILES;
+select * from cargo;
