@@ -11,7 +11,7 @@ public class AppServer {
 	
 	public static void run(String app) throws Exception {
 		System.out.println(XavaResources.getString("starting_application")); 
-        String webappDir = new File("web").getAbsolutePath();
+        String webappDir = new File("Educalife/web").getAbsolutePath();
         Tomcat tomcat = new Tomcat();
         tomcat.setBaseDir("temp"); 
         tomcat.setPort(8080);
