@@ -1,11 +1,6 @@
 package br.com.hslife.educalife.security;
 
-import java.util.*;
-
-import org.openxava.jpa.*;
 import org.openxava.util.*;
-
-import br.com.hslife.educalife.model.*;
 
 public class UsuarioAutorizacao {
 	
@@ -19,11 +14,12 @@ public class UsuarioAutorizacao {
 			String nomeUsuario = Users.getCurrent();
 			
 			// Carrega as permissões do usuário logado
+			/*
 			List<PermissaoUsuario> permissoes = XPersistence.getManager()
 					.createQuery("select p from PermissaoUsuario p where p.usuario.login = :login", PermissaoUsuario.class)
 					.setParameter("login", nomeUsuario)
 					.getResultList();
-			
+			*/
 			switch (menuName) {
 				case "Cadastros":
 					if (nomeUsuario.equalsIgnoreCase("admin"))
@@ -73,10 +69,12 @@ public class UsuarioAutorizacao {
 			String nomeUsuario = Users.getCurrent();
 			
 			// Carrega as permissões do usuário logado
+			/*
 			List<PermissaoUsuario> permissoes = XPersistence.getManager()
 					.createQuery("select p from PermissaoUsuario p where p.usuario.login = :login", PermissaoUsuario.class)
 					.setParameter("login", nomeUsuario)
 					.getResultList();
+			*/
 			
 			if (nomeUsuario.equalsIgnoreCase("admin"))
 				liberado = true;
