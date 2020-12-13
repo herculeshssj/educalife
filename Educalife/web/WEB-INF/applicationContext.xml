@@ -22,7 +22,7 @@
  
     <!-- Configure parameters -->
     <task:scheduled-tasks scheduler="educalifeScheduler">
-        <task:scheduled ref="populaBaseService" method="populaBase" fixed-delay="1000000" initial-delay="1000000"/>
+        <task:scheduled ref="populaBaseService" method="populaBase" fixed-delay="100000" initial-delay="100000"/>
     </task:scheduled-tasks>
  
 </beans>
