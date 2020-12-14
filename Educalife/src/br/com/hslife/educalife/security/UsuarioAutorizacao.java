@@ -33,6 +33,10 @@ public class UsuarioAutorizacao {
 					if (nomeUsuario.equalsIgnoreCase("admin"))
 						liberado = true; 
 					break;
+				case "Processo":
+					if (nomeUsuario.equalsIgnoreCase("admin"))
+						liberado = true; 
+					break;					
 				case "Financeiro":
 					if (nomeUsuario.equalsIgnoreCase("admin"))
 						liberado = true; 

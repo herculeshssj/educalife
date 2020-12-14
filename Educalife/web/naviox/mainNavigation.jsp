@@ -159,6 +159,25 @@ if (modules.hasModules(request)) {
 	            <% } %>
 	          </ul>
 	        </li>
+		<% } %>
+		
+		<% if (UsuarioAutorizacao.isMenuAutorizado("Processo")) { %>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle sign-in" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+	          	<xava:message key="menuProcesso"/>
+	          </a>
+	          <ul class="dropdown-menu">
+	          
+				<% if (UsuarioAutorizacao.isAutorizado("TipoDocumento")) { %>
+	            	<li><a href="<%=modules.getModuleURI(request, menuModulos.get("TipoDocumento"))%>?init=true"><xava:message key="procTipoDocumento"/></a></li>
+	            <% } %>  
+				
+				<% if (UsuarioAutorizacao.isAutorizado("TipoProcesso")) { %>
+	            	<li><a href="<%=modules.getModuleURI(request, menuModulos.get("TipoProcesso"))%>?init=true"><xava:message key="procTipoProcesso"/></a></li>
+	            <% } %>
+	            
+	          </ul>
+	        </li>
         <% } %>
         
         <% if (UsuarioAutorizacao.isMenuAutorizado("Financeiro")) { %>
