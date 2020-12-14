@@ -4,12 +4,13 @@
 
 <controllers>
 
-	<!-- Diário de Classe -->
+	<!-- DiÃ¡rio de Classe -->
 	<controller name="FrequenciaAula">
 		<action name="salvarFrequencia" mode="detail" class="br.com.hslife.educalife.action.SalvarFrequenciaAction"/>
+		<action name="gerarFrequencia" mode="detail" class="br.com.hslife.educalife.action.GerarFrequenciaAction" confirm="true"/>
 	</controller>
 	
-	<!-- Diário de Notas -->
+	<!-- Diï¿½rio de Notas -->
 	<controller name="AvaliacaoNota">
 		<action name="salvarNotas" mode="detail" class="br.com.hslife.educalife.action.SalvarNotasAction"/>
 	</controller>
