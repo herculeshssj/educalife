@@ -50,6 +50,11 @@ public class SalvarFrequenciaAction extends ViewBaseAction {
 				}
 				
 			}
+
+			// Salva as frequências
+			for (Frequencia frequencia: frequenciaSet) {
+				XPersistence.getManager().persist(frequencia);
+			}
 			
 			// Atribui as frequencias na inscrição
 			inscricaoTurma.getFrequencia().addAll(frequenciaSet);

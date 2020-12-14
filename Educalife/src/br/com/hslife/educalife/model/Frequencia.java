@@ -4,8 +4,13 @@ import java.util.*;
 
 import javax.persistence.*;
 
-@Embeddable
-public class Frequencia {
+import org.hibernate.envers.Audited;
+import org.openxava.model.Identifiable;
+
+@Entity
+@Table(name="frequencia")
+@Audited
+public class Frequencia extends Identifiable {
 	
 	@ManyToOne
 	@JoinColumn(name="id_aula")
@@ -22,16 +27,16 @@ public class Frequencia {
 	
 	@Override
 	public int hashCode() {
-		if (this.aula != null) {
-			return Objects.hash(this.aula.getId());
+		if (this.getId() != null) {
+			return Objects.hash(this.getId());
 		}
 		return super.hashCode();
 	}
 	
 	@Override
 	public boolean equals(Object obj) {
-		if (this.aula != null & obj != null & ((Frequencia)obj).getAula() != null) {
-			return this.aula.getId().equals(((Frequencia)obj).getAula().getId());
+		if (this.getId() != null & obj != null & ((Frequencia)obj).getId() != null) {
+			return this.getId().equals(((Frequencia)obj).getId());
 		}
 
 		return super.equals(obj);
