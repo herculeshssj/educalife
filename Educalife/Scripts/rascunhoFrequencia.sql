@@ -24,3 +24,7 @@ insert into inscricao_turma_frequencia (inscricao_turma_id, frequencia_id)
 	
 	
 	
+select * from inscricao_turma_frequencia itf ;
+select * from frequencia f 
+
+select * from frequencia f where id in (select distinct frequencia_id from dbo.inscricao_turma_frequencia itf);

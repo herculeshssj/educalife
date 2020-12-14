@@ -839,168 +839,332 @@ update dbo.contrato set texto_contrato = '<p><strong>CONTRATO DE PRESTA&Ccedil;&
 
 
 /* Frequência */
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('0025D6AC6042496BBFC31F0B1B4D7741', 0, 1, '', '4028b88174d504040174d509054f003d');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('0215E614467E42C4BA0A6DE536F57919', 1, 0, 'Problemas de saúde', '4028b88174d504040174d505fb6b000d');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('080F5DBA327C43C083BEB94542D46005', 0, 1, '', '4028b88174d504040174d5080c920027');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('100CB79740B44F089C439DA9112E5481', 0, 0, 'Não justificou', '4028b88174d504040174d5089e020031');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('16766158C8394EB2877A7C9819DD2350', 0, 1, '', '4028b88174d504040174d50722fc0014');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('175880CDDA0B426D93EE30CAED52564B', 0, 1, '', '4028b88174d504040174d508eeb8003a');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('19CDEFE2CB6F45DDA35780EA53549B69', 0, 1, '', '4028b88174d504040174d5076528001a');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('1ACE735D4E83411A8DC20B910DD7AE93', 0, 1, '', '4028b88174d504040174d50749fa0017');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('1CD1B85557B44936BAC0878DC7A833A5', 0, 1, '', '4028b88174d504040174d508b9e80034');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('1DB1BC7D3D3E4012A0985CD66995477B', 0, 0, 'Não justificou', '4028b88174d504040174d508b9e80034');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('1E48B2A7B94E436A8EED877DC0A13F2E', 0, 1, '', '4028b88174d504040174d507804d001d');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('267DE400A4C248C7B3291432E21C801C', 0, 0, 'Fez prova em outro dia e não obteve média.', '4028b88174d504040174d509054f003d');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('2c92e08176617f2301766197c816002e', 0, 1, '', '4028b88174d504040174d505dda0000a');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('2c92e08176617f2301766197c816002f', 0, 1, '', '4028b88174d504040174d505be630007');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('2c92e08176617f2301766197c8160030', 0, 0, 'Não justificou', '4028b88174d504040174d505fb6b000d');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('2c92e08176617f2301766197c8160031', 0, 1, '', '4028b88174d504040174d50468ab0001');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('304E30B3CEC84A0785DD808D08F8A78E', 0, 0, 'Não justificou', '4028b88174d504040174d508eeb8003a');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('372A152908C74926B928F78C268B0972', 0, 1, '', '4028b88174d504040174d507c3880021');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('3D13A1392CB340AA841CDC5E9F09637E', 0, 1, '', '4028b88174d504040174d505be630007');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('4883400D6A96491D9FBB986779C9DB19', 0, 0, 'Não justificou', '4028b88174d504040174d505fb6b000d');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('4CECAF99D38B415694846A971C1AA672', 0, 1, '', '4028b88174d504040174d507ebd40024');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('4DC38EE37DF445B78D197D74BC9E3700', 0, 1, '', '4028b88174d504040174d508daa10037');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('5274B6A10FF048D4A93B7EF65496E4A7', 0, 0, 'Não justificou', '4028b88174d504040174d505be630007');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('57E71DF60B4E4C6798064DA8080FD698', 0, 0, 'Não justificou', '4028b88174d504040174d505dda0000a');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('595113EFF460414C9B5456928F50A5D1', 0, 0, 'Não justificou', '4028b88174d504040174d508daa10037');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('598A86D3D9074AE8B29508B5CE179BA2', 0, 0, 'Não justificou', '4028b88174d504040174d5089e020031');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('70F7B5F7D2B04172A2AF582C12308E01', 1, 0, 'Impossibilitado de chegar no curso', '4028b88174d504040174d5076528001a');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('7A8CF35300B9461ABC5AF3C9AB8B26B9', 0, 1, '', '4028b88174d504040174d507c3880021');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('83B05C1B13464FFEB9E24AF2E7545D76', 1, 0, 'Obteve bom desempenho na avaliação', '4028b88174d504040174d50722fc0014');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('8D70F82AA5E24B64A781EF20BB5EBBAE', 0, 1, '', '4028b88174d504040174d508b9e80034');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('936D26CE14114396905DFB5B5D807782', 1, 0, 'Vez prova em outro dia e obteve a média', '4028b88174d504040174d509054f003d');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('967DBABF46F941F4A711E9BDFE98AE8E', 0, 1, '', '4028b88174d504040174d5089e020031');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('9DEA9C6D20034581BDF86DB49437115E', 0, 1, '', '4028b88174d504040174d507ebd40024');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('A25875A0D1FE4A26844A3B4E3B6B597A', 0, 1, '', '4028b88174d504040174d50749fa0017');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('AF72A288197949D3BBB92B431BEF4700', 0, 1, '', '4028b88174d504040174d508daa10037');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('AF95C1D044494A479D802B1645812679', 0, 1, '', '4028b88174d504040174d50749fa0017');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('B4BEE704E8DA4884BBA0C10063A65C40', 0, 1, '', '4028b88174d504040174d50468ab0001');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('B604843A5C77486094FEEECDA853EFF6', 0, 1, '', '4028b88174d504040174d5082fe2002a');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('B89376C1218B4103BA1909E7FCDF8548', 0, 1, '', '4028b88174d504040174d5085378002d');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('BF3D2FE83CCE4DBFBE46738DB0EF2AFA', 0, 1, '', '4028b88174d504040174d505dda0000a');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('C091BECD9CC4446386DD60181234ACB3', 0, 1, '', '4028b88174d504040174d50468ab0001');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('C94CC212A2D744AF985039545F3C1221', 0, 1, '', '4028b88174d504040174d507804d001d');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('CA2167F4C0F44BD187CEE4B024FE7127', 0, 1, '', '4028b88174d504040174d5076528001a');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('CA8B01CE19D448C79A9085AF839E142A', 0, 1, '', '4028b88174d504040174d50722fc0014');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('D49C3BDE82614453AE2456F199EE27A6', 0, 1, '', '4028b88174d504040174d5080c920027');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('D685E56828F14F2BA43FC1B60E6EC2B5', 0, 1, '', '4028b88174d504040174d507ebd40024');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('E6029702DBA6495199C15F1522D4D14B', 0, 1, '', '4028b88174d504040174d5085378002d');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('EAB65EC8C02349E89DD86314E3C73ADA', 0, 0, 'Não justificou', '4028b88174d504040174d5082fe2002a');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('EB46858357EE43F2867041B112497E7A', 0, 1, '', '4028b88174d504040174d5080c920027');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('F255450E088D41B899F0FABE11693562', 0, 1, '', '4028b88174d504040174d5085378002d');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('F7284A99387749BF9C8D19727D7955AD', 0, 1, '', '4028b88174d504040174d507804d001d');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('F8240BB1371B45B1A00DC7532F449B0D', 0, 1, '', '4028b88174d504040174d508eeb8003a');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('F981D972E44A42908268A15B77477949', 1, 0, 'Teve bom desempenho na avaliação', '4028b88174d504040174d5082fe2002a');
+INSERT INTO dbo.frequencia
+(id, abonado, compareceu, justificativa, id_aula)
+VALUES('FC1D8C1A17EB40DD8E9FEDA41CD7D154', 0, 1, '', '4028b88174d504040174d507c3880021');
+
+
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb35e060002', 0, '4028b88174d504040174d505fb6b000d', 0, 'Não justificou');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb35e060002', '2c92e08176617f2301766197c816002e');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb74fcb0007', 1, '4028b88174d504040174d505fb6b000d', 0, 'Problemas de saúde');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb35e060002', '2c92e08176617f2301766197c816002f');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb7b363000b', 0, '4028b88174d504040174d505fb6b000d', 0, 'Não justificou');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb35e060002', '2c92e08176617f2301766197c8160030');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb35e060002', 0, '4028b88174d504040174d505dda0000a', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb35e060002', '2c92e08176617f2301766197c8160031');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb35e060002', 0, '4028b88174d504040174d505be630007', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbbc354e003b', '0025D6AC6042496BBFC31F0B1B4D7741');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb35e060002', 0, '4028b88174d504040174d50468ab0001', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb74fcb0007', '0215E614467E42C4BA0A6DE536F57919');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb74fcb0007', 0, '4028b88174d504040174d505dda0000a', 0, 'Não justificou');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb96c96001f', '080F5DBA327C43C083BEB94542D46005');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb74fcb0007', 0, '4028b88174d504040174d505be630007', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbbc354e003b', '100CB79740B44F089C439DA9112E5481');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb74fcb0007', 0, '4028b88174d504040174d50468ab0001', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb8c9180017', '16766158C8394EB2877A7C9819DD2350');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb7b363000b', 0, '4028b88174d504040174d505dda0000a', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbbc354e003b', '175880CDDA0B426D93EE30CAED52564B');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb7b363000b', 0, '4028b88174d504040174d505be630007', 0, 'Não justificou');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb8c9180017', '19CDEFE2CB6F45DDA35780EA53549B69');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb7b363000b', 0, '4028b88174d504040174d50468ab0001', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb8c9180017', '1ACE735D4E83411A8DC20B910DD7AE93');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb801e5000f', 0, '4028b88174d504040174d50722fc0014', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbbc8c89003f', '1CD1B85557B44936BAC0878DC7A833A5');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb801e5000f', 0, '4028b88174d504040174d50749fa0017', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbbc354e003b', '1DB1BC7D3D3E4012A0985CD66995477B');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb801e5000f', 1, '4028b88174d504040174d5076528001a', 0, 'Impossibilitado de chegar no curso');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb8c9180017', '1E48B2A7B94E436A8EED877DC0A13F2E');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb801e5000f', 0, '4028b88174d504040174d507804d001d', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbbc8c89003f', '267DE400A4C248C7B3291432E21C801C');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb876de0013', 1, '4028b88174d504040174d50722fc0014', 0, 'Obteve bom desempenho na avaliação');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbbc8c89003f', '304E30B3CEC84A0785DD808D08F8A78E');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb876de0013', 0, '4028b88174d504040174d50749fa0017', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb91b9a001b', '372A152908C74926B928F78C268B0972');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb876de0013', 0, '4028b88174d504040174d5076528001a', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb74fcb0007', '3D13A1392CB340AA841CDC5E9F09637E');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb876de0013', 0, '4028b88174d504040174d507804d001d', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb7b363000b', '4883400D6A96491D9FBB986779C9DB19');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb8c9180017', 0, '4028b88174d504040174d50722fc0014', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb96c96001f', '4CECAF99D38B415694846A971C1AA672');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb8c9180017', 0, '4028b88174d504040174d50749fa0017', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbbbd1c80037', '4DC38EE37DF445B78D197D74BC9E3700');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb8c9180017', 0, '4028b88174d504040174d5076528001a', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb7b363000b', '5274B6A10FF048D4A93B7EF65496E4A7');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb8c9180017', 0, '4028b88174d504040174d507804d001d', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb74fcb0007', '57E71DF60B4E4C6798064DA8080FD698');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb91b9a001b', 0, '4028b88174d504040174d507c3880021', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbbc8c89003f', '595113EFF460414C9B5456928F50A5D1');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb91b9a001b', 0, '4028b88174d504040174d507ebd40024', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbbbd1c80037', '598A86D3D9074AE8B29508B5CE179BA2');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb91b9a001b', 0, '4028b88174d504040174d5080c920027', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb801e5000f', '70F7B5F7D2B04172A2AF582C12308E01');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb91b9a001b', 0, '4028b88174d504040174d5082fe2002a', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb9cb1d0023', '7A8CF35300B9461ABC5AF3C9AB8B26B9');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb91b9a001b', 0, '4028b88174d504040174d5085378002d', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb876de0013', '83B05C1B13464FFEB9E24AF2E7545D76');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb96c96001f', 0, '4028b88174d504040174d507c3880021', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbbbd1c80037', '8D70F82AA5E24B64A781EF20BB5EBBAE');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb96c96001f', 0, '4028b88174d504040174d507ebd40024', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbbbd1c80037', '936D26CE14114396905DFB5B5D807782');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb96c96001f', 0, '4028b88174d504040174d5080c920027', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbbc8c89003f', '967DBABF46F941F4A711E9BDFE98AE8E');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb96c96001f', 1, '4028b88174d504040174d5082fe2002a', 0, 'Teve bom desempenho na avaliação');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb91b9a001b', '9DEA9C6D20034581BDF86DB49437115E');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb96c96001f', 0, '4028b88174d504040174d5085378002d', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb876de0013', 'A25875A0D1FE4A26844A3B4E3B6B597A');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb9cb1d0023', 0, '4028b88174d504040174d507c3880021', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbbc354e003b', 'AF72A288197949D3BBB92B431BEF4700');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb9cb1d0023', 0, '4028b88174d504040174d507ebd40024', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb801e5000f', 'AF95C1D044494A479D802B1645812679');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb9cb1d0023', 0, '4028b88174d504040174d5080c920027', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb74fcb0007', 'B4BEE704E8DA4884BBA0C10063A65C40');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb9cb1d0023', 0, '4028b88174d504040174d5082fe2002a', 0, 'Não justificou');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb91b9a001b', 'B604843A5C77486094FEEECDA853EFF6');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbb9cb1d0023', 0, '4028b88174d504040174d5085378002d', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb9cb1d0023', 'B89376C1218B4103BA1909E7FCDF8548');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbbd1c80037', 0, '4028b88174d504040174d5089e020031', 0, 'Não justificou');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb7b363000b', 'BF3D2FE83CCE4DBFBE46738DB0EF2AFA');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbbd1c80037', 0, '4028b88174d504040174d508b9e80034', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb7b363000b', 'C091BECD9CC4446386DD60181234ACB3');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbbd1c80037', 0, '4028b88174d504040174d508daa10037', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb876de0013', 'C94CC212A2D744AF985039545F3C1221');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbbd1c80037', 0, '4028b88174d504040174d508eeb8003a', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb876de0013', 'CA2167F4C0F44BD187CEE4B024FE7127');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbbd1c80037', 1, '4028b88174d504040174d509054f003d', 0, 'Vez prova em outro dia e obteve a média');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb801e5000f', 'CA8B01CE19D448C79A9085AF839E142A');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc354e003b', 0, '4028b88174d504040174d5089e020031', 0, 'Não justificou');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb91b9a001b', 'D49C3BDE82614453AE2456F199EE27A6');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc354e003b', 0, '4028b88174d504040174d508b9e80034', 0, 'Não justificou');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb9cb1d0023', 'D685E56828F14F2BA43FC1B60E6EC2B5');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc354e003b', 0, '4028b88174d504040174d508daa10037', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb91b9a001b', 'E6029702DBA6495199C15F1522D4D14B');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc354e003b', 0, '4028b88174d504040174d508eeb8003a', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb9cb1d0023', 'EAB65EC8C02349E89DD86314E3C73ADA');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc354e003b', 0, '4028b88174d504040174d509054f003d', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb9cb1d0023', 'EB46858357EE43F2867041B112497E7A');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc8c89003f', 0, '4028b88174d504040174d5089e020031', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb96c96001f', 'F255450E088D41B899F0FABE11693562');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc8c89003f', 0, '4028b88174d504040174d508b9e80034', 1, '');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb801e5000f', 'F7284A99387749BF9C8D19727D7955AD');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc8c89003f', 0, '4028b88174d504040174d508daa10037', 0, 'Não justificou');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbbbd1c80037', 'F8240BB1371B45B1A00DC7532F449B0D');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc8c89003f', 0, '4028b88174d504040174d508eeb8003a', 0, 'Não justificou');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb96c96001f', 'F981D972E44A42908268A15B77477949');
 INSERT INTO dbo.inscricao_turma_frequencia
-(inscricao_turma_id, abonado, id_aula, compareceu, justificativa)
-VALUES('4028b88174cbb2ab0174cbbc8c89003f', 0, '4028b88174d504040174d509054f003d', 0, 'Fez prova em outro dia e não obteve média.');
+(inscricao_turma_id, frequencia_id)
+VALUES('4028b88174cbb2ab0174cbb96c96001f', 'FC1D8C1A17EB40DD8E9FEDA41CD7D154');
 
 
 /* Resultado de avaliação */
