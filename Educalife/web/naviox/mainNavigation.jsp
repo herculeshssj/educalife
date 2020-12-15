@@ -167,7 +167,11 @@ if (modules.hasModules(request)) {
 	          	<xava:message key="menuProcesso"/>
 	          </a>
 	          <ul class="dropdown-menu">
-	          
+			  
+				<% if (UsuarioAutorizacao.isAutorizado("Processo")) { %>
+	            	<li><a href="<%=modules.getModuleURI(request, menuModulos.get("Processo"))%>?init=true"><xava:message key="procProcesso"/></a></li>
+	            <% } %>  
+
 				<% if (UsuarioAutorizacao.isAutorizado("TipoDocumento")) { %>
 	            	<li><a href="<%=modules.getModuleURI(request, menuModulos.get("TipoDocumento"))%>?init=true"><xava:message key="procTipoDocumento"/></a></li>
 	            <% } %>  
