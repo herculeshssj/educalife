@@ -9,6 +9,10 @@ import org.openxava.model.*;
 @Entity
 @Table(name="departamento")
 @Audited
+@View(
+	name = "view_in_processo", 
+	members = "nomeDepartamento, unidade"
+)
 public class Departamento extends Identifiable {
 
 	@Column(name="nome_departamento", nullable = false)

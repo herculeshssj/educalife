@@ -14,7 +14,9 @@ import org.hibernate.envers.Audited;
 import org.openxava.annotations.NoCreate;
 import org.openxava.annotations.NoModify;
 import org.openxava.annotations.ReadOnly;
+import org.openxava.annotations.ReferenceView;
 import org.openxava.annotations.Required;
+import org.openxava.annotations.View;
 import org.openxava.model.Identifiable;
 
 import br.com.hslife.educalife.enumeration.StatusProcesso;
@@ -22,16 +24,25 @@ import br.com.hslife.educalife.enumeration.StatusProcesso;
 @Entity
 @Table(name="processo")
 @Audited
+@View(
+    members = "numeroProcesso; "
+        + "dataAbertura; "
+        + "interessado; "
+        + "statusProcesso, publico; "
+        + "tipoProcesso; "
+        + "departamento"
+)
 public class Processo extends Identifiable{
 
     @ManyToOne
     @JoinColumn(name="id_tipo_processo", nullable = false)
     @Required
     @NoCreate @NoModify
+    @ReferenceView(value = "view_in_processo")
     private TipoProcesso tipoProcesso;
     
     @Column(name="numero_processo", nullable = false)
-    @Required
+    @ReadOnly
     private String numeroProcesso;
 
     @Column(name="data_abertura", nullable = false)
@@ -42,6 +53,7 @@ public class Processo extends Identifiable{
     @JoinColumn(name="id_departamento", nullable = false)
     @Required
     @NoCreate @NoModify
+    @ReferenceView(value = "view_in_processo")
     private Departamento departamento;
 
     @Column(nullable = true)
@@ -101,5 +113,13 @@ public class Processo extends Identifiable{
 
     public void setTipoProcesso(TipoProcesso tipoProcesso) {
         this.tipoProcesso = tipoProcesso;
+    }
+
+    public boolean isPublico() {
+        return publico;
+    }
+
+    public void setPublico(boolean publico) {
+        this.publico = publico;
     }
 }

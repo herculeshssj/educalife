@@ -6,11 +6,16 @@ import javax.persistence.Table;
 
 import org.hibernate.envers.Audited;
 import org.openxava.annotations.Required;
+import org.openxava.annotations.View;
 import org.openxava.model.Identifiable;
 
 @Entity
 @Table(name="tipo_processo")
 @Audited
+@View(
+    name = "view_in_processo",
+    members = "codigo, descricao"
+)
 public class TipoProcesso extends Identifiable {
     
     @Column(nullable = false, length = 50)
