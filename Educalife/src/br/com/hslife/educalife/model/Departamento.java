@@ -25,6 +25,10 @@ public class Departamento extends Identifiable {
 	@NoCreate @NoModify
 	private Unidade unidade;
 
+	public String getNomeEUnidade() {
+		return this.nomeDepartamento + " (" + this.unidade.getNomeUnidade() + ")";
+	}
+
 	public String getNomeDepartamento() {
 		return nomeDepartamento;
 	}

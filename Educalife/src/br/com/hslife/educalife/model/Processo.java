@@ -11,15 +11,19 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.envers.Audited;
+import org.openxava.annotations.Action;
 import org.openxava.annotations.NoCreate;
 import org.openxava.annotations.NoModify;
+import org.openxava.annotations.PreCreate;
 import org.openxava.annotations.ReadOnly;
 import org.openxava.annotations.ReferenceView;
 import org.openxava.annotations.Required;
+import org.openxava.annotations.Tab;
 import org.openxava.annotations.View;
 import org.openxava.model.Identifiable;
 
 import br.com.hslife.educalife.enumeration.StatusProcesso;
+import br.com.hslife.educalife.helper.ProcessoHelper;
 
 @Entity
 @Table(name="processo")
@@ -32,6 +36,9 @@ import br.com.hslife.educalife.enumeration.StatusProcesso;
         + "tipoProcesso; "
         + "departamento"
 )
+@Tab(properties = "tipoProcesso.descricao, " +
+    "numeroProcesso, dataAbertura, departamento.nomeEUnidade, " + 
+    " interessado, publico, statusProcesso")
 public class Processo extends Identifiable{
 
     @ManyToOne
@@ -41,7 +48,7 @@ public class Processo extends Identifiable{
     @ReferenceView(value = "view_in_processo")
     private TipoProcesso tipoProcesso;
     
-    @Column(name="numero_processo", nullable = false)
+    @Column(name="numero_processo", nullable = false, unique = true)
     @ReadOnly
     private String numeroProcesso;
 
@@ -66,6 +73,12 @@ public class Processo extends Identifiable{
     @Column(name="status_processo", nullable = false)
     @Required
     private StatusProcesso statusProcesso;
+
+    @PreCreate
+    public void executarAntesDeCriar() {
+        this.dataAbertura = LocalDate.now();
+        this.numeroProcesso = ProcessoHelper.gerarNumeroProcesso();
+    }
 
     public LocalDate getDataAbertura() {
         return dataAbertura;
