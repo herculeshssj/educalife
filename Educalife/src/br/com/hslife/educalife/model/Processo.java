@@ -1,17 +1,20 @@
 package br.com.hslife.educalife.model;
 
 import java.time.LocalDate;
+import java.util.Collection;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.envers.Audited;
-import org.openxava.annotations.Action;
 import org.openxava.annotations.NoCreate;
 import org.openxava.annotations.NoModify;
 import org.openxava.annotations.PreCreate;
@@ -29,12 +32,13 @@ import br.com.hslife.educalife.helper.ProcessoHelper;
 @Table(name="processo")
 @Audited
 @View(
-    members = "numeroProcesso; "
+    members = "geral { numeroProcesso; "
         + "dataAbertura; "
         + "interessado; "
         + "statusProcesso, publico; "
         + "tipoProcesso; "
-        + "departamento"
+        + "departamento } "
+        + "documentos { documentosProcesso }"
 )
 @Tab(properties = "tipoProcesso.descricao, " +
     "numeroProcesso, dataAbertura, departamento.nomeEUnidade, " + 
@@ -74,10 +78,22 @@ public class Processo extends Identifiable{
     @Required
     private StatusProcesso statusProcesso;
 
+    @ElementCollection
+	@OneToMany(mappedBy = "processo", orphanRemoval = true, cascade = CascadeType.ALL)
+	private Collection<DocumentoProcesso> documentosProcesso;
+
     @PreCreate
     public void executarAntesDeCriar() {
         this.dataAbertura = LocalDate.now();
         this.numeroProcesso = ProcessoHelper.gerarNumeroProcesso(this.departamento);
+    }
+
+    public Collection<DocumentoProcesso> getDocumentosProcesso() {
+        return documentosProcesso;
+    }
+
+    public void setDocumentosProcesso(Collection<DocumentoProcesso> documentosProcesso) {
+        this.documentosProcesso = documentosProcesso;
     }
 
     public LocalDate getDataAbertura() {
