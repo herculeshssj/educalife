@@ -77,7 +77,7 @@ public class Processo extends Identifiable{
     @PreCreate
     public void executarAntesDeCriar() {
         this.dataAbertura = LocalDate.now();
-        this.numeroProcesso = ProcessoHelper.gerarNumeroProcesso();
+        this.numeroProcesso = ProcessoHelper.gerarNumeroProcesso(this.departamento);
     }
 
     public LocalDate getDataAbertura() {
