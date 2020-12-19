@@ -9,6 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.envers.Audited;
+import org.openxava.annotations.Action;
 import org.openxava.annotations.NoCreate;
 import org.openxava.annotations.NoModify;
 import org.openxava.annotations.ReferenceView;
@@ -32,6 +33,7 @@ public class DocumentoProcesso extends Identifiable {
 
     @Column(name = "numero_documento", nullable = false)
     @Required
+    @Action("GerarNumeroDocumento.gerarNumero")
     private String numeroDocumento;
 
     @ManyToOne

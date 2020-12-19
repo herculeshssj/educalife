@@ -4,6 +4,11 @@
 
 <controllers>
 
+	<!-- Processos -->
+	<controller name="GerarNumeroDocumento">
+		<action name="gerarNumero" hidden="true" class="br.com.hslife.educalife.action.GerarNumeroDocumentoProcessoAction" />
+	</controller>
+
 	<!-- Diário de Classe -->
 	<controller name="FrequenciaAula">
 		<action name="salvarFrequencia" mode="detail" class="br.com.hslife.educalife.action.SalvarFrequenciaAction"/>

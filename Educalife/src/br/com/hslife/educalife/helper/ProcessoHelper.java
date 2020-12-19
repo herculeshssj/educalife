@@ -7,8 +7,32 @@ import org.openxava.jpa.XPersistence;
 
 import br.com.hslife.educalife.model.Departamento;
 import br.com.hslife.educalife.model.Empresa;
+import br.com.hslife.educalife.model.TipoDocumento;
 
 public class ProcessoHelper {
+
+    public static String gerarNumeroDocumento(String idTipoDocumento) {
+        // Busca o tipo de documento
+        TipoDocumento tipoDocumento = XPersistence.getManager()
+            .createQuery("SELECT t FROM TipoDocumento t WHERE t.id = :idTipoDocumento", TipoDocumento.class)
+            .setParameter("idTipoDocumento", idTipoDocumento)
+            .getSingleResult();
+
+        // Ano corrente
+        String anoCorrente = Integer.toString(LocalDate.now().getYear());
+
+        // Busca o próximo sequencial do tipo de documento
+        Integer quantDocumentos = (Integer)XPersistence.getManager()
+            .createNativeQuery("select count(*) from documento_processo p "+
+                "where datepart(year, data_criacao) = datepart(year, getdate())")
+            .getSingleResult();
+
+        // Sequencial do processo
+        String sequencialDocumento = String.format("%05d", quantDocumentos.intValue() + 1);
+
+        // Retorna o número do documento
+        return anoCorrente + "." + tipoDocumento.getCodigo() + "." + sequencialDocumento;
+    }
     
     public static String gerarNumeroProcesso(Departamento departamento) {
         String numeroProcessoGerado = "";
