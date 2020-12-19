@@ -6,11 +6,14 @@ import javax.persistence.Table;
 
 import org.hibernate.envers.Audited;
 import org.openxava.annotations.Required;
+import org.openxava.annotations.View;
 import org.openxava.model.Identifiable;
 
 @Entity
 @Table(name="tipo_documento")
 @Audited
+@View(name = "view_in_documento_processo",
+    members = "codigo, descricao")
 public class TipoDocumento extends Identifiable {
 
     @Column(nullable = false, length = 50)

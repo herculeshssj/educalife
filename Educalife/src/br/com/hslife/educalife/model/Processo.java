@@ -15,6 +15,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.envers.Audited;
+import org.openxava.annotations.ListProperties;
 import org.openxava.annotations.NoCreate;
 import org.openxava.annotations.NoModify;
 import org.openxava.annotations.PreCreate;
@@ -79,6 +80,7 @@ public class Processo extends Identifiable{
     private StatusProcesso statusProcesso;
 
     @ElementCollection
+    @ListProperties("tipoDocumento.descricao, numeroDocumento, dataCriacao, autorDocumento")
 	@OneToMany(mappedBy = "processo", orphanRemoval = true, cascade = CascadeType.ALL)
 	private Collection<DocumentoProcesso> documentosProcesso;
 

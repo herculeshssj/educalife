@@ -9,13 +9,21 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.envers.Audited;
+import org.openxava.annotations.NoCreate;
+import org.openxava.annotations.NoModify;
+import org.openxava.annotations.ReferenceView;
 import org.openxava.annotations.Required;
 import org.openxava.annotations.Stereotype;
+import org.openxava.annotations.View;
 import org.openxava.model.Identifiable;
 
 @Entity
 @Table(name="documento_processo")
 @Audited
+@View(members = "geral { tipoDocumento; " +
+    "numeroDocumento; autorDocumento; dataCriacao } " +
+    "conteudo { corpoDocumento } " +
+    "anexos { anexosDocumento }")
 public class DocumentoProcesso extends Identifiable {
 
     @ManyToOne
@@ -29,6 +37,8 @@ public class DocumentoProcesso extends Identifiable {
     @ManyToOne
     @JoinColumn(name="id_tipo_documento", nullable = false)
     @Required
+    @NoCreate @NoModify
+    @ReferenceView("view_in_documento_processo")
     private TipoDocumento tipoDocumento;
 
     @Column(name = "data_criacao", nullable = false)
