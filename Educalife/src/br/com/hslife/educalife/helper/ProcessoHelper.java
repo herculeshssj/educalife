@@ -1,7 +1,7 @@
 package br.com.hslife.educalife.helper;
 
-import java.math.BigInteger;
 import java.time.LocalDate;
+import java.util.zip.CRC32;
 
 import org.openxava.jpa.XPersistence;
 
@@ -43,48 +43,10 @@ public class ProcessoHelper {
         numeroProcessoGerado = cpnjEmpresa.substring(0, 8) + "." + sequencialProcesso + "/" + anoCorrente + "-";
 
         // Gera o dígito verificador
-        numeroProcessoGerado = numeroProcessoGerado + digitoVerificador(cpnjEmpresa + sequencialProcesso + anoCorrente);
-
+        CRC32 crc = new CRC32();
+        crc.update(numeroProcessoGerado.getBytes());
+        numeroProcessoGerado = numeroProcessoGerado + String.valueOf(crc.getValue()).substring(7, 9);
+        
         return numeroProcessoGerado;
-    }
-
-    private static String digitoVerificador(String numeroProcesso) {
-        // Declaração de variáveis
-        int somaNumeros = 0;
-        int digitoVerificador1 = 0;
-        int digitoVerificador2 = 0;
-
-        // Soma todos os números da String
-        for (int i = 0; i < numeroProcesso.length(); i++) {
-            somaNumeros = somaNumeros + Integer.parseInt(numeroProcesso.substring(i, i+1));
-        }
-
-        // Divide-se o número obtido por 11 e analisa a parte inteira da divisão
-        int divisao = somaNumeros / (int)11;
-        if (divisao > 9) {
-            digitoVerificador1 = 0;
-        } else {
-            digitoVerificador1 = divisao;
-        }
-
-        // Adiciona o primeiro dígito verificador ao número do processo
-        numeroProcesso = numeroProcesso + String.valueOf(digitoVerificador1);
-
-        somaNumeros = 0;
-        // Soma todos os números da String
-        for (int i = 0; i < numeroProcesso.length(); i++) {
-            somaNumeros = somaNumeros + Integer.parseInt(numeroProcesso.substring(i, i+1));
-        }
-
-        // Divide-se o número obtido por 14 e analisa a parte inteira da divisão
-        divisao = somaNumeros / (int)14;
-        if (divisao > 9) {
-            digitoVerificador2 = 0;
-        } else {
-            digitoVerificador2 = divisao;
-        }
-
-        // Retorna os dígitos verificadores gerados
-        return String.valueOf(digitoVerificador1) + String.valueOf(digitoVerificador2);
     }
 }
