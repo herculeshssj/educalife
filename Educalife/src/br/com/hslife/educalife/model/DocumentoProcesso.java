@@ -1,17 +1,22 @@
 package br.com.hslife.educalife.model;
 
 import java.time.LocalDate;
+import java.util.Collection;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.envers.Audited;
 import org.openxava.annotations.Action;
 import org.openxava.annotations.NoCreate;
 import org.openxava.annotations.NoModify;
+import org.openxava.annotations.PreCreate;
 import org.openxava.annotations.ReadOnly;
 import org.openxava.annotations.ReferenceView;
 import org.openxava.annotations.Required;
@@ -19,13 +24,16 @@ import org.openxava.annotations.Stereotype;
 import org.openxava.annotations.View;
 import org.openxava.model.Identifiable;
 
+import br.com.hslife.educalife.helper.ProcessoHelper;
+
 @Entity
 @Table(name="documento_processo")
 @Audited
 @View(members = "geral { tipoDocumento; " +
-    "numeroDocumento; autorDocumento; dataCriacao } " +
+    "numeroDocumento; autorDocumento; dataDocumento } " +
     "conteudo { corpoDocumento } " +
-    "anexos { anexosDocumento }")
+    "anexos { anexosDocumento } " +
+    "assinaturas { assinaturasDocumento } ")
 public class DocumentoProcesso extends Identifiable {
 
     @ManyToOne
@@ -33,8 +41,8 @@ public class DocumentoProcesso extends Identifiable {
 	private Processo processo;
 
     @Column(name = "numero_documento", nullable = false)
-    @Required
-    @Action("GerarNumeroDocumento.gerarNumero")
+    @ReadOnly
+    //@Action("GerarNumeroDocumento.gerarNumero")
     private String numeroDocumento;
 
     @ManyToOne
@@ -45,8 +53,11 @@ public class DocumentoProcesso extends Identifiable {
     private TipoDocumento tipoDocumento;
 
     @Column(name = "data_criacao", nullable = false)
-    @Required
     private LocalDate dataCriacao;
+    
+    @Column(name = "data_documento", nullable = false)
+    @Required
+    private LocalDate dataDocumento;
 
     @Column(name="autor_documento", nullable = false)
     @Required
@@ -59,7 +70,33 @@ public class DocumentoProcesso extends Identifiable {
     @Stereotype("FILES")
 	@Column(length=32, name = "anexos_documento")
     private String anexosDocumento;
+
+    @ElementCollection
+    @OneToMany(mappedBy = "documentoProcesso", orphanRemoval = true, cascade = CascadeType.ALL)
+    Collection<AssinaturaDocumento> assinaturasDocumento;
     
+    @PreCreate
+    public void executarAntesDeCriar() {
+        this.dataCriacao = LocalDate.now();
+        this.numeroDocumento = ProcessoHelper.gerarNumeroDocumento(this.getTipoDocumento().getId());
+    }
+    
+    public Collection<AssinaturaDocumento> getAssinaturasDocumento() {
+        return assinaturasDocumento;
+    }
+
+    public void setAssinaturasDocumento(Collection<AssinaturaDocumento> assinaturasDocumento) {
+        this.assinaturasDocumento = assinaturasDocumento;
+    }
+
+    public LocalDate getDataDocumento() {
+        return dataDocumento;
+    }
+
+    public void setDataDocumento(LocalDate dataDocumento) {
+        this.dataDocumento = dataDocumento;
+    }
+
     public Processo getProcesso() {
         return processo;
     }

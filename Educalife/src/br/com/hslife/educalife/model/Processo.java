@@ -81,7 +81,7 @@ public class Processo extends Identifiable{
     private StatusProcesso statusProcesso;
 
     @ElementCollection
-    @ListProperties("tipoDocumento.descricao, numeroDocumento, dataCriacao, autorDocumento")
+    @ListProperties("tipoDocumento.descricao, numeroDocumento, dataDocumento, autorDocumento")
 	@OneToMany(mappedBy = "processo", orphanRemoval = true, cascade = CascadeType.ALL)
     private Collection<DocumentoProcesso> documentosProcesso;
     

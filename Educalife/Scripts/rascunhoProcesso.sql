@@ -14,3 +14,11 @@ where datepart(year, data_abertura) = datepart(year, getdate())
 and e.id = '2c9e80817638473201763856e7ff0006'; 
 
 
+alter table documento_processo add data_documento date null;
+update documento_processo set data_documento = data_criacao where data_documento is null;
+
+alter table documento_processo alter column data_documento date not null;
+
+
+alter table audit.documento_processo_AUD add data_documento date null;
+select * from audit.documento_processo_AUD dpa ;

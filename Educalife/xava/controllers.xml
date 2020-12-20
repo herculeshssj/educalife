@@ -5,9 +5,11 @@
 <controllers>
 
 	<!-- Processos -->
+	<!--
 	<controller name="GerarNumeroDocumento">
 		<action name="gerarNumero" hidden="true" class="br.com.hslife.educalife.action.GerarNumeroDocumentoProcessoAction" />
 	</controller>
+	-->
 
 	<controller name="DocumentoProcesso">
 		<extends controller="Typical" />
