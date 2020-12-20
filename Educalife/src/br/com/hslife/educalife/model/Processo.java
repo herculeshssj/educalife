@@ -39,7 +39,8 @@ import br.com.hslife.educalife.helper.ProcessoHelper;
         + "statusProcesso, publico; "
         + "tipoProcesso; "
         + "departamento } "
-        + "documentos { documentosProcesso }"
+        + "documentos { documentosProcesso } "
+        + "tramitacao { tramitacaoProcesso } "
 )
 @Tab(properties = "tipoProcesso.descricao, " +
     "numeroProcesso, dataAbertura, departamento.nomeEUnidade, " + 
@@ -82,12 +83,25 @@ public class Processo extends Identifiable{
     @ElementCollection
     @ListProperties("tipoDocumento.descricao, numeroDocumento, dataCriacao, autorDocumento")
 	@OneToMany(mappedBy = "processo", orphanRemoval = true, cascade = CascadeType.ALL)
-	private Collection<DocumentoProcesso> documentosProcesso;
+    private Collection<DocumentoProcesso> documentosProcesso;
+    
+    @ElementCollection
+    @ListProperties("departamentoOrigem.nomeEUnidade, departamentoDestino.nomeEUnidade, dataTramitacao, observacao")
+    @OneToMany(mappedBy = "processo", orphanRemoval = true, cascade = CascadeType.ALL)
+	Collection<TramitacaoProcesso> tramitacaoProcesso;
 
     @PreCreate
     public void executarAntesDeCriar() {
         this.dataAbertura = LocalDate.now();
         this.numeroProcesso = ProcessoHelper.gerarNumeroProcesso(this.departamento);
+    }
+
+    public Collection<TramitacaoProcesso> getTramitacaoProcesso() {
+        return tramitacaoProcesso;
+    }
+
+    public void setTramitacaoProcesso(Collection<TramitacaoProcesso> tramitacaoProcesso) {
+        this.tramitacaoProcesso = tramitacaoProcesso;
     }
 
     public Collection<DocumentoProcesso> getDocumentosProcesso() {
