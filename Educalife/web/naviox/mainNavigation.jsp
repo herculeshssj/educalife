@@ -170,7 +170,11 @@ if (modules.hasModules(request)) {
 			  
 				<% if (UsuarioAutorizacao.isAutorizado("Processo")) { %>
 	            	<li><a href="<%=modules.getModuleURI(request, menuModulos.get("Processo"))%>?init=true"><xava:message key="procProcesso"/></a></li>
-	            <% } %>  
+				<% } %>
+				
+				<% if (UsuarioAutorizacao.isAutorizado("DocumentoProcesso")) { %>
+	            	<li><a href="<%=modules.getModuleURI(request, menuModulos.get("DocumentoProcesso"))%>?init=true"><xava:message key="procDocumentoProcesso"/></a></li>
+	            <% } %>
 
 				<% if (UsuarioAutorizacao.isAutorizado("TipoDocumento")) { %>
 	            	<li><a href="<%=modules.getModuleURI(request, menuModulos.get("TipoDocumento"))%>?init=true"><xava:message key="procTipoDocumento"/></a></li>

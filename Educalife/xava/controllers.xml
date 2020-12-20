@@ -9,6 +9,11 @@
 		<action name="gerarNumero" hidden="true" class="br.com.hslife.educalife.action.GerarNumeroDocumentoProcessoAction" />
 	</controller>
 
+	<controller name="DocumentoProcesso">
+		<extends controller="Typical" />
+		<action name="assinarDocumento" mode="ALL" class="br.com.hslife.educalife.action.AssinarDocumentoProcessoAction" confirm="true" available-on-new="false"/>
+	</controller>
+
 	<!-- Diário de Classe -->
 	<controller name="FrequenciaAula">
 		<action name="salvarFrequencia" mode="detail" class="br.com.hslife.educalife.action.SalvarFrequenciaAction"/>
