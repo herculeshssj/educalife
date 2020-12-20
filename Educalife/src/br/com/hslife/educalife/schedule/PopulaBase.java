@@ -14,7 +14,7 @@ public class PopulaBase {
 
 	public void populaBase() {
 
-		populaCargo();
+		//populaCargo();
 		
 		System.out.println("Base populada com sucesso!");
 	}

@@ -18,12 +18,14 @@ public class Empresa extends Identifiable {
 
 	@OneToOne
 	@JoinColumn(name="id_pessoa_juridica", unique = true)
+	@Required
 	private PessoaJuridica pessoaJuridica;
 	
 	@Column(name="data_criacao", nullable = false)
+	@Required
 	private LocalDate dataCriacao;
 	
-	@Column(columnDefinition = "text", name="contrato_social", nullable = true)
+	@Column(columnDefinition = "nvarchar(max)", name="contrato_social", nullable = true)
 	@Stereotype("HTML_TEXT")
 	private String contratoSocial;
 	
