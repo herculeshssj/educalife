@@ -60,3 +60,6 @@ alter table OXFILES alter column [data] varbinary(max);
 
 select * from OXFILES;
 select * from cargo;
+
+alter table audit.empresa_AUD alter column contrato_social nvarchar(max) null;
+alter table empresa alter column contrato_social nvarchar(max) null;
