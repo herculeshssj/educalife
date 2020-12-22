@@ -63,3 +63,14 @@ select * from cargo;
 
 alter table audit.empresa_AUD alter column contrato_social nvarchar(max) null;
 alter table empresa alter column contrato_social nvarchar(max) null;
+
+
+
+select gen_random_uuid();
+f413fa75e3e54113975920768712de02
+
+select random() * 10 + 1;
+SELECT floor(random() * 10 + 1)::int;
+
+select floor(random()* (100000-10000 + 1) + 10000);
+

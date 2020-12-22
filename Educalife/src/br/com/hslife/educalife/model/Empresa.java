@@ -25,7 +25,7 @@ public class Empresa extends Identifiable {
 	@Required
 	private LocalDate dataCriacao;
 	
-	@Column(columnDefinition = "nvarchar(max)", name="contrato_social", nullable = true)
+	@Column(columnDefinition = "text", name="contrato_social", nullable = true)
 	@Stereotype("HTML_TEXT")
 	private String contratoSocial;
 	

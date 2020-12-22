@@ -24,7 +24,7 @@ public class ProcessoHelper {
         // Busca o próximo sequencial do tipo de documento
         Integer quantDocumentos = (Integer)XPersistence.getManager()
             .createNativeQuery("select count(*) from documento_processo p "+
-                "where datepart(year, data_criacao) = datepart(year, getdate())")
+                "where date_part('year', data_criacao) = date_part('year', now())")
             .getSingleResult();
 
         // Sequencial do processo
@@ -52,7 +52,7 @@ public class ProcessoHelper {
                 "inner join departamento d on d.id = p.id_departamento "+
                 "inner join unidade u on u.id = d.id_unidade "+
                 "inner join empresa e on e.id = u.id_empresa "+
-                "where datepart(year, data_abertura) = datepart(year, getdate()) " + 
+                "where date_part('year', data_abertura) = date_part('year', getdate()) " + 
                 "and e.id = :idEmpresa")
             .setParameter("idEmpresa", empresa.getId())
             .getSingleResult();

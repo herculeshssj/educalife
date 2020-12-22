@@ -72,7 +72,7 @@ public class Contrato extends Identifiable {
 	@Stereotype("MEMO")
 	private String observacao;
 	
-	@Column(columnDefinition = "nvarchar(max)", name="texto_contrato", nullable = true)
+	@Column(columnDefinition = "text", name="texto_contrato", nullable = true)
 	@Stereotype("HTML_TEXT")
 	private String textoContrato;
 	

@@ -13,7 +13,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.envers.Audited;
-import org.openxava.annotations.Action;
 import org.openxava.annotations.NoCreate;
 import org.openxava.annotations.NoModify;
 import org.openxava.annotations.PreCreate;
@@ -63,7 +62,7 @@ public class DocumentoProcesso extends Identifiable {
     @Required
     private String autorDocumento;
 
-    @Column(columnDefinition = "nvarchar(max)", name="corpo_documento", nullable = true)
+    @Column(columnDefinition = "text", name="corpo_documento", nullable = true)
     @Stereotype("HTML_TEXT")
     private String corpoDocumento;
     
