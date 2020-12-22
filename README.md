@@ -5,14 +5,12 @@ Sistema de Gestão Acadêmica
 
 Desenvolvido com a plataforma RAD OpenXava 6.4.
 
-### Criação do container SQL Server 2017/2019
+### Criação do container PostgreSQL
 
 ```
 docker volume create educalife_db_data
-docker run --name educalife-db --restart=unless-stopped -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -e 'MSSQL_AGENT_ENABLED=true' -p 1433:1433 -v educalife_db_data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-latest
+docker run --name educalife-db --restart=unless-stopped -e POSTGRES_PASSWORD=postgres -p 5432:5432 -v educalife_db_data:/var/lib/postgresql/data -d postgres
 ```
-
-Caso queira a versão 2017, substitua a imagem Docker por __mcr.microsoft.com/mssql/server:2017-latest__
 
 No seu arquivo /etc/hosts, inclua uma nova entrada apontando para o IP da sua máquina:
 
@@ -24,12 +22,11 @@ Localização do arquivo hosts:
 - Windows: C:\Windows\System32\drivers\etc
 - Linux: /etc
 
-Após acessar a base como usuário SA, rode o script SQL **baseInicial.sql** que se encontra na pasta Scripts.
+Após acessar a base como usuário postgres, rode o script SQL **baseInicial.sql** que se encontra na pasta Scripts.
 
 Inicie a aplicação para realizar a criação das tabelas.
 
 Para carregar os dados de exemplos, rode o script SQL **cadastrosBasicos.sql** que se encontra na pasta Scripts. Rode o script usando o usuário __educalife__.
-Logo após, rode o script SQL **cadastrosBasicosComplementares.sql** para carregar os dados de exemplos das tabelas de cadastro.
 
 
 ### Fluxo de cadastro
@@ -67,10 +64,6 @@ Os cadastros no Educalife ocorrem na seguinte ordem:
 29. Ensino -> Diário de Classe;
 30. Ensino -> Diário de Notas;
 31. Ensino -> Histórico do Aluno.
-
-### Problema com anexos
-
-Caso tenha problema em anexos arquivos, execute o script __correcaoAnexos__. O problema se deve ao tamanho do campo que guarda os dados binários os anexos.
 
 
 ### Processo de atualização
