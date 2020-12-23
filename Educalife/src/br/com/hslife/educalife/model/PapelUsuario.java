@@ -1,7 +1,5 @@
 package br.com.hslife.educalife.model;
 
-import java.util.*;
-
 import javax.persistence.*;
 
 import org.hibernate.envers.*;
@@ -20,16 +18,6 @@ public class PapelUsuario extends Identifiable {
 	@Column(nullable = false, length = 100)
 	@Required
 	private String descricao;
-	
-	@Override
-	public boolean equals(Object other) {
-		return ((PapelUsuario)other).getId().equals(this.getId()); 
-	}
-	
-	@Override
-	public int hashCode() {
-		return Objects.hashCode(this.getId());
-	}
 
 	public String getNome() {
 		return nome;

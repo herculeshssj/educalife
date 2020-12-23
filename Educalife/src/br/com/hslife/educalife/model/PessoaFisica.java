@@ -28,6 +28,7 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "foto { foto }"
 )
 @View(name = "view_in_contrato", members = "nome, cpf")
+@View(name = "view_simplificada", members = "nome, cpf")
 @Tab(properties = "nome, cpf, dataNascimento, estadoCivil.descricao")		
 public class PessoaFisica extends Identifiable {
 

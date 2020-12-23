@@ -11,7 +11,7 @@ import org.openxava.model.*;
 @Entity
 @Table(name="usuario")
 @Audited
-@Tab(properties = "login, ativo")
+@Tab(properties = "login, pessoaFisica.nome, pessoaFisica.cpf, ativo")
 public class Usuario extends Identifiable {
 	
 	@Column(nullable = false)
@@ -25,11 +25,26 @@ public class Usuario extends Identifiable {
 	
 	@Column(nullable = false)
 	private boolean ativo;
+
+	@OneToOne
+	@JoinColumn(name="id_pessoa_fisica", nullable = true)
+	@ReferenceView(value = "view_simplificada")
+	@NoCreate @NoModify
+	private PessoaFisica pessoaFisica;
 	
-	@OneToMany(mappedBy = "usuario")
+	@ManyToMany
 	@ElementCollection
-	@ListProperties("papelUsuario.nome, papelUsuario.descricao")
-	private Collection<PermissaoUsuario> permissao;
+	@ListProperties("nome, descricao")
+	@NoModify
+	private Collection<PapelUsuario> permissao;
+
+	public PessoaFisica getPessoaFisica() {
+		return pessoaFisica;
+	}
+
+	public void setPessoaFisica(PessoaFisica pessoaFisica) {
+		this.pessoaFisica = pessoaFisica;
+	}
 
 	public String getLogin() {
 		return login;
@@ -55,11 +70,11 @@ public class Usuario extends Identifiable {
 		this.ativo = ativo;
 	}
 
-	public Collection<PermissaoUsuario> getPermissao() {
+	public Collection<PapelUsuario> getPermissao() {
 		return permissao;
 	}
 
-	public void setPermissao(Collection<PermissaoUsuario> permissao) {
+	public void setPermissao(Collection<PapelUsuario> permissao) {
 		this.permissao = permissao;
 	}
 }

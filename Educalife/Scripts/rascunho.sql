@@ -79,3 +79,12 @@ select * from cargo;
 select id, row_number() over (order by id) from cargo;
 
 ae69320f-9219-4815-8ac3-952ef5c52f65
+
+
+select * from papel_usuario pu ;
+
+select * from audit.cargo_aud ca order by rev desc;
+select * from audit.auditoria a order by id desc;
+select * from usuario u ;
+select * from papel_usuario pu ;
+select * from usuario_papel_usuario upu ;
