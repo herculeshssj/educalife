@@ -74,3 +74,8 @@ SELECT floor(random() * 10 + 1)::int;
 
 select floor(random()* (100000-10000 + 1) + 10000);
 
+select * from cargo;
+
+select id, row_number() over (order by id) from cargo;
+
+ae69320f-9219-4815-8ac3-952ef5c52f65
