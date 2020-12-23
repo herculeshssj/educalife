@@ -257,6 +257,10 @@ if (modules.hasModules(request)) {
 	            
 	            <% if (UsuarioAutorizacao.isAutorizado("PapelUsuario")) { %>
 	            	<li><a href="<%=modules.getModuleURI(request, menuModulos.get("PapelUsuario"))%>?init=true"><xava:message key="opcaoUsuarioPapel"/></a></li>
+				<% } %>
+				
+				<% if (UsuarioAutorizacao.isAutorizado("PermissaoMenuSistema")) { %>
+	            	<li><a href="<%=modules.getModuleURI(request, menuModulos.get("PermissaoMenuSistema"))%>?init=true"><xava:message key="opcaoPermissaoMenu"/></a></li>
 	            <% } %>
 	            
 	            <% if (UsuarioAutorizacao.isAutorizado("LogAcesso")) { %>
