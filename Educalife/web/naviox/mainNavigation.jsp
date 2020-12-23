@@ -44,7 +44,7 @@ if (modules.hasModules(request)) {
           </a>
         </li>
         
-        <% if (UsuarioAutorizacao.isMenuAutorizado("Cadastros")) { %>
+        <% if (UsuarioAutorizacao.isAutorizado("Cadastros")) { %>
 	      	<li class="dropdown">
 	          <a href="#" class="dropdown-toggle sign-in" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 	          	<xava:message key="menuCadastros"/>
@@ -93,7 +93,7 @@ if (modules.hasModules(request)) {
 	        </li>
         <% } %>
         
-        <% if (UsuarioAutorizacao.isMenuAutorizado("Ensino")) { %>
+        <% if (UsuarioAutorizacao.isAutorizado("Ensino")) { %>
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle sign-in" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 	          	<xava:message key="menuEnsino"/>
@@ -131,7 +131,7 @@ if (modules.hasModules(request)) {
 	        </li>
         <% } %>
         
-        <% if (UsuarioAutorizacao.isMenuAutorizado("Administracao")) { %>
+        <% if (UsuarioAutorizacao.isAutorizado("Administracao")) { %>
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle sign-in" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 	          	<xava:message key="menuAdministracao"/>
@@ -161,7 +161,7 @@ if (modules.hasModules(request)) {
 	        </li>
 		<% } %>
 		
-		<% if (UsuarioAutorizacao.isMenuAutorizado("Processo")) { %>
+		<% if (UsuarioAutorizacao.isAutorizado("Processos")) { %>
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle sign-in" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 	          	<xava:message key="menuProcesso"/>
@@ -188,7 +188,7 @@ if (modules.hasModules(request)) {
 	        </li>
         <% } %>
         
-        <% if (UsuarioAutorizacao.isMenuAutorizado("Financeiro")) { %>
+        <% if (UsuarioAutorizacao.isAutorizado("Financeiro")) { %>
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle sign-in" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 	          	<xava:message key="menuFinanceiro"/>
@@ -218,7 +218,7 @@ if (modules.hasModules(request)) {
 	        </li>
         <% } %>
         
-        <% if (UsuarioAutorizacao.isMenuAutorizado("Pessoal")) { %>
+        <% if (UsuarioAutorizacao.isAutorizado("Pessoal")) { %>
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle sign-in" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 	          	<xava:message key="menuPessoal"/>
@@ -240,7 +240,7 @@ if (modules.hasModules(request)) {
 	        </li>
         <% } %>
         
-        <% if (UsuarioAutorizacao.isMenuAutorizado("Opcao")) { %>
+        <% if (UsuarioAutorizacao.isAutorizado("Opcao")) { %>
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle sign-in" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 	          	<xava:message key="menuOpcao"/>

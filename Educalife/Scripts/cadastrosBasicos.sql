@@ -53,3 +53,6 @@ VALUES('4028b881757e7d9101757e7e3d990001', true, 'admin', 'admin', null);
 INSERT INTO public.usuario_papel_usuario
 (usuario_id, permissao_id)
 VALUES('4028b881757e7d9101757e7e3d990001', '4028b8817567abae017567ac1bb50000');
+
+
+/* Permissões dos papéis dos usuários */

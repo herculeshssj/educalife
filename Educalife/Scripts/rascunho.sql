@@ -88,3 +88,21 @@ select * from audit.auditoria a order by id desc;
 select * from usuario u ;
 select * from papel_usuario pu ;
 select * from usuario_papel_usuario upu ;
+select * from permissao_menu_sistema pms ;
+
+select * from permissao_menu_sistema pms;
+select * from usuario_papel_usuario upu ;
+select * from usuario u2 ;
+select * from papel_usuario pu ;
+
+select u.* from usuario u 
+inner join usuario_papel_usuario up on up.usuario_id = u.id 
+inner join papel_usuario p on p.id = up.permissao_id 
+where p.nome = 'ADMIN' and u.login = 'coordenador1';
+
+
+select p.* from papel_usuario p 
+inner join usuario_papel_usuario up on up.permissao_id = p.id
+inner join usuario u on u.id = up.usuario_id 
+inner join permissao_menu_sistema pm on pm.id_papel_usuario = p.id 
+where u.login = 'coordenador1' and pm.modulo = 'Ensino' and pm.pode_consultar = true;
