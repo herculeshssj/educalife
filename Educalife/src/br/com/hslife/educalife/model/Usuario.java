@@ -3,6 +3,7 @@ package br.com.hslife.educalife.model;
 import java.util.*;
 
 import javax.persistence.*;
+import javax.validation.ValidationException;
 
 import org.hibernate.envers.*;
 import org.openxava.annotations.*;
@@ -14,8 +15,9 @@ import org.openxava.model.*;
 @Tab(properties = "login, pessoaFisica.nome, pessoaFisica.cpf, ativo")
 public class Usuario extends Identifiable {
 	
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	@Required
+	@ReadOnly(onCreate = false)
 	private String login;
 	
 	@Column(nullable = false, length = 64)
@@ -37,6 +39,13 @@ public class Usuario extends Identifiable {
 	@ListProperties("nome, descricao")
 	@NoModify
 	private Collection<PapelUsuario> permissao;
+
+	@PreDelete
+	public void antesDeExcluir() {
+		// Não é possível excluir o usuário admin
+		if (this.login.equalsIgnoreCase("admin"))
+			throw new ValidationException("Não é possível excluir o usuário 'admin'!");
+	}
 
 	public PessoaFisica getPessoaFisica() {
 		return pessoaFisica;
