@@ -8,5 +8,6 @@ public class Sample {
     public static void populaBase() {
         //SampleCargo.populaCargo();
         SamplePessoaFisica.populaPessoaFisica();
+        SamplePessoaJuridica.populaPessoaJuridica();
     }
 }

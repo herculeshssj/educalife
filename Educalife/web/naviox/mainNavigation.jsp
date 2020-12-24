@@ -89,6 +89,10 @@ if (modules.hasModules(request)) {
 				<% if (UsuarioAutorizacao.isAutorizado("PessoaFisica")) { %>
 					<li><a href="<%=modules.getModuleURI(request, menuModulos.get("PessoaFisica"))%>?init=true"><xava:message key="cadastroPessoaFisica"/></a></li>
 				<% } %>
+
+				<% if (UsuarioAutorizacao.isAutorizado("PessoaJuridica")) { %>
+					<li><a href="<%=modules.getModuleURI(request, menuModulos.get("PessoaJuridica"))%>?init=true"><xava:message key="cadastroPessoaJuridica"/></a></li>
+				<% } %>
 				
 				<% if (UsuarioAutorizacao.isAutorizado("TipoLogradouro")) { %>
 					<li><a href="<%=modules.getModuleURI(request, menuModulos.get("TipoLogradouro"))%>?init=true"><xava:message key="cadastroTipoLogradouro"/></a></li>

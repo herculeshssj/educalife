@@ -110,3 +110,4 @@ where u.login = 'coordenador1' and pm.modulo = 'Ensino' and pm.pode_consultar = 
 
 select * from tipo_logradouro tl 
 select * from pessoa_fisica pf ;
+select * from pessoa_juridica pj ;
