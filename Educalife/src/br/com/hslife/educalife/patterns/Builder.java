@@ -28,7 +28,7 @@ public class Builder<T> {
     	Method[] metodos = this.entity.getClass().getDeclaredMethods();
     	for (Method metodo : metodos) {
     		if (isSetter(metodo)) {
-    			if (metodo.getName().toLowerCase().contains(property.toLowerCase())) {
+    			if (metodo.getName().toLowerCase().startsWith("set" + property.toLowerCase())) {
     				metodo.invoke(this.entity, value);
     			}
     		}

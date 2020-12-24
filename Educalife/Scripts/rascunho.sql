@@ -106,3 +106,7 @@ inner join usuario_papel_usuario up on up.permissao_id = p.id
 inner join usuario u on u.id = up.usuario_id 
 inner join permissao_menu_sistema pm on pm.id_papel_usuario = p.id 
 where u.login = 'coordenador1' and pm.modulo = 'Ensino' and pm.pode_consultar = true;
+
+
+select * from tipo_logradouro tl 
+select * from pessoa_fisica pf ;
