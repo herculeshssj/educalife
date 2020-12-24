@@ -41,6 +41,7 @@ public class PessoaFisica extends Identifiable {
 	private String cpf;
 	
 	@Column(name = "data_nascimento", nullable = false)
+	@Required
 	private LocalDate dataNascimento;
 	
 	@Column(name="nome_pai", nullable = true)
@@ -52,11 +53,13 @@ public class PessoaFisica extends Identifiable {
 	@ManyToOne(optional = true)
 	@JoinColumn(name="id_estado_civil", nullable = true)
 	@DescriptionsList(descriptionProperties = "descricao", order = "${descricao} asc")
+	@NoCreate @NoModify
 	private EstadoCivil estadoCivil;
 	
 	@ManyToOne(optional = true)
 	@JoinColumn(name="id_nacionalidade", nullable = true)
 	@DescriptionsList(descriptionProperties = "denominacao", order = "${denominacao} asc")
+	@NoCreate @NoModify
 	private Pais nacionalidade;
 	
 	@Column(nullable = true)
@@ -69,21 +72,25 @@ public class PessoaFisica extends Identifiable {
 	@ManyToOne(optional = true)
 	@JoinColumn(name="id_genero", nullable = true)
 	@DescriptionsList(descriptionProperties = "descricao", order = "${descricao} asc")
+	@NoCreate @NoModify
 	private Genero genero;
 	
 	@ManyToOne(optional = true)
 	@JoinColumn(name="id_escolaridade", nullable = true)
 	@DescriptionsList(descriptionProperties = "descricao", order = "${descricao} asc")
+	@NoCreate @NoModify
 	private Escolaridade escolaridade;
 	
 	@ManyToOne(optional = true)
 	@JoinColumn(name="id_etnia", nullable = true)
 	@DescriptionsList(descriptionProperties = "descricao", order = "${descricao} asc")
+	@NoCreate @NoModify
 	private Etnia etnia;
 	
 	@ManyToOne(optional = true)
 	@JoinColumn(name="id_deficiencia", nullable = true)
 	@DescriptionsList(descriptionProperties = "descricao", order = "${descricao} asc")
+	@NoCreate @NoModify
 	private Deficiencia deficiencia;
 	
 	@Embedded

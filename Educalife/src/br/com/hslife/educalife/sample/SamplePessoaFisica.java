@@ -5,9 +5,15 @@ import java.util.List;
 
 import org.openxava.jpa.XPersistence;
 
+import br.com.hslife.educalife.enumeration.TipoSanguineo;
 import br.com.hslife.educalife.enumeration.Uf;
+import br.com.hslife.educalife.model.Deficiencia;
 import br.com.hslife.educalife.model.Endereco;
+import br.com.hslife.educalife.model.Escolaridade;
 import br.com.hslife.educalife.model.EstadoCivil;
+import br.com.hslife.educalife.model.Etnia;
+import br.com.hslife.educalife.model.Genero;
+import br.com.hslife.educalife.model.Pais;
 import br.com.hslife.educalife.model.PessoaFisica;
 import br.com.hslife.educalife.model.TipoLogradouro;
 import br.com.hslife.educalife.patterns.Builder;
@@ -23,7 +29,11 @@ public class SamplePessoaFisica {
 
             // Estado
             Uf[] estados = Uf.values();
-            int indexEstado = Util.getRandomInt(27);
+            int indexEstado = Util.getRandomInt(estados.length);
+
+            // TipoSanguineo
+            TipoSanguineo[] tiposSangue = TipoSanguineo.values();
+            int indexSangue = Util.getRandomInt(tiposSangue.length);
 
             // TipoLogradouro
             List<TipoLogradouro> tiposLogradouros = XPersistence.getManager()
@@ -40,6 +50,46 @@ public class SamplePessoaFisica {
 
             int indexEstadoCivil = Util.getRandomInt(estadosCivis.size());
             EstadoCivil estadoCivil = estadosCivis.get(indexEstadoCivil);
+
+            // Deficiência
+            List<Deficiencia> deficiencias = XPersistence.getManager()
+                .createQuery("SELECT d FROM Deficiencia d", Deficiencia.class)
+                .getResultList();
+            
+            int indexDeficiencia = Util.getRandomInt(deficiencias.size());
+            Deficiencia deficiencia = deficiencias.get(indexDeficiencia);
+
+            // Escolaridade
+            List<Escolaridade> escolaridades = XPersistence.getManager()
+                .createQuery("SELECT e FROM Escolaridade e", Escolaridade.class)
+                .getResultList();
+            
+            int indexEscolaridade = Util.getRandomInt(escolaridades.size());
+            Escolaridade escolaridade = escolaridades.get(indexEscolaridade);
+
+            // Nacionalidade
+            List<Pais> paises = XPersistence.getManager()
+                .createQuery("SELECT p FROM Pais p", Pais.class)
+                .getResultList();
+            
+            int indexPais = Util.getRandomInt(paises.size());
+            Pais nacionalidade = paises.get(indexPais);
+
+            // Genero
+            List<Genero> generos = XPersistence.getManager()
+                .createQuery("SELECT g FROM Genero g", Genero.class)
+                .getResultList();
+            
+            int indexGenero = Util.getRandomInt(generos.size());
+            Genero genero = generos.get(indexGenero);
+
+            // Etnia
+            List<Etnia> etnias = XPersistence.getManager()
+                .createQuery("SELECT e FROM Etnia e", Etnia.class)
+                .getResultList();
+            
+            int indexEtnia = Util.getRandomInt(etnias.size());
+            Etnia etnia = etnias.get(indexEtnia);
 
             // Endereço
             Builder<Endereco> enderecoBuilder = new Builder<>(new Endereco());
@@ -61,6 +111,13 @@ public class SamplePessoaFisica {
                 .set("dataNascimento", LocalDate.now())
                 .set("endereco", endereco)
                 .set("estadoCivil", estadoCivil)
+                .set("naturalidade", Util.getRandomString().substring(0,8))
+                .set("tipoSanguineo", tiposSangue[indexSangue])
+                .set("deficiencia", deficiencia)
+                .set("escolaridade", escolaridade)
+                .set("genero", genero)
+                .set("etnia", etnia)
+                .set("nacionalidade", nacionalidade)
                 .build();
 
             XPersistence.getManager().persist(pessoa);
