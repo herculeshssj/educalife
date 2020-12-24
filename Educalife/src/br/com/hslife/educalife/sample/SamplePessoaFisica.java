@@ -7,9 +7,11 @@ import org.openxava.jpa.XPersistence;
 
 import br.com.hslife.educalife.enumeration.Uf;
 import br.com.hslife.educalife.model.Endereco;
+import br.com.hslife.educalife.model.EstadoCivil;
 import br.com.hslife.educalife.model.PessoaFisica;
 import br.com.hslife.educalife.model.TipoLogradouro;
 import br.com.hslife.educalife.patterns.Builder;
+import br.com.hslife.educalife.util.CPFGenerator;
 import br.com.hslife.educalife.util.Util;
 
 public class SamplePessoaFisica {
@@ -31,6 +33,14 @@ public class SamplePessoaFisica {
             int indexLogradouro = Util.getRandomInt(tiposLogradouros.size());
             TipoLogradouro tipoLogradouro = tiposLogradouros.get(indexLogradouro);
 
+            // EstadoCivil
+            List<EstadoCivil> estadosCivis = XPersistence.getManager()
+                .createQuery("SELECT e FROM EstadoCivil e", EstadoCivil.class)
+                .getResultList();
+
+            int indexEstadoCivil = Util.getRandomInt(estadosCivis.size());
+            EstadoCivil estadoCivil = estadosCivis.get(indexEstadoCivil);
+
             // Endereço
             Builder<Endereco> enderecoBuilder = new Builder<>(new Endereco());
             Endereco endereco = enderecoBuilder
@@ -46,10 +56,11 @@ public class SamplePessoaFisica {
             /***  Popula a tabela de pessoa física ***/
             Builder<PessoaFisica> pessoaBuilder = new Builder<>(new PessoaFisica());
             PessoaFisica pessoa = pessoaBuilder
-                .set("cpf", "999.999.999-99")
+                .set("cpf", CPFGenerator.generateRandomFormatted())
                 .set("nome", "Pessoa " + Util.getRandomString().substring(0,8))
                 .set("dataNascimento", LocalDate.now())
                 .set("endereco", endereco)
+                .set("estadoCivil", estadoCivil)
                 .build();
 
             XPersistence.getManager().persist(pessoa);

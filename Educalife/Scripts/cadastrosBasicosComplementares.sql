@@ -1,12 +1,3 @@
-/* Tipo de logradouro */
-INSERT INTO tipo_logradouro
-(id, codigo, descricao)
-VALUES('2c9640817418b7f6017418b8a4ee001e', 'AV', 'Avenida');
-INSERT INTO tipo_logradouro
-(id, codigo, descricao)
-VALUES('2c9640817425a439017425a955dd1996', 'R', 'Rua');
-
-
 /* Cargo */
 INSERT INTO cargo
 (id, ativo, codigo_cbo, denominacao)
@@ -86,42 +77,6 @@ VALUES('2c9640817425a439017425a794011676', '4a. Série do primeiro grau completa
 INSERT INTO escolaridade
 (id, descricao)
 VALUES('2c9640817425a439017425a794101678', 'Não Informada');
-
-
-/* EstadoCivil */
-INSERT INTO estado_civil
-(id, descricao)
-VALUES('2c9640817425a439017425a7db61167a', 'SOLTEIRO');
-INSERT INTO estado_civil
-(id, descricao)
-VALUES('2c9640817425a439017425a7db72167c', 'CASADO');
-INSERT INTO estado_civil
-(id, descricao)
-VALUES('2c9640817425a439017425a7db80167e', 'SEPARADO JUDICIALMENTE');
-INSERT INTO estado_civil
-(id, descricao)
-VALUES('2c9640817425a439017425a7db8d1680', 'VIUVO');
-INSERT INTO estado_civil
-(id, descricao)
-VALUES('2c9640817425a439017425a7db9a1682', 'DESQUITADO');
-INSERT INTO estado_civil
-(id, descricao)
-VALUES('2c9640817425a439017425a7dba91684', 'OUTROS');
-INSERT INTO estado_civil
-(id, descricao)
-VALUES('2c9640817425a439017425a7dbb61686', 'SEPARADO CONSENSUALMENTE');
-INSERT INTO estado_civil
-(id, descricao)
-VALUES('2c9640817425a439017425a7dbc41688', 'DIVORCIADO');
-INSERT INTO estado_civil
-(id, descricao)
-VALUES('2c9640817425a439017425a7dbd1168a', 'DESCONHECIDO');
-INSERT INTO estado_civil
-(id, descricao)
-VALUES('2c9640817425a439017425a7dbe0168c', 'UNIÃO ESTÁVEL');
-INSERT INTO estado_civil
-(id, descricao)
-VALUES('2c9640817425a439017425a7dbe8168e', 'HOMOAFETIVA');
 
 
 /* Etnia */
