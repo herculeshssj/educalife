@@ -111,3 +111,15 @@ where u.login = 'coordenador1' and pm.modulo = 'Ensino' and pm.pode_consultar = 
 select * from tipo_logradouro tl 
 select * from pessoa_fisica pf ;
 select * from pessoa_juridica pj ;
+
+select * from modulosistema m ;
+select * from modulo_sistema ms;
+
+insert into modulo_sistema 
+	select * from modulosistema ;
+
+
+select distinct menu from modulo_sistema ms order by menu asc;
+select nome from modulo_sistema ms where menu = 'Cadastros' order by nome asc;
+
+select nome from modulo_sistema ms ;
