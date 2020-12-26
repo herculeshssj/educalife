@@ -63,7 +63,8 @@ public class SignInHelper {
 			return false;
 		}
 		
-		return password.equals(storedPassword);
+		//return password.equals(storedPassword);
+		return SignInHelper.SHA256(password).equals(storedPassword);
 	}	
 	
 	/**
@@ -93,7 +94,7 @@ public class SignInHelper {
 	/*
 	 * Retorna o texto criptografado em SHA-256
 	 */
-	private String SHA256(String texto) {
+	private static String SHA256(String texto) {
         String sen = "";
         MessageDigest md = null;
         try {
