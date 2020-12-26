@@ -9,5 +9,6 @@ public class Sample {
         //SampleCargo.populaCargo();
         SamplePessoaFisica.populaPessoaFisica();
         SamplePessoaJuridica.populaPessoaJuridica();
+        SampleContaBanco.populaBase();
     }
 }

@@ -1,0 +1,36 @@
+package br.com.hslife.educalife.dao;
+
+import java.math.BigInteger;
+
+import org.openxava.jpa.XPersistence;
+
+import br.com.hslife.educalife.model.PessoaFisica;
+
+public class PessoaFisicaDAO {
+    
+    public BigInteger countPessoaFisica() {
+        BigInteger quantidadeRegistros = (BigInteger)XPersistence.getManager()
+            .createNativeQuery("select count(id) from pessoa_fisica")
+            .getSingleResult();
+
+        if (quantidadeRegistros == null)
+            return BigInteger.ZERO;
+
+        return quantidadeRegistros;
+    }
+
+    public PessoaFisica obterPessoaFisicaPorIndice(int indice) {
+
+        // Busca o ID da pessoa física
+        String idPessoaFisica = (String)XPersistence.getManager()
+            .createNativeQuery("select id from ( "
+                + "select id, row_number() over (order by id) as indice from pessoa_fisica "
+                + ") as temp_table "
+                + "where indice = :indice")
+            .setParameter("indice", indice)
+            .getSingleResult();
+
+        // Busca a pessoa física a partir do ID
+        return XPersistence.getManager().find(PessoaFisica.class, idPessoaFisica);
+    }
+}
