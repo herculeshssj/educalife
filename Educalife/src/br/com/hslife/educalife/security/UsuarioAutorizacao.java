@@ -13,7 +13,7 @@ import br.com.hslife.educalife.model.Usuario;
 public class UsuarioAutorizacao {
 	
 	@SuppressWarnings("unchecked")
-	public static boolean isAutorizado(String menuName) {
+	public static boolean isAutorizado(String moduleName) {
 		
 		boolean liberado = false;
 		
@@ -52,8 +52,9 @@ public class UsuarioAutorizacao {
 						+ "inner join usuario_papel_usuario up on up.permissao_id = p.id "
 						+ "inner join usuario u on u.id = up.usuario_id "
 						+ "inner join permissao_menu_sistema pm on pm.id_papel_usuario = p.id "
-						+ "where u.login = :login and pm.modulo = :modulo and pm.pode_consultar = true", PapelUsuario.class)
-						.setParameter("modulo", menuName.toUpperCase())
+						+ "inner join modulo_sistema ms on ms.id = pm.id_modulo_sistema "
+						+ "where u.login = :login and ms.nome = :modulo and pm.pode_consultar = true", PapelUsuario.class)
+						.setParameter("modulo", moduleName)
 						.setParameter("login", nomeUsuario)
 						.getResultList();
 
@@ -107,14 +108,15 @@ public class UsuarioAutorizacao {
 				} else {
 
 					// Verifica dentre os papéis que o usuário possui aquele que tem permissão de consulta
-					// ao módulo informado
+					// ao menu informado
 					List<PapelUsuario> listaPapeis = XPersistence.getManager()
 						.createNativeQuery("select p.* from papel_usuario p "
 						+ "inner join usuario_papel_usuario up on up.permissao_id = p.id "
 						+ "inner join usuario u on u.id = up.usuario_id "
 						+ "inner join permissao_menu_sistema pm on pm.id_papel_usuario = p.id "
-						+ "where u.login = :login and pm.modulo = :modulo and pm.pode_consultar = true", PapelUsuario.class)
-						.setParameter("modulo", menuName.toUpperCase())
+						+ "inner join modulo_sistema ms on ms.id = pm.id_modulo_sistema "
+						+ "where u.login = :login and ms.menu = :modulo and pm.pode_consultar = true", PapelUsuario.class)
+						.setParameter("modulo", menuName)
 						.setParameter("login", nomeUsuario)
 						.getResultList();
 
