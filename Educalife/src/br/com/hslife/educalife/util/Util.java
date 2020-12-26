@@ -19,7 +19,7 @@ public class Util {
     /*
 	 * Retorna o texto criptografado em SHA-256
 	 */
-	private static String SHA256(String texto) {
+	public static String SHA256(String texto) {
         String sen = "";
         MessageDigest md = null;
         try {

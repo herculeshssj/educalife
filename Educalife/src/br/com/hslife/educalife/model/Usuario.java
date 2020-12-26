@@ -9,6 +9,8 @@ import org.hibernate.envers.*;
 import org.openxava.annotations.*;
 import org.openxava.model.*;
 
+import br.com.hslife.educalife.util.Util;
+
 @Entity
 @Table(name="usuario")
 @Audited
@@ -23,6 +25,7 @@ public class Usuario extends Identifiable {
 	@Column(nullable = false, length = 64)
 	@Required
 	@Stereotype("PASSWORD")
+	@ReadOnly(onCreate = false)
 	private String senha;
 	
 	@Column(nullable = false)
@@ -39,6 +42,13 @@ public class Usuario extends Identifiable {
 	@ListProperties("nome, descricao")
 	@NoModify
 	private Collection<PapelUsuario> permissao;
+
+	@PreCreate
+	public void antesDeCriar() {
+		if (this.senha != null && !this.senha.isEmpty()) {
+			this.senha = Util.SHA256(this.senha);
+		}
+	}
 
 	@PreDelete
 	public void antesDeExcluir() {
