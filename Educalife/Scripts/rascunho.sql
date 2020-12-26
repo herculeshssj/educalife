@@ -123,3 +123,5 @@ select distinct menu from modulo_sistema ms order by menu asc;
 select nome from modulo_sistema ms where menu = 'Cadastros' order by nome asc;
 
 select nome from modulo_sistema ms ;
+select * from permissao_menu_sistema pms ;
+truncate permissao_menu_sistema ;
