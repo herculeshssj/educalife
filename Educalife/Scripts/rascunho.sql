@@ -105,7 +105,16 @@ select p.* from papel_usuario p
 inner join usuario_papel_usuario up on up.permissao_id = p.id
 inner join usuario u on u.id = up.usuario_id 
 inner join permissao_menu_sistema pm on pm.id_papel_usuario = p.id 
-where u.login = 'coordenador1' and pm.modulo = 'Ensino' and pm.pode_consultar = true;
+inner join modulo_sistema ms on ms.id = pm.id_modulo_sistema 
+where u.login = 'coordenador1' and ms.nome = 'Curso' and pm.pode_consultar = true;
+
+
+select p.* from papel_usuario p 
+inner join usuario_papel_usuario up on up.permissao_id = p.id
+inner join usuario u on u.id = up.usuario_id 
+inner join permissao_menu_sistema pm on pm.id_papel_usuario = p.id 
+inner join modulo_sistema ms on ms.id = pm.id_modulo_sistema 
+where u.login = 'coordenador4' and ms.menu = 'Ensino' and pm.pode_consultar = true;
 
 
 select * from tipo_logradouro tl 
@@ -125,3 +134,5 @@ select nome from modulo_sistema ms where menu = 'Cadastros' order by nome asc;
 select nome from modulo_sistema ms ;
 select * from permissao_menu_sistema pms ;
 truncate permissao_menu_sistema ;
+
+select * from usuario u2 ;

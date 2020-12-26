@@ -104,3 +104,24 @@ git checkout -- Educalife/web/WEB-INF/web.xml
 
 16. Após isso, realize o commit das alterações;
 17. Inicie o projeto e confira se está tudo Ok.
+
+
+### Ant
+
+Alvos Ant úteis nos projetos.
+
+Educalife:
+-> compile
+-> deployWar
+-> createWar
+-> updateOX
+
+OpenXava:
+-> buildOpenXava
+-> buildAddons
+
+Dentro da pasta do projeto, execute:
+
+```
+ant -f build.xml <alvo>
+```
