@@ -30,6 +30,7 @@ public class Unidade extends Identifiable {
 	@ReferenceView(value = "endereco")
 	private Endereco endereco;
 	
+	@ManyToMany
 	@ElementCollection
 	@ListProperties("tipoContato, descricao, observacao")
 	private Collection<Contato> contatos;

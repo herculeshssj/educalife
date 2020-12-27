@@ -2,10 +2,15 @@ package br.com.hslife.educalife.model;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.Audited;
+import org.openxava.model.Identifiable;
+
 import br.com.hslife.educalife.enumeration.*;
 
-@Embeddable
-public class Contato {
+@Entity
+@Table(name="contato")
+@Audited
+public class Contato extends Identifiable {
 
 	@Enumerated(EnumType.STRING)
 	@Column(name="tipo_contato")
