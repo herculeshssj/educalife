@@ -1,5 +1,0 @@
-Nome;Descrição
-ADMIN;Administrador do sistema. Concede acesso a todas as funcionalidades do sistema.
-GESTAO_USUARIO;Permite ao usuário realizar a gestão dos demais usuários do sistema.
-COORDENADOR_CURSO;Permite ao coordenador acessar os dados referentes os cursos e turmas que gerencia
-SECRETARIA;Acesso às tarefas pertinentes a secretaria para gestão dos alunos na instituição, como matrícula, trancamento, pagamentos, etc.
