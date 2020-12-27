@@ -1,7 +1,6 @@
 package br.com.hslife.educalife.action;
 
 import java.time.*;
-import java.util.*;
 
 import org.apache.commons.beanutils.*;
 import org.openxava.actions.*;
@@ -9,6 +8,7 @@ import org.openxava.jpa.*;
 import org.openxava.util.*;
 
 import br.com.hslife.educalife.enumeration.*;
+import br.com.hslife.educalife.helper.ContratoHelper;
 import br.com.hslife.educalife.model.*;
 
 public class GestaoContratoRenegociarAction extends ViewBaseAction {
@@ -34,7 +34,7 @@ public class GestaoContratoRenegociarAction extends ViewBaseAction {
 				contrato.setDataRenovacao(LocalDate.now());
 				
 				// Seta o novo número de contrato
-				novoContrato.setNumeroContrato(new Random().nextInt(99999 - 10000) + 10000);
+				novoContrato.setNumeroContrato(ContratoHelper.gerarNumeroContrato());
 				
 				// Seta a situação dos contratos
 				contrato.setSituacaoContrato(SituacaoContrato.RENEGOCIADO);

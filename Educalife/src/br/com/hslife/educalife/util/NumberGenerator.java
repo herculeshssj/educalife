@@ -11,8 +11,6 @@ import java.util.Random;
  */
 public class NumberGenerator {
 
-	// TODO generate array with range
-
 	static int[] generateArray(Random random, int length, int quantityOfZeros) {
 		if (quantityOfZeros > length)
 			throw new IllegalArgumentException("quantityOfZeros must be less or equal than length.");

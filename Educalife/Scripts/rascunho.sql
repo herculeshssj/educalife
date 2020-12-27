@@ -159,3 +159,10 @@ select * from audit.auditoria a order by data_alteracao desc;
 select * from audit.pessoa_fisica_aud pfa where revtype = 0 order by rev desc;
 
 select * from audit.conta_banco_aud cba order by rev desc;
+
+
+select count(*) from contrato c where numero_contrato like '2020.%';
+select * from contrato;
+
+select count(*) from documento_processo p "+
+                "where date_part('year', data_criacao) = date_part('year', now())

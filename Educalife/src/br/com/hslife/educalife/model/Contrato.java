@@ -10,6 +10,7 @@ import org.openxava.annotations.*;
 import org.openxava.model.*;
 
 import br.com.hslife.educalife.enumeration.*;
+import br.com.hslife.educalife.helper.ContratoHelper;
 
 @Entity
 @Table(name="contrato")
@@ -33,13 +34,13 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "quantidadeParcelas, valorParcela")
 public class Contrato extends Identifiable {
 
-	@Column(name = "numero_contrato")
-	@Required
-	private int numeroContrato;
-	
+	@Column(name = "numero_contrato", length = 15, nullable = false, unique = true)
+	@ReadOnly
+	private String numeroContrato;
+
 	@Enumerated(EnumType.STRING)
 	@Column(name="situacao_contrato", nullable = false)
-//	@ReadOnly
+	@Required
 	private SituacaoContrato situacaoContrato;
 	
 	@Column(name="data_inicio_vigencia", nullable = false)
@@ -86,11 +87,16 @@ public class Contrato extends Identifiable {
 	@NoCreate @NoModify
 	private PessoaFisica contratante;
 
-	public int getNumeroContrato() {
+	@PreCreate
+	public void antesDeCriar() {
+		this.numeroContrato = ContratoHelper.gerarNumeroContrato();
+	}
+
+	public String getNumeroContrato() {
 		return numeroContrato;
 	}
 
-	public void setNumeroContrato(int numeroContrato) {
+	public void setNumeroContrato(String numeroContrato) {
 		this.numeroContrato = numeroContrato;
 	}
 
