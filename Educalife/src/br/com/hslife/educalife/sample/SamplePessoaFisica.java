@@ -1,13 +1,17 @@
 package br.com.hslife.educalife.sample;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.openxava.jpa.XPersistence;
 import org.springframework.stereotype.Component;
 
+import br.com.hslife.educalife.enumeration.TipoContato;
 import br.com.hslife.educalife.enumeration.TipoSanguineo;
 import br.com.hslife.educalife.enumeration.Uf;
+import br.com.hslife.educalife.model.Contato;
 import br.com.hslife.educalife.model.Deficiencia;
 import br.com.hslife.educalife.model.Endereco;
 import br.com.hslife.educalife.model.Escolaridade;
@@ -93,6 +97,26 @@ public class SamplePessoaFisica implements ISample {
             int indexEtnia = Util.getRandomInt(etnias.size());
             Etnia etnia = etnias.get(indexEtnia);
 
+            /*** Contato ***/
+            String telefone = new StringBuilder()
+                .append("(")
+                .append(String.valueOf(Util.getRandomInt(999)))
+                .append(") ")
+                .append(String.valueOf(Util.getRandomInt(999)))
+                .append("-")
+                .append(String.valueOf(Util.getRandomInt(999)))
+                .append("-")
+                .append(String.valueOf(Util.getRandomInt(999)))
+                .toString();
+            Contato contato = new Contato();
+            contato.setDescricao(telefone);
+            contato.setTipoContato(TipoContato.TELEFONE);
+            // Salva o contato
+            XPersistence.getManager().persist(contato);
+            // Atribui em um collection
+            Collection<Contato> contatos = new ArrayList<>();
+            contatos.add(contato);
+
             // Endereço
             Builder<Endereco> enderecoBuilder = new Builder<>(new Endereco());
             Endereco endereco = enderecoBuilder
@@ -123,6 +147,7 @@ public class SamplePessoaFisica implements ISample {
                 .set("genero", genero)
                 .set("etnia", etnia)
                 .set("nacionalidade", nacionalidade)
+                .set("contatos", contatos)
                 .build();
 
             XPersistence.getManager().persist(pessoa);
