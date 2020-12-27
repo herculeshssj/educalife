@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import org.openxava.jpa.XPersistence;
+import org.springframework.stereotype.Component;
 
 import br.com.hslife.educalife.enumeration.TipoSanguineo;
 import br.com.hslife.educalife.enumeration.Uf;
@@ -20,9 +21,10 @@ import br.com.hslife.educalife.patterns.Builder;
 import br.com.hslife.educalife.util.CPFGenerator;
 import br.com.hslife.educalife.util.Util;
 
-public class SamplePessoaFisica {
+@Component
+public class SamplePessoaFisica implements ISample {
     
-    public static void populaPessoaFisica() {
+    public void populaBase() {
 		try {
 
             /***  Popula a entidade Endereço para atribuir a PessoaFisica ***/

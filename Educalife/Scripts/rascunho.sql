@@ -136,3 +136,26 @@ select * from permissao_menu_sistema pms ;
 truncate permissao_menu_sistema ;
 
 select * from usuario u2 ;
+
+select id, row_number() over (order by id) from pessoa_fisica pf;
+
+
+
+select id from (
+	select id, row_number() over (order by id) as indice from pessoa_fisica
+) as temp_table
+where indice = 100;
+
+select count(id) from pessoa_fisica pf ;
+
+select * from banco b ;
+select * from conta_banco cb order by id desc;
+select * from pessoa_fisica pf where id = '2c98008176947193017694c8210b0247';
+
+select id_pessoa_fisica, count(id_pessoa_fisica) from conta_banco group by id_pessoa_fisica having count(*) > 1 order by 2 desc;
+
+
+select * from audit.auditoria a order by data_alteracao desc;
+select * from audit.pessoa_fisica_aud pfa where revtype = 0 order by rev desc;
+
+select * from audit.conta_banco_aud cba order by rev desc;

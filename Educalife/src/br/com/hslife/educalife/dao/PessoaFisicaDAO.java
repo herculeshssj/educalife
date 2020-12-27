@@ -3,9 +3,11 @@ package br.com.hslife.educalife.dao;
 import java.math.BigInteger;
 
 import org.openxava.jpa.XPersistence;
+import org.springframework.stereotype.Component;
 
 import br.com.hslife.educalife.model.PessoaFisica;
 
+@Component
 public class PessoaFisicaDAO {
     
     public BigInteger countPessoaFisica() {

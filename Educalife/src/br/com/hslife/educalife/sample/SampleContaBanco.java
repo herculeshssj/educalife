@@ -4,6 +4,8 @@ import java.math.BigInteger;
 import java.util.List;
 
 import org.openxava.jpa.XPersistence;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import br.com.hslife.educalife.dao.BancoDAO;
 import br.com.hslife.educalife.dao.PessoaFisicaDAO;
@@ -13,12 +15,16 @@ import br.com.hslife.educalife.model.PessoaFisica;
 import br.com.hslife.educalife.patterns.Builder;
 import br.com.hslife.educalife.util.Util;
 
-public class SampleContaBanco {
-    
-    public static void populaBase() {
+@Component
+public class SampleContaBanco implements ISample {
 
-        PessoaFisicaDAO daoPessoaFisica = new PessoaFisicaDAO();
-        BancoDAO daoBanco = new BancoDAO();
+    @Autowired
+    PessoaFisicaDAO daoPessoaFisica;
+
+    @Autowired
+    BancoDAO daoBanco;
+    
+    public void populaBase() {
 
         try {
 
