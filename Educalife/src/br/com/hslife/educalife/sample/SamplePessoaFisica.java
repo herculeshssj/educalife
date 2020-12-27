@@ -107,9 +107,12 @@ public class SamplePessoaFisica implements ISample {
 
             /***  Popula a tabela de pessoa física ***/
             Builder<PessoaFisica> pessoaBuilder = new Builder<>(new PessoaFisica());
+            String nomePessoa = "Pessoa " + Util.getRandomString().substring(0,8);
             PessoaFisica pessoa = pessoaBuilder
                 .set("cpf", CPFGenerator.generateRandomFormatted())
-                .set("nome", "Pessoa " + Util.getRandomString().substring(0,8))
+                .set("nome", nomePessoa)
+                .set("nomeMae", "Mãe de " + nomePessoa)
+                .set("nomePai", "Pai de " + nomePessoa)
                 .set("dataNascimento", LocalDate.now())
                 .set("endereco", endereco)
                 .set("estadoCivil", estadoCivil)
