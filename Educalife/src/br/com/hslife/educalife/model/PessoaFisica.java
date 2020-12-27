@@ -101,7 +101,7 @@ public class PessoaFisica extends Identifiable {
 	@ListProperties("tipoContato, descricao, observacao")
 	private Collection<Contato> contatos;
 	
-	@ElementCollection
+	@OneToMany(mappedBy = "pessoaFisica")
 	@ListProperties("tipoIdentidade, numero, orgaoExpedidor, dataExpedicao, complemento")
 	private Collection<DocumentoIdentidade> documentosIdentidade;
 	

@@ -4,16 +4,24 @@ import java.time.*;
 
 import javax.persistence.*;
 
+import org.hibernate.envers.Audited;
+import org.openxava.annotations.Required;
+import org.openxava.model.Identifiable;
+
 import br.com.hslife.educalife.enumeration.*;
 
-@Embeddable
-public class DocumentoIdentidade {
+@Entity
+@Table(name="documento_identidade")
+@Audited
+public class DocumentoIdentidade extends Identifiable {
 	
 	@Enumerated(EnumType.STRING)
 	@Column(name="tipo_identidade")
+	@Required
 	private TipoIdentidade tipoIdentidade;
 	
 	@Column
+	@Required
 	private String numero;
 	
 	@Column(name="orgao_expedidor")
@@ -24,6 +32,18 @@ public class DocumentoIdentidade {
 	
 	@Column
 	private String complemento;
+
+	@ManyToOne
+	@JoinColumn(name="id_pessoa_fisica")
+	private PessoaFisica pessoaFisica;
+
+	public PessoaFisica getPessoaFisica() {
+		return pessoaFisica;
+	}
+
+	public void setPessoaFisica(PessoaFisica pessoaFisica) {
+		this.pessoaFisica = pessoaFisica;
+	}
 
 	public TipoIdentidade getTipoIdentidade() {
 		return tipoIdentidade;
