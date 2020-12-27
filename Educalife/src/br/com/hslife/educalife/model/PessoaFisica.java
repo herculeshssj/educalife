@@ -24,7 +24,6 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "contatos { contatos };"
 		+ "documentos { documentosIdentidade }; "
 		+ "dadosBancarios { dadosBancarios } "
-		+ "anotacoes { anotacoes }"
 		+ "foto { foto }"
 )
 @View(name = "view_in_contrato", members = "nome, cpf")
@@ -108,9 +107,6 @@ public class PessoaFisica extends Identifiable {
 	@OneToMany(mappedBy = "pessoaFisica")
 	@ListProperties("banco.codigo, banco.nome, agencia, numeroConta, operacao")
 	private Collection<ContaBanco> dadosBancarios;
-	
-	@ElementCollection
-	private Collection<Anotacao> anotacoes;
 	
 	@Stereotype("PHOTO")
 	@Column
@@ -257,14 +253,6 @@ public class PessoaFisica extends Identifiable {
 
 	public void setDadosBancarios(Collection<ContaBanco> dadosBancarios) {
 		this.dadosBancarios = dadosBancarios;
-	}
-
-	public Collection<Anotacao> getAnotacoes() {
-		return anotacoes;
-	}
-
-	public void setAnotacoes(Collection<Anotacao> anotacoes) {
-		this.anotacoes = anotacoes;
 	}
 
 	public byte[] getFoto() {
