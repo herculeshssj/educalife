@@ -34,13 +34,19 @@ public class SampleUsuario implements ISample {
             int indexPessoa = Util.getRandomInt(quantidadePessoas.intValue());
             PessoaFisica pessoaFisica = daoPessoaFisica.obterPessoaFisicaPorIndice(indexPessoa);
 
+            // Verifica se o usuário já existe
+            String login = pessoaFisica.getNome().replace(" ", "").toLowerCase();
+            if (daoUsuario.buscarPorLogin(login).isPresent()) {
+                // Finaliza o método aqui, pois já existe usuário cadastrado
+                return;
+            }
+
             // Busca o papel CONSULTA para definir ao usuário
             PapelUsuario papel = daoUsuario.obterPapelPorNome("CONSULTA");
             Collection<PapelUsuario> papeis = new ArrayList<>();
             papeis.add(papel);
 
             // Popula o usuário com os dados vindos da pessoa física
-            String login = pessoaFisica.getNome().replace(" ", "").toLowerCase();
             Builder<Usuario> usuarioBuilder = new Builder<Usuario>(new Usuario());
             Usuario usuario = usuarioBuilder
                 .set("login", login)
