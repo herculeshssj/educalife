@@ -17,6 +17,9 @@ public class Sample {
 
     @Autowired
     SampleDocumentoIdentidade sampleDocumentoIdentidade;
+
+    @Autowired
+    SampleUsuario sampleUsuario;
     
     /*
         Invoca todos os métodos que populam a base
@@ -27,5 +30,6 @@ public class Sample {
         samplePessoaJuridica.populaBase();
         sampleContaBanco.populaBase();
         sampleDocumentoIdentidade.populaBase();
+        sampleUsuario.populaBase();
     }
 }
