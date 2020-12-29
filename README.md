@@ -22,12 +22,15 @@ Localização do arquivo hosts:
 - Windows: C:\Windows\System32\drivers\etc
 - Linux: /etc
 
-Após acessar a base como usuário postgres, rode o script SQL **baseInicial.sql** que se encontra na pasta Scripts.
+Após acessar a base como usuário postgres, rode o script SQL **baseInicial.sql** que se encontra na pasta Scripts. Este script cria a base e o usuário utilizados pelo sistema.
 
-Inicie a aplicação para realizar a criação das tabelas.
+Logo após, em uma janela de terminal, execute a restauração da base:
 
-Para carregar os dados de exemplos, rode o script SQL **cadastrosBasicos.sql** que se encontra na pasta Scripts. Rode o script usando o usuário __educalife__.
+```
+docker run --rm --link educalife-db -e PGPASSWORD="Ed7c4l1f3*" -v "$PWD":/backup postgres pg_restore -U educalife -h educalife-db -W -v -c --if-exists -O -d educalife /backup/educalife.backup
+```
 
+O comando acima considera que o dump da base está no diretório atual
 
 ### Fluxo de cadastro
 
