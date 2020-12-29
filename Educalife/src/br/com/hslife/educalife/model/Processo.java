@@ -36,6 +36,7 @@ import br.com.hslife.educalife.helper.ProcessoHelper;
     members = "geral { numeroProcesso; "
         + "dataAbertura; "
         + "interessado; "
+        + "cpfCnpjInteressado; "
         + "statusProcesso, publico; "
         + "tipoProcesso; "
         + "departamento } "
@@ -59,7 +60,6 @@ public class Processo extends Identifiable{
     private String numeroProcesso;
 
     @Column(name="data_abertura", nullable = false)
-    @ReadOnly
     private LocalDate dataAbertura;
 
     @ManyToOne
@@ -71,6 +71,9 @@ public class Processo extends Identifiable{
 
     @Column(nullable = true)
     private String interessado;
+
+    @Column(name="cpf_cnpj_interessado", nullable = true)
+    private String cpfCnpjInteressado;
 
     @Column
     private boolean publico;
@@ -94,6 +97,14 @@ public class Processo extends Identifiable{
     public void executarAntesDeCriar() {
         this.dataAbertura = LocalDate.now();
         this.numeroProcesso = ProcessoHelper.gerarNumeroProcesso(this.departamento);
+    }
+
+    public String getCpfCnpjInteressado() {
+        return cpfCnpjInteressado;
+    }
+
+    public void setCpfCnpjInteressado(String cpfCnpjInteressado) {
+        this.cpfCnpjInteressado = cpfCnpjInteressado;
     }
 
     public Collection<TramitacaoProcesso> getTramitacaoProcesso() {

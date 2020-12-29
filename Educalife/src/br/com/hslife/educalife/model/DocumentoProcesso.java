@@ -29,7 +29,7 @@ import br.com.hslife.educalife.helper.ProcessoHelper;
 @Table(name="documento_processo")
 @Audited
 @View(members = "geral { tipoDocumento; " +
-    "numeroDocumento; autorDocumento; dataDocumento } " +
+    "numeroDocumento; autorDocumento; cpfCnpjAutorDocumento; dataDocumento } " +
     "conteudo { corpoDocumento } " +
     "anexos { anexosDocumento } " +
     "assinaturas { assinaturasDocumento } ")
@@ -50,9 +50,6 @@ public class DocumentoProcesso extends Identifiable {
     @NoCreate @NoModify
     @ReferenceView("view_in_documento_processo")
     private TipoDocumento tipoDocumento;
-
-    @Column(name = "data_criacao", nullable = false)
-    private LocalDate dataCriacao;
     
     @Column(name = "data_documento", nullable = false)
     @Required
@@ -61,6 +58,10 @@ public class DocumentoProcesso extends Identifiable {
     @Column(name="autor_documento", nullable = false)
     @Required
     private String autorDocumento;
+
+    @Column(name="cpf_cnpj_autor_documento", nullable = false)
+    @Required
+    private String cpfCnpjAutorDocumento;
 
     @Column(columnDefinition = "text", name="corpo_documento", nullable = true)
     @Stereotype("HTML_TEXT")
@@ -76,8 +77,15 @@ public class DocumentoProcesso extends Identifiable {
     
     @PreCreate
     public void executarAntesDeCriar() {
-        this.dataCriacao = LocalDate.now();
         this.numeroDocumento = ProcessoHelper.gerarNumeroDocumento(this.getTipoDocumento().getId());
+    }
+
+    public String getCpfCnpjAutorDocumento() {
+        return cpfCnpjAutorDocumento;
+    }
+
+    public void setCpfCnpjAutorDocumento(String cpfCnpjAutorDocumento) {
+        this.cpfCnpjAutorDocumento = cpfCnpjAutorDocumento;
     }
     
     public Collection<AssinaturaDocumento> getAssinaturasDocumento() {
@@ -126,14 +134,6 @@ public class DocumentoProcesso extends Identifiable {
 
     public void setCorpoDocumento(String corpoDocumento) {
         this.corpoDocumento = corpoDocumento;
-    }
-
-    public LocalDate getDataCriacao() {
-        return dataCriacao;
-    }
-
-    public void setDataCriacao(LocalDate dataCriacao) {
-        this.dataCriacao = dataCriacao;
     }
 
     public String getNumeroDocumento() {

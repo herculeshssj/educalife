@@ -157,6 +157,7 @@ select id_pessoa_fisica, count(id_pessoa_fisica) from conta_banco group by id_pe
 
 select * from audit.auditoria a order by data_alteracao desc;
 select * from audit.pessoa_fisica_aud pfa where revtype = 0 order by rev desc;
+select * from audit.pessoa_juridica_aud pja where revtype = 0 order by rev desc;
 
 select * from audit.conta_banco_aud cba order by rev desc;
 
@@ -166,3 +167,11 @@ select * from contrato;
 
 select count(*) from documento_processo p "+
                 "where date_part('year', data_criacao) = date_part('year', now())
+
+select pg_size_pretty(pg_database_size(current_database()));
+
+select * from tipo_documento td where length(codigo) <> 3;
+
+update tipo_documento set codigo = '0'||codigo where length(codigo) <> 3;
+
+

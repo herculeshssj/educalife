@@ -1,5 +1,6 @@
 package br.com.hslife.educalife.helper;
 
+import java.math.BigInteger;
 import java.time.LocalDate;
 import java.util.zip.CRC32;
 
@@ -22,7 +23,7 @@ public class ProcessoHelper {
         String anoCorrente = Integer.toString(LocalDate.now().getYear());
 
         // Busca o próximo sequencial do tipo de documento
-        Integer quantDocumentos = (Integer)XPersistence.getManager()
+        BigInteger quantDocumentos = (BigInteger)XPersistence.getManager()
             .createNativeQuery("select count(*) from documento_processo p "+
                 "where date_part('year', data_criacao) = date_part('year', now())")
             .getSingleResult();
@@ -47,12 +48,12 @@ public class ProcessoHelper {
         String cpnjEmpresa = empresa.getCnpjEmpresa().replace(".", "").replace("-", "").replace("/", "");
 
         // Busca o próximo sequencial de processo
-        Integer quantProcessos = (Integer)XPersistence.getManager()
+        BigInteger quantProcessos = (BigInteger)XPersistence.getManager()
             .createNativeQuery("select count(*) from processo p "+
                 "inner join departamento d on d.id = p.id_departamento "+
                 "inner join unidade u on u.id = d.id_unidade "+
                 "inner join empresa e on e.id = u.id_empresa "+
-                "where date_part('year', data_abertura) = date_part('year', getdate()) " + 
+                "where date_part('year', data_abertura) = date_part('year', now()) " + 
                 "and e.id = :idEmpresa")
             .setParameter("idEmpresa", empresa.getId())
             .getSingleResult();
