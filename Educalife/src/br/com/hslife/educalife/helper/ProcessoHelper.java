@@ -24,12 +24,11 @@ public class ProcessoHelper {
 
         // Busca o próximo sequencial do tipo de documento
         BigInteger quantDocumentos = (BigInteger)XPersistence.getManager()
-            .createNativeQuery("select count(*) from documento_processo p "+
-                "where date_part('year', data_criacao) = date_part('year', now())")
+            .createNativeQuery("select count(*) from documento_processo p where numero_documento like '" + anoCorrente + "." + tipoDocumento.getCodigo() + ".%'")
             .getSingleResult();
 
         // Sequencial do processo
-        String sequencialDocumento = String.format("%05d", quantDocumentos.intValue() + 1);
+        String sequencialDocumento = String.format("%06d", quantDocumentos.intValue() + 1);
 
         // Retorna o número do documento
         return anoCorrente + "." + tipoDocumento.getCodigo() + "." + sequencialDocumento;

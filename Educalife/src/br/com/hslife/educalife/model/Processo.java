@@ -12,6 +12,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 import org.hibernate.envers.Audited;
@@ -84,7 +85,8 @@ public class Processo extends Identifiable{
     private StatusProcesso statusProcesso;
 
     @ElementCollection
-    @ListProperties("tipoDocumento.descricao, numeroDocumento, dataDocumento, autorDocumento")
+    @ListProperties("tipoDocumento.descricao, numeroDocumento, dataDocumento, autorDocumento, dataInclusaoProcesso")
+    @OrderBy("dataInclusaoProcesso")
 	@OneToMany(mappedBy = "processo", orphanRemoval = true, cascade = CascadeType.ALL)
     private Collection<DocumentoProcesso> documentosProcesso;
     

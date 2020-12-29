@@ -174,4 +174,6 @@ select * from tipo_documento td where length(codigo) <> 3;
 
 update tipo_documento set codigo = '0'||codigo where length(codigo) <> 3;
 
+select * from documento_processo dp ;
 
+select count(*) from documento_processo where numero_documento like '2020.083.%';
