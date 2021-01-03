@@ -41,6 +41,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>consulta-cep</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
