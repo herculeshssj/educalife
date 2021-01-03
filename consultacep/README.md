@@ -27,5 +27,20 @@ docker run --restart=unless-stopped --name consulta-cep-db -e POSTGRES_PASSWORD=
 **Aplicação:**
 
 ```
-docker run --restart=unless-stopped --name consulta-cep -p 9090:8080 -d consultacep:latest
+docker run --restart=unless-stopped --name consulta-cep --link consulta-cep-db -p 9090:8080 -d consultacep:latest
+```
+
+Backup e restauração
+--------------------
+
+Backup:
+
+```
+pg_dump -U consulta_cep -O -F c -b -v -f consulta_cep.backup -W consulta_cep
+```
+
+Restauração:
+
+```
+pg_restore -U consulta_cep -W -v -c --if-exists -O -d consulta_cep consulta_cep.backup
 ```
