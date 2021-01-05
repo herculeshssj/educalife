@@ -177,3 +177,21 @@ update tipo_documento set codigo = '0'||codigo where length(codigo) <> 3;
 select * from documento_processo dp ;
 
 select count(*) from documento_processo where numero_documento like '2020.083.%';
+
+select * from tipo_logradouro tl where tl.descricao = 'Rua';
+
+select * from pessoa_fisica pf where pf.ti
+
+
+select * from pessoa_juridica pf
+inner join tipo_logradouro tl ON pf.id_tipo_logradouro = tl.id
+where upper(tl.descricao) = upper('Rua')
+and tl.id = '40288f85769287940176928f1c760104';
+
+select * from tipo_logradouro tl where id = '40288f85769287940176928f1c760104';
+select * from pessoa_fisica pf where id_tipo_logradouro = '40288f85769287940176928f1c760104';
+
+update pessoa_juridica set id_tipo_logradouro = '2c9640817425a439017425a955dd1996' where id_tipo_logradouro = '40288f85769287940176928f1c760104';
+delete from tipo_logradouro where id = '40288f85769287940176928f1c760104';
+
+select * from pessoa_juridica pj where pj.id_tipo_logradouro = '40288f85769287940176928f1c760104';
