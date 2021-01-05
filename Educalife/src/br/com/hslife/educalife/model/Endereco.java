@@ -51,6 +51,7 @@ public class Endereco {
 
 	@Required
 	@Column(name = "cep", nullable = false)
+	@Action("ConsultaCep.consultarCep")
 	private String cep;
 
 	public String getLogradouro() {
