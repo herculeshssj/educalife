@@ -4,12 +4,10 @@
 
 <controllers>
 
-	<!-- Processos -->
-	<!--
-	<controller name="GerarNumeroDocumento">
-		<action name="gerarNumero" hidden="true" class="br.com.hslife.educalife.action.GerarNumeroDocumentoProcessoAction" />
+	<!-- CEP -->
+	<controller name="ConsultaCep">
+		<action name="consultarCep" hidden="true" class="br.com.hslife.educalife.action.ConsultaCepAction" />
 	</controller>
-	-->
 
 	<controller name="DocumentoProcesso">
 		<extends controller="Typical" />
