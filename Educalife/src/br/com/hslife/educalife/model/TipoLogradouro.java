@@ -12,11 +12,11 @@ import org.openxava.model.*;
 public class TipoLogradouro extends Identifiable {
 	
 	@Required
-	@Column(name="codigo", nullable = false)
+	@Column(name="codigo", nullable = false, unique = true)
 	private String codigo;
 	
 	@Required
-	@Column(name="descricao", nullable = false)
+	@Column(name="descricao", nullable = false, unique = true)
 	private String descricao;
 
 	public String getCodigo() {
