@@ -21,6 +21,9 @@ public class Localidade extends Identifiable {
 	
 	@Column
 	private boolean ativo;
+
+	@Column(name="ministra_aula")
+	private boolean ministraAula;
 	
 	@ManyToOne
 	@JoinColumn(name="id_unidade", nullable = false)
@@ -30,6 +33,14 @@ public class Localidade extends Identifiable {
 	@Column
 	@Stereotype("MEMO")
 	private String observacao;
+
+	public boolean isMinistraAula() {
+		return ministraAula;
+	}
+
+	public void setMinistraAula(boolean ministraAula) {
+		this.ministraAula = ministraAula;
+	}
 	
 	public String getCodigo() {
 		return codigo;

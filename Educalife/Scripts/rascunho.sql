@@ -195,3 +195,11 @@ update pessoa_juridica set id_tipo_logradouro = '2c9640817425a439017425a955dd199
 delete from tipo_logradouro where id = '40288f85769287940176928f1c760104';
 
 select * from pessoa_juridica pj where pj.id_tipo_logradouro = '40288f85769287940176928f1c760104';
+
+
+ALTER TABLE public.localidade RENAME COLUMN ministraaula TO ministra_aula;
+ALTER TABLE public.localidade ALTER COLUMN ministra_aula SET DEFAULT false;
+update localidade set ministra_aula = false where ministra_aula is null; 
+ALTER TABLE public.localidade ALTER COLUMN ministra_aula SET NOT NULL;
+
+
