@@ -7,17 +7,21 @@ import javax.validation.ValidationException;
 
 import org.openxava.actions.ViewBaseAction;
 import org.openxava.jpa.XPersistence;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import br.com.hslife.educalife.enumeration.Uf;
-import br.com.hslife.educalife.model.ParametroSistema;
+import br.com.hslife.educalife.helper.ParametroSistemaHelper;
 import br.com.hslife.educalife.model.TipoLogradouro;
 import br.com.hslife.educalife.vo.Cep;
 
 public class ConsultaCepAction extends ViewBaseAction {
+
+    @Autowired
+    ParametroSistemaHelper parametroSistemaHelper;
 
     @Override
     public void execute() throws Exception {
@@ -31,7 +35,7 @@ public class ConsultaCepAction extends ViewBaseAction {
         }
 
         ResponseEntity<List<Cep>> responseEntity = new RestTemplate()
-            .exchange("http://raspberrypi:9090/" + cepInformado,
+            .exchange(new ParametroSistemaHelper().getConsultaCepRestApiUrl() + cepInformado,
                 HttpMethod.GET,
                 null,
                 new ParameterizedTypeReference<List<Cep>>(){});
