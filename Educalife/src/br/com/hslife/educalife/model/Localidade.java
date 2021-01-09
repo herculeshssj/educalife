@@ -9,6 +9,7 @@ import org.openxava.model.*;
 @Entity
 @Table(name = "localidade")	
 @Audited
+@Tab(properties = "codigo, descricao, ministraAula, ativo, unidade.empresa.nomeEmpresa")
 public class Localidade extends Identifiable {
 
 	@Column(nullable = false)
