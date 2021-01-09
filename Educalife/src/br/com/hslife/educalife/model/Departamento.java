@@ -13,6 +13,7 @@ import org.openxava.model.*;
 	name = "view_in_processo", 
 	members = "nomeDepartamento, unidade"
 )
+@Tab(properties = "nomeDepartamento, unidade.nomeUnidade, unidade.empresa.nomeEmpresa")
 public class Departamento extends Identifiable {
 
 	@Column(name="nome_departamento", nullable = false)
