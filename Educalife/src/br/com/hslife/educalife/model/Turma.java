@@ -63,6 +63,7 @@ public class Turma extends Identifiable {
 	@ManyToOne
 	@JoinColumn(name="id_localidade", nullable = true)
 	@NoCreate @NoModify
+	@SearchListCondition("${ministraAula} = true")
 	private Localidade localAula;
 	
 	@ElementCollection
