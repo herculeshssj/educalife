@@ -16,7 +16,7 @@ import org.openxava.model.*;
 		+ "empresa };"
 		+ "endereco { endereco } ;"
 		+ "contatos { contatos }")
-@Tab(properties = "nomeUnidade, horarioFuncionamento")
+@Tab(properties = "empresa.nomeEmpresa, nomeUnidade, horarioFuncionamento")
 public class Unidade extends Identifiable {
 
 	@Column(name="nome_unidade", nullable = false)
