@@ -20,6 +20,9 @@ public class Sample {
 
     @Autowired
     SampleUsuario sampleUsuario;
+
+    @Autowired
+    SampleColaborador sampleColaborador;
     
     /*
         Invoca todos os métodos que populam a base
@@ -31,5 +34,6 @@ public class Sample {
         sampleContaBanco.populaBase();
         sampleDocumentoIdentidade.populaBase();
         sampleUsuario.populaBase();
+        sampleColaborador.populaBase();
     }
 }
