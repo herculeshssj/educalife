@@ -102,6 +102,7 @@ git checkout -- Educalife/web/WEB-INF/web.xml
 Alvos Ant úteis nos projetos.
 
 Educalife:
+-> deployEducalife
 -> compile
 -> deployWar
 -> createWar
@@ -110,6 +111,8 @@ Educalife:
 OpenXava:
 -> buildOpenXava
 -> buildAddons
+
+O alvo **deployEducalife** realiza a geração do arquivo WAR do projeto pronto para deploy, tanto no Tomcat quanto executado direto através do comando __java -jar arquivo.war__. 
 
 Dentro da pasta do projeto, execute:
 
