@@ -14,7 +14,7 @@ import br.com.hslife.educalife.enumeration.*;
 @Entity
 @Table(name="turma")
 @Audited
-@View(members = "geral { nomeTurma; modalidadeTurma; dataInicio; dataFim; dataInicioInscricao; dataFimInscricao; statusTurma } "
+@View(members = "geral { codigoTurma; nomeTurma; modalidadeTurma; dataInicio; dataFim; dataInicioInscricao; dataFimInscricao; statusTurma } "
 		+ "curso { curso } "
 		+ "local { localAula } "
 		+ "equipe { equipe }"
@@ -25,8 +25,12 @@ import br.com.hslife.educalife.enumeration.*;
 		+ "modalidadeTurma, "
 		+ "statusTurma"
 )
-@Tab(properties = "nomeTurma, curso.nomeCurso, modalidadeTurma, dataInicio, dataFim, statusTurma")
+@Tab(properties = "codigoTurma, nomeTurma, curso.nomeCurso, modalidadeTurma, dataInicio, dataFim, statusTurma")
 public class Turma extends Identifiable {
+
+	@Column(name="codigo_turma", length = 15, nullable = false)
+	@Required
+	private String codigoTurma;
 	
 	@Column(name="nome_turma", nullable = false)
 	@Required
@@ -78,6 +82,14 @@ public class Turma extends Identifiable {
 	@ListProperties("dataAula, horarioInicio, horarioFim")
 	@OneToMany(mappedBy = "turma", orphanRemoval = true, cascade = CascadeType.ALL)
 	private Collection<Aula> aulas;
+
+	public String getCodigoTurma() {
+		return codigoTurma;
+	}
+
+	public void setCodigoTurma(String codigoTurma) {
+		this.codigoTurma = codigoTurma;
+	}
 
 	public StatusTurma getStatusTurma() {
 		return statusTurma;
