@@ -11,19 +11,23 @@ import br.com.hslife.educalife.enumeration.*;
 @Entity
 @Table(name = "curso")
 @Audited
-@View(members = "nomeCurso; "
+@View(members = "codigoCurso; nomeCurso; "
 		+ "cargaHoraria, statusCurso; "
 		+ "nomeCoordenador; "
 		+ "coordenador;"
 		+ "ementaCurso "
 )
-@View(name = "view_in_turma", members = "nomeCurso; "
+@View(name = "view_in_turma", members = "codigoCurso; nomeCurso; "
 		+ "nomeCoordenador; "
 		+ "cargaHoraria, statusCurso; "
 		+ "ementaCurso "
 )
-@Tab(properties = "nomeCurso, coordenador.pessoaFisica.nome, cargaHoraria, statusCurso") 
+@Tab(properties = "codigoCurso, nomeCurso, coordenador.pessoaFisica.nome, cargaHoraria, statusCurso") 
 public class Curso extends Identifiable {
+
+	@Column(name="codigo_curso", length = 10, nullable = false)
+	@Required
+	private String codigoCurso;
 
 	@Column(name="nome_curso", nullable = false)
 	@Required
@@ -57,6 +61,14 @@ public class Curso extends Identifiable {
 			}
 		}
 		return "";
+	}
+
+	public String getCodigoCurso() {
+		return codigoCurso;
+	}
+
+	public void setCodigoCurso(String codigoCurso) {
+		this.codigoCurso = codigoCurso;
 	}
 
 	public String getNomeCurso() {
