@@ -29,6 +29,30 @@ delete from contato where id not in (
 delete from pessoa_juridica where id not in (select id_pessoa_juridica from empresa);
 
 
+/* Exclui os colaboradores */
+delete from colaborador c where id_pessoa_fisica in (
+	select id from pessoa_fisica pf where pf.nome like 'Pessoa%'
+);
+
+/* Exclui as contas bancárias das pessoas físicas */
+delete from conta_banco cb where id_pessoa_fisica in (
+	select id from pessoa_fisica pf where pf.nome like 'Pessoa%'
+);
+
+/* Exclui os documentos de identidades das pessoas físicas */
+delete from documento_identidade di where di.id_pessoa_fisica in (
+	select id from pessoa_fisica pf where pf.nome like 'Pessoa%'
+);
+
+/* Exclui os contratos vinculados às pessoas físicas */
+delete from contrato where id_contratante in (
+	select id from pessoa_fisica pf where pf.nome like 'Pessoa%'
+);
+
+/* Exclui as pessoas físicas */
+delete from pessoa_fisica pf where pf.nome like 'Pessoa%';
+
+
 /* Rascunhos */
 
 select * from usuario u;
@@ -68,4 +92,12 @@ delete from contato where id in (
 		inner join pessoa_fisica pf on pf.id = pfc.pessoa_fisica_id 
 	where pf.nome like 'Pessoa%'
 );
+
+
+select * from contrato c
+inner join pessoa_fisica pf on pf.id = c.id_contratante 
+where pf.nome like 'Pessoa%';
+
+
+
 
