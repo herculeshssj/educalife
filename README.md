@@ -8,8 +8,8 @@ Desenvolvido com a plataforma RAD OpenXava 6.4.
 ### Criação do container PostgreSQL
 
 ```
-docker volume create educalife_db_data
-docker run --name educalife-db --restart=unless-stopped -e POSTGRES_PASSWORD=postgres -p 5432:5432 -v educalife_db_data:/var/lib/postgresql/data -d postgres
+docker volume create educalife-db-data
+docker run --name educalife-db --restart=unless-stopped -e POSTGRES_PASSWORD=Ed7c4l1f3* -e POSTGRES_USER=educalife -e POSTGRES_DB=educalife -p 5432:5432 -v educalife-db-data:/var/lib/postgresql/data -d postgres
 ```
 
 No seu arquivo /etc/hosts, inclua uma nova entrada apontando para o IP da sua máquina:
@@ -21,8 +21,6 @@ No seu arquivo /etc/hosts, inclua uma nova entrada apontando para o IP da sua m�
 Localização do arquivo hosts:
 - Windows: C:\Windows\System32\drivers\etc
 - Linux: /etc
-
-Após acessar a base como usuário postgres, rode o script SQL **baseInicial.sql** que se encontra na pasta Scripts. Este script cria a base e o usuário utilizados pelo sistema.
 
 Logo após, em uma janela de terminal, execute a restauração da base:
 
@@ -118,4 +116,32 @@ Dentro da pasta do projeto, execute:
 
 ```
 ant -f build.xml <alvo>
+```
+
+### Docker
+
+No diretório raiz do repositório, execute a construção da imagem Docker:
+
+```
+docker build -t educalife:latest .
+```
+
+Após a construção da imagem, realize a criação do container:
+
+```
+docker run --restart=unless-stopped --name educalife --link educalife-db -p 8080:8080 -d educalife:latest
+```
+
+### Backup e restore da base
+
+**Backup:**
+
+```
+docker run --rm --link educalife-db -e PGPASSWORD="Ed7c4l1f3*" -v "$PWD":/backup postgres pg_dump -U educalife -h educalife-db -O -F c -b -v -f /backup/educalife.backup -W educalife
+```
+
+**Restauração:**
+
+```
+docker run --rm --link educalife-db -e PGPASSWORD="Ed7c4l1f3*" -v "$PWD":/backup postgres pg_restore -U educalife -h educalife-db -W -v -c --if-exists -O -d educalife /backup/educalife.backup
 ```
