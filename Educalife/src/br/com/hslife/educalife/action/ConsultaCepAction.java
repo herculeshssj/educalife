@@ -7,7 +7,6 @@ import javax.validation.ValidationException;
 
 import org.openxava.actions.ViewBaseAction;
 import org.openxava.jpa.XPersistence;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -19,9 +18,6 @@ import br.com.hslife.educalife.model.TipoLogradouro;
 import br.com.hslife.educalife.vo.Cep;
 
 public class ConsultaCepAction extends ViewBaseAction {
-
-    @Autowired
-    ParametroSistemaHelper parametroSistemaHelper;
 
     @Override
     public void execute() throws Exception {
