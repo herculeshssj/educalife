@@ -2,7 +2,7 @@ FROM tomcat
 
 RUN apt update && apt upgrade -y && apt install -y ant
 
-WORKDIR /app
+RUN mkdir /app
 
 COPY ./ /app
 
@@ -12,4 +12,4 @@ RUN mv /workspace.dist/Educalife.dist/Educalife.war /usr/local/tomcat/webapps &&
 
 EXPOSE 8080
 
-CMD [“catalina.sh”, “run”]
+CMD ["catalina.sh", "run"]
