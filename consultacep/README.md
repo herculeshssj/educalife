@@ -44,3 +44,5 @@ Restauração:
 ```
 pg_restore -U consulta_cep -W -v -c --if-exists -O -d consulta_cep consulta_cep.backup
 ```
+
+Obs: Backup e restauração são possíveis apenas dentro do container.
