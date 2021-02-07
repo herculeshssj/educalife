@@ -132,6 +132,17 @@ Após a construção da imagem, realize a criação do container:
 docker run --restart=unless-stopped --name educalife --link educalife-db -p 8080:8080 -d educalife:latest
 ```
 
+Para ter acesso aos recursos oferecidos pelo Consulta-CEP, use o seguinte comando para criar o container:
+
+```
+docker run --restart=unless-stopped --name educalife --link educalife-db --link consulta-cep -p 8080:8080 -d educalife:latest
+```
+
+O sistema está acessível em http://<ip>:8080/Educalife/
+
+Ex: http://192.168.15.10:8080/Educalife/
+
+
 ### Backup e restore da base
 
 **Backup:**
