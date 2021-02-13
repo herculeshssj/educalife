@@ -1,33 +1,6 @@
 {
 	"folders": {},
 	"connections": {
-		"postgres-jdbc-17689f1772f-71a2d467e202f636": {
-			"provider": "postgresql",
-			"driver": "postgres-jdbc",
-			"name": "postgres",
-			"save-password": true,
-			"show-system-objects": true,
-			"read-only": false,
-			"configuration": {
-				"host": "educalife-db",
-				"port": "5432",
-				"database": "postgres",
-				"url": "jdbc:postgresql://educalife-db:5432/postgres",
-				"home": "postgresql_client",
-				"type": "dev",
-				"provider-properties": {
-					"@dbeaver-show-non-default-db@": "true",
-					"@dbeaver-show-template-db@": "false",
-					"@dbeaver-show-unavailable-db@": "false",
-					"postgresql.dd.plain.string": "false",
-					"postgresql.dd.tag.string": "false"
-				},
-				"auth-model": "native"
-			},
-			"custom-properties": {
-				"database.meta.separate.connection": "false"
-			}
-		},
 		"postgres-jdbc-17689f4b78f-33cd1cd3141e7258": {
 			"provider": "postgresql",
 			"driver": "postgres-jdbc",
@@ -53,31 +26,6 @@
 			},
 			"custom-properties": {
 				"database.meta.separate.connection": "false"
-			}
-		},
-		"postgres-jdbc-176c47e695a-434eb5361e13c99e": {
-			"provider": "postgresql",
-			"driver": "postgres-jdbc",
-			"name": "consulta_cep",
-			"save-password": true,
-			"show-system-objects": true,
-			"read-only": false,
-			"configuration": {
-				"host": "educalife-db",
-				"port": "5432",
-				"database": "consulta_cep",
-				"url": "jdbc:postgresql://educalife-db:5432/consulta_cep",
-				"home": "postgresql_client",
-				"type": "dev",
-				"provider-properties": {
-					"@dbeaver-show-non-default-db@": "false",
-					"@dbeaver-show-template-db@": "false",
-					"@dbeaver-show-unavailable-db@": "false",
-					"postgresql.dd.plain.string": "false",
-					"postgresql.dd.tag.string": "false"
-				},
-				"auth-model": "native",
-				"handlers": {}
 			}
 		}
 	},

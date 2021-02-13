@@ -1,47 +1,76 @@
 package br.com.hslife.educalife.model;
 
+import java.util.Collection;
+
 import javax.persistence.*;
 
+import org.hibernate.envers.Audited;
 import org.openxava.annotations.*;
+import org.openxava.model.Identifiable;
 
-import br.com.hslife.educalife.enumeration.*;
-
-@Embeddable
-public class Equipe {
+@Entity
+@Table(name="equipe")
+@Audited
+@View(members = "sigla; nome; ativo; descricao; membrosEquipe")
+public class Equipe extends Identifiable {
 	
-	@ManyToOne
-	@JoinColumn(name="id_pessoa_fisica")
-	@DescriptionsList(descriptionProperties = "nome", order = "${nome} asc")
-	private PessoaFisica pessoaFisica;
-	
-	@Enumerated(EnumType.STRING)
-	@Column(name="funcao_equipe")
-	private FuncaoEquipe funcaoEquipe;
-	
-	@Column(name="ministra_aula")
-	private boolean ministraAula;
+	@Column(nullable = false, length = 30)
+	@Required
+	private String sigla;
 
-	public PessoaFisica getPessoaFisica() {
-		return pessoaFisica;
+	@Column(nullable = false, length = 100)
+	@Required
+	private String nome;
+
+	@Column(nullable = true)
+	@Stereotype("MEMO")
+	private String descricao;
+
+	@Column
+	private boolean ativo;
+
+	@OneToMany(mappedBy = "equipe")
+	@ElementCollection
+	@ListProperties("pessoaFisica.nome, funcaoMembroEquipe.descricao, afastado")
+	Collection<MembroEquipe> membrosEquipe;
+
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setPessoaFisica(PessoaFisica pessoaFisica) {
-		this.pessoaFisica = pessoaFisica;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
-	public FuncaoEquipe getFuncaoEquipe() {
-		return funcaoEquipe;
+	public Collection<MembroEquipe> getMembrosEquipe() {
+		return membrosEquipe;
 	}
 
-	public void setFuncaoEquipe(FuncaoEquipe funcaoEquipe) {
-		this.funcaoEquipe = funcaoEquipe;
+	public void setMembrosEquipe(Collection<MembroEquipe> membrosEquipe) {
+		this.membrosEquipe = membrosEquipe;
 	}
 
-	public boolean isMinistraAula() {
-		return ministraAula;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setMinistraAula(boolean ministraAula) {
-		this.ministraAula = ministraAula;
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getSigla() {
+		return sigla;
+	}
+
+	public void setSigla(String sigla) {
+		this.sigla = sigla;
+	}
+
+	public boolean isAtivo() {
+		return ativo;
+	}
+
+	public void setAtivo(boolean ativo) {
+		this.ativo = ativo;
 	}
 }

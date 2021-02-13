@@ -5,14 +5,18 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import org.hibernate.envers.Audited;
+import org.openxava.annotations.Required;
+import org.openxava.annotations.View;
 import org.openxava.model.Identifiable;
 
 @Entity
 @Table(name="funcao_membro_equipe")
 @Audited
+@View(name = "view_in_equipe", members = "descricao, lideranca")
 public class FuncaoMembroEquipe extends Identifiable{
     
     @Column(nullable = false, length = 100)
+    @Required
     private String descricao;
 
     @Column

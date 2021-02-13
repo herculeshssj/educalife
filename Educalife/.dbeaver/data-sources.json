@@ -27,6 +27,47 @@
 			"custom-properties": {
 				"database.meta.separate.connection": "false"
 			}
+		},
+		"postgres-jdbc-1779a862ef8-1df29f535b710e2f": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "consulta_cep",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"configuration": {
+				"host": "consulta-cep-db",
+				"port": "5432",
+				"database": "consulta_cep",
+				"url": "jdbc:postgresql://consulta-cep-db:5432/consulta_cep",
+				"home": "postgresql_client",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"virtual-models": {
+		"postgres-jdbc-17689f4b78f-33cd1cd3141e7258": {
+			"educalife": {
+				"public": {
+					":turma_equipe": {
+						"constraints": {
+							"VIRTUAL_PK": {
+								"type": "vpk",
+								"useAllColumns": true
+							}
+						}
+					}
+				}
+			}
 		}
 	},
 	"connection-types": {
