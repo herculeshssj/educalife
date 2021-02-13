@@ -78,6 +78,7 @@ public class Turma extends Identifiable {
 	
 	@ElementCollection
 	@ListProperties("numeroVaga, publicoAlvo")
+	@OneToMany(mappedBy = "turma", orphanRemoval = true, cascade = CascadeType.ALL)
 	private Collection<OfertaVaga> ofertaVagas;
 	
 	@ElementCollection

@@ -203,3 +203,19 @@ update localidade set ministra_aula = false where ministra_aula is null;
 ALTER TABLE public.localidade ALTER COLUMN ministra_aula SET NOT NULL;
 
 
+
+select * from turma_ofertavagas to2 ;
+select * from oferta_vaga ov ;
+
+insert into oferta_vaga (id, numero_vaga, publico_alvo, id_turma)
+	select
+	replace(gen_random_uuid()::varchar, '-', ''),
+	numero_vaga,
+	publico_alvo,
+	turma_id
+	from 
+	turma_ofertavagas; 
+	
+
+
+select gen_random_uuid();
