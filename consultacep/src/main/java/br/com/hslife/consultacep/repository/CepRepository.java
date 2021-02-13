@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import br.com.hslife.consultacep.entity.Cep;
 
 @Repository
-public interface CepRepository extends JpaRepository<Cep, Long> {
+public interface CepRepository extends JpaRepository<Cep, Long>, CustomCepRepository {
     
-    public List<Cep> findByCep(Integer cep);
+    public List<Cep> findByCep(int cep);
 }

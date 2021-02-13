@@ -21,7 +21,8 @@ Execução do container
 **PostgreSQL:** 
 
 ```
-docker run --restart=unless-stopped --name consulta-cep-db -e POSTGRES_PASSWORD=C0ns7lt*C3p% -e POSTGRES_USER=consulta_cep -e POSTGRES_DB=consulta_cep -d postgres
+docker volume create consulta-cep-data
+docker run --restart=unless-stopped --name consulta-cep-db -e POSTGRES_PASSWORD=C0ns7lt*C3p% -e POSTGRES_USER=consulta_cep -e POSTGRES_DB=consulta_cep -v consulta-cep-data:/var/lib/postgresql/data -d postgres
 ```
 
 **Aplicação:**
