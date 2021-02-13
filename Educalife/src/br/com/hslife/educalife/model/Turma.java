@@ -70,9 +70,11 @@ public class Turma extends Identifiable {
 	@SearchListCondition("${ministraAula} = true")
 	private Localidade localAula;
 	
-	@ElementCollection
-	@ListProperties("pessoaFisica, funcaoEquipe, ministraAula")
-	private Collection<Equipe> equipe;
+	@ManyToOne
+	@JoinColumn(name="id_equipe", nullable = true)
+	@ReferenceView(value = "view_in_turma")
+	@NoCreate @NoModify
+	private Equipe equipe;
 	
 	@ElementCollection
 	@ListProperties("numeroVaga, publicoAlvo")
@@ -163,14 +165,6 @@ public class Turma extends Identifiable {
 		this.localAula = localAula;
 	}
 
-	public Collection<Equipe> getEquipe() {
-		return equipe;
-	}
-
-	public void setEquipe(Collection<Equipe> equipe) {
-		this.equipe = equipe;
-	}
-
 	public Collection<OfertaVaga> getOfertaVagas() {
 		return ofertaVagas;
 	}
@@ -185,5 +179,13 @@ public class Turma extends Identifiable {
 
 	public void setAulas(Collection<Aula> aulas) {
 		this.aulas = aulas;
+	}
+
+	public Equipe getEquipe() {
+		return equipe;
+	}
+
+	public void setEquipe(Equipe equipe) {
+		this.equipe = equipe;
 	}
 }

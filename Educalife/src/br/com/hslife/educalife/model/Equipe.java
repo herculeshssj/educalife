@@ -12,6 +12,7 @@ import org.openxava.model.Identifiable;
 @Table(name="equipe")
 @Audited
 @View(members = "sigla; nome; ativo; descricao; membrosEquipe")
+@View(name = "view_in_turma", members = "sigla; nome; ativo; descricao; membrosEquipe")
 public class Equipe extends Identifiable {
 	
 	@Column(nullable = false, length = 30)
@@ -31,7 +32,7 @@ public class Equipe extends Identifiable {
 
 	@OneToMany(mappedBy = "equipe", orphanRemoval = true)
 	@ElementCollection
-	@ListProperties("pessoaFisica.nome, funcaoMembroEquipe.descricao, afastado")
+	@ListProperties("pessoaFisica.nome, funcaoMembroEquipe.descricao, funcaoMembroEquipe.lideranca, afastado")
 	@AsEmbedded
 	Collection<MembroEquipe> membrosEquipe;
 
