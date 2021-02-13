@@ -27,6 +27,7 @@ public class Aula extends Identifiable{
 	
 	@ManyToOne
 	@JoinColumn(name="id_turma", nullable = false)
+	@NoCreate @NoModify
 	private Turma turma;
 
 	public Turma getTurma() {
