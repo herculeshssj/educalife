@@ -29,9 +29,10 @@ public class Equipe extends Identifiable {
 	@Column
 	private boolean ativo;
 
-	@OneToMany(mappedBy = "equipe")
+	@OneToMany(mappedBy = "equipe", orphanRemoval = true)
 	@ElementCollection
 	@ListProperties("pessoaFisica.nome, funcaoMembroEquipe.descricao, afastado")
+	@AsEmbedded
 	Collection<MembroEquipe> membrosEquipe;
 
 	public String getDescricao() {
