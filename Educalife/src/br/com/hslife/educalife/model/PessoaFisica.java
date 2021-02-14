@@ -96,9 +96,10 @@ public class PessoaFisica extends Identifiable {
 	@ReferenceView(value = "endereco")
 	private Endereco endereco;
 	
-	@ManyToMany
+	@ManyToMany(cascade = CascadeType.ALL)
 	@ElementCollection
 	@ListProperties("tipoContato, descricao, observacao")
+	@AsEmbedded
 	private Collection<Contato> contatos;
 	
 	@OneToMany(mappedBy = "pessoaFisica")
