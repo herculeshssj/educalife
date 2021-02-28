@@ -99,5 +99,6 @@ inner join pessoa_fisica pf on pf.id = c.id_contratante
 where pf.nome like 'Pessoa%';
 
 
-
+-- Tamanho ocupado pela base de dados no disco
+select pg_size_pretty(pg_database_size(current_database()));
 
