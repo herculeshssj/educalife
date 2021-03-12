@@ -49,7 +49,25 @@
 					"postgresql.dd.plain.string": "false",
 					"postgresql.dd.tag.string": "false"
 				},
-				"auth-model": "native",
+				"auth-model": "native"
+			}
+		},
+		"microsoft-17826b7df20-781ee5a22ef408ec": {
+			"provider": "sqlserver",
+			"driver": "microsoft",
+			"name": "educalife - mssql",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "educalife-db",
+				"port": "1433",
+				"database": "educalife",
+				"url": "jdbc:sqlserver://;serverName=educalife-db;databaseName=educalife",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-authentication@": "SQL_SERVER_PASSWORD",
+					"@dbeaver-show-all-schemas@": "false"
+				},
 				"handlers": {}
 			}
 		}
