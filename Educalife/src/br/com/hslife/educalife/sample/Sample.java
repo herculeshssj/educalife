@@ -1,13 +1,18 @@
 package br.com.hslife.educalife.sample;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Optional;
+import java.util.Properties;
 
 import org.openxava.jpa.XPersistence;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import br.com.hslife.educalife.dao.MenuDAO;
 import br.com.hslife.educalife.dao.UsuarioDAO;
-import br.com.hslife.educalife.model.PapelUsuario;
+import br.com.hslife.educalife.model.ModuloSistema;
 import br.com.hslife.educalife.model.Usuario;
 import br.com.hslife.educalife.patterns.Builder;
 
@@ -40,6 +45,7 @@ public class Sample {
     */
     public void populaBase() {
         verificaPresencaUsuarioAdmin();
+        verificaPresencaMenuSistema();
         //SampleCargo.populaCargo();
         samplePessoaFisica.populaBase();
         samplePessoaJuridica.populaBase();
@@ -72,5 +78,39 @@ public class Sample {
 			    e.printStackTrace();
             }
         }
+    }
+
+    /*
+        Verificar a presença do cadastro dos menus do sistema.
+        Caso a tabela esteja vazia, será efetuado o cadastro dos
+        menus.
+    */
+    private void verificaPresencaMenuSistema() {
+
+        // Verifica se existem menus cadastrados
+        if (MenuDAO.buscarMenus().isEmpty()) {
+            try (InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream("menu.properties")) {
+
+                Properties props = new Properties();
+                props.load(inputStream);
+
+                for (Object key : props.keySet()) {
+                    ModuloSistema modulo = new ModuloSistema();
+                    modulo.setNome((String)key);
+                    modulo.setMenu((String)props.get(key));
+
+                    XPersistence.getManager().persist(modulo);
+                }
+
+                XPersistence.commit();
+
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            } catch (Exception e) {
+                XPersistence.rollback();
+                e.printStackTrace();
+            }
+        }
+       
     }
 }
