@@ -11,14 +11,19 @@ import br.com.hslife.educalife.model.PessoaFisica;
 public class PessoaFisicaDAO {
     
     public BigInteger countPessoaFisica() {
-        BigInteger quantidadeRegistros = (BigInteger)XPersistence.getManager()
+        Object quantidadeRegistros = XPersistence.getManager()
             .createNativeQuery("select count(id) from pessoa_fisica")
             .getSingleResult();
 
-        if (quantidadeRegistros == null)
-            return BigInteger.ZERO;
+        if (quantidadeRegistros != null) {
+            if (quantidadeRegistros instanceof Integer) {
+                return BigInteger.valueOf((Integer)quantidadeRegistros);
+            } else if (quantidadeRegistros instanceof BigInteger) {
+                return (BigInteger)quantidadeRegistros;
+            }
+        }
 
-        return quantidadeRegistros;
+        return BigInteger.ZERO;
     }
 
     public PessoaFisica obterPessoaFisicaPorIndice(int indice) {

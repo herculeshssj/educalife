@@ -18,9 +18,9 @@ persistence.xml.
 
 		<property name="hibernate.connection.datasource">java://comp/env/jdbc/EducalifeDS</property>
 		<property name="hibernate.jdbc.use_get_generated_keys">false</property>		
-		<property name="hibernate.show_sql">true</property>
-		<!-- <property name="hibernate.default_schema">public</property> --> <!-- PostgreSQL -->
-		<property name="hibernate.default_schema">dbo</property> <!-- SQL Server -->
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.default_schema">public</property> <!-- PostgreSQL -->
+		<!-- <property name="hibernate.default_schema">dbo</property> --> <!-- SQL Server -->
 
 						
 		<!-- GalleryImage is needed only if you uses IMAGES_GALLERY/GALERIA_IMAGENES stereotype -->
