@@ -37,6 +37,9 @@ public class Sample {
     SampleColaborador sampleColaborador;
 
     @Autowired
+    SampleEmpresaUnidadeDepartamento sampleEmpresaUnidadeDepartamento;
+
+    @Autowired
     UsuarioDAO usuarioDAO;
     
     /*
@@ -51,6 +54,7 @@ public class Sample {
         sampleContaBanco.populaBase();
         sampleDocumentoIdentidade.populaBase();
         sampleUsuario.populaBase();
+        sampleEmpresaUnidadeDepartamento.populaBase();
         sampleColaborador.populaBase();
     }
 

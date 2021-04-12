@@ -1,0 +1,2647 @@
+ativo;codigo_cbo;denominacao
+true;234120;Professor de computação (no ensino superior)
+true;10105;Oficial general da aeronáutica
+true;10110;Oficial general do exército
+true;10115;Oficial general da marinha
+true;10205;Oficial da aeronáutica
+true;10210;Oficial do exército
+true;10215;Oficial da marinha
+true;10305;Praça da aeronáutica
+true;10310;Praça do exército
+true;10315;Praça da marinha
+true;20105;Coronel da polícia militar
+true;20110;Tenente-coronel da polícia militar
+true;20115;Major da polícia militar
+true;20205;Capitão da polícia militar
+true;20305;Primeiro tenente de polícia militar
+true;20310;Segundo tenente de polícia militar
+true;21105;Subtenente da policia militar
+true;21110;Sargento da policia militar
+true;21205;Cabo da polícia militar
+true;21210;Soldado da polícia militar
+true;30105;Coronel bombeiro militar
+true;30110;Major bombeiro militar
+true;30115;Tenente-coronel bombeiro militar
+true;30205;Capitão bombeiro militar
+true;30305;Tenente do corpo de bombeiros militar
+true;31105;Subtenente bombeiro militar
+true;31110;Sargento bombeiro militar
+true;31205;Cabo bombeiro militar
+true;31210;Soldado bombeiro militar
+true;111105;Senador
+true;111110;Deputado federal
+true;111115;Deputado estadual e distrital
+true;111120;Vereador
+true;111205;Presidente da república
+true;111210;Vice-presidente da república
+true;111215;Ministro de estado
+true;111220;Secretário - executivo
+true;111225;Membro superior do poder executivo
+true;111230;Governador de estado
+true;111235;Governador do distrito federal
+true;111240;Vice-governador de estado
+true;111245;Vice-governador do distrito federal
+true;111250;Prefeito
+true;111255;Vice-prefeito
+true;111305;Ministro do supremo tribunal federal
+true;111310;Ministro do superior tribunal de justiça
+true;111315;Ministro do  superior tribunal militar
+true;111320;Ministro do  superior tribunal do trabalho
+true;111325;Juiz de direito
+true;111330;Juiz federal
+true;111335;Juiz auditor federal - justiça militar
+true;111340;Juiz auditor estadual - justiça militar
+true;111345;Juiz do trabalho
+true;111405;Dirigente do serviço público federal
+true;111410;Dirigente do serviço público estadual e distrital
+true;111415;Dirigente do serviço público municipal
+true;111505;Especialista de políticas públicas e gestão governamental - eppgg
+true;111510;Analista de planejamento e orçamento - apo
+true;113005;Cacique
+true;113010;Líder de comunidade caiçara
+true;113015;Membro de liderança quilombola
+true;114105;Dirigente de partido político
+true;114205;Dirigentes de entidades de trabalhadores
+true;114210;Dirigentes de entidades patronais
+true;114305;Dirigente e administrador de organização religiosa
+true;114405;Dirigente e administrador de organização da sociedade civil sem fins lucrativos
+true;121005;Diretor de planejamento estratégico
+true;121010;Diretor geral de empresa e organizações (exceto de interesse público)
+true;122105;Diretor de produção e operações em empresa agropecuária
+true;122110;Diretor de produção e operações em empresa aqüícola
+true;122115;Diretor de produção e operações em empresa florestal
+true;122120;Diretor de produção e operações em empresa pesqueira
+true;122205;Diretor de produção e operações da indústria de transformação, extração mineral e utilidades
+true;122305;Diretor de operações de obras pública e civil
+true;122405;Diretor de operações comerciais (comércio atacadista e varejista)
+true;122505;Diretor de  produção e operações de alimentação
+true;122510;Diretor de  produção e operações de hotel
+true;122515;Diretor de  produção e operações de turismo
+true;122520;Turismólogo
+true;122605;Diretor de operações de correios
+true;122610;Diretor de operações de serviços de armazenamento
+true;122615;Diretor de operações de serviços de telecomunicações
+true;122620;Diretor de operações de serviços de transporte
+true;122705;Diretor comercial em operações de intermediação financeira
+true;122710;Diretor de produtos bancários
+true;122715;Diretor de crédito rural
+true;122720;Diretor de câmbio e comércio exterior
+true;122725;Diretor de compliance
+true;122730;Diretor de crédito (exceto crédito imobiliário)
+true;122735;Diretor de crédito imobiliário
+true;122740;Diretor de leasing
+true;122745;Diretor de mercado de capitais
+true;122750;Diretor de recuperação de créditos em operações de intermediação financeira
+true;122755;Diretor de riscos de mercado
+true;123105;Diretor administrativo
+true;123110;Diretor administrativo e financeiro
+true;123115;Diretor financeiro
+true;123205;Diretor de recursos humanos
+true;123210;Diretor de relações de trabalho
+true;123305;Diretor comercial
+true;123310;Diretor de marketing
+true;123405;Diretor de suprimentos
+true;123410;Diretor de suprimentos no serviço público
+true;123605;Diretor de tecnologia da informação
+true;123705;Diretor de pesquisa e desenvolvimento (p&d)
+true;123805;Diretor de manutenção
+true;131105;Diretor de serviços culturais
+true;131110;Diretor de serviços sociais
+true;131115;Gerente de serviços culturais
+true;131120;Gerente de serviços sociais
+true;131205;Diretor de serviços de saúde
+true;131210;Gerente de serviços de saúde
+true;131215;Tecnólogo em gestão hospitalar
+true;131220;Gerontólogo
+true;131225;Sanitarista
+true;131305;Diretor de instituição educacional da área privada
+true;131310;Diretor de instituição educacional pública
+true;131315;Gerente de instituição educacional da área privada
+true;131320;Gerente de serviços educacionais da área pública
+true;141105;Gerente de produção e operações  aqüícolas
+true;141110;Gerente de produção e operações  florestais
+true;141115;Gerente de produção e operações agropecuárias
+true;141120;Gerente de produção e operações pesqueiras
+true;141205;Gerente de produção e operações
+true;141305;Gerente de produção e operações da construção civil e obras públicas
+true;141405;Comerciante atacadista
+true;141410;Comerciante varejista
+true;141415;Gerente de loja e supermercado
+true;141420;Gerente de operações de serviços de assistência técnica
+true;141505;Gerente de hotel
+true;141510;Gerente de restaurante
+true;141515;Gerente de bar
+true;141520;Gerente de pensão
+true;141525;Gerente de turismo
+true;141605;Gerente de operações de transportes
+true;141610;Gerente de operações de correios e telecomunicações
+true;141615;Gerente de logística (armazenagem e distribuição)
+true;141705;Gerente de produtos bancários
+true;141710;Gerente de agência
+true;141715;Gerente de câmbio e comércio exterior
+true;141720;Gerente de crédito e cobrança
+true;141725;Gerente de crédito imobiliário
+true;141730;Gerente de crédito rural
+true;141735;Gerente de recuperação de crédito
+true;141805;Gerente de administração em aeroportos
+true;141810;Gerente de empresa aérea e empresa de serviços auxiliares ao transporte aéreo (esata) em aeroportos
+true;141815;Gerente de operações em aeroportos
+true;141820;Gerente de operações de cargas
+true;141825;Gerente de segurança da aviação civil
+true;211120;Matemático aplicado
+true;141830;Gerente de segurança operacional (aviação civil)
+true;142105;Gerente administrativo
+true;142110;Gerente de riscos
+true;142115;Gerente financeiro
+true;142120;Tecnólogo em gestão administrativo- financeira
+true;142205;Gerente de recursos humanos
+true;142210;Gerente de departamento pessoal
+true;142305;Gerente comercial
+true;142310;Gerente de comunicação
+true;142315;Gerente de marketing
+true;142320;Gerente de vendas
+true;142325;Relações públicas
+true;142330;Analista de negócios
+true;142335;Analista de pesquisa de mercado
+true;142340;Ouvidor
+true;142345;Profissional de relações institucionais e governamentais
+true;142350;Profissonal de relações internacionais
+true;142405;Gerente de compras
+true;142410;Gerente de suprimentos
+true;142415;Gerente de almoxarifado
+true;142505;Gerente de infraestrutura de tecnologia da informação
+true;142510;Gerente de desenvolvimento de sistemas
+true;142515;Gerente de operação de tecnologia da informação
+true;142520;Gerente de projetos de tecnologia da informação
+true;142525;Gerente de segurança da informação
+true;142530;Gerente de suporte técnico de tecnologia da informação
+true;142535;Tecnólogo em gestão da tecnologia da informação
+true;142605;Gerente de pesquisa e desenvolvimento (p&d)
+true;142610;Especialista em desenvolvimento de cigarros
+true;142705;Gerente de projetos e serviços de manutenção
+true;142710;Tecnólogo em sistemas biomédicos
+true;201105;Bioengenheiro
+true;201110;Biotecnologista
+true;201115;Geneticista
+true;201205;Pesquisador em metrologia
+true;201210;Especialista em calibrações metrológicas
+true;201215;Especialista em ensaios metrológicos
+true;201220;Especialista em instrumentação metrológica
+true;201225;Especialista em materiais de referência metrológica
+true;202105;Engenheiro mecatrônico
+true;202110;Engenheiro de controle e automação
+true;202115;Tecnólogo em mecatrônica
+true;202120;Tecnólogo em automação industrial
+true;203005;Pesquisador em biologia ambiental
+true;203010;Pesquisador em biologia animal
+true;203015;Pesquisador em biologia de microorganismos e parasitas
+true;203020;Pesquisador em biologia humana
+true;203025;Pesquisador em biologia vegetal
+true;203105;Pesquisador em ciências da computação e informática
+true;203110;Pesquisador em ciências da terra e meio ambiente
+true;203115;Pesquisador em física
+true;203120;Pesquisador em matemática
+true;203125;Pesquisador em química
+true;203205;Pesquisador de engenharia civil
+true;203210;Pesquisador de engenharia e tecnologia (outras áreas da engenharia)
+true;203215;Pesquisador de engenharia elétrica e eletrônica
+true;203220;Pesquisador de engenharia mecânica
+true;203225;Pesquisador de engenharia metalúrgica, de minas e de materiais
+true;203230;Pesquisador de engenharia química
+true;203305;Pesquisador de clínica médica
+true;203310;Pesquisador de medicina básica
+true;203315;Pesquisador em medicina veterinária
+true;203320;Pesquisador em saúde coletiva
+true;203405;Pesquisador em ciências agronômicas
+true;203410;Pesquisador em ciências da pesca e aqüicultura
+true;203415;Pesquisador em ciências da zootecnia
+true;203420;Pesquisador em ciências florestais
+true;203505;Pesquisador em ciências sociais e humanas
+true;203510;Pesquisador em economia
+true;203515;Pesquisador em ciências da educação
+true;203520;Pesquisador em história
+true;203525;Pesquisador em psicologia
+true;204105;Perito criminal
+true;211105;Atuário
+true;211110;Especialista em pesquisa operacional
+true;211115;Matemático
+true;211205;Estatístico
+true;211210;Estatístico (estatística aplicada)
+true;211215;Estatístico teórico
+true;212205;Engenheiro de aplicativos em computação
+true;212210;Engenheiro de equipamentos em computação
+true;212215;Engenheiros de sistemas operacionais em computação
+true;212305;Administrador de banco de dados
+true;212310;Administrador de redes
+true;212315;Administrador de sistemas operacionais
+true;212320;Administrador em segurança da informação
+true;212405;Analista de desenvolvimento de sistemas
+true;212410;Analista de redes e de comunicação de dados
+true;212415;Analista de sistemas de automação
+true;212420;Analista de suporte computacional
+true;212425;Arquiteto de soluções de tecnologia da informação
+true;212430;Analista de testes de tecnologia da informação
+true;213105;Físico
+true;213110;Físico (acústica)
+true;213115;Físico (atômica e molecular)
+true;213120;Físico (cosmologia)
+true;213125;Físico (estatística e matemática)
+true;213130;Físico (fluidos)
+true;213135;Físico (instrumentação)
+true;213140;Físico (matéria condensada)
+true;213145;Físico (materiais)
+true;213150;Físico (medicina)
+true;213155;Físico (nuclear e reatores)
+true;213160;Físico (óptica)
+true;213165;Físico (partículas e campos)
+true;213170;Físico (plasma)
+true;213175;Físico (térmica)
+true;213205;Químico
+true;213210;Químico industrial
+true;213215;Tecnólogo em processos químicos
+true;213305;Astrônomo
+true;213310;Geofísico espacial
+true;213315;Meteorologista
+true;213405;Geólogo
+true;213410;Geólogo de engenharia
+true;213415;Geofísico
+true;213420;Geoquímico
+true;213425;Hidrogeólogo
+true;213430;Paleontólogo
+true;213435;Petrógrafo
+true;213440;Oceanógrafo
+true;214005;Engenheiro ambiental
+true;214010;Tecnólogo em meio ambiente
+true;214105;Arquiteto de edificações
+true;214110;Arquiteto de interiores
+true;214115;Arquiteto de patrimônio
+true;214120;Arquiteto paisagista
+true;214125;Arquiteto urbanista
+true;214130;Urbanista
+true;214205;Engenheiro civil
+true;214210;Engenheiro civil (aeroportos)
+true;214215;Engenheiro civil (edificações)
+true;214220;Engenheiro civil (estruturas metálicas)
+true;214225;Engenheiro civil (ferrovias e metrovias)
+true;214230;Engenheiro civil (geotécnia)
+true;214235;Engenheiro civil (hidrologia)
+true;214240;Engenheiro civil (hidráulica)
+true;214245;Engenheiro civil (pontes e viadutos)
+true;214250;Engenheiro civil (portos e vias navegáveis)
+true;214255;Engenheiro civil (rodovias)
+true;214260;Engenheiro civil (saneamento)
+true;214265;Engenheiro civil (túneis)
+true;214270;Engenheiro civil (transportes e trânsito)
+true;214280;Tecnólogo em construção civil
+true;214305;Engenheiro eletricista
+true;214310;Engenheiro eletrônico
+true;214315;Engenheiro eletricista de manutenção
+true;214320;Engenheiro eletricista de projetos
+true;214325;Engenheiro eletrônico de manutenção
+true;214330;Engenheiro eletrônico de projetos
+true;214335;Engenheiro de manutenção de telecomunicações
+true;214340;Engenheiro de telecomunicações
+true;214345;Engenheiro projetista de telecomunicações
+true;214350;Engenheiro de redes de comunicação
+true;214360;Tecnólogo em eletricidade
+true;214365;Tecnólogo em eletrônica
+true;214370;Tecnólogo em telecomunicações
+true;214405;Engenheiro mecânico
+true;214410;Engenheiro mecânico automotivo
+true;214415;Engenheiro mecânico (energia nuclear)
+true;214420;Engenheiro mecânico industrial
+true;214425;Engenheiro aeronáutico
+true;214430;Engenheiro naval
+true;214435;Tecnólogo em fabricação mecânica
+true;214505;Engenheiro químico
+true;214510;Engenheiro químico (indústria química)
+true;214515;Engenheiro químico (mineração, metalurgia, siderurgia, cimenteira e cerâmica)
+true;214520;Engenheiro químico (papel e celulose)
+true;214525;Engenheiro químico (petróleo e borracha)
+true;214530;Engenheiro químico (utilidades e meio ambiente)
+true;214535;Tecnólogo em produção sulcroalcooleira
+true;214605;Engenheiro de materiais
+true;214610;Engenheiro metalurgista
+true;214615;Tecnólogo em metalurgia
+true;214705;Engenheiro de minas
+true;214710;Engenheiro de minas (beneficiamento)
+true;214715;Engenheiro de minas (lavra a céu aberto)
+true;214720;Engenheiro de minas (lavra subterrânea)
+true;214725;Engenheiro de minas (pesquisa mineral)
+true;214730;Engenheiro de minas (planejamento)
+true;214735;Engenheiro de minas (processo)
+true;214740;Engenheiro de minas (projeto)
+true;214745;Tecnólogo em petróleo e gás
+true;214750;Tecnólogo em rochas ornamentais
+true;214805;Engenheiro agrimensor
+true;214810;Engenheiro cartógrafo
+true;214905;Engenheiro de produção
+true;214910;Engenheiro de controle de qualidade
+true;214915;Engenheiro de segurança do trabalho
+true;214920;Engenheiro de riscos
+true;214925;Engenheiro de tempos e movimentos
+true;214930;Tecnólogo em produção industrial
+true;214935;Tecnólogo em segurança do trabalho
+true;214940;Higienista ocupacional
+true;214945;Engenheiro de logistica
+true;215105;Agente de manobra e docagem
+true;215110;Capitão de manobra da marinha mercante
+true;215115;Comandante da marinha mercante
+true;215120;Coordenador de operações de combate à poluição no meio aquaviário
+true;215125;Imediato da marinha mercante
+true;215130;Inspetor de terminal
+true;215135;Inspetor naval
+true;215140;Oficial de quarto de navegação da marinha mercante
+true;215145;Prático de portos da marinha mercante
+true;215150;Vistoriador naval
+true;215205;Oficial superior de máquinas da marinha mercante
+true;215210;Primeiro oficial de máquinas da marinha mercante
+true;215215;Segundo oficial de máquinas da marinha mercante
+true;215220;Superintendente técnico no transporte aquaviário
+true;215305;Piloto de aeronaves
+true;215310;Piloto de ensaios em vôo
+true;215315;Instrutor de vôo
+true;221105;Biólogo
+true;221205;Biomédico
+true;222105;Engenheiro agrícola
+true;222110;Engenheiro agrônomo
+true;222115;Engenheiro de pesca
+true;222120;Engenheiro florestal
+true;222205;Engenheiro de alimentos
+true;222215;Tecnólogo em alimentos
+true;223204;Cirurgião dentista - auditor
+true;223208;Cirurgião dentista - clínico geral
+true;223212;Cirurgião dentista - endodontista
+true;223216;Cirurgião dentista - epidemiologista
+true;223220;Cirurgião dentista - estomatologista
+true;223224;Cirurgião dentista - implantodontista
+true;223228;Cirurgião dentista - odontogeriatra
+true;223232;Cirurgião dentista - odontologista legal
+true;223236;Cirurgião dentista - odontopediatra
+true;223240;Cirurgião dentista - ortopedista e ortodontista
+true;223244;Cirurgião dentista - patologista bucal
+true;223248;Cirurgião dentista - periodontista
+true;223252;Cirurgião dentista - protesiólogo bucomaxilofacial
+true;223256;Cirurgião dentista - protesista
+true;223260;Cirurgião dentista - radiologista
+true;223264;Cirurgião dentista - reabilitador oral
+true;223268;Cirurgião dentista - traumatologista bucomaxilofacial
+true;223272;Cirurgião dentista de saúde coletiva
+true;223276;Cirurgião dentista - odontologia do trabalho
+true;223280;Cirurgião dentista - dentística
+true;223284;Cirurgião dentista - disfunção temporomandibular e dor orofacial
+true;223288;Cirurgião dentista - odontologia para pacientes com necessidades especiais
+true;223293;Cirurgião-dentista da estratégia de saúde da família
+true;223305;Médico veterinário
+true;223310;Zootecnista
+true;223405;Farmacêutico
+true;223415;Farmacêutico analista clínico
+true;223420;Farmacêutico de alimentos
+true;223425;Farmacêutico práticas integrativas e complementares
+true;223430;Farmacêutico em saúde pública
+true;223435;Farmacêutico industrial
+true;223440;Farmacêutico toxicologista
+true;223445;Farmacêutico hospitalar e clínico
+true;223505;Enfermeiro
+true;223510;Enfermeiro auditor
+true;223515;Enfermeiro de bordo
+true;223520;Enfermeiro de centro cirúrgico
+true;223525;Enfermeiro de terapia intensiva
+true;223530;Enfermeiro do trabalho
+true;223535;Enfermeiro nefrologista
+true;223540;Enfermeiro neonatologista
+true;223545;Enfermeiro obstétrico
+true;223550;Enfermeiro psiquiátrico
+true;223555;Enfermeiro puericultor e pediátrico
+true;223560;Enfermeiro sanitarista
+true;223565;Enfermeiro da estratégia de saúde da família
+true;223570;Perfusionista
+true;223605;Fisioterapeuta geral
+true;223625;Fisioterapeuta respiratória
+true;223630;Fisioterapeuta neurofuncional
+true;223635;Fisioterapeuta traumato-ortopédica funcional
+true;223640;Fisioterapeuta osteopata
+true;223645;Fisioterapeuta quiropraxista
+true;223650;Fisioterapeuta acupunturista
+true;223655;Fisioterapeuta esportivo
+true;223660;Fisioterapeuta  do trabalho
+true;223705;Dietista
+true;223710;Nutricionista
+true;223810;Fonoaudiólogo geral
+true;223815;Fonoaudiólogo educacional
+true;223820;Fonoaudiólogo em audiologia
+true;223825;Fonoaudiólogo em disfagia
+true;223830;Fonoaudiólogo em linguagem
+true;223835;Fonoaudiólogo em motricidade orofacial
+true;223840;Fonoaudiólogo em saúde coletiva
+true;223845;Fonoaudiólogo em voz
+true;223905;Terapeuta ocupacional
+true;223910;Ortoptista
+true;223915;Psicomotricista
+true;224105;Avaliador físico
+true;224110;Ludomotricista
+true;224115;Preparador de atleta
+true;224120;Preparador físico
+true;224125;Técnico de desporto individual e coletivo (exceto futebol)
+true;224130;Técnico de laboratório e fiscalização desportiva
+true;224135;Treinador profissional de futebol
+true;224140;Profissional de educação física na saúde
+true;225103;Médico infectologista
+true;225105;Médico acupunturista
+true;225106;Médico legista
+true;225109;Médico nefrologista
+true;225110;Médico alergista e imunologista
+true;225112;Médico neurologista
+true;225115;Médico angiologista
+true;225118;Médico nutrologista
+true;225120;Médico cardiologista
+true;225121;Médico oncologista clínico
+true;225122;Médico cancerologista pediátrico
+true;225124;Médico pediatra
+true;225125;Médico clínico
+true;225127;Médico pneumologista
+true;225130;Médico de família e comunidade
+true;225133;Médico psiquiatra
+true;225135;Médico dermatologista
+true;225136;Médico reumatologista
+true;225139;Médico sanitarista
+true;225140;Médico do trabalho
+true;225142;Médico da estratégia de saúde da família
+true;225145;Médico em medicina de tráfego
+true;225148;Médico anatomopatologista
+true;225150;Médico em medicina intensiva
+true;225151;Médico anestesiologista
+true;225154;Médico antroposófico
+true;225155;Médico endocrinologista e metabologista
+true;225160;Médico fisiatra
+true;225165;Médico gastroenterologista
+true;225170;Médico generalista
+true;225175;Médico geneticista
+true;225180;Médico geriatra
+true;225185;Médico hematologista
+true;225195;Médico homeopata
+true;225203;Médico em cirurgia vascular
+true;225210;Médico cirurgião cardiovascular
+true;225215;Médico cirurgião de cabeça e pescoço
+true;225220;Médico cirurgião do aparelho digestivo
+true;225225;Médico cirurgião geral
+true;225230;Médico cirurgião pediátrico
+true;225235;Médico cirurgião plástico
+true;225240;Médico cirurgião torácico
+true;225250;Médico ginecologista e obstetra
+true;225255;Médico mastologista
+true;225260;Médico neurocirurgião
+true;225265;Médico oftalmologista
+true;225270;Médico ortopedista e traumatologista
+true;225275;Médico otorrinolaringologista
+true;225280;Médico coloproctologista
+true;225285;Médico urologista
+true;225290;Médico cancerologista cirurgíco
+true;225295;Médico cirurgião da mão
+true;225305;Médico citopatologista
+true;225310;Médico em endoscopia
+true;225315;Médico em medicina nuclear
+true;225320;Médico em radiologia e diagnóstico por imagem
+true;225325;Médico patologista
+true;225330;Médico radioterapeuta
+true;225335;Médico patologista clínico / medicina laboratorial
+true;225340;Médico hemoterapeuta
+true;225345;Médico hiperbarista
+true;225350;Médico neurofisiologista clínico
+true;225355;Médico radiologista intervencionista
+true;226105;Quiropraxista
+true;226110;Osteopata
+true;226305;Musicoterapeuta
+true;226310;Arteterapeuta
+true;226315;Equoterapeuta
+true;226320;Naturólogo
+true;231105;Professor de nível superior na educação infantil (quatro a seis anos)
+true;231110;Professor de nível superior na educação infantil (zero a três anos)
+true;231205;Professor da  educação de jovens e adultos do ensino fundamental (primeira a quarta série)
+true;231210;Professor de nível superior do ensino fundamental (primeira a quarta série)
+true;231305;Professor de ciências exatas e naturais do ensino fundamental
+true;231310;Professor de educação artística do ensino fundamental
+true;231315;Professor de educação física do ensino fundamental
+true;231320;Professor de geografia do ensino fundamental
+true;231325;Professor de história do ensino fundamental
+true;231330;Professor de língua estrangeira moderna do ensino fundamental
+true;231335;Professor de língua portuguesa do ensino fundamental
+true;231340;Professor de matemática do ensino fundamental
+true;232105;Professor de artes no ensino médio
+true;232110;Professor de biologia no ensino médio
+true;232115;Professor de disciplinas pedagógicas no ensino médio
+true;232120;Professor de educação física no ensino médio
+true;232125;Professor de filosofia no ensino médio
+true;232130;Professor de física no ensino médio
+true;232135;Professor de geografia no ensino médio
+true;232140;Professor de história no ensino médio
+true;232145;Professor de língua e literatura brasileira no ensino médio
+true;232150;Professor de língua estrangeira moderna no ensino médio
+true;232155;Professor de matemática no ensino médio
+true;232160;Professor de psicologia no ensino médio
+true;232165;Professor de química no ensino médio
+true;232170;Professor de sociologia no ensino médio
+true;233105;Professor da área de meio ambiente
+true;233110;Professor de desenho técnico
+true;233115;Professor de técnicas agrícolas
+true;233120;Professor de técnicas comerciais e secretariais
+true;233125;Professor de técnicas de enfermagem
+true;233130;Professor de técnicas industriais
+true;233135;Professor de tecnologia e cálculo técnico
+true;233205;Instrutor de aprendizagem e treinamento agropecuário
+true;233210;Instrutor de aprendizagem e treinamento industrial
+true;233215;Instrutor de aprendizagem e treinamento comercial
+true;233220;Professor instrutor de ensino e aprendizagem agroflorestal
+true;233225;Professor instrutor de ensino e aprendizagem em serviços
+true;234105;Professor de matemática aplicada (no ensino superior)
+true;234110;Professor de matemática pura (no ensino superior)
+true;234115;Professor de estatística (no ensino superior)
+true;234125;Professor de pesquisa operacional (no ensino superior)
+true;234205;Professor de física (ensino superior)
+true;234210;Professor de química (ensino superior)
+true;234215;Professor de astronomia (ensino superior)
+true;234305;Professor de arquitetura
+true;234310;Professor de engenharia
+true;234315;Professor de geofísica
+true;234320;Professor de geologia
+true;234405;Professor de ciências biológicas do ensino superior
+true;234410;Professor de educação física no ensino superior
+true;234415;Professor de enfermagem do ensino superior
+true;234420;Professor de farmácia e bioquímica
+true;234425;Professor de fisioterapia
+true;234430;Professor de fonoaudiologia
+true;234435;Professor de medicina
+true;234440;Professor de medicina veterinária
+true;234445;Professor de nutrição
+true;234450;Professor de odontologia
+true;234455;Professor de terapia ocupacional
+true;234460;Professor de zootecnia do ensino superior
+true;234505;Professor de ensino superior na área de didática
+true;234510;Professor de ensino superior na área de orientação educacional
+true;234515;Professor de ensino superior na área de pesquisa educacional
+true;234520;Professor de ensino superior na área de prática de ensino
+true;234604;Professor de língua alemã
+true;234608;Professor de língua italiana
+true;234612;Professor de língua francesa
+true;234616;Professor de língua inglesa
+true;234620;Professor de língua espanhola
+true;234624;Professor de língua portuguesa
+true;234628;Professor de literatura brasileira
+true;234632;Professor de literatura portuguesa
+true;234636;Professor de literatura alemã
+true;234640;Professor de literatura comparada
+true;234644;Professor de literatura espanhola
+true;234648;Professor de literatura francesa
+true;234652;Professor de literatura inglesa
+true;234656;Professor de literatura italiana
+true;234660;Professor de literatura de línguas estrangeiras modernas
+true;234664;Professor de outras línguas e literaturas
+true;234668;Professor de línguas estrangeiras modernas
+true;234672;Professor de lingüística e lingüística aplicada
+true;234676;Professor de filologia e crítica textual
+true;234680;Professor de semiótica
+true;234684;Professor de teoria da literatura
+true;234705;Professor de antropologia do ensino superior
+true;234710;Professor de arquivologia do ensino superior
+true;234715;Professor de biblioteconomia do ensino superior
+true;234720;Professor de ciência política do ensino superior
+true;234725;Professor de comunicação social do ensino superior
+true;234730;Professor de direito do ensino superior
+true;234735;Professor de filosofia do ensino superior
+true;234740;Professor de geografia do ensino superior
+true;234745;Professor de história do ensino superior
+true;234750;Professor de jornalismo
+true;234755;Professor de museologia do ensino superior
+true;234760;Professor de psicologia do ensino superior
+true;234765;Professor de serviço social do ensino superior
+true;234770;Professor de sociologia do ensino superior
+true;234805;Professor de economia
+true;234810;Professor de administração
+true;234815;Professor de contabilidade
+true;234905;Professor de artes do espetáculo no ensino superior
+true;234910;Professor de artes visuais no ensino superior (artes plásticas e multimídia)
+true;234915;Professor de música no ensino superior
+true;239205;Professor de alunos com deficiência auditiva e surdos
+true;239210;Professor de alunos com deficiência física
+true;239215;Professor de alunos com deficiência mental
+true;239220;Professor de alunos com deficiência múltipla
+true;239225;Professor de alunos com deficiência visual
+true;239405;Coordenador pedagógico
+true;239410;Orientador educacional
+true;239415;Pedagogo
+true;239420;Professor de técnicas e recursos audiovisuais
+true;239425;Psicopedagogo
+true;239430;Supervisor de ensino
+true;239435;Designer educacional
+true;239440;Neuropsicopedagogo clinico
+true;239445;Neuropsicopedagogo institucional
+true;241005;Advogado
+true;241010;Advogado de empresa
+true;241015;Advogado (direito civil)
+true;241020;Advogado (direito público)
+true;241025;Advogado (direito penal)
+true;241030;Advogado (áreas especiais)
+true;241035;Advogado (direito do trabalho)
+true;241040;Consultor jurídico
+true;241205;Advogado da união
+true;241210;Procurador autárquico
+true;241215;Procurador da fazenda nacional
+true;241220;Procurador do estado
+true;241225;Procurador do município
+true;241230;Procurador federal
+true;241235;Procurador fundacional
+true;241305;Oficial de registro de contratos marítimos
+true;241310;Oficial do registro civil de pessoas jurídicas
+true;241315;Oficial do registro civil de pessoas naturais
+true;241320;Oficial do registro de distribuições
+true;241325;Oficial do registro de imóveis
+true;241330;Oficial do registro de títulos e documentos
+true;241335;Tabelião de notas
+true;241340;Tabelião de protestos
+true;242205;Procurador da república
+true;242210;Procurador de justiça
+true;242215;Procurador de justiça militar
+true;242220;Procurador do trabalho
+true;242225;Procurador regional da república
+true;242230;Procurador regional do trabalho
+true;242235;Promotor de justiça
+true;242240;Subprocurador de justiça militar
+true;242245;Subprocurador-geral da república
+true;242250;Subprocurador-geral do trabalho
+true;242305;Delegado de polícia
+true;242405;Defensor público
+true;242410;Procurador da assistência judiciária
+true;242905;Oficial de inteligência
+true;242910;Oficial técnico de inteligência
+true;251105;Antropólogo
+true;251110;Arqueólogo
+true;251115;Cientista político
+true;251120;Sociólogo
+true;251205;Economista
+true;251210;Economista agroindustrial
+true;251215;Economista financeiro
+true;251220;Economista industrial
+true;251225;Economista do setor público
+true;251230;Economista ambiental
+true;251235;Economista regional e urbano
+true;251305;Geógrafo
+true;251405;Filósofo
+true;251505;Psicólogo educacional
+true;251510;Psicólogo clínico
+true;251515;Psicólogo do esporte
+true;251520;Psicólogo hospitalar
+true;251525;Psicólogo jurídico
+true;251530;Psicólogo social
+true;251535;Psicólogo do trânsito
+true;251540;Psicólogo do trabalho
+true;251545;Neuropsicólogo
+true;251550;Psicanalista
+true;251555;Psicólogo acupunturista
+true;251605;Assistente social
+true;251610;Economista doméstico
+true;252105;Administrador
+true;252205;Auditor (contadores e afins)
+true;252210;Contador
+true;252215;Perito contábil
+true;252305;Secretária(o) executiva(o)
+true;252310;Secretário  bilíngüe
+true;252315;Secretária trilíngüe
+true;252320;Tecnólogo em secretariado escolar
+true;252405;Analista de recursos humanos
+true;252505;Administrador de fundos e carteiras de investimento
+true;252510;Analista de câmbio
+true;252515;Analista de cobrança (instituições financeiras)
+true;252525;Analista de crédito (instituições financeiras)
+true;252530;Analista de crédito rural
+true;252535;Analista de leasing
+true;252540;Analista de produtos bancários
+true;252545;Analista financeiro (instituições financeiras)
+true;252550;Profissional de relações com investidores
+true;252605;Gestor em segurança
+true;252705;Analista de pcp (programação e controle da produção)
+true;252710;Analista de planejamento de materias
+true;252715;Analista de logistica
+true;252720;Analista de projetos logisticos
+true;252725;Analista de gestão de estoque
+true;253110;Redator de publicidade
+true;253115;Publicitário
+true;253120;Diretor de mídia (publicidade)
+true;253125;Diretor de arte (publicidade)
+true;253130;Diretor de criação
+true;253135;Diretor de contas (publicidade)
+true;253140;Agenciador de propaganda
+true;253205;Gerente de captação (fundos e investimentos institucionais)
+true;253210;Gerente de clientes especiais (private)
+true;253215;Gerente de contas - pessoa física e jurídica
+true;253220;Gerente de grandes contas (corporate)
+true;253225;Operador de negócios
+true;253305;Corretor de valores, ativos financeiros, mercadorias e derivativos
+true;254105;Auditor-fiscal da receita federal
+true;254110;Técnico da receita federal
+true;254205;Auditor-fiscal da previdência social
+true;254305;Auditor-fiscal do trabalho
+true;254310;Agente de higiene e segurança
+true;254405;Fiscal de tributos estadual
+true;254410;Fiscal de tributos municipal
+true;254415;Técnico de tributos estadual
+true;254420;Técnico de tributos municipal
+true;254505;Fiscal de atividades urbanas
+true;261105;Arquivista pesquisador (jornalismo)
+true;261110;Assessor de imprensa
+true;261115;Diretor de redação
+true;261120;Editor
+true;261125;Jornalista
+true;261130;Produtor de texto
+true;261135;Repórter (exclusive rádio e televisão)
+true;261140;Revisor de texto
+true;261205;Bibliotecário
+true;261210;Documentalista
+true;261215;Analista de informações (pesquisador de informações de rede)
+true;261305;Arquivista
+true;261310;Museólogo
+true;261405;Filólogo
+true;261410;Intérprete
+true;261415;Lingüista
+true;261420;Tradutor
+true;261425;Intérprete de língua de sinais
+true;261430;Audiodescritor
+true;261505;Autor-roteirista
+true;261510;Crítico
+true;261515;Escritor de ficção
+true;261520;Escritor de não ficção
+true;261525;Poeta
+true;261530;Redator de textos técnicos
+true;261605;Editor de jornal
+true;261610;Editor de livro
+true;261615;Editor de mídia eletrônica
+true;261620;Editor de revista
+true;261625;Editor de revista científica
+true;261705;Âncora de mídias audiovisuais
+true;261710;Comentarista de mídias audiovisuais
+true;261715;Locutor de mídias audiovisuais
+true;261730;Repórter de mídias audiovisuais
+true;261805;Fotógrafo
+true;261810;Fotógrafo publicitário
+true;261815;Fotógrafo retratista
+true;261820;Repórter fotográfico
+true;261905;Continuista
+true;261910;Assistente de direção (tv)
+true;262105;Produtor cultural
+true;262110;Produtor cinematográfico
+true;262115;Produtor de rádio
+true;262120;Produtor de teatro
+true;262125;Produtor de televisão
+true;262130;Tecnólogo em produção fonográfica
+true;262135;Tecnólogo em produção audiovisual
+true;262205;Diretor de cinema
+true;262210;Diretor de programas de rádio
+true;262215;Diretor de programas de televisão
+true;262220;Diretor teatral
+true;262225;Diretor de programação
+true;262230;Diretor de produção
+true;262235;Diretor artistíco
+true;262305;Cenógrafo carnavalesco e festas populares
+true;262310;Cenógrafo de cinema
+true;262315;Cenógrafo de eventos
+true;262320;Cenógrafo de teatro
+true;262325;Cenógrafo de tv
+true;262330;Diretor de arte
+true;262405;Artista (artes visuais)
+true;262410;Desenhista industrial gráfico (designer gráfico)
+true;262415;Conservador-restaurador de bens  culturais
+true;262420;Desenhista industrial de produto (designer de produto)
+true;262425;Desenhista industrial de produto de moda (designer de moda)
+true;262505;Ator
+true;262605;Compositor
+true;262610;Músico arranjador
+true;262615;Músico regente
+true;262620;Musicólogo
+true;262705;Músico intérprete cantor
+true;262710;Músico intérprete instrumentista
+true;262805;Assistente de coreografia
+true;262810;Bailarino (exceto danças populares)
+true;262815;Coreógrafo
+true;262820;Dramaturgo de dança
+true;262825;Ensaiador de dança
+true;262830;Professor de dança
+true;262905;Decorador de interiores de nível superior
+true;263105;Ministro de culto religioso
+true;263110;Missionário
+true;263115;Teólogo
+true;271105;Chefe de cozinha
+true;271110;Tecnólogo em gastronomia
+true;300105;Técnico em mecatrônica - automação da manufatura
+true;300110;Técnico em mecatrônica - robótica
+true;300305;Técnico em eletromecânica
+true;301105;Técnico de laboratório industrial
+true;301110;Técnico de laboratório de análises físico-químicas (materiais de construção)
+true;301115;Técnico químico de petróleo
+true;301205;Técnico de apoio à bioengenharia
+true;311105;Técnico químico
+true;311110;Técnico de celulose e papel
+true;311115;Técnico em curtimento
+true;311205;Técnico em petroquímica
+true;311305;Técnico em materiais, produtos cerâmicos e vidros
+true;311405;Técnico em borracha
+true;311410;Técnico em plástico
+true;311505;Técnico de controle de meio ambiente
+true;311510;Técnico de meteorologia
+true;311515;Técnico de utilidade (produção e distribuição de vapor, gases, óleos, combustíveis, energia)
+true;311520;Técnico em tratamento de efluentes
+true;311605;Técnico têxtil
+true;311610;Técnico têxtil (tratamentos químicos)
+true;311615;Técnico têxtil de fiação
+true;311620;Técnico têxtil de malharia
+true;311625;Técnico têxtil de tecelagem
+true;311705;Colorista de papel
+true;311710;Colorista têxtil
+true;311715;Preparador de tintas
+true;311720;Preparador de tintas (fábrica de tecidos)
+true;311725;Tingidor de couros e peles
+true;312105;Técnico de obras civis
+true;312205;Técnico de estradas
+true;312210;Técnico de saneamento
+true;312305;Técnico em agrimensura
+true;312310;Técnico em geodésia e cartografia
+true;312315;Técnico em hidrografia
+true;312320;Topógrafo
+true;313105;Eletrotécnico
+true;313110;Eletrotécnico (produção de energia)
+true;313115;Eletrotécnico na fabricação, montagem e instalação de máquinas e equipamentos
+true;313120;Técnico de manutenção elétrica
+true;313125;Técnico de manutenção elétrica de máquina
+true;313130;Técnico eletricista
+true;313205;Técnico de manutenção eletrônica
+true;313210;Técnico de manutenção eletrônica (circuitos de máquinas com comando numérico)
+true;313215;Técnico eletrônico
+true;313220;Técnico em manutenção de equipamentos de informática
+true;313305;Técnico de comunicação de dados
+true;313310;Técnico de rede (telecomunicações)
+true;313315;Técnico de telecomunicações (telefonia)
+true;313320;Técnico de transmissão (telecomunicações)
+true;313405;Técnico em calibração
+true;313410;Técnico em instrumentação
+true;313415;Encarregado de manutenção de instrumentos de controle, medição e similares
+true;313505;Técnico em fotônica
+true;314105;Técnico em mecânica de precisão
+true;314110;Técnico mecânico
+true;314115;Técnico mecânico (calefação, ventilação e refrigeração)
+true;314120;Técnico mecânico (máquinas)
+true;314125;Técnico mecânico (motores)
+true;314205;Técnico mecânico na fabricação de ferramentas
+true;314210;Técnico mecânico na manutenção de ferramentas
+true;314305;Técnico em automobilística
+true;314310;Técnico mecânico (aeronaves)
+true;314315;Técnico mecânico (embarcações)
+true;314405;Técnico de manutenção de sistemas e instrumentos
+true;314410;Técnico em manutenção de máquinas
+true;314605;Inspetor de soldagem
+true;314610;Técnico em caldeiraria
+true;314615;Técnico em estruturas metálicas
+true;314620;Técnico em soldagem
+true;314625;Tecnólogo em soldagem
+true;314705;Técnico de acabamento em siderurgia
+true;314710;Técnico de aciaria em siderurgia
+true;314715;Técnico de fundição em siderurgia
+true;314720;Técnico de laminação em siderurgia
+true;314725;Técnico de redução na siderurgia (primeira fusão)
+true;314730;Técnico de refratário em siderurgia
+true;316105;Técnico em geofísica
+true;316110;Técnico em geologia
+true;316115;Técnico em geoquímica
+true;316120;Técnico em geotecnia
+true;316305;Técnico de mineração
+true;316310;Técnico de mineração (óleo e petróleo)
+true;316315;Técnico em processamento mineral (exceto petróleo)
+true;316320;Técnico em pesquisa mineral
+true;316325;Técnico de produção em refino de petróleo
+true;316330;Técnico em planejamento de lavra de minas
+true;316335;Desincrustador (poços de petróleo)
+true;316340;Cimentador (poços de petróleo)
+true;317105;Desenvolvedor web (técnico)
+true;317110;Desenvolvedor de sistemas de tecnologia da informação (técnico)
+true;317115;Programador de máquinas - ferramenta com comando numérico
+true;317120;Desenvolvedor de multimídia
+true;317205;Operador de computador
+true;317210;Técnico de suporte ao usuário de tecnologia da informação
+true;318005;Desenhista técnico
+true;318010;Desenhista copista
+true;318015;Desenhista detalhista
+true;318105;Desenhista técnico (arquitetura)
+true;318110;Desenhista técnico (cartografia)
+true;318115;Desenhista técnico (construção civil)
+true;318120;Desenhista técnico (instalações hidrossanitárias)
+true;318205;Desenhista técnico mecânico
+true;318210;Desenhista técnico aeronáutico
+true;318215;Desenhista técnico naval
+true;318305;Desenhista técnico (eletricidade e eletrônica)
+true;318310;Desenhista técnico (calefação, ventilação e refrigeração)
+true;318405;Desenhista técnico (artes gráficas)
+true;318410;Desenhista técnico (ilustrações artísticas)
+true;318415;Desenhista técnico (ilustrações técnicas)
+true;318420;Desenhista técnico (indústria têxtil)
+true;318425;Desenhista técnico (mobiliário)
+true;318430;Desenhista técnico de embalagens, maquetes e leiautes
+true;318505;Desenhista projetista de arquitetura
+true;318510;Desenhista projetista de construção civil
+true;318605;Desenhista projetista de máquinas
+true;318610;Desenhista projetista mecânico
+true;318705;Desenhista projetista de eletricidade
+true;318710;Desenhista projetista eletrônico
+true;318805;Projetista de móveis
+true;318810;Modelista de roupas
+true;318815;Modelista de calçados
+true;319105;Técnico em calçados e artefatos de couro
+true;319110;Técnico em confecções do vestuário
+true;319205;Técnico do mobiliário
+true;320105;Técnico em bioterismo
+true;320110;Técnico em histologia
+true;321105;Técnico agrícola
+true;321110;Técnico agropecuário
+true;321205;Técnico em madeira
+true;321210;Técnico florestal
+true;321305;Técnico em piscicultura
+true;321310;Técnico em carcinicultura
+true;321315;Técnico em mitilicultura
+true;321320;Técnico em ranicultura
+true;322105;Técnico em acupuntura
+true;322110;Podólogo
+true;322115;Técnico em quiropraxia
+true;322120;Massoterapeuta
+true;322125;Terapeuta holístico
+true;322130;Esteticista
+true;322135;Doula
+true;322205;Técnico de enfermagem
+true;322210;Técnico de enfermagem de terapia intensiva
+true;322215;Técnico de enfermagem do trabalho
+true;322220;Técnico de enfermagem psiquiátrica
+true;322225;Instrumentador cirúrgico
+true;322230;Auxiliar de enfermagem
+true;322235;Auxiliar de enfermagem do trabalho
+true;322240;Auxiliar de saúde (navegação marítima)
+true;322245;Técnico de enfermagem da estratégia de saúde da família
+true;322250;Auxiliar de enfermagem da estratégia de saúde da família
+true;322305;Técnico em óptica e optometria
+true;322405;Técnico em saúde bucal
+true;322410;Protético dentário
+true;322415;Auxiliar em saúde bucal
+true;322420;Auxiliar de prótese dentária
+true;322425;Técnico em saúde bucal da estratégia de saúde da família
+true;322430;Auxiliar em saúde bucal da estratégia de saúde da família
+true;322505;Técnico de ortopedia
+true;322605;Técnico de imobilização ortopédica
+true;323105;Técnico em pecuária
+true;324105;Técnico em métodos eletrográficos em encefalografia
+true;324110;Técnico em métodos gráficos em cardiologia
+true;324115;Técnico em radiologia e imagenologia
+true;324120;Tecnólogo em radiologia
+true;324125;Tecnólogo oftálmico
+true;324130;Técnico em espirometria
+true;324135;Técnico em polissonografia
+true;324205;Técnico em patologia clínica
+true;324215;Citotécnico
+true;324220;Técnico em hemoterapia
+true;325005;Enólogo
+true;325010;Aromista
+true;325015;Perfumista
+true;325105;Auxiliar técnico em laboratório de farmácia
+true;325110;Técnico em laboratório de farmácia
+true;325115;Técnico em farmácia
+true;325205;Técnico de alimentos
+true;325210;Técnico em nutrição e dietética
+true;325305;Técnico em biotecnologia
+true;325310;Técnico em imunobiológicos
+true;328105;Embalsamador
+true;328110;Taxidermista
+true;331105;Professor de nível médio na educação infantil
+true;331110;Auxiliar de desenvolvimento infantil
+true;331205;Professor de nível médio no ensino fundamental
+true;331305;Professor de nível médio no ensino profissionalizante
+true;332105;Professor leigo no ensino fundamental
+true;332205;Professor prático no ensino profissionalizante
+true;333105;Instrutor de auto-escola
+true;333110;Instrutor de cursos livres
+true;333115;Professores de cursos livres
+true;334105;Inspetor de alunos de escola privada
+true;334110;Inspetor de alunos de escola pública
+true;334115;Monitor de transporte escolar
+true;341105;Piloto comercial (exceto linhas aéreas)
+true;341110;Piloto comercial de helicóptero (exceto linhas aéreas)
+true;341115;Mecânico de vôo
+true;341120;Piloto agrícola
+true;341205;Contramestre de cabotagem
+true;341210;Mestre de cabotagem
+true;341215;Mestre fluvial
+true;341220;Patrão de pesca de alto-mar
+true;341225;Patrão de pesca na navegação interior
+true;341230;Piloto fluvial
+true;341235;Ténico em sinalização nautica
+true;341240;Técnicos em manobras em equipamentos de convés
+true;341245;Técnico em sinais navais
+true;341250;Auxiliar técnico de sinalização nautica
+true;341305;Condutor maquinista motorista fluvial
+true;341310;Condutor de máquinas
+true;341315;Eletricista de bordo
+true;341320;Condutor de máquinas (bombeador)
+true;341325;Condutor de máquinas (mecânico)
+true;342105;Analista de transporte em comércio exterior
+true;342110;Operador de transporte multimodal
+true;342115;Controlador de serviços de máquinas e veículos
+true;342120;Afretador
+true;342125;Tecnólogo em logística de transporte
+true;342205;Ajudante de despachante aduaneiro
+true;342210;Despachante aduaneiro
+true;342215;Analista de desembaraço aduaneiro
+true;342305;Chefe de serviço de transporte rodoviário (passageiros e cargas)
+true;342310;Inspetor de serviços de transportes rodoviários (passageiros e cargas)
+true;342315;Supervisor de carga e descarga
+true;342405;Agente de estação (ferrovia e metrô)
+true;342410;Operador de centro de controle (ferrovia e metrô)
+true;342505;Controlador de tráfego aéreo
+true;342510;Despachante operacional de vôo
+true;342515;Fiscal de aviação civil (fac)
+true;342530;Inspetor de aviação civil
+true;342535;Operador de atendimento aeroviário
+true;342540;Supervisor da administração de aeroportos
+true;342545;Supervisor de empresa aérea em aeroportos
+true;342550;Agente de proteção de aviação civil
+true;342555;Fiscal de pista de aeroporto
+true;342560;Lider de rampa ( transporte aéreo)
+true;342605;Chefe de estação portuária
+true;342610;Supervisor de operações portuárias
+true;351105;Técnico de contabilidade
+true;351110;Chefe de contabilidade (técnico)
+true;351115;Consultor contábil (técnico)
+true;351305;Técnico em administração
+true;351310;Técnico em administração de comércio exterior
+true;351315;Agente de recrutamento e seleção
+true;351405;Escrevente
+true;351410;Escrivão judicial
+true;351415;Escrivão extra - judicial
+true;351420;Escrivão de polícia
+true;351425;Oficial de justiça
+true;351430;Auxiliar de serviços jurídicos
+true;351505;Técnico em secretariado
+true;351510;Taquígrafo
+true;351515;Estenotipista
+true;351605;Técnico em segurança do trabalho
+true;351610;Técnico em higiene ocupacional
+true;351705;Analista de seguros (técnico)
+true;351710;Analista de sinistros
+true;351715;Assistente comercial de seguros
+true;351720;Assistente técnico de seguros
+true;351725;Inspetor de risco
+true;351730;Inspetor de sinistros
+true;351735;Técnico de resseguros
+true;351740;Técnico de seguros
+true;351805;Detetive profissional
+true;351810;Investigador de polícia
+true;351815;Papiloscopista policial
+true;351905;Agente de inteligência
+true;351910;Agente técnico de inteligência
+true;352205;Agente de defesa ambiental
+true;352210;Agente de saúde pública
+true;352305;Metrologista
+true;352310;Agente fiscal de qualidade
+true;352315;Agente fiscal metrológico
+true;352320;Agente fiscal têxtil
+true;352405;Agente de direitos autorais
+true;352410;Avaliador de produtos do meio de comunicação
+true;352420;Técnico em direitos autorais
+true;353205;Técnico de operações e serviços bancários - câmbio
+true;353210;Técnico de operações e serviços bancários - crédito imobiliário
+true;353215;Técnico de operações e serviços bancários - crédito rural
+true;353220;Técnico de operações e serviços bancários - leasing
+true;353225;Técnico de operações e serviços bancários - renda fixa e variável
+true;353230;Tesoureiro de banco
+true;353235;Chefe de serviços bancários
+true;354120;Agente de vendas de serviços
+true;354125;Assistente de vendas
+true;354130;Promotor de vendas especializado
+true;354135;Técnico de vendas
+true;354140;Técnico em atendimento e vendas
+true;354145;Vendedor pracista
+true;354150;Propagandista de produtos famacêuticos
+true;354205;Comprador
+true;354210;Supervisor de compras
+true;354305;Analista de exportação e importação
+true;354405;Leiloeiro
+true;354410;Avaliador de imóveis
+true;354415;Avaliador de bens móveis
+true;354505;Corretor de seguros
+true;354605;Corretor de imóveis
+true;354705;Representante comercial autônomo
+true;354805;Técnico em turismo
+true;354810;Operador de turismo
+true;354815;Agente de viagem
+true;354820;Organizador de evento
+true;354825;Cerimonialista
+true;371105;Auxiliar de biblioteca
+true;371110;Técnico em biblioteconomia
+true;371205;Colecionador de selos e moedas
+true;371210;Técnico em museologia
+true;371305;Técnico em programação visual
+true;371310;Técnico gráfico
+true;371405;Recreador de acantonamento
+true;371410;Recreador
+true;372105;Diretor de fotografia
+true;372110;Iluminador (televisão)
+true;372115;Operador de câmera de televisão
+true;372205;Operador de rede de teleprocessamento
+true;372210;Radiotelegrafista
+true;373105;Operador de mídia audiovisual
+true;373130;Técnico de sistemas audiovisuais
+true;373135;Operador de controle mestre
+true;373140;Coordenador de programação
+true;373145;Assistente de operações audiovisuais
+true;373220;Supervisor técnico operacional de sistemas de televisão e produtoras de vídeo
+true;373225;Supervisor de operações (mídias audiovisuais)
+true;373230;Supervisor técnico (mídias audiovisuais)
+true;374105;Técnico em gravação de áudio
+true;374110;Técnico em instalação de equipamentos de áudio
+true;374115;Técnico em masterização de áudio
+true;374120;Projetista de som
+true;374125;Técnico em sonorização
+true;374130;Técnico em mixagem de áudio
+true;374135;Projetista de sistemas de áudio
+true;374140;Microfonista
+true;374145;Dj (disc jockey)
+true;374150;Sonoplasta
+true;374155;Analista musical
+true;374205;Cenotécnico (cinema, vídeo, televisão, teatro e espetáculos)
+true;374210;Maquinista de cinema e vídeo
+true;374215;Maquinista de teatro e espetáculos
+true;374305;Operador de projetor cinematográfico
+true;374310;Operador-mantenedor de projetor cinematográfico
+true;374405;Editor de mídia audiovisual
+true;374410;Finalizador de filmes
+true;374415;Finalizador de vídeo
+true;374420;Montador de filmes
+true;374425;Diretor de imagens (tv)
+true;375105;Designer de interiores
+true;375110;Designer de vitrines
+true;375115;Visual merchandiser
+true;375120;Decorador de eventos
+true;375125;Produtor de moda
+true;376105;Dançarino tradicional
+true;376110;Dançarino popular
+true;376205;Acrobata
+true;376210;Artista aéreo
+true;376215;Artista de circo (outros)
+true;376220;Contorcionista
+true;376225;Domador de animais (circense)
+true;376230;Equilibrista
+true;376235;Mágico
+true;376240;Malabarista
+true;376245;Palhaço
+true;376250;Titeriteiro
+true;376255;Trapezista
+true;376305;Apresentador de eventos
+true;376310;Apresentador de festas populares
+true;376315;Apresentador de programas de rádio
+true;376320;Apresentador de programas de televisão
+true;376325;Apresentador de circo
+true;376330;Mestre de cerimonias
+true;376405;Modelo artístico
+true;376410;Modelo de modas
+true;376415;Modelo publicitário
+true;377105;Atleta profissional (outras modalidades)
+true;377110;Atleta profissional de futebol
+true;377115;Atleta profissional de golfe
+true;377120;Atleta profissional de luta
+true;377125;Atleta profissional de tênis
+true;377130;Jóquei
+true;377135;Piloto de competição automobilística
+true;377140;Profissional de atletismo
+true;377145;Pugilista
+true;377205;Árbitro desportivo
+true;377210;Árbitro de atletismo
+true;377215;Árbitro de basquete
+true;377220;Árbitro de futebol
+true;377225;Árbitro de futebol de salão
+true;377230;Árbitro de judô
+true;377235;Árbitro de karatê
+true;377240;Árbitro de poló aquático
+true;377245;Árbitro de vôlei
+true;391105;Cronoanalista
+true;391110;Cronometrista
+true;391115;Controlador de entrada e saída
+true;391120;Planejista
+true;391125;Técnico de planejamento de produção
+true;391130;Técnico de planejamento e programação da manutenção
+true;391135;Técnico de matéria-prima e material
+true;391140;Analista de manutenção (equipamentos aéreos)
+true;391145;Analista de planejamento de manutenção
+true;391205;Inspetor de qualidade
+true;391210;Técnico de garantia da qualidade
+true;391215;Operador de inspeção de qualidade
+true;391220;Técnico de painel de controle
+true;391225;Escolhedor de papel
+true;391230;Técnico operacional de serviços de correios
+true;395105;Técnico de apoio em pesquisa e desenvolvimento (exceto agropecuário e florestal)
+true;395110;Técnico de apoio em pesquisa e desenvolvimento agropecuário florestal
+true;410105;Supervisor administrativo
+true;410205;Supervisor de almoxarifado
+true;410210;Supervisor de câmbio
+true;410215;Supervisor de contas a pagar
+true;410220;Supervisor de controle patrimonial
+true;410225;Supervisor de crédito e cobrança
+true;410230;Supervisor de orçamento
+true;410235;Supervisor de tesouraria
+true;410240;Supervisor de logística
+true;411005;Auxiliar de escritório
+true;411010;Assistente administrativo
+true;411015;Atendente de judiciário
+true;411020;Auxiliar de judiciário
+true;411025;Auxiliar de cartório
+true;411030;Auxiliar de pessoal
+true;411035;Auxiliar de estatística
+true;411040;Auxiliar de seguros
+true;411045;Auxiliar de serviços de importação e exportação
+true;411050;Agente de microcrédito
+true;412105;Datilógrafo
+true;412110;Digitador
+true;412115;Operador de mensagens de telecomunicações (correios)
+true;412120;Supervisor de digitação e operação
+true;412205;Contínuo
+true;413105;Analista de folha de pagamento
+true;413110;Auxiliar de contabilidade
+true;413115;Auxiliar de faturamento
+true;413205;Atendente de agência
+true;413210;Caixa de banco
+true;413215;Compensador de banco
+true;413220;Conferente de serviços bancários
+true;413225;Escriturário de banco
+true;413230;Operador de cobrança bancária
+true;414105;Almoxarife
+true;414110;Armazenista
+true;414115;Balanceiro
+true;414120;Conferente mercadoria (exceto carga e descarga)
+true;414125;Estoquista
+true;414135;Expedidor de mercadorias
+true;414140;Auxiliar de logistica
+true;414205;Apontador de mão-de-obra
+true;414210;Apontador de produção
+true;414215;Conferente de carga e descarga
+true;415105;Arquivista de documentos
+true;415115;Codificador de dados
+true;415120;Fitotecário
+true;415125;Kardexista
+true;415130;Operador de máquina copiadora (exceto operador de gráfica rápida)
+true;415205;Carteiro
+true;415210;Operador de triagem e transbordo
+true;415215;Entregador de publicações
+true;415305;Registrador de câncer
+true;420105;Supervisor de caixas e bilheteiros (exceto caixa de banco)
+true;420110;Supervisor de cobrança
+true;420115;Supervisor de coletadores de apostas e de jogos
+true;420120;Supervisor de entrevistadores e recenseadores
+true;420125;Supervisor de recepcionistas
+true;420130;Supervisor de telefonistas
+true;420135;Supervisor de telemarketing e atendimento
+true;421105;Atendente comercial (agência postal)
+true;421110;Bilheteiro de transportes coletivos
+true;421115;Bilheteiro no serviço de diversões
+true;421120;Emissor de passagens
+true;421125;Operador de caixa
+true;421205;Recebedor de apostas (loteria)
+true;421210;Recebedor de apostas (turfe)
+true;421305;Cobrador externo
+true;421310;Cobrador interno
+true;421315;Localizador (cobrador)
+true;422105;Recepcionista, em geral
+true;422110;Recepcionista de consultório médico ou dentário
+true;422115;Recepcionista de seguro saúde
+true;422120;Recepcionista de hotel
+true;422125;Recepcionista de banco
+true;422130;Concierge
+true;422205;Telefonista
+true;422210;Teleoperador
+true;422215;Monitor de teleatendimento
+true;422220;Operador de rádio-chamada
+true;422305;Operador de telemarketing ativo
+true;422310;Operador de telemarketing ativo e receptivo
+true;422315;Operador de telemarketing receptivo
+true;422320;Operador de telemarketing técnico
+true;423105;Despachante documentalista
+true;423110;Despachante de trânsito
+true;424105;Entrevistador censitário e de pesquisas amostrais
+true;424110;Entrevistador de pesquisa de opinião e mídia
+true;424115;Entrevistador de pesquisas de mercado
+true;424120;Entrevistador de preços
+true;424125;Escriturário  em  estatística
+true;424130;Entrevistador social
+true;424205;Coordenador de provas (concurso, avaliação, exame)
+true;424210;Aplicador de provas (concurso, avaliação,exame)
+true;510105;Supervisor de transportes
+true;510110;Administrador de edifícios
+true;510115;Supervisor de andar
+true;510120;Chefe de portaria de hotel
+true;510130;Chefe de bar
+true;510135;Maître
+true;510205;Supervisor de lavanderia
+true;510305;Supervisor de bombeiros
+true;510310;Supervisor de vigilantes
+true;511105;Comissário de vôo
+true;511110;Comissário de trem
+true;511115;Taifeiro (exceto militares)
+true;511205;Fiscal de transportes coletivos (exceto trem)
+true;511210;Despachante de transportes coletivos (exceto trem)
+true;511215;Cobrador de transportes coletivos (exceto trem)
+true;511220;Bilheteiro (estações de metrô, ferroviárias e assemelhadas)
+true;511405;Guia de turismo
+true;511505;Condutor de turismo de aventura
+true;511510;Condutor de turismo de pesca
+true;512105;Empregado  doméstico  nos serviços gerais
+true;512110;Empregado doméstico  arrumador
+true;512115;Empregado doméstico  faxineiro
+true;512120;Empregado doméstico diarista
+true;513105;Mordomo de residência
+true;513110;Mordomo de hotelaria
+true;513115;Governanta de hotelaria
+true;513205;Cozinheiro geral
+true;513210;Cozinheiro do serviço doméstico
+true;513215;Cozinheiro industrial
+true;513220;Cozinheiro de hospital
+true;513225;Cozinheiro de embarcações
+true;513305;Camareiro de teatro
+true;513310;Camareiro de televisão
+true;513315;Camareiro  de hotel
+true;513320;Camareiro de embarcações
+true;513325;Guarda-roupeiro de cinema
+true;513405;Garçom
+true;513410;Garçom (serviços de vinhos)
+true;513415;Cumim
+true;513420;Barman
+true;513425;Copeiro
+true;513430;Copeiro de hospital
+true;513435;Atendente de lanchonete
+true;513440;Barista
+true;513505;Auxiliar nos serviços de alimentação
+true;513605;Churrasqueiro
+true;513610;Pizzaiolo
+true;513615;Sushiman
+true;514105;Ascensorista
+true;514110;Garagista
+true;514115;Sacristão
+true;514120;Zelador de edifício
+true;514205;Coletor de lixo domiciliar
+true;514215;Varredor de rua
+true;514225;Trabalhador de serviços de limpeza e conservação de áreas públicas
+true;514230;Coletor de resíduos sólidos de serviços de saúde
+true;514305;Limpador de vidros
+true;514310;Auxiliar de manutenção predial
+true;514315;Limpador de fachadas
+true;514320;Faxineiro
+true;514325;Trabalhador da manutenção de edificações
+true;514330;Limpador de piscinas
+true;515105;Agente comunitário de saúde
+true;515110;Atendente de enfermagem
+true;515115;Parteira leiga
+true;515120;Visitador sanitário
+true;515125;Agente indígena de saúde
+true;515130;Agente indígena de saneamento
+true;515135;Socorrista (exceto médicos e enfermeiros)
+true;515140;Agente de combate às endemias
+true;515205;Auxiliar de banco de sangue
+true;515210;Auxiliar de farmácia de manipulação
+true;515215;Auxiliar de laboratório de análises clínicas
+true;515220;Auxiliar de laboratório de imunobiológicos
+true;515225;Auxiliar de produção farmacêutica
+true;515305;Educador social
+true;515310;Agente de ação social
+true;515315;Monitor de dependente químico
+true;515320;Conselheiro tutelar
+true;515325;Sócioeducador
+true;515330;Monitor de ressocialização prisional
+true;516105;Barbeiro
+true;516110;Cabeleireiro
+true;516120;Manicure
+true;516125;Maquiador
+true;516130;Maquiador de caracterização
+true;516140;Pedicure
+true;516205;Babá
+true;516210;Cuidador de idosos
+true;516215;Mãe social
+true;516220;Cuidador em saúde
+true;516305;Lavadeiro, em geral
+true;516310;Lavador de roupas  a maquina
+true;516315;Lavador de artefatos de tapeçaria
+true;516320;Limpador a seco, à máquina
+true;516325;Passador de roupas em geral
+true;516330;Tingidor de roupas
+true;516335;Conferente-expedidor de roupas (lavanderias)
+true;516340;Atendente de lavanderia
+true;516345;Auxiliar de lavanderia
+true;516405;Lavador de roupas
+true;516410;Limpador de roupas a seco, à mão
+true;516415;Passador de roupas, à mão
+true;516505;Agente funerário
+true;516605;Operador de forno (serviços funerários)
+true;516610;Sepultador
+true;516705;Astrólogo
+true;516710;Numerólogo
+true;516805;Esotérico
+true;516810;Paranormal
+true;517105;Bombeiro de aeródromo
+true;517110;Bombeiro civil
+true;517115;Salva-vidas
+true;517120;Brigadista florestal
+true;517125;Chefe de brigada
+true;517205;Agente de polícia federal
+true;517210;Policial rodoviário federal
+true;517215;Guarda-civil municipal
+true;517220;Agente de trânsito
+true;517225;Policial legislativo
+true;517305;Agente de proteção de aeroporto
+true;517310;Agente de segurança
+true;517315;Agente de segurança penitenciária
+true;517320;Vigia florestal
+true;517325;Vigia portuário
+true;517330;Vigilante
+true;517335;Guarda portuário
+true;517405;Porteiro (hotel)
+true;517410;Porteiro de edifícios
+true;517415;Porteiro de locais de diversão
+true;517420;Vigia
+true;517425;Fiscal de loja
+true;519105;Ciclista mensageiro
+true;519110;Motofretista
+true;519115;Mototaxista
+true;519205;Catador de material reciclável
+true;519210;Selecionador de material reciclável
+true;519215;Operador de prensa de material reciclável
+true;519305;Auxiliar de veterinário
+true;519310;Esteticista de animais domésticos
+true;519315;Banhista de animais domésticos
+true;519320;Tosador de animais domésticos
+true;519805;Profissional do sexo
+true;519905;Cartazeiro
+true;519910;Controlador de pragas
+true;519915;Engraxate
+true;519920;Gandula
+true;519925;Guardador de veículos
+true;519930;Lavador de garrafas, vidros e outros utensílios
+true;519935;Lavador de veículos
+true;519940;Leiturista
+true;519945;Recepcionista de casas de espetáculos
+true;520105;Supervisor de vendas de serviços
+true;520110;Supervisor de vendas comercial
+true;521105;Vendedor em comércio atacadista
+true;521110;Vendedor de comércio varejista
+true;521115;Promotor de vendas
+true;521120;Demonstrador de mercadorias
+true;521125;Repositor de mercadorias
+true;521130;Atendente de farmácia - balconista
+true;521135;Frentista
+true;521140;Atendente de lojas e mercados
+true;523105;Instalador de cortinas e persianas, portas sanfonadas e boxe
+true;523110;Instalador de som e acessórios de veículos
+true;523115;Chaveiro
+true;524105;Vendedor em domicílio
+true;524205;Feirante
+true;524210;Jornaleiro (em banca de jornal)
+true;524215;Vendedor  permissionário
+true;524305;Vendedor ambulante
+true;524310;Pipoqueiro ambulante
+true;524315;Baiana de acarajé
+true;611005;Produtor agropecuário, em geral
+true;612005;Produtor agrícola polivalente
+true;612105;Produtor de arroz
+true;612110;Produtor de cana-de-açúcar
+true;612115;Produtor de cereais de inverno
+true;612120;Produtor de gramíneas forrageiras
+true;612125;Produtor de milho e sorgo
+true;612205;Produtor de algodão
+true;612210;Produtor de curauá
+true;612215;Produtor de juta
+true;612220;Produtor de rami
+true;612225;Produtor de sisal
+true;612305;Produtor na olericultura de legumes
+true;612310;Produtor na olericultura de raízes, bulbos e tubérculos
+true;612315;Produtor na olericultura de talos, folhas e flores
+true;612320;Produtor na olericultura de frutos e sementes
+true;612405;Produtor de flores de corte
+true;612410;Produtor de flores em vaso
+true;612415;Produtor de forrações
+true;612420;Produtor de plantas ornamentais
+true;612505;Produtor de árvores frutíferas
+true;612510;Produtor de espécies frutíferas rasteiras
+true;612515;Produtor de espécies frutíferas trepadeiras
+true;612605;Cafeicultor
+true;612610;Produtor de cacau
+true;612615;Produtor de erva-mate
+true;612620;Produtor de fumo
+true;612625;Produtor de guaraná
+true;612705;Produtor da cultura de amendoim
+true;612710;Produtor da cultura de canola
+true;612715;Produtor da cultura de coco-da-baia
+true;612720;Produtor da cultura de dendê
+true;612725;Produtor da cultura de girassol
+true;612730;Produtor da cultura de linho
+true;612735;Produtor da cultura de mamona
+true;612740;Produtor da cultura de soja
+true;612805;Produtor de especiarias
+true;612810;Produtor de plantas aromáticas e medicinais
+true;613005;Criador em pecuária polivalente
+true;613010;Criador de animais domésticos
+true;613105;Criador de asininos e muares
+true;613110;Criador de bovinos (corte)
+true;613115;Criador de bovinos (leite)
+true;613120;Criador de bubalinos (corte)
+true;613125;Criador de bubalinos (leite)
+true;613130;Criador de eqüínos
+true;613205;Criador de caprinos
+true;613210;Criador de ovinos
+true;613215;Criador de suínos
+true;613305;Avicultor
+true;613310;Cunicultor
+true;613405;Apicultor
+true;613410;Criador de animais produtores de veneno
+true;613415;Minhocultor
+true;613420;Sericultor
+true;620105;Supervisor de exploração agrícola
+true;620110;Supervisor de exploração agropecuária
+true;620115;Supervisor de exploração pecuária
+true;621005;Trabalhador agropecuário em geral
+true;622005;Caseiro (agricultura)
+true;622010;Jardineiro
+true;622015;Trabalhador na produção de mudas e sementes
+true;622020;Trabalhador volante da agricultura
+true;622105;Trabalhador da cultura de arroz
+true;622110;Trabalhador da cultura de cana-de-açúcar
+true;622115;Trabalhador da cultura de milho e sorgo
+true;622120;Trabalhador da cultura de trigo, aveia, cevada e triticale
+true;622205;Trabalhador da cultura de algodão
+true;622210;Trabalhador da cultura de sisal
+true;622215;Trabalhador da cultura do rami
+true;622305;Trabalhador na olericultura (frutos e sementes)
+true;622310;Trabalhador na olericultura (legumes)
+true;622315;Trabalhador na olericultura (raízes, bulbos e tubérculos)
+true;622320;Trabalhador na olericultura (talos, folhas e flores)
+true;622405;Trabalhador no cultivo de flores e folhagens de corte
+true;622410;Trabalhador no cultivo de flores em vaso
+true;622415;Trabalhador no cultivo de forrações
+true;622420;Trabalhador no cultivo de mudas
+true;622425;Trabalhador no cultivo de plantas ornamentais
+true;622505;Trabalhador no cultivo de árvores frutíferas
+true;622510;Trabalhador no cultivo de espécies frutíferas rasteiras
+true;622515;Trabalhador no cultivo de trepadeiras frutíferas
+true;622605;Trabalhador da cultura de cacau
+true;622610;Trabalhador da cultura de café
+true;622615;Trabalhador da cultura de erva-mate
+true;622620;Trabalhador da cultura de fumo
+true;622625;Trabalhador da cultura de guaraná
+true;622705;Trabalhador na cultura de amendoim
+true;622710;Trabalhador na cultura de canola
+true;622715;Trabalhador na cultura de coco-da-baía
+true;622720;Trabalhador na cultura de dendê
+true;622725;Trabalhador na cultura de mamona
+true;622730;Trabalhador na cultura de soja
+true;622735;Trabalhador na cultura do girassol
+true;622740;Trabalhador na cultura do linho
+true;622805;Trabalhador da cultura de especiarias
+true;622810;Trabalhador da cultura de plantas aromáticas e medicinais
+true;623005;Adestrador de animais
+true;623010;Inseminador
+true;623015;Trabalhador de pecuária polivalente
+true;623020;Tratador de animais
+true;623025;Casqueador de animais
+true;623030;Ferrador de animais
+true;623105;Trabalhador da pecuária (asininos e muares)
+true;623110;Trabalhador da pecuária (bovinos corte)
+true;623115;Trabalhador da pecuária (bovinos leite)
+true;623120;Trabalhador da pecuária (bubalinos)
+true;623125;Trabalhador da pecuária (eqüinos)
+true;623205;Trabalhador da caprinocultura
+true;623210;Trabalhador da ovinocultura
+true;623215;Trabalhador da suinocultura
+true;623305;Trabalhador da avicultura de corte
+true;623310;Trabalhador da avicultura de postura
+true;623315;Operador de incubadora
+true;623320;Trabalhador da cunicultura
+true;623325;Sexador
+true;623405;Trabalhador em criatórios de animais produtores de veneno
+true;623410;Trabalhador na apicultura
+true;623415;Trabalhador na minhocultura
+true;623420;Trabalhador na sericicultura
+true;630105;Supervisor da aqüicultura
+true;630110;Supervisor da área florestal
+true;631005;Catador de caranguejos e siris
+true;631010;Catador de mariscos
+true;631015;Pescador artesanal de lagostas
+true;631020;Pescador artesanal de peixes e camarões
+true;631105;Pescador artesanal de água doce
+true;631205;Pescador industrial
+true;631210;Pescador profissional
+true;631305;Criador de camarões
+true;631310;Criador de jacarés
+true;631315;Criador de mexilhões
+true;631320;Criador de ostras
+true;631325;Criador de peixes
+true;631330;Criador de quelônios
+true;631335;Criador de rãs
+true;631405;Gelador industrial
+true;631410;Gelador profissional
+true;631415;Proeiro
+true;631420;Redeiro (pesca)
+true;632005;Guia florestal
+true;632010;Raizeiro
+true;632015;Viveirista florestal
+true;632105;Classificador de toras
+true;632110;Cubador de madeira
+true;632115;Identificador florestal
+true;632120;Operador de motosserra
+true;632125;Trabalhador de extração florestal, em geral
+true;632205;Seringueiro
+true;632210;Trabalhador da exploração de espécies produtoras de gomas não elásticas
+true;632215;Trabalhador da exploração de resinas
+true;632305;Trabalhador da exploração de andiroba
+true;632310;Trabalhador da exploração de babaçu
+true;632315;Trabalhador da exploração de bacaba
+true;632320;Trabalhador da exploração de buriti
+true;632325;Trabalhador da exploração de carnaúba
+true;632330;Trabalhador da exploração de coco-da-praia
+true;632335;Trabalhador da exploração de copaíba
+true;632340;Trabalhador da exploração de malva (pãina)
+true;632345;Trabalhador da exploração de murumuru
+true;632350;Trabalhador da exploração de oiticica
+true;632355;Trabalhador da exploração de ouricuri
+true;632360;Trabalhador da exploração de pequi
+true;632365;Trabalhador da exploração de piaçava
+true;632370;Trabalhador da exploração de tucum
+true;632405;Trabalhador da exploração de açaí
+true;632410;Trabalhador da exploração de castanha
+true;632415;Trabalhador da exploração de pinhão
+true;632420;Trabalhador da exploração de pupunha
+true;632505;Trabalhador da exploração de árvores e arbustos produtores de substâncias aromát., Medic. E tóxicas
+true;632510;Trabalhador da exploração de cipós produtores de substâncias aromáticas, medicinais e tóxicas
+true;632515;Trabalhador da exploração de madeiras tanantes
+true;632520;Trabalhador da exploração de raízes produtoras de substâncias aromáticas, medicinais e tóxicas
+true;632525;Trabalhador da extração de substâncias aromáticas, medicinais e tóxicas, em geral
+true;632605;Carvoeiro
+true;632610;Carbonizador
+true;632615;Ajudante de carvoaria
+true;641005;Operador de colheitadeira
+true;641010;Operador de máquinas de beneficiamento de produtos agrícolas
+true;641015;Tratorista agrícola
+true;642005;Operador de colhedor florestal
+true;642010;Operador de máquinas florestais estáticas
+true;642015;Operador de trator florestal
+true;643005;Trabalhador na operação de sistema de irrigação localizada (microaspersão e gotejamento)
+true;643010;Trabalhador na operação de sistema de irrigação por aspersão (pivô central)
+true;643015;Trabalhador na operação de sistemas convencionais de irrigação por aspersão
+true;643020;Trabalhador na operação de sistemas de irrigação e aspersão (alto propelido)
+true;643025;Trabalhador na operação de sistemas de irrigação por superfície e drenagem
+true;710105;Supervisor de apoio operacional na mineração
+true;710110;Supervisor de extração de sal
+true;710115;Supervisor de perfuração e desmonte
+true;710120;Supervisor de produção na mineração
+true;710125;Supervisor de transporte na mineração
+true;710205;Mestre (construção civil)
+true;710210;Mestre de linhas (ferrovias)
+true;710215;Inspetor de terraplenagem
+true;710220;Supervisor de usina de concreto
+true;710225;Fiscal de pátio de usina de concreto
+true;711105;Amostrador de minérios
+true;711110;Canteiro
+true;711115;Destroçador de pedra
+true;711120;Detonador
+true;711125;Escorador de minas
+true;711130;Mineiro
+true;711205;Operador de caminhão (minas e pedreiras)
+true;711210;Operador de carregadeira
+true;711215;Operador de máquina cortadora (minas e pedreiras)
+true;711220;Operador de máquina de extração contínua (minas de carvão)
+true;711225;Operador de máquina perfuradora (minas e pedreiras)
+true;711230;Operador de máquina perfuratriz
+true;711235;Operador de motoniveladora (extração de minerais sólidos)
+true;711240;Operador de schutthecar
+true;711245;Operador de trator (minas e pedreiras)
+true;711305;Operador de sonda de percussão
+true;711310;Operador de sonda rotativa
+true;711315;Sondador (poços de petróleo e gás)
+true;711320;Sondador de poços (exceto de petróleo e gás)
+true;711325;Plataformista (petróleo)
+true;711330;Torrista (petróleo)
+true;711405;Garimpeiro
+true;711410;Operador de salina (sal marinho)
+true;712105;Moleiro de minérios
+true;712110;Operador de aparelho de flotação
+true;712115;Operador de aparelho de precipitação (minas de ouro ou prata)
+true;712120;Operador de britador de mandíbulas
+true;712125;Operador de espessador
+true;712130;Operador de jig (minas)
+true;712135;Operador de peneiras hidráulicas
+true;712205;Cortador de pedras
+true;712210;Gravador de inscrições em pedra
+true;712215;Gravador de relevos em pedra
+true;712220;Polidor de pedras
+true;712225;Torneiro (lavra de pedra)
+true;712230;Traçador de pedras
+true;715105;Operador de bate-estacas
+true;715110;Operador de compactadora de solos
+true;715115;Operador de escavadeira
+true;715120;Operador de máquina de abrir valas
+true;715125;Operador de máquinas de construção civil e mineração
+true;715130;Operador de motoniveladora
+true;715135;Operador de pá carregadeira
+true;715140;Operador de pavimentadora (asfalto, concreto e materiais similares)
+true;715145;Operador de trator de lâmina
+true;715205;Calceteiro
+true;715210;Pedreiro
+true;715215;Pedreiro (chaminés industriais)
+true;715220;Pedreiro (material refratário)
+true;715225;Pedreiro (mineração)
+true;715230;Pedreiro de edificações
+true;715305;Armador de estrutura de concreto
+true;715310;Moldador de corpos de prova em usinas de concreto
+true;715315;Armador de estrutura de concreto armado
+true;715405;Operador de betoneira
+true;715410;Operador de bomba de concreto
+true;715415;Operador de central de concreto
+true;715505;Carpinteiro
+true;715510;Carpinteiro (esquadrias)
+true;715515;Carpinteiro (cenários)
+true;715520;Carpinteiro (mineração)
+true;715525;Carpinteiro de obras
+true;715530;Carpinteiro (telhados)
+true;715535;Carpinteiro de fôrmas para concreto
+true;715540;Carpinteiro de obras civis de arte (pontes, túneis, barragens)
+true;715545;Montador de andaimes (edificações)
+true;715605;Eletricista de instalações (cenários)
+true;715610;Eletricista de instalações (edifícios)
+true;715615;Eletricista de instalações
+true;715705;Aplicador de asfalto impermeabilizante (coberturas)
+true;715710;Instalador de isolantes acústicos
+true;715715;Instalador de isolantes térmicos (refrigeração e climatização)
+true;715720;Instalador de isolantes térmicos de caldeira e tubulações
+true;715725;Instalador de material isolante, a mão (edificações)
+true;715730;Instalador de material isolante, a máquina (edificações)
+true;716105;Acabador de superfícies de concreto
+true;716110;Revestidor de superfícies de concreto
+true;716205;Telhador (telhas de argila e materiais similares)
+true;716210;Telhador (telhas de cimento-amianto)
+true;716215;Telhador (telhas metálicas)
+true;716220;Telhador (telhas plásticas)
+true;716305;Vidraceiro
+true;716310;Vidraceiro (edificações)
+true;716315;Vidraceiro (vitrais)
+true;716405;Gesseiro
+true;716505;Assoalhador
+true;716510;Assentador de revestimentos cerâmicos
+true;716515;Pastilheiro
+true;716520;Lustrador de piso
+true;716525;Marmorista (construção)
+true;716530;Mosaísta
+true;716535;Taqueiro
+true;716540;Rejuntador de revestimentos
+true;716605;Calafetador
+true;716610;Pintor de obras
+true;716615;Revestidor de interiores (papel, material plástico e emborrachados)
+true;717005;Demolidor de edificações
+true;717010;Operador de martelete
+true;717015;Poceiro (edificações)
+true;717020;Servente de obras
+true;717025;Vibradorista
+true;720105;Mestre (afiador de ferramentas)
+true;720110;Mestre de caldeiraria
+true;720115;Mestre de ferramentaria
+true;720120;Mestre de forjaria
+true;720125;Mestre de fundição
+true;720130;Mestre de galvanoplastia
+true;720135;Mestre de pintura (tratamento de superfícies)
+true;720140;Mestre de soldagem
+true;720145;Mestre de trefilação de metais
+true;720150;Mestre de usinagem
+true;720155;Mestre serralheiro
+true;720160;Supervisor de controle de tratamento térmico
+true;720205;Mestre (construção naval)
+true;720210;Mestre (indústria de automotores e material de transportes)
+true;720215;Mestre (indústria de máquinas e outros equipamentos mecânicos)
+true;720220;Mestre de construção de fornos
+true;721105;Ferramenteiro
+true;721110;Ferramenteiro de mandris, calibradores e outros dispositivos
+true;721115;Modelador de metais (fundição)
+true;721205;Operador de máquina de eletroerosão
+true;721210;Operador de máquinas operatrizes
+true;721215;Operador de máquinas-ferramenta convencionais
+true;721220;Operador de usinagem convencional por abrasão
+true;721225;Preparador de máquinas-ferramenta
+true;721305;Afiador de cardas
+true;721310;Afiador de cutelaria
+true;721315;Afiador de ferramentas
+true;721320;Afiador de serras
+true;721325;Polidor de metais
+true;721405;Operador de centro de usinagem com comando numérico
+true;721410;Operador de fresadora com comando numérico
+true;721415;Operador de mandriladora com comando numérico
+true;721420;Operador de máquina eletroerosão, à fio, com comando numérico
+true;721425;Operador de retificadora com comando numérico
+true;721430;Operador de torno com comando numérico
+true;722105;Forjador
+true;722110;Forjador a martelo
+true;722115;Forjador prensista
+true;722205;Fundidor de metais
+true;722210;Lingotador
+true;722215;Operador de acabamento de peças fundidas
+true;722220;Operador de máquina centrifugadora de fundição
+true;722225;Operador de máquina de fundir sob pressão
+true;722230;Operador de vazamento (lingotamento)
+true;722235;Preparador de panelas (lingotamento)
+true;722305;Macheiro, a mão
+true;722310;Macheiro, a  máquina
+true;722315;Moldador, a  mão
+true;722320;Moldador, a  máquina
+true;722325;Operador de equipamentos de preparação de areia
+true;722330;Operador de máquina de moldar automatizada
+true;722405;Cableador
+true;722410;Estirador de tubos de metal sem costura
+true;722415;Trefilador de metais, à máquina
+true;723105;Cementador de metais
+true;723110;Normalizador de metais e de compósitos
+true;723115;Operador de equipamento para resfriamento
+true;723120;Operador de forno de tratamento térmico de metais
+true;723125;Temperador de metais e de compósitos
+true;723205;Decapador
+true;723210;Fosfatizador
+true;723215;Galvanizador
+true;723220;Metalizador a pistola
+true;723225;Metalizador (banho quente)
+true;723230;Operador de máquina recobridora de arame
+true;723235;Operador de zincagem (processo eletrolítico)
+true;723240;Oxidador
+true;723305;Operador de equipamento de secagem de pintura
+true;723310;Pintor a pincel e rolo (exceto obras e estruturas metálicas)
+true;723315;Pintor de estruturas metálicas
+true;723320;Pintor de veículos (fabricação)
+true;723325;Pintor por imersão
+true;723330;Pintor, a  pistola (exceto obras e estruturas metálicas)
+true;724105;Assentador de canalização (edificações)
+true;724110;Encanador
+true;724115;Instalador de tubulações
+true;724120;Instalador de tubulações (aeronaves)
+true;724125;Instalador de tubulações (embarcações)
+true;724130;Instalador de tubulações de gás combustível (produção e distribuição)
+true;724135;Instalador de tubulações de vapor (produção e distribuição)
+true;724205;Montador de estruturas metálicas
+true;724210;Montador de estruturas metálicas de embarcações
+true;724215;Rebitador a  martelo pneumático
+true;724220;Preparador de estruturas metálicas
+true;724225;Riscador de estruturas metálicas
+true;724230;Rebitador, a  mão
+true;724305;Brasador
+true;724310;Oxicortador a mão e a  máquina
+true;724315;Soldador
+true;724320;Soldador a  oxigás
+true;724325;Soldador elétrico
+true;724405;Caldeireiro (chapas de cobre)
+true;724410;Caldeireiro (chapas de ferro e aço)
+true;724415;Chapeador
+true;724420;Chapeador de carrocerias metálicas (fabricação)
+true;724425;Chapeador naval
+true;724430;Chapeador de aeronaves
+true;724435;Funileiro industrial
+true;724440;Serralheiro
+true;724505;Operador de máquina de cilindrar chapas
+true;724510;Operador de máquina de dobrar chapas
+true;724515;Prensista (operador de prensa)
+true;724605;Operador de laços de cabos de aço
+true;724610;Trançador de cabos de aço
+true;725005;Ajustador ferramenteiro
+true;725010;Ajustador mecânico
+true;725015;Ajustador mecânico (usinagem em bancada e em máquinas-ferramentas)
+true;725020;Ajustador mecânico em bancada
+true;725025;Ajustador naval (reparo e construção)
+true;725105;Montador de máquinas, motores e acessórios (montagem em série)
+true;725205;Montador de máquinas
+true;725210;Montador de máquinas gráficas
+true;725215;Montador de máquinas operatrizes para madeira
+true;725220;Montador de máquinas têxteis
+true;725225;Montador de máquinas-ferramentas (usinagem de metais)
+true;725305;Montador de equipamento de levantamento
+true;725310;Montador de máquinas agrícolas
+true;725315;Montador de máquinas de minas e pedreiras
+true;725320;Montador de máquinas de terraplenagem
+true;725405;Mecânico montador de motores de aeronaves
+true;725410;Mecânico montador de motores de embarcações
+true;725415;Mecânico montador de motores de explosão e diesel
+true;725420;Mecânico montador de turboalimentadores
+true;725505;Montador de veículos (linha de montagem)
+true;725510;Operador de time de montagem
+true;725605;Montador de estruturas de aeronaves
+true;725610;Montador de sistemas de combustível de aeronaves
+true;725705;Mecânico de refrigeração
+true;730105;Supervisor de montagem e instalação eletroeletrônica
+true;731105;Montador de equipamentos eletrônicos (aparelhos médicos)
+true;731110;Montador de equipamentos eletrônicos (computadores e equipamentos auxiliares)
+true;731115;Montador de equipamentos elétricos (instrumentos de medição)
+true;731120;Montador de equipamentos elétricos (aparelhos eletrodomésticos)
+true;731125;Montador de equipamentos elétricos (centrais elétricas)
+true;731130;Montador de equipamentos elétricos (motores e dínamos)
+true;731135;Montador de equipamentos elétricos
+true;731140;Montador de equipamentos eletrônicos (instalações de sinalização)
+true;731145;Montador de equipamentos eletrônicos (máquinas industriais)
+true;731150;Montador de equipamentos eletrônicos
+true;731155;Montador de equipamentos elétricos (elevadores e equipamentos similares)
+true;731160;Montador de equipamentos elétricos (transformadores)
+true;731165;Bobinador eletricista, à mão
+true;731170;Bobinador eletricista, à máquina
+true;731175;Operador de linha de montagem (aparelhos elétricos)
+true;731180;Operador de linha de montagem (aparelhos eletrônicos)
+true;731205;Montador de equipamentos eletrônicos (estação de rádio, tv e equipamentos de radar)
+true;731305;Instalador-reparador de equipamentos de comutação em telefonia
+true;731310;Instalador-reparador de equipamentos de energia em telefonia
+true;731315;Instalador-reparador de equipamentos de transmissão em telefonia
+true;731320;Instalador-reparador de linhas e aparelhos de telecomunicações
+true;731325;Instalador-reparador de redes e cabos telefônicos
+true;731330;Reparador de aparelhos de telecomunicações em laboratório
+true;732105;Eletricista de manutenção de linhas elétricas, telefônicas e de comunicação de dados
+true;732110;Emendador de cabos elétricos e telefônicos (aéreos e subterrâneos)
+true;732115;Examinador de cabos, linhas elétricas e telefônicas
+true;732120;Instalador de linhas elétricas de alta e baixa - tensão (rede aérea e subterrânea)
+true;732125;Instalador eletricista (tração de veículos)
+true;732130;Instalador-reparador de redes telefônicas e de comunicação de dados
+true;732135;Ligador de linhas telefônicas
+true;732140;Instalador de sistemas fotovoltaicos
+true;740105;Supervisor da mecânica de precisão
+true;740110;Supervisor de fabricação de instrumentos musicais
+true;741105;Ajustador de instrumentos de precisão
+true;741110;Montador de instrumentos de óptica
+true;741115;Montador de instrumentos de precisão
+true;741120;Relojoeiro (fabricação)
+true;741125;Relojoeiro (reparação)
+true;742105;Afinador de instrumentos musicais
+true;742110;Confeccionador de acordeão
+true;742115;Confeccionador de instrumentos de corda
+true;742120;Confeccionador de instrumentos de percussão (pele, couro ou plástico)
+true;742125;Confeccionador de instrumentos de sopro (madeira)
+true;742130;Confeccionador de instrumentos de sopro (metal)
+true;742135;Confeccionador de órgão
+true;742140;Confeccionador de piano
+true;750105;Supervisor de joalheria
+true;750205;Supervisor da indústria de minerais não metálicos (exceto os derivados de petróleo e carvão)
+true;751005;Engastador (jóias)
+true;751010;Joalheiro
+true;751015;Joalheiro (reparações)
+true;751020;Lapidador (jóias)
+true;751105;Bate-folha a  máquina
+true;751110;Fundidor (joalheria e ourivesaria)
+true;751115;Gravador (joalheria e ourivesaria)
+true;751120;Laminador de metais preciosos a  mão
+true;751125;Ourives
+true;751130;Trefilador (joalheria e ourivesaria)
+true;752105;Artesão modelador (vidros)
+true;752110;Moldador (vidros)
+true;752115;Soprador de vidro
+true;752120;Transformador de tubos de vidro
+true;752205;Aplicador serigráfico em vidros
+true;752210;Cortador de vidro
+true;752215;Gravador de vidro a  água-forte
+true;752220;Gravador de vidro a  esmeril
+true;752225;Gravador de vidro a  jato de areia
+true;752230;Lapidador de vidros e cristais
+true;752235;Surfassagista
+true;752305;Ceramista
+true;752310;Ceramista (torno de pedal e motor)
+true;752315;Ceramista (torno semi-automático)
+true;752320;Ceramista modelador
+true;752325;Ceramista moldador
+true;752330;Ceramista prensador
+true;752405;Decorador de cerâmica
+true;752410;Decorador de vidro
+true;752415;Decorador de vidro à pincel
+true;752420;Operador de esmaltadeira
+true;752425;Operador de espelhamento
+true;752430;Pintor de cerâmica, a  pincel
+true;760105;Contramestre de acabamento (indústria têxtil)
+true;760110;Contramestre de fiação (indústria têxtil)
+true;760115;Contramestre de malharia (indústria têxtil)
+true;760120;Contramestre de tecelagem (indústria têxtil)
+true;760125;Mestre (indústria têxtil e de confecções)
+true;760205;Supervisor de curtimento
+true;760305;Encarregado de corte na confecção do vestuário
+true;760310;Encarregado de costura na confecção do vestuário
+true;760405;Supervisor  (indústria de calçados e artefatos de couro)
+true;760505;Supervisor da confecção de artefatos de tecidos, couros e afins
+true;760605;Supervisor das artes gráficas  (indústria editorial e gráfica)
+true;761005;Operador polivalente da indústria têxtil
+true;761105;Classificador de fibras têxteis
+true;761110;Lavador de lã
+true;761205;Operador de abertura (fiação)
+true;761210;Operador de binadeira
+true;761215;Operador de bobinadeira
+true;761220;Operador de cardas
+true;761225;Operador de conicaleira
+true;761230;Operador de filatório
+true;761235;Operador de laminadeira e reunideira
+true;761240;Operador de maçaroqueira
+true;761245;Operador de open-end
+true;761250;Operador de passador (fiação)
+true;761255;Operador de penteadeira
+true;761260;Operador de retorcedeira
+true;761303;Tecelão (redes)
+true;761306;Tecelão (rendas e bordados)
+true;761309;Tecelão (tear automático)
+true;761312;Tecelão (tear jacquard)
+true;761315;Tecelão (tear mecânico de maquineta)
+true;761318;Tecelão (tear mecânico de xadrez)
+true;761321;Tecelão (tear mecânico liso)
+true;761324;Tecelão (tear mecânico, exceto jacquard)
+true;761327;Tecelão de malhas, a  máquina
+true;761330;Tecelão de malhas (máquina circular)
+true;761333;Tecelão de malhas (máquina retilínea)
+true;761336;Tecelão de meias, a  máquina
+true;761339;Tecelão de meias (máquina circular)
+true;761342;Tecelão de meias (máquina retilínea)
+true;761345;Tecelão de tapetes, a  máquina
+true;761348;Operador de engomadeira de urdume
+true;761351;Operador de espuladeira
+true;761354;Operador de máquina de cordoalha
+true;761357;Operador de urdideira
+true;761360;Passamaneiro a  máquina
+true;761363;Remetedor de fios
+true;761366;Picotador de cartões jacquard
+true;761405;Alvejador (tecidos)
+true;761410;Estampador de tecido
+true;761415;Operador de calandras (tecidos)
+true;761420;Operador de chamuscadeira de tecidos
+true;761425;Operador de impermeabilizador de tecidos
+true;761430;Operador de máquina de lavar fios e tecidos
+true;761435;Operador de rameuse
+true;761805;Inspetor de estamparia (produção têxtil)
+true;761810;Revisor de fios (produção têxtil)
+true;761815;Revisor de tecidos acabados
+true;761820;Revisor de tecidos crus
+true;762005;Trabalhador polivalente do curtimento de couros e peles
+true;762105;Classificador de peles
+true;762110;Descarnador de couros e peles, à maquina
+true;762115;Estirador de couros e peles (preparação)
+true;762120;Fuloneiro
+true;762125;Rachador de couros e peles
+true;762205;Curtidor (couros e peles)
+true;762210;Classificador de couros
+true;762215;Enxugador de couros
+true;762220;Rebaixador de couros
+true;762305;Estirador de couros e peles (acabamento)
+true;762310;Fuloneiro no acabamento de couros e peles
+true;762315;Lixador de couros e peles
+true;762320;Matizador de couros e peles
+true;762325;Operador de máquinas do acabamento de couros e peles
+true;762330;Prensador de couros e peles
+true;762335;Palecionador de couros e peles
+true;762340;Preparador de couros curtidos
+true;762345;Vaqueador de couros e peles
+true;763005;Alfaiate
+true;763010;Costureira de peças sob encomenda
+true;763015;Costureira de reparação de roupas
+true;763020;Costureiro de roupa de couro e pele
+true;763105;Auxiliar de corte (preparação da confecção de roupas)
+true;763110;Cortador de roupas
+true;763115;Enfestador de roupas
+true;763120;Riscador de roupas
+true;763125;Ajudante de confecção
+true;763205;Costureiro de roupas de couro e pele, a  máquina na  confecção em série
+true;763210;Costureiro na confecção em série
+true;763215;Costureiro, a  máquina  na confecção em série
+true;763305;Arrematadeira
+true;763310;Bordador, à máquina
+true;763315;Marcador de peças confeccionadas para bordar
+true;763320;Operador de máquina de costura de acabamento
+true;763325;Passadeira de peças confeccionadas
+true;764005;Trabalhador polivalente da confecção de calçados
+true;764105;Cortador de calçados, a  máquina (exceto solas e palmilhas)
+true;764110;Cortador de solas e palmilhas, a  máquina
+true;764115;Preparador de calçados
+true;764120;Preparador de solas e palmilhas
+true;764205;Costurador de calçados, a  máquina
+true;764210;Montador de calçados
+true;764305;Acabador de calçados
+true;765005;Confeccionador de artefatos de couro (exceto sapatos)
+true;765010;Chapeleiro de senhoras
+true;765015;Boneleiro
+true;765105;Cortador de artefatos de couro (exceto roupas e calçados)
+true;765110;Cortador de tapeçaria
+true;765205;Colchoeiro (confecção de colchões)
+true;765215;Confeccionador de brinquedos de pano
+true;765225;Confeccionador de velas náuticas, barracas e toldos
+true;765230;Estofador de aviões
+true;765235;Estofador de móveis
+true;765240;Tapeceiro de autos
+true;765310;Costurador de artefatos de couro, a  máquina (exceto roupas e calçados)
+true;765315;Montador de artefatos de couro (exceto roupas e calçados)
+true;765405;Trabalhador do acabamento de artefatos de tecidos e couros
+true;766105;Copiador de chapa
+true;766115;Gravador de matriz para flexografia (clicherista)
+true;766120;Editor de texto e imagem
+true;766125;Montador de fotolito (analógico e digital)
+true;766130;Gravador de matriz para rotogravura (eletromecânico e químico)
+true;766135;Gravador de matriz calcográfica
+true;766140;Gravador de matriz serigráfica
+true;766145;Operador de sistemas de prova (analógico e digital)
+true;766150;Operador de processo de tratamento de imagem
+true;766155;Programador visual gráfico
+true;766205;Impressor (serigrafia)
+true;766210;Impressor calcográfico
+true;766215;Impressor de ofsete (plano e rotativo)
+true;766220;Impressor de rotativa
+true;766225;Impressor de rotogravura
+true;766230;Impressor digital
+true;766235;Impressor flexográfico
+true;766240;Impressor letterset
+true;766245;Impressor tampográfico
+true;766250;Impressor tipográfico
+true;766305;Acabador de embalagens (flexíveis e cartotécnicas)
+true;766310;Impressor de corte e vinco
+true;766315;Operador de acabamento (indústria gráfica)
+true;766320;Operador de guilhotina (corte de papel)
+true;766325;Preparador de matrizes de corte e vinco
+true;766405;Laboratorista fotográfico
+true;766410;Revelador de filmes fotográficos, em preto e branco
+true;766415;Revelador de filmes fotográficos, em cores
+true;766420;Auxiliar de radiologia (revelação fotográfica)
+true;768105;Tecelão (tear manual)
+true;768110;Tecelão de tapetes, a  mão
+true;768115;Tricoteiro, à mão
+true;768120;Redeiro
+true;768125;Chapeleiro (chapéus de palha)
+true;768130;Crocheteiro, a  mão
+true;768205;Bordador, a  mão
+true;768210;Cerzidor
+true;768305;Artífice do couro
+true;768310;Cortador de calçados, a  mão (exceto solas)
+true;768315;Costurador de artefatos de couro, a  mão (exceto roupas e calçados)
+true;768320;Sapateiro (calçados sob medida)
+true;768325;Seleiro
+true;768605;Tipógrafo
+true;768610;Linotipista
+true;768615;Monotipista
+true;768620;Paginador
+true;768625;Pintor de letreiros
+true;768630;Confeccionador de carimbos de borracha
+true;768705;Gravador, à mão (encadernação)
+true;768710;Restaurador de livros
+true;770105;Mestre (indústria de madeira e mobiliário)
+true;770110;Mestre carpinteiro
+true;771105;Marceneiro
+true;771110;Modelador de madeira
+true;771115;Maquetista na marcenaria
+true;771120;Tanoeiro
+true;772105;Classificador de madeira
+true;772110;Impregnador de madeira
+true;772115;Secador de madeira
+true;773105;Cortador de laminados de madeira
+true;773110;Operador de serras no desdobramento de madeira
+true;773115;Serrador de bordas no desdobramento de madeira
+true;773120;Serrador de madeira
+true;773125;Serrador de madeira (serra circular múltipla)
+true;773130;Serrador de madeira (serra de fita múltipla)
+true;773205;Operador de máquina intercaladora e placas (compensados)
+true;773210;Prensista de aglomerados
+true;773215;Prensista de compensados
+true;773220;Preparador de aglomerantes
+true;773305;Operador de desempenadeira na usinagem convencional de madeira
+true;773310;Operador de entalhadeira (usinagem de madeira)
+true;773315;Operador de fresadora (usinagem de madeira)
+true;773320;Operador de lixadeira (usinagem de madeira)
+true;773325;Operador de máquina de usinagem madeira, em geral
+true;773330;Operador de molduradora (usinagem de madeira)
+true;773335;Operador de plaina desengrossadeira
+true;773340;Operador de serras (usinagem de madeira)
+true;773345;Operador de torno automático (usinagem de madeira)
+true;773350;Operador de tupia (usinagem de madeira)
+true;773355;Torneiro na usinagem convencional de madeira
+true;773405;Operador de máquina bordatriz
+true;773410;Operador de máquina de cortina d´água (produção de móveis)
+true;773415;Operador de máquina de usinagem de madeira (produção em série)
+true;773420;Operador de prensa de alta freqüência na usinagem de madeira
+true;773505;Operador de centro de usinagem de madeira (cnc)
+true;773510;Operador de máquinas de usinar madeira (cnc)
+true;774105;Montador de móveis e artefatos de madeira
+true;775105;Entalhador  de madeira
+true;775110;Folheador de móveis de madeira
+true;775115;Lustrador de peças de madeira
+true;775120;Marcheteiro
+true;776405;Cesteiro
+true;776410;Confeccionador de escovas, pincéis e produtos similares (a mão)
+true;776415;Confeccionador de escovas, pincéis e produtos similares (a máquina)
+true;776420;Confeccionador de móveis de vime, junco e bambu
+true;776425;Esteireiro
+true;776430;Vassoureiro
+true;777105;Carpinteiro naval (construção de pequenas embarcações)
+true;777110;Carpinteiro naval (embarcações)
+true;777115;Carpinteiro naval (estaleiros)
+true;777205;Carpinteiro de carretas
+true;777210;Carpinteiro de carrocerias
+true;780105;Supervisor de embalagem e etiquetagem
+true;781105;Condutor de processos robotizados de pintura
+true;781110;Condutor de processos robotizados de soldagem
+true;781305;Operador de veículos subaquáticos controlados remotamente
+true;781705;Mergulhador profissional (raso e profundo)
+true;782105;Operador de draga
+true;782110;Operador de guindaste (fixo)
+true;782115;Operador de guindaste móvel
+true;782120;Operador de máquina rodoferroviária
+true;782125;Operador de monta-cargas (construção civil)
+true;782130;Operador de ponte rolante
+true;782135;Operador de pórtico rolante
+true;782140;Operador de talha elétrica
+true;782145;Sinaleiro (ponte-rolante)
+true;782205;Guincheiro (construção civil)
+true;782210;Operador de docagem
+true;782220;Operador de empilhadeira
+true;782305;Motorista de carro de passeio
+true;782310;Motorista de furgão ou veículo similar
+true;782315;Motorista de táxi
+true;782320;Condutor de ambulância
+true;782405;Motorista de ônibus rodoviário
+true;782410;Motorista de ônibus urbano
+true;782415;Motorista de trólebus
+true;782505;Caminhoneiro autônomo (rotas regionais e internacionais)
+true;782510;Motorista de caminhão (rotas regionais e internacionais)
+true;782515;Motorista operacional de guincho
+true;782605;Operador de trem de metrô
+true;782610;Maquinista de trem
+true;782615;Maquinista de trem metropolitano
+true;782620;Motorneiro
+true;782625;Auxiliar de maquinista de trem
+true;782630;Operador de teleférico (passageiros)
+true;782705;Marinheiro de convés (marítimo e fluviário)
+true;782710;Marinheiro de máquinas
+true;782715;Moço de convés (marítimo e fluviário)
+true;782720;Moço de máquinas (marítimo e fluviário)
+true;782725;Marinheiro de esporte e recreio
+true;782730;Marinheiro auxiliar de convés (marítimo e aquaviario)
+true;782735;Marinheiro auxiliar de máquinas (marítimo e aquaviário)
+true;782805;Condutor de veículos de tração animal (ruas e estradas)
+true;782810;Tropeiro
+true;782815;Boiadeiro
+true;782820;Condutor de veículos a pedais
+true;783105;Agente de pátio
+true;783110;Manobrador
+true;783205;Carregador (aeronaves)
+true;783210;Carregador (armazém)
+true;783215;Carregador (veículos de transportes terrestres)
+true;783220;Estivador
+true;783225;Ajudante de motorista
+true;783230;Bloqueiro (trabalhador portuário)
+true;783235;Trabalhador portuário de capatazia
+true;783240;Amarrador e desamarrado de embarcações
+true;784105;Embalador, a mão
+true;784110;Embalador, a máquina
+true;784115;Operador de máquina de etiquetar
+true;784120;Operador de máquina de envasar líquidos
+true;784125;Operador de prensa de enfardamento
+true;784205;Alimentador de linha de produção
+true;791105;Artesão bordador
+true;791110;Artesão ceramista
+true;791115;Artesão com material reciclável
+true;791120;Artesão confeccionador de biojóias e ecojóias
+true;791125;Artesão do couro
+true;791130;Artesão escultor
+true;791135;Artesão moveleiro (exceto reciclado)
+true;791140;Artesão tecelão
+true;791145;Artesão trançador
+true;791150;Artesão crocheteiro
+true;791155;Artesão tricoteiro
+true;791160;Artesão rendeiro
+true;810105;Mestre (indústria petroquímica e carboquímica)
+true;810110;Mestre de produção química
+true;810205;Mestre (indústria de borracha e plástico)
+true;810305;Mestre de produção farmacêutica
+true;811005;Operador de processos químicos e petroquímicos
+true;811010;Operador de sala de controle de instalações químicas, petroquímicas e afins
+true;811105;Moleiro (tratamentos químicos e afins)
+true;811110;Operador de máquina misturadeira (tratamentos químicos e afins)
+true;811115;Operador de britadeira (tratamentos químicos e afins)
+true;811120;Operador de concentração
+true;811125;Trabalhador da fabricação de resinas e vernizes
+true;811130;Trabalhador de fabricação de tintas
+true;811205;Operador de calcinação (tratamento químico e afins)
+true;811215;Operador de tratamento químico de materiais radioativos
+true;811305;Operador de centrifugadora (tratamentos químicos e afins)
+true;811310;Operador de exploração de petróleo
+true;811315;Operador de filtro de secagem (mineração)
+true;811320;Operador de filtro de tambor rotativo (tratamentos químicos e afins)
+true;811325;Operador de filtro-esteira (mineração)
+true;811330;Operador de filtro-prensa (tratamentos químicos e afins)
+true;811335;Operador de filtros de parafina (tratamentos químicos e afins)
+true;811405;Destilador de madeira
+true;811410;Destilador de produtos químicos (exceto petróleo)
+true;811415;Operador de alambique de funcionamento contínuo (produtos químicos, exceto petróleo)
+true;811420;Operador de aparelho de reação e conversão (produtos químicos, exceto petróleo)
+true;811425;Operador de equipamento de destilação de álcool
+true;811430;Operador de evaporador na destilação
+true;811505;Operador de painel de controle (refinação de petróleo)
+true;811510;Operador de transferência e estocagem - na refinação do petróleo
+true;811605;Operador de britador de coque
+true;811610;Operador de carro de apagamento e coque
+true;811615;Operador de destilação e subprodutos de coque
+true;811620;Operador de enfornamento e desenfornamento de coque
+true;811625;Operador de exaustor (coqueria)
+true;811630;Operador de painel de controle
+true;811635;Operador de preservação e controle térmico
+true;811640;Operador de reator de coque de petróleo
+true;811645;Operador de refrigeração (coqueria)
+true;811650;Operador de sistema de reversão (coqueria)
+true;811705;Bamburista
+true;811710;Calandrista de borracha
+true;811715;Confeccionador de pneumáticos
+true;811725;Confeccionador de velas por imersão
+true;811735;Confeccionador de velas por moldagem
+true;811745;Laminador de plástico
+true;811750;Moldador de borracha por compressão
+true;811760;Moldador de plástico por compressão
+true;811770;Moldador de plástico por injeção
+true;811775;Trefilador de borracha
+true;811805;Operador de máquina de produtos farmacêuticos
+true;811810;Drageador (medicamentos)
+true;811815;Operador de máquina de fabricação de cosméticos
+true;811820;Operador de máquina de fabricação de produtos de higiene e limpeza (sabão, sabonete, detergente, absorvente, fraldas cotonetes e outros)
+true;812105;Pirotécnico
+true;812110;Trabalhador da fabricação de munição e explosivos
+true;813105;Cilindrista (petroquímica e afins)
+true;813110;Operador de calandra (química, petroquímica e afins)
+true;813115;Operador de extrusora (química, petroquímica e afins)
+true;813120;Operador de processo (química, petroquímica e afins)
+true;813125;Operador de produção (química, petroquímica e afins)
+true;813130;Técnico de operação (química, petroquímica e afins)
+true;818105;Assistente de laboratório industrial
+true;818110;Auxiliar de laboratório de análises físico-químicas
+true;820105;Mestre de siderurgia
+true;820110;Mestre de aciaria
+true;820115;Mestre de alto-forno
+true;820120;Mestre de forno elétrico
+true;820125;Mestre de laminação
+true;820205;Supervisor de fabricação de produtos cerâmicos, porcelanatos e afins
+true;820210;Supervisor de fabricação de produtos de vidro
+true;821105;Operador de centro de controle
+true;821110;Operador de máquina de sinterizar
+true;821205;Forneiro e operador (alto-forno)
+true;821210;Forneiro e operador (conversor a oxigênio)
+true;821215;Forneiro e operador (forno elétrico)
+true;821220;Forneiro e operador (refino de metais não-ferrosos)
+true;821225;Forneiro e operador de forno de redução direta
+true;821230;Operador de aciaria (basculamento de convertedor)
+true;821235;Operador de aciaria (dessulfuração de gusa)
+true;821240;Operador de aciaria (recebimento de gusa)
+true;821245;Operador de área de corrida
+true;821250;Operador de desgaseificação
+true;821255;Soprador de convertedor
+true;821305;Operador de laminador
+true;821310;Operador de laminador de barras a frio
+true;821315;Operador de laminador de barras a quente
+true;821320;Operador de laminador de metais não-ferrosos
+true;821325;Operador de laminador de tubos
+true;821330;Operador de montagem de cilindros e mancais
+true;821335;Recuperador de guias e cilindros
+true;821405;Encarregado de acabamento de chapas e metais  (têmpera)
+true;821410;Escarfador
+true;821415;Marcador de produtos (siderúrgico e metalúrgico)
+true;821420;Operador de bobinadeira de tiras a quente, no acabamento de chapas e metais
+true;821425;Operador de cabine de laminação (fio-máquina)
+true;821430;Operador de escória e sucata
+true;821435;Operador de jato abrasivo
+true;821440;Operador de tesoura mecânica e máquina de corte, no acabamento de chapas e metais
+true;821445;Preparador de sucata e aparas
+true;821450;Rebarbador de metal
+true;822105;Forneiro de cubilô
+true;822110;Forneiro de forno-poço
+true;822115;Forneiro de fundição (forno de redução)
+true;822120;Forneiro de reaquecimento e tratamento térmico na metalurgia
+true;822125;Forneiro de revérbero
+true;823105;Preparador de massa (fabricação de abrasivos)
+true;823110;Preparador de massa (fabricação de vidro)
+true;823115;Preparador de massa de argila
+true;823120;Preparador de barbotina
+true;823125;Preparador de esmaltes (cerâmica)
+true;823130;Preparador de aditivos
+true;823135;Operador de atomizador
+true;823210;Extrusor de fios ou fibras de vidro
+true;823215;Forneiro na fundição de vidro
+true;823220;Forneiro no recozimento de vidro
+true;823230;Moldador de abrasivos na fabricação de cerâmica, vidro e porcelana
+true;823235;Operador de banho metálico de vidro por flutuação
+true;823240;Operador de máquina de soprar vidro
+true;823245;Operador de máquina extrusora de varetas e tubos de vidro
+true;823250;Operador de prensa de moldar vidro
+true;823255;Temperador de vidro
+true;823265;Trabalhador na fabricação de produtos abrasivos
+true;823305;Classificador e empilhador de tijolos refratários
+true;823315;Forneiro (materiais de construção)
+true;823320;Trabalhador da elaboração de pré-fabricados (cimento amianto)
+true;823325;Trabalhador da elaboração de pré-fabricados (concreto armado)
+true;823330;Trabalhador da fabricação de pedras artificiais
+true;828105;Oleiro (fabricação de telhas)
+true;828110;Oleiro (fabricação de tijolos)
+true;830105;Mestre (indústria de celulose, papel e papelão)
+true;831105;Cilindreiro na preparação de pasta para fabricação de papel
+true;831110;Operador de branqueador de pasta para fabricação de papel
+true;831115;Operador de digestor de pasta para fabricação de papel
+true;831120;Operador de lavagem e depuração de pasta para fabricação de papel
+true;831125;Operador de máquina de secar celulose
+true;832105;Calandrista de papel
+true;832110;Operador de cortadeira de papel
+true;832115;Operador de máquina de fabricar papel  (fase úmida)
+true;832120;Operador de máquina de fabricar papel (fase seca)
+true;832125;Operador de máquina de fabricar papel e papelão
+true;832135;Operador de rebobinadeira na fabricação de papel e papelão
+true;833105;Cartonageiro, a máquina
+true;833110;Confeccionador de bolsas, sacos e sacolas e papel, a máquina
+true;833115;Confeccionador de sacos de celofane, a máquina
+true;833120;Operador de máquina de cortar e dobrar papelão
+true;833125;Operador de prensa de embutir papelão
+true;833205;Cartonageiro, a mão (caixas de papelão)
+true;840105;Supervisor de produção da indústria alimentícia
+true;840110;Supervisor da indústria de bebidas
+true;840115;Supervisor da indústria de fumo
+true;840120;Chefe de confeitaria
+true;841105;Moleiro de cereais (exceto arroz)
+true;841110;Moleiro de especiarias
+true;841115;Operador de processo de moagem
+true;841205;Moedor de sal
+true;841210;Refinador de sal
+true;841305;Operador de cristalização na refinação de açucar
+true;841310;Operador de equipamentos de refinação de açúcar (processo contínuo)
+true;841315;Operador de moenda na fabricação de açúcar
+true;841320;Operador de tratamento de calda na refinação de açúcar
+true;841408;Cozinhador (conservação de alimentos)
+true;841416;Cozinhador de carnes
+true;841420;Cozinhador de frutas e legumes
+true;841428;Cozinhador de pescado
+true;841432;Desidratador de alimentos
+true;841440;Esterilizador de alimentos
+true;841444;Hidrogenador de óleos e gorduras
+true;841448;Lagareiro
+true;841456;Operador de câmaras frias
+true;841460;Operador de preparação de grãos vegetais (óleos e gorduras)
+true;841464;Prensador de frutas (exceto oleaginosas)
+true;841468;Preparador de rações
+true;841472;Refinador de óleo e gordura
+true;841476;Trabalhador de fabricação de margarina
+true;841484;Trabalhador de preparação de pescados (limpeza)
+true;841505;Trabalhador de tratamento do leite e fabricação de laticínios e afins
+true;841605;Misturador de café
+true;841610;Torrador de café
+true;841615;Moedor de café
+true;841620;Operador de extração de café solúvel
+true;841625;Torrador de cacau
+true;841630;Misturador de chá ou mate
+true;841705;Alambiqueiro
+true;841710;Filtrador de cerveja
+true;841715;Fermentador
+true;841720;Trabalhador de fabricação de vinhos
+true;841725;Malteiro (germinação)
+true;841730;Cozinhador de malte
+true;841735;Dessecador de malte
+true;841740;Vinagreiro
+true;841745;Xaropeiro
+true;841805;Operador de forno (fabricação de pães, biscoitos e similares)
+true;841810;Operador de máquinas de fabricação de doces, salgados e massas alimentícias
+true;841815;Operador de máquinas de fabricação de chocolates e achocolatados
+true;842105;Preparador de melado e essência de fumo
+true;842110;Processador de fumo
+true;842115;Classificador de fumo
+true;842120;Auxiliar de processamento de fumo
+true;842125;Operador de máquina (fabricação de cigarros)
+true;842135;Operador de máquina de preparação de matéria prima para produção de cigarros
+true;842205;Preparador de fumo na fabricação de charutos
+true;842210;Operador de máquina de fabricar charutos e cigarrilhas
+true;842215;Classificador de charutos
+true;842220;Cortador de charutos
+true;842225;Celofanista na fabricação de charutos
+true;842230;Charuteiro a mão
+true;842235;Degustador de charutos
+true;848105;Defumador de carnes e pescados
+true;848110;Salgador de alimentos
+true;848115;Salsicheiro (fabricação de lingüiça, salsicha e produtos similares)
+true;848205;Pasteurizador
+true;848210;Queijeiro na fabricação de laticínio
+true;848215;Manteigueiro na fabricação de laticínio
+true;848305;Padeiro
+true;848310;Confeiteiro
+true;848315;Masseiro (massas alimentícias)
+true;848325;Trabalhador de fabricação de sorvete
+true;848405;Degustador de café
+true;848410;Degustador de chá
+true;848415;Degustador de derivados de cacau
+true;848420;Degustador de vinhos ou licores
+true;848425;Classificador de grãos
+true;848505;Abatedor
+true;848510;Açougueiro
+true;848515;Desossador
+true;848520;Magarefe
+true;848525;Retalhador de carne
+true;848605;Trabalhador do beneficiamento de fumo
+true;860105;Supervisor de manutenção eletromecânica (utilidades)
+true;860110;Supervisor de operação de fluidos (distribuição, captação, tratamento de água, gases, vapor)
+true;860115;Supervisor de operação elétrica (geração, transmissão e distribuição de energia elétrica)
+true;861105;Operador de central hidrelétrica
+true;861110;Operador de quadro de distribuição de energia elétrica
+true;861115;Operador de central termoelétrica
+true;861120;Operador de reator nuclear
+true;861205;Operador de subestação
+true;862105;Foguista (locomotivas a vapor)
+true;862110;Maquinista de embarcações
+true;862115;Operador de bateria de gás de hulha
+true;862120;Operador de caldeira
+true;862130;Operador de compressor de ar
+true;862140;Operador de estação de bombeamento
+true;862150;Operador de máquinas fixas, em geral
+true;862155;Operador de utilidade (produção e distribuição de vapor, gás, óleo, combustível, energia, oxigênio)
+true;862160;Operador de abastecimento de combustível de aeronave
+true;862205;Operador de estação de captação, tratamento e distribuição de água
+true;862305;Operador de estação de tratamento de água e efluentes
+true;862310;Operador de forno de incineração no tratamento de água, efluentes e resíduos industriais
+true;862405;Operador de instalação de extração, processamento, envasamento e distribuição de gases
+true;862505;Operador de instalação de refrigeração
+true;862510;Operador de refrigeração com amônia
+true;862515;Operador de instalação de ar-condicionado
+true;910105;Encarregado de manutenção mecânica de sistemas operacionais
+true;910110;Supervisor de manutenção de aparelhos térmicos, de climatização e de refrigeração
+true;910115;Supervisor de manutenção de bombas, motores, compressores e equipamentos de transmissão
+true;910120;Supervisor de manutenção de máquinas gráficas
+true;910125;Supervisor de manutenção de máquinas industriais têxteis
+true;910130;Supervisor de manutenção de máquinas operatrizes e de usinagem
+true;910205;Supervisor da manutenção e reparação de veículos leves
+true;910210;Supervisor da manutenção e reparação de veículos pesados
+true;910905;Supervisor de reparos linhas férreas
+true;910910;Supervisor de manutenção de vias férreas
+true;911105;Mecânico de manutenção de bomba injetora (exceto de veículos automotores)
+true;911110;Mecânico de manutenção de bombas
+true;911115;Mecânico de manutenção de compressores de ar
+true;911120;Mecânico de manutenção de motores diesel (exceto de veículos automotores)
+true;911125;Mecânico de manutenção de redutores
+true;911130;Mecânico de manutenção de turbinas (exceto de aeronaves)
+true;911135;Mecânico de manutenção de turbocompressores
+true;911205;Mecânico de manutenção e instalação de aparelhos de climatização e  refrigeração
+true;911305;Mecânico de manutenção de máquinas, em geral
+true;911310;Mecânico de manutenção de máquinas gráficas
+true;911315;Mecânico de manutenção de máquinas operatrizes (lavra de madeira)
+true;911320;Mecânico de manutenção de máquinas têxteis
+true;911325;Mecânico de manutenção de máquinas-ferramentas (usinagem de metais)
+true;913105;Mecânico de manutenção de aparelhos de levantamento
+true;913110;Mecânico de manutenção de equipamento de mineração
+true;913115;Mecânico de manutenção de máquinas agrícolas
+true;913120;Mecânico de manutenção de máquinas de construção e terraplenagem
+true;914105;Mecânico de manutenção de aeronaves, em geral
+true;914110;Mecânico de manutenção de sistema hidráulico de aeronaves (serviços de pista e hangar)
+true;914205;Mecânico de manutenção de motores e equipamentos navais
+true;914305;Mecânico de manutenção de veículos ferroviários
+true;914405;Mecânico de manutenção de automóveis, motocicletas e veículos similares
+true;914410;Mecânico de manutenção de empilhadeiras e outros veículos de cargas leves
+true;914415;Mecânico de manutenção de motocicletas
+true;914420;Mecânico de manutenção de tratores
+true;914425;Mecânico de veículos automotores a diesel (exceto tratores)
+true;915105;Técnico em manutenção de instrumentos de medição e precisão
+true;915110;Técnico em manutenção de hidrômetros
+true;915115;Técnico em manutenção de balanças
+true;915205;Restaurador de instrumentos musicais (exceto cordas arcadas)
+true;915210;Reparador de instrumentos musicais
+true;915215;Luthier (restauração de cordas arcadas)
+true;915305;Técnico em manutenção de equipamentos e instrumentos médico-hospitalares
+true;915405;Reparador de equipamentos fotográficos
+true;919105;Lubrificador industrial
+true;919110;Lubrificador de veículos automotores (exceto embarcações)
+true;919115;Lubrificador de embarcações
+true;919205;Mecânico de manutenção de máquinas cortadoras de grama, roçadeiras, motosserras e similares
+true;919305;Mecânico de manutenção de aparelhos esportivos e de ginástica
+true;919310;Mecânico de manutenção de bicicletas e veículos similares
+true;919315;Montador de bicicletas
+true;950105;Supervisor de manutenção elétrica de alta tensão industrial
+true;950110;Supervisor de manutenção eletromecânica industrial, comercial e predial
+true;950205;Encarregado de manutenção elétrica de veículos
+true;950305;Supervisor de manutenção eletromecânica
+true;951105;Eletricista de manutenção eletroeletrônica
+true;951305;Instalador de sistemas eletroeletrônicos de segurança
+true;951310;Mantenedor de sistemas eletroeletrônicos de segurança
+true;951315;Monitor de sistemas eletrônicos de segurança interno
+true;951320;Monitor de sistemas eletrônicos de segurança externo
+true;953105;Eletricista de instalações (aeronaves)
+true;953110;Eletricista de instalações (embarcações)
+true;953115;Eletricista de instalações (veículos automotores e máquinas operatrizes, exceto aeronaves e embarcações)
+true;954105;Eletromecânico de manutenção de elevadores
+true;954110;Eletromecânico de manutenção de escadas rolantes
+true;954115;Eletromecânico de manutenção de portas automáticas
+true;954120;Mecânico de manutenção de instalações mecânicas de edifícios
+true;954125;Operador eletromecânico
+true;954205;Reparador de aparelhos eletrodomésticos (exceto imagem e som)
+true;954210;Reparador de rádio, tv e som
+true;954305;Reparador de equipamentos de escritório
+true;991105;Conservador de via permanente (trilhos)
+true;991110;Inspetor de via permanente (trilhos)
+true;991115;Operador de máquinas especiais em conservação de via permanente (trilhos)
+true;991120;Soldador aluminotérmico em conservação de trilhos
+true;991205;Mantenedor de equipamentos de parques de diversões e similares
+true;991305;Funileiro de veículos (reparação)
+true;991310;Montador de veículos (reparação)
+true;991315;Pintor de veículos (reparação)
+true;992105;Alinhador de pneus
+true;992110;Balanceador
+true;992115;Borracheiro
+true;992120;Lavador de peças
+true;992205;Encarregado geral de operações de conservação de vias permanentes (exceto trilhos)
+true;992210;Encarregado de equipe de conservação de vias permanentes (exceto trilhos)
+true;992215;Operador de ceifadeira na conservação de vias permanentes
+true;992220;Pedreiro de conservação de vias permanentes (exceto trilhos)
+true;992225;Auxiliar geral de conservação de vias permanentes (exceto trilhos)

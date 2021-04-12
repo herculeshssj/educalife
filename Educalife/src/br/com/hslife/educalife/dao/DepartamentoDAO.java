@@ -11,14 +11,19 @@ import br.com.hslife.educalife.model.Departamento;
 public class DepartamentoDAO {
     
     public BigInteger countDepartamento() {
-        BigInteger quantidadeRegistros = (BigInteger)XPersistence.getManager()
+        Object quantidadeRegistros = XPersistence.getManager()
             .createNativeQuery("select count(id) from departamento")
             .getSingleResult();
 
-        if (quantidadeRegistros == null)
-            return BigInteger.ZERO;
+        if (quantidadeRegistros != null) {
+            if (quantidadeRegistros instanceof Integer) {
+                return BigInteger.valueOf((Integer)quantidadeRegistros);
+            } else if (quantidadeRegistros instanceof BigInteger) {
+                return (BigInteger)quantidadeRegistros;
+            }
+        }
 
-        return quantidadeRegistros;
+        return BigInteger.ZERO;
     }
 
     public Departamento obterDepartamentoPorIndice(int indice) {
