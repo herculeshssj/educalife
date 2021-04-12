@@ -1,0 +1,15 @@
+descricao;nome
+Administrador do sistema. Concede acesso a todas as funcionalidades do sistema.;ADMIN
+Permite ao coordenador acessar os dados referentes os cursos e turmas que gerencia.;COORDENADOR_CURSO
+Acesso às tarefas pertinentes a secretaria para gestão dos alunos na instituição.;SECRETARIA
+Permite gerenciar detalhes gerais da estrutura da organização.;ADMINISTRACAO
+Gestão da área financeira (contabilidade, tesouraria) da empresa.;FINANCEIRO
+Acesso a gestão de pessoal da empresa e finanças relacionadas a pessoal.;PESSOAL
+Permite o acesso às informações dos cursos e turma a qual está matriculado/inscrito.;ALUNO
+Permite o acesso às turmas que ministra aula.;PROFESSOR
+Acesso aos menus e opções relacionados ao cadastro básico do sistema.;CADASTRADOR
+Acesso somente consulta às opções do sistema.;CONSULTA
+Acesso aos menus e opções relacionadas a geração de relatórios do sistema.;RELATORIO
+Permite o acesso às informações pessoais e profissionais do colaborador.;COLABORADOR
+Acesso a opções do sistema específicias para membros da diretoria.;DIRETORIA
+Acesso a opções do sistema específicas para líderes de equipes e departamentos.;LIDER

@@ -1,0 +1,275 @@
+codigo;descricao
+AV;Avenida
+R;Rua
+A;Área
+AC;Acesso
+ACA;Acampamento
+ACL;Acesso Local
+AD;Adro
+AE;Área Especial
+AER;Aeroporto
+AL;Alameda
+AMD;Avenida Marginal Direita
+AME;Avenida Marginal Esquerda
+AN;Anel Viário
+ANT;Antiga Estrada
+ART;Artéria
+AT;Alto
+ATL;Atalho
+A V;Área Verde
+AVC;Avenida Contorno
+AVM;Avenida Marginal
+AVV;Avenida Velha
+BAL;Balneário
+BC;Beco
+BCO;Buraco
+BEL;Belvedere
+BL;Bloco
+BLO;Balão
+BLS;Blocos
+BLV;Bulevar
+BSQ;Bosque
+BVD;Boulevard
+BX;Baixa
+C;Cais
+CAL;Calçada
+CAM;Caminho
+CAN;Canal
+CH;Chácara
+CHA;Chapadão
+CIC;Ciclovia
+CIR;Circular
+CJ;Conjunto
+CJM;Conjunto Mutirão
+CMP;Complexo Viário
+COL;Colônia
+COM;Comunidade
+CON;Condomínio
+COR;Corredor
+CPO;Campo
+CRG;Córrego
+CTN;Contorno
+DSC;Descida
+DSV;Desvio
+DT;Distrito
+EB;Entre Bloco
+EIM;Estrada Intermunicipal
+ENS;Enseada
+ENT;Entrada Particular
+EQ;Entre Quadra
+ESC;Escada
+ESD;Escadaria
+ESE;Estrada Estadual
+ESI;Estrada Vicinal
+ESL;Estrada de Ligação
+ESM;Estrada Municipal
+ESP;Esplanada
+ESS;Estrada de Servidão
+EST;Estrada
+ESV;Estrada Velha
+ETA;Estrada Antiga
+ETC;Estação
+ETD;Estádio
+ETN;Estância
+ETP;Estrada Particular
+ETT;Estacionamento
+EVA;Evangélica
+EVD;Elevada
+EX;Eixo Industrial
+FAV;Favela
+FAZ;Fazenda
+FER;Ferrovia
+FNT;Fonte
+FRA;Feira
+FTE;Forte
+GAL;Galeria
+GJA;Granja
+HAB;Núcleo Habitacional
+IA;Ilha
+IND;Indeterminado
+IOA;Ilhota
+JD;Jardim
+JDE;Jardinete
+LD;Ladeira
+LGA;Lagoa
+LGO;Lago
+LOT;Loteamento
+LRG;Largo
+LT;Lote
+MER;Mercado
+MNA;Marina
+MOD;Modulo
+MRG;Projeção
+MRO;Morro
+MTE;Monte
+NUC;Núcleo
+NUR;Núcleo Rural
+OUT;Outeiro
+PAR;Paralela
+PAS;Passeio
+PAT;Pátio
+PC;Praça
+PCE;Praça de Esportes
+PDA;Parada
+PDO;Paradouro
+PNT;Ponta
+PR;Praia
+PRL;Prolongamento
+PRM;Parque Municipal
+PRQ;Parque
+PRR;Parque Residencial
+PSA;Passarela
+PSG;Passagem
+PSP;Passagem de Pedestre
+PSS;Passagem Subterrânea
+PTE;Ponte
+PTO;Porto
+Q;Quadra
+QTA;Quinta
+QTS;Quintas
+R I;Rua Integração
+R L;Rua de Ligação
+R P;Rua Particular
+R V;Rua Velha
+RAM;Ramal
+RCR;Recreio
+REC;Recanto
+RER;Retiro
+RES;Residencial
+RET;Reta
+RLA;Ruela
+RMP;Rampa
+ROA;Rodo Anel
+ROD;Rodovia
+ROT;Rotula
+RPE;Rua de Pedestre
+RPR;Margem
+RTN;Retorno
+RTT;Rotatória
+SEG;Segunda Avenida
+SIT;Sitio
+SRV;Servidão
+ST;Setor
+SUB;Subida
+TCH;Trincheira
+TER;Terminal
+TR;Trecho
+TRV;Trevo
+TUN;Túnel
+TV;Travessa
+TVP;Travessa Particular
+TVV;Travessa Velha
+UNI;Unidade
+V;Via
+V C;Via Coletora
+V L;Via Local
+VAC;Via de Acesso
+VAL;Vala
+VCO;Via Costeira
+VD;Viaduto
+V-E;Via Expressa
+VER;Vereda
+VEV;Via Elevado
+VL;Vila
+VLA;Viela
+VLE;Vale
+VLT;Via Litorânea
+VPE;Via de Pedestre
+VRT;Variante
+ZIG;Zigue-Zague
+10ªT;10ª Travessa
+11ª;11ª Rua
+11ªT;11ª Travessa
+12ª;12ª Rua
+12ªT;12ª Travessa
+13ª;13ª Travessa
+14ª;14ª Travessa
+15ª;15ª Travessa
+16ª;16ª Travessa
+1ªAv;1ª Avenida
+1ªPç;1ª Paralela
+1ªR;1ª Rua
+1ªS;1ª Subida
+1ªT;1ª Travessa
+1ªTR;1ª Travessa da Rodovia
+1ªV;1ª Vila
+1ºa;1º Alto
+1º1;1º Beco
+2ª2;2ª Avenida
+2ª3;2ª Paralela
+2ª4;2ª Rua
+2ª5;2ª Subida
+2ª6;2ª Travessa
+2ª7;2ª Travessa da Rodovia
+2ª8;2ª Vila
+2º9;2º Alto
+2º0;2º Beco
+3ª2;3ª Avenida
+3ª3;3ª Ladeira
+3ª4;3ª Paralela
+3ª5;3ª Rua
+3ª6;3ª Subida
+3ª7;3ª Travessa
+3ª8;3ª Vila
+3º9;3º Alto
+3º0;3º Beco
+4ª2;4ª Avenida
+4ª3;4ª Paralela
+4ª4;4ª Rua
+4ª8;4ª Subida
+4ª5;4ª Vila
+5ª6;5ª Avenida
+5ª7;5ª Rua
+5ª1;5ª Subida
+5ª2;5ª Travessa
+5ª3;5ª Vila
+6ª4;6ª Avenida
+6ª5;6ª Rua
+6ª6;6ª Subida
+6ª7;6ª Travessa
+7ª8;7ª Rua
+7ª9;7ª Travessa
+8ª1;8ª Travessa
+9ª2;9ª Rua
+9ª3;9ª Travessa
+Av4;Avenida Marginal Norte
+Av5;Avenida Perimetral
+Cal1;Calçadão
+Cam1;Caminho de Servidão
+Cam3;Campus
+Con3;Condomínio Residencial
+Con5;Conjunto Habitacional
+Cx ;Cx Postal
+Eix;Eixo
+Jar;Jardim Residencial
+Loc;Localidade
+Mód;Módulo
+Rót;Rótula
+Sít;Sítio
+Via;Via Litoranea
+10ªR;10ª RUA
+17ª Tv;17ª Travessa
+18ª Tv;18ª Travessa
+19ª Tv;19ª Travessa
+20ª Tv;20ª Travessa
+21ª Tv;21ª Travessa
+22ª Tv;22ª Travessa
+2ª Ld;2ª Ladeira
+Ant. Estação;Antiga Estação
+Cj Res;Conjunto Residencial
+N Av;Nova Avenida
+Stv Psg;Servidão de Passagem
+Terc Av;Terceira Avenida
+Vrte Est;Variante da Estrada
+V. Marg.;Via Marginal
+4ª TV;4ª Travessa
+R Pr;Rua Principal
+R Prj;Rua Projetada
+V Pr;Via Principal
+V Lat;Via Lateral
+V PE;Via de Pedestres
+Est FER;Estrada de Ferro
+Est N;Estrada Nova
+Eix Pr;Eixo Principal
+Pas PE;Passagem de Pedestres
+Pas Pub;Passeio Público

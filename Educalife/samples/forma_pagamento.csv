@@ -1,0 +1,17 @@
+ativo;descricao
+true;Balcão
+true;Cheque
+true;Débito em conta
+true;Crédito em conta
+true;Depósito
+true;Retirada
+true;Depósito ATM
+true;Retirada ATM
+true;On-line
+true;Ponto de venda
+true;Saque
+true;Transferência
+true;Pagamento
+true;Telefone/Fax
+true;Cobrança
+true;Dívida Ativa

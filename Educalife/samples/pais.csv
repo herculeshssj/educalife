@@ -1,0 +1,254 @@
+codigo;denominacao
+24;BRASIL
+21;BIRMANIA                                
+70;GUINE                                   
+78;IEMEM DO SUL                            
+85;IRLANDIA                                
+89;IUGOSLAVIA                              
+162;UNIAO SOVIETICA                         
+167;VIETINA                                 
+176;CEUTA E MELILLA                         
+183;ILHA JOHNSTOM                           
+187;ILHA WAKE                               
+188;ILHAS DO CANAL                          
+192;ILHAS COOR                              
+193;ILHAS FABOE                             
+195;ILHAS MARIANAS DO NORTE                 
+201;IRIA OCIDENTAL                          
+218;T. TUT. DAS I. PACIFICO                 
+224;ALGERIA                                 
+246;TAITI                                   
+255;BARBUDA                                 
+257;QUIRIBATI                               
+261;MICRONESIA                              
+8;ANTIGUA                                 
+13;AUSTRIA                                 
+17;BAREIN                                  
+229;BELARUS                                 
+175;BERMUDAS                                
+23;BOTSUANA                                
+32;CAMBOJA                                 
+34;CATAR                                   
+39;CINGAPURA                               
+41;CONGO                                   
+48;DJIBUTI                                 
+50;EGITO                                   
+55;ESTADOS UNIDOS                          
+60;FORMOSA                                 
+66;GRANADA                                 
+74;HOLANDA                                 
+189;ILHAS CAYMAN                            
+196;ILHAS MIDWAY                            
+94;KUWEIT                                  
+102;MADAGASCAR                              
+104;MALAVI                                  
+235;MOLDOVA                                 
+118;NIGER                                   
+135;SAMOA OCIDENTAL                         
+219;TIMOR                                   
+157;TRINIDAD E TOBAGO                       
+168;ZAIRE                                   
+170;ZIMBABUE                                
+6;ANDORRA                                 
+7;ANGOLA                                  
+171;ANGUILLA                                
+173;ANTILHAS HOLANDESAS                     
+11;ARGENTINA                               
+174;ARUBA                                   
+14;BAHAMAS                                 
+15;BANGLADESH                              
+16;BARBADOS                                
+19;BELIZE                                  
+20;BENIN                                   
+24;BRASIL                                  
+25;BRUNEI                                  
+28;BURUNDI                                 
+30;CABO VERDE                              
+35;CHADE                                   
+36;CHILE                                   
+37;CHINA                                   
+38;CHIPRE                                  
+43;COREIA DO SUL                           
+44;COSTA DO MARFIM                         
+45;COSTA RICA                              
+46;CUBA                                    
+47;DINAMARCA                               
+49;DOMINICA                                
+51;EL SALVADOR                             
+53;EQUADOR                                 
+54;ESPANHA                                 
+57;FIJI                                    
+58;FILIPINAS                               
+64;GANA                                    
+177;GIBRALTAR                               
+68;GUATEMALA                               
+69;GUIANA                                  
+181;GUIANA FRANCESA                         
+73;HAITI                                   
+75;HONDURAS                                
+182;HONG KONG                               
+76;HUNGRIA                                 
+84;IRAQUE                                  
+222;IRLANDA                                 
+87;ISRAEL                                  
+90;JAMAICA                                 
+93;KIRIBATI                                
+95;LAOS                                    
+96;LESOTO                                  
+100;LIECHTENSTEIN                           
+101;LUXEMBURGO                              
+202;MACAU                                   
+105;MALDIVAS                                
+106;MALI                                    
+107;MALTA                                   
+108;MARROCOS                                
+203;MARTINICA                               
+204;MAYOTTE                                 
+205;MONTSERRAT                              
+115;NAURU                                   
+116;NEPAL                                   
+207;NIUE                                    
+120;NORUEGA                                 
+251;PALAU                                   
+126;PARAGUAI                                
+127;PERU                                    
+210;PORTO RICO                              
+129;PORTUGAL                                
+134;RUANDA                                  
+212;SAARA OCIDENTAL                         
+214;SAMOA AMERICANA                         
+136;SAN MARINO                              
+215;SANTA HELENA                            
+141;SENEGAL                                 
+142;SERRA LEOA                              
+143;SEYCHELLES                              
+146;SRI LANKA                               
+151;SURINAME                                
+155;TOGO                                    
+156;TONGA                                   
+220;TOQUELAU                                
+159;TURQUIA                                 
+160;TUVALU                                  
+161;UGANDA                                  
+163;URUGUAI                                 
+164;VANUATU                                 
+165;VATICANO                                
+166;VENEZUELA                               
+211;REUNIAO                                 
+4;ALEMANHA OCIDENTAL                      
+5;ALEMANHA ORIENTAL                       
+172;ANTARTICA                               
+9;ARABIA SAUDITA                          
+10;ARGELIA                                 
+239;ARMENIA                                 
+12;AUSTRALIA                               
+243;AZERBAIJAO                              
+18;BELGICA                                 
+22;BOLIVIA                                 
+260;BOSNIA-HERZEGOVINA                      
+26;BULGARIA                                
+27;BURKINA                                 
+29;BUTAO                                   
+31;CAMAROES                                
+33;CANADA                                  
+264;CAZAQUISTAO                             
+40;COLOMBIA                                
+42;COREIA DO NORTE                         
+242;CROACIA                                 
+52;EMIRADOS ARABES UNIDOS                  
+225;ERITEIA                                 
+223;ESCOCIA                                 
+230;ESLOVAQUIA                              
+244;ESLOVENIA                               
+231;ESTONIA                                 
+56;ETIOPIA                                 
+59;FINLANDIA                               
+61;FRANCA                                  
+62;GABAO                                   
+63;GAMBIA                                  
+249;GEORGIA                                 
+65;GRA-BRETANHA                            
+67;GRECIA                                  
+178;GROELANDIA                              
+179;GUADALUPE                               
+180;GUAN                                    
+71;GUINE-BISSAU                            
+72;GUINE EQUATORIAL                        
+77;IEMEM                                   
+185;ILHA DE MAN                             
+186;ILHA DE PITCAIRN                        
+184;ILHA NORFOLK                            
+190;ILHAS CHRISTMAS                         
+191;ILHAS COCOS (KEELING)                   
+79;ILHAS COMORES                           
+194;ILHAS MALVINAS                          
+232;ILHAS MARSHAL                           
+80;ILHAS SALOMAO                           
+197;ILHAS TURKS E CAICOS                    
+198;ILHAS VIRGENS AMERICANAS                
+199;ILHAS VIRGENS BRITANICAS                
+200;ILHAS WALLIS E FUTUNA                   
+81;INDIA                                   
+82;INDONESIA                               
+83;IRA                                     
+86;ISLANDIA                                
+88;ITALIA                                  
+91;JAPAO                                   
+92;JORDANIA                                
+245;LETONIA                                 
+97;LIBANO                                  
+98;LIBERIA                                 
+99;LIBIA                                   
+233;LITUANIA                                
+234;MACEDONIA                               
+103;MALASIA                                 
+109;MAURICIO                                
+110;MAURITANIA                              
+111;MEXICO                                  
+113;MONACO                                  
+114;MONGOLIA                                
+206;NAMIBIA                                 
+112;MOCAMBIQUE                              
+117;NICARAGUA                               
+119;NIGERIA                                 
+208;NOVA CALEDONIA                          
+121;NOVA ZELANDIA                           
+122;OMA                                     
+123;PANAMA                                  
+124;PAPUA NOVA GUINE                        
+125;PAQUISTAO                               
+209;POLINESIA FRANCESA                      
+128;POLONIA                                 
+130;QUENIA                                  
+226;QUIRGUISTAO                             
+254;REINO UNIDO                             
+2;REPUBL. DA AFRICA DO SUL                
+1;REPUBL. DEMOCR. DO AFEGANISTAO          
+131;REPUBLICA CENTRO AFRICANA               
+132;REPUBLICA DOMINICANA                    
+267;REPUBLICA THECA                         
+3;REPUBL. POPULAR DA ALBANIA              
+133;ROMENIA                                 
+256;RUSSIA                                  
+213;SAINT-PIERRE E MIQUELOH                 
+137;SANTA LUCIA                             
+138;SAO CRISTOVAO E NEVES                   
+139;SAO TOME E PRINCIPE                     
+140;SAO VICENTE E GRANABINAS                
+144;SIRIA                                   
+145;SOMALIA                                 
+147;SUAZILANDIA                             
+148;SUDAO                                   
+149;SUECIA                                  
+150;SUICA                                   
+216;SVALBARD                                
+152;TAILANDIA                               
+258;TADJIQUISTAO                            
+153;TANZANIA                                
+217;T. BRIT. DO OCEANO INDICO               
+154;TCHECOSLOVAQUIA                         
+158;TUNISIA                                 
+250;TURCOMENISTAO                           
+221;UCRANIA                                 
+268;UZBEQUISTAO                             
+169;ZAMBIA                                  

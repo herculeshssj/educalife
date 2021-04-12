@@ -1,0 +1,2 @@
+codigo;descricao;modulo;tipo_parametro;valor
+CONSULTA_CEP_REST_API_URL;URL da API REST para consulta dos dados de CEP.;;TEXTO;http://consulta-cep:9090/

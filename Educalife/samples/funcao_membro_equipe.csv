@@ -1,0 +1,16 @@
+descricao;lideranca
+Instrutor;false
+Monitor;false
+Palestrante;false
+Tutor;false
+Membro da Equipe;false
+Aprendiz;false
+Convidado/Visitante;false
+Secretário;false
+Auxiliar;false
+Técnico/Especialista;false
+Coordenador;true
+Gerente;true
+Diretor;true
+Assistente;false
+Substituto;false

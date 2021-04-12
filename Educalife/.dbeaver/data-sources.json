@@ -51,6 +51,25 @@
 				},
 				"auth-model": "native"
 			}
+		},
+		"microsoft-178c743a2c2-6e5962fa19589cdc": {
+			"provider": "sqlserver",
+			"driver": "microsoft",
+			"name": "Educalife",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "educalife-db",
+				"port": "1433",
+				"database": "Educalife",
+				"url": "jdbc:sqlserver://;serverName=educalife-db;databaseName=Educalife",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-authentication@": "SQL_SERVER_PASSWORD",
+					"@dbeaver-show-all-schemas@": "false"
+				},
+				"handlers": {}
+			}
 		}
 	},
 	"virtual-models": {
