@@ -19,18 +19,18 @@
 		Right button on your project > Properties > Java Build Path > Libraries
 	-->
 	
-	<!-- PostgreSQL
+	<!-- PostgreSQL -->
 	<Resource name="jdbc/EducalifeDS" auth="Container" type="javax.sql.DataSource"
 	      maxTotal="20" maxIdle="5" maxWaitMillis="10000"
 	      username="educalife" password="Ed7c4l1f3*" driverClassName="org.postgresql.Driver"
 	      url="jdbc:postgresql://educalife-db/educalife"/>
-	-->
 
-	<!-- SQL Server -->
+	<!-- SQL Server
 	<Resource name="jdbc/EducalifeDS" auth="Container" type="javax.sql.DataSource"
 	      maxTotal="20" maxIdle="5" maxWaitMillis="10000"
 	      username="educalife" password="Ed7c4l1f3*" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
 	      url="jdbc:sqlserver://educalife-db;database=Educalife;"/>
+	-->
 	 
 	<!-- HSQLDB    	
     <Resource name="jdbc/EducalifeDS" auth="Container" type="javax.sql.DataSource"
