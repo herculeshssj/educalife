@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import org.hibernate.envers.Audited;
+import org.openxava.annotations.Required;
 import org.openxava.model.Identifiable;
 
 @Entity
@@ -13,33 +14,43 @@ import org.openxava.model.Identifiable;
 public class CatalogoMaterial extends Identifiable {
 
     @Column(name="codigo_grupo_material", nullable = false)
+    @Required
     private int codigoGrupoMaterial;
 
     @Column(name="grupo_material", nullable = false, length = 1000)
+    @Required
     private String grupoMaterial;
 
     @Column(name="codigo_classe_material", nullable = false)
+    @Required
     private int codigoClasseMaterial;
 
     @Column(name="classe_material", nullable = false, length = 1000)
+    @Required
     private String classeMaterial;
 
     @Column(name="codigo_padrao_descricao_material", nullable = false)
+    @Required
     private int codigoPadraoDescricaoMaterial;
 
     @Column(name="padrao_descricao_material", nullable = false, length = 1000)
+    @Required
     private String padraoDescricaoMaterial;
 
     @Column(name="codigo_material", nullable = false)
+    @Required
     private int codigoMaterial;
 
     @Column(name="descricao_material", nullable = false, length = 3000)
+    @Required
     private String descricaoMaterial;
 
     @Column(name="situacao_atual", nullable = false)
+    @Required
     private String situacaoAtual;
 
     @Column(name="item_sustentavel", nullable = false)
+    @Required
     private String itemSustentavel;
     
 

@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import org.hibernate.envers.Audited;
+import org.openxava.annotations.Required;
 import org.openxava.model.Identifiable;
 
 @Entity
@@ -13,21 +14,27 @@ import org.openxava.model.Identifiable;
 public class CatalogoServico extends Identifiable {
 
     @Column(name="codigo_grupo_servico", nullable = false)
+    @Required
     private int codigoGrupoServico;
 
     @Column(name="grupo_servico", nullable = false, length = 1000)
+    @Required
     private String grupoServico;
 
     @Column(name="codigo_classe_servico", nullable = false)
+    @Required
     private int codigoClasseServico;
 
     @Column(name = "classe_servico", nullable = false, length = 1000)
+    @Required
     private String classeServico;
 
     @Column(name = "codigo_servico", nullable = false)
+    @Required
     private int codigoServico;
 
     @Column(name = "descricao_servico", nullable = false, length = 3000)
+    @Required
     private String descricaoServico;
 
     @Column(name = "situacao_atual", nullable = false)
