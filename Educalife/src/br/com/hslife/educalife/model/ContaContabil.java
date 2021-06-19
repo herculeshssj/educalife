@@ -12,35 +12,7 @@ import org.openxava.model.Identifiable;
 @Table(name = "conta_contabil")
 @Audited
 public class ContaContabil extends Identifiable{
-        
-    @Column(nullable = false)
-    @Required
-    private int classe;
-
-    @Column(nullable = false)
-    @Required
-    private int grupo;
-
-    @Column(nullable = false)
-    @Required
-    private int subgrupo;
-
-    @Column(nullable = false)
-    @Required
-    private int titulo;
-
-    @Column(nullable = false)
-    @Required
-    private int subtituto;
-
-    @Column(nullable = false)
-    @Required
-    private int item;
-
-    @Column(nullable = false)
-    @Required
-    private int subitem;
-
+   
     @Column(nullable = false)
     @Required
     private String conta;
@@ -64,14 +36,6 @@ public class ContaContabil extends Identifiable{
     @Column(name = "obrigatorio_facultativo")
     @Required
     private String obrigatorioFacultativo;
-
-    public int getClasse() {
-        return classe;
-    }
-
-    public void setClasse(int classe) {
-        this.classe = classe;
-    }
 
     public String getConta() {
         return conta;
@@ -97,22 +61,6 @@ public class ContaContabil extends Identifiable{
         this.funcao = funcao;
     }
 
-    public int getGrupo() {
-        return grupo;
-    }
-
-    public void setGrupo(int grupo) {
-        this.grupo = grupo;
-    }
-
-    public int getItem() {
-        return item;
-    }
-
-    public void setItem(int item) {
-        this.item = item;
-    }
-
     public String getNaturezaSaldo() {
         return naturezaSaldo;
     }
@@ -135,37 +83,5 @@ public class ContaContabil extends Identifiable{
 
     public void setStatus(String status) {
         this.status = status;
-    }
-
-    public int getSubgrupo() {
-        return subgrupo;
-    }
-
-    public void setSubgrupo(int subgrupo) {
-        this.subgrupo = subgrupo;
-    }
-
-    public int getSubitem() {
-        return subitem;
-    }
-
-    public void setSubitem(int subitem) {
-        this.subitem = subitem;
-    }
-
-    public int getSubtituto() {
-        return subtituto;
-    }
-
-    public void setSubtituto(int subtituto) {
-        this.subtituto = subtituto;
-    }
-
-    public int getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(int titulo) {
-        this.titulo = titulo;
     }
 }
