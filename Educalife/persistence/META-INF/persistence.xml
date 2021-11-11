@@ -15,8 +15,8 @@
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="update"/>
             <property name="javax.persistence.create-database-schemas" value="true"/> 
-            <property name="hibernate.default_schema" value="public"/> <!-- PostgreSQL -->
-            <!-- <property name="hibernate.default_schema" value="dbo"/> SQL Server -->
+            <!-- <property name="hibernate.default_schema" value="public"/>  PostgreSQL -->
+            <property name="hibernate.default_schema" value="dbo"/> <!-- SQL Server -->
             <property name="hibernate.jdbc.use_streams_for_binary" value="true"/>
             <property name="hibernate.show_sql" value="false"/>
     		<property name="org.hibernate.envers.default_schema" value="audit"/>
