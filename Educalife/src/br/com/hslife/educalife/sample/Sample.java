@@ -19,6 +19,9 @@ import br.com.hslife.educalife.patterns.Builder;
 public class Sample {
 
     @Autowired
+    SampleProcesso sampleProcesso;
+
+    @Autowired
     SamplePessoaFisica samplePessoaFisica;
 
     @Autowired
@@ -49,13 +52,14 @@ public class Sample {
         verificaPresencaUsuarioAdmin();
         verificaPresencaMenuSistema();
         //SampleCargo.populaCargo();
-        samplePessoaFisica.populaBase();
-        samplePessoaJuridica.populaBase();
-        sampleContaBanco.populaBase();
-        sampleDocumentoIdentidade.populaBase();
-        sampleUsuario.populaBase();
-        sampleEmpresaUnidadeDepartamento.populaBase();
-        sampleColaborador.populaBase();
+        //samplePessoaFisica.populaBase();
+        //samplePessoaJuridica.populaBase();
+        //sampleContaBanco.populaBase();
+        //sampleDocumentoIdentidade.populaBase();
+        //sampleUsuario.populaBase();
+        //sampleEmpresaUnidadeDepartamento.populaBase();
+        //sampleColaborador.populaBase();
+        sampleProcesso.populaBase();
     }
 
     private void verificaPresencaUsuarioAdmin() {
